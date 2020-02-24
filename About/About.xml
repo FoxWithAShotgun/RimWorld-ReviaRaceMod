@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <name>Revia Race</name>
+  <author>Fox with a Shotgun</author>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>FS.ReviaRace</packageId>
+  <url>https://github.com/FoxWithAShotgun/RimWorld-ReviaRaceMod/wiki</url>
+  <description>
+    A race mod for bloodthirsty foxgirls in RimWorld.
+    
+    Revia are near-humans with vulpine traits. Feared in the sector of the galaxy that they exist in for their warlike natures, it is said that Revia accept only one absolute law in their society: the strong live and prosper, and the weak serve the strong in whatever way they are able.
+    Their society worships bloodshed in the name of a certain deity that sits upon a throne of bleached skulls, and will stop at nothing to slake his thirst.
+    
+    Features:
+    - A foxgirl race with guaranteed Bloodlust trait.
+    - A mechanic which allows them to grow extra tails as they accumulate more humanlike kills. Each additional tail indicates a rapidly increasing killcount, and also confers stat bonuses to them. They become stronger in melee, take less damage, and have more hitpoints as they gain more tails. Caps out at 9.
+    - A faction of their kind which acts hostile, and whose raiders will never retreat. Blood is blood, no matter whose side spills it!
+  </description>
+</ModMetaData>
