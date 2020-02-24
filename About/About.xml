@@ -7,6 +7,17 @@
     <li>1.1</li>
   </supportedVersions>
   <packageId>FS.ReviaRace</packageId>
+  <modDependencies>
+    <li>
+      <packageId>erdelf.HumanoidAlienRaces</packageId>
+      <displayName>Humanoid Alien Races 2.0</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+      <downloadUrl>https://github.com/erdelf/AlienRaces/wiki</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>erdelf.HumanoidAlienRaces</li>
+  </loadAfter>
   <url>https://github.com/FoxWithAShotgun/RimWorld-ReviaRaceMod/wiki</url>
   <description>
     A race mod for bloodthirsty foxgirls in RimWorld.

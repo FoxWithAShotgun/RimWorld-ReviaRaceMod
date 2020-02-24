@@ -1,1 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.BackstoryDef>
+    <defName>ReviaRaceBackstoryAdultAssassin</defName>
+    <title>Revia Assassin</title>
+    <titleShort>Assassin</titleShort>
+    <baseDescription>
+      [PAWN_nameDef] was a weapon of the high priests to silence their opponents.
+      [PAWN_pronoun] is utterly lethal with a blade, but cares little for what it actually cuts into.
+      As long as it hits something fleshy, [Pawn_pronoun] is satisfied.
+    </baseDescription>
+    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>ReviaRaceBackstory</li>
+    </spawnCategories>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>10</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+    </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>Nimble</defName>
+      </li>
+    </forcedTraits>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>Intellectual</li>
+      <li>Artistic</li>
+    </workDisables>
+  </AlienRace.BackstoryDef>
+</Defs>
