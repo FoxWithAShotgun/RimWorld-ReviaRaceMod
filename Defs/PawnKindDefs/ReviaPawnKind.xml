@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>ReviaKind</defName>
+    <label>Revia</label>
+    <race>ReviaRace</race>
+    <backstoryCategories>
+      <li>ReviaRaceBackstory</li>
+    </backstoryCategories>
+  </PawnKindDef>
+</Defs>

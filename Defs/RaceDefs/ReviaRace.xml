@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>ReviaRace</defName>
+    <label>Revia</label>
+    <description>A bloodthirsty vulpine near-human.</description>
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>0.0</maleGenderProbability>
+        <forcedRacetraitEntries>
+          <li>
+            <defname>Bloodlust</defname>
+          </li>
+          <li>
+            <defname>Beauty</defname>
+            <degree>1</degree>
+            <chance>40</chance>
+          </li>
+          <li>
+            <defname>Beauty</defname>
+            <degree>2</degree>
+            <chance>30</chance>
+          </li>
+        </forcedRacetraitEntries>
+        <disallowedTraits>
+          <li>Kind</li>
+        </disallowedTraits>
+        <allowHumanBios>false</allowHumanBios>
+        <humanRecipeImport>true</humanRecipeImport>
+        <alienPartGenerator>
+          <aliencrowntypes>
+            <li>Average_Normal</li>
+            <li>Average_Pointy</li>
+            <li>Narrow_Normal</li>
+            <li>Narrow_Pointy</li>
+          </aliencrowntypes>
+          <alienbodytypes>
+            <li>Thin</li>
+            <li>Female</li>
+          </alienbodytypes>
+          <alienskincolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>30</weight>
+                <only>RGBA(1.0, 0.997, 0.995, 1.0)</only>
+              </li>
+              <li>
+                <weight>30</weight>
+                <only>RGBA(0.997, 0.995, 0.993, 1.0)</only>
+              </li>
+              <li>
+                <weight>40</weight>
+                <only>RGBA(0.995, 0.993, 0.990, 1.0)</only>
+              </li>
+            </options>
+          </alienskincolorgen>
+          <alienskinsecondcolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>30</weight>
+                <only>RGBA(1.0, 0.997, 0.995, 1.0)</only>
+              </li>
+              <li>
+                <weight>30</weight>
+                <only>RGBA(0.997, 0.995, 0.993, 1.0)</only>
+              </li>
+              <li>
+                <weight>40</weight>
+                <only>RGBA(0.995, 0.993, 0.990, 1.0)</only>
+              </li>
+            </options>
+          </alienskinsecondcolorgen>
+          <alienhaircolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.60, 0.05, 0.05, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.80, 0.50, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.40, 0.05, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.10, 0.10, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.90, 0.90, 0.10, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.90, 0.80, 0.40, 1.0)</only>
+              </li>
+            </options>
+          </alienhaircolorgen>
+          <alienhairsecondcolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.60, 0.05, 0.05, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.80, 0.50, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.40, 0.05, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.10, 0.10, 0.0, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.90, 0.90, 0.10, 1.0)</only>
+              </li>
+              <li>
+                <weight>20</weight>
+                <only>RGBA(0.90, 0.80, 0.40, 1.0)</only>
+              </li>
+            </options>
+          </alienhairsecondcolorgen>
+          <bodyAddons>
+            <li>
+              <path>Things/Tails/Tail1</path>
+              <bodyPart>Tail</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <drawnInBed>false</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <hediffGraphics>
+                <ReviaRaceSoulreapTier1>Things/Tails/Tail1</ReviaRaceSoulreapTier1>
+                <ReviaRaceSoulreapTier2>Things/Tails/Tail2</ReviaRaceSoulreapTier2>
+                <ReviaRaceSoulreapTier3>Things/Tails/Tail3</ReviaRaceSoulreapTier3>
+                <ReviaRaceSoulreapTier4>Things/Tails/Tail4</ReviaRaceSoulreapTier4>
+                <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
+                <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
+                <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
+                <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
+                <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
+              </hediffGraphics>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Ears/LeftEar</path>
+              <bodyPart>left ear</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Ears/RightEar</path>
+              <bodyPart>right ear</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(0.40, -0.20)</Female>
+                    <Thin>(0.40, -0.20)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0.42, -0.20)</Normal_Average>
+                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
+                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
+                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+          </bodyAddons>
+        </alienPartGenerator>
+      </generalSettings>
+      <hairSettings>
+        <HasHair>true</HasHair>
+        <GetsGreyAt>65</GetsGreyAt>
+        <hairTags>
+          <li>ReviaRaceHair</li>
+        </hairTags>
+      </hairSettings>
+      <thoughtSettings>
+        
+      </thoughtSettings>
+      <relationSettings>
+        
+      </relationSettings>
+      <raceRestrictions>
+        
+      </raceRestrictions>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <HairDef>
+    <defName>ReviaRaceHairLongWild</defName>
+    <label>natural long</label>
+    <hairGender>Female</hairGender>
+    <texPath>Hairs/ReviaLongWild</texPath>
+    <hairTags>
+      <li>ReviaRaceHair</li>
+    </hairTags>
+  </HairDef>
+</Defs>
