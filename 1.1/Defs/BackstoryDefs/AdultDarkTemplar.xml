@@ -34,7 +34,6 @@
     </skillGains>
     <workDisables>
       <li>Caring</li>
-      <li>DumbLabor</li>
     </workDisables>
   </AlienRace.BackstoryDef>
 </Defs>
