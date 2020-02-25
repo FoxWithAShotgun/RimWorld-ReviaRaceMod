@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <ThingDef Name="ReviaRaceBase" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
   <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
-    <defName>ReviaRace</defName>
+    <defName>ReviaRaceAlien</defName>
     <label>Revia</label>
     <description>A bloodthirsty vulpine near-human.</description>
     <alienRace>
       <generalSettings>
         <maleGenderProbability>0.0</maleGenderProbability>
-        <forcedRacetraitEntries>
+        <forcedRaceTraitEntries>
           <li>
-            <defname>Bloodlust</defname>
+            <defName>Bloodlust</defName>
           </li>
           <li>
-            <defname>Beauty</defname>
+            <defName>Beauty</defName>
             <degree>1</degree>
             <chance>40</chance>
           </li>
           <li>
-            <defname>Beauty</defname>
+            <defName>Beauty</defName>
             <degree>2</degree>
             <chance>30</chance>
           </li>
-        </forcedRacetraitEntries>
+        </forcedRaceTraitEntries>
         <disallowedTraits>
           <li>Kind</li>
         </disallowedTraits>
@@ -277,21 +304,128 @@
         </alienPartGenerator>
       </generalSettings>
       <hairSettings>
-        <HasHair>true</HasHair>
-        <GetsGreyAt>65</GetsGreyAt>
+        <hasHair>true</hasHair>
+        <getsGreyAt>65</getsGreyAt>
         <hairTags>
           <li>ReviaRaceHair</li>
         </hairTags>
       </hairSettings>
-      <thoughtSettings>
-        
-      </thoughtSettings>
-      <relationSettings>
-        
-      </relationSettings>
-      <raceRestrictions>
-        
-      </raceRestrictions>
     </alienRace>
+    <statBases>
+      <MarketValue>2250</MarketValue>
+      <MoveSpeed>5.25</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>36</ComfyTemperatureMax>
+      <LeatherAmount>45</LeatherAmount>
+      <ResearchSpeed>0.90</ResearchSpeed>
+      <MiningSpeed>1.25</MiningSpeed>
+      <SocialImpact>0.95</SocialImpact>
+      <MeleeDodgeChance>1.30</MeleeDodgeChance>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>14</power>
+        
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.4</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>110</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>ReviaRaceBody</body>
+      <baseBodySize>0.95</baseBodySize>
+      <baseHealthScale>1.15</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>30.0</gestationPeriodDays>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>3.0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>11</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>16</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(10,0)</li>
+          <li>(11,15)</li>
+          <li>(12,20)</li>
+          <li>(14,40)</li>
+          <li>(16,60)</li>
+          <li>(20,100)</li>
+          <li>(30,100)</li>
+          <li>(35,60)</li>
+          <li>(40,40)</li>
+          <li>(50,10)</li>
+          <li>(60,5)</li>
+          <li>(70,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
   </AlienRace.ThingDef_AlienRace>
 </Defs>

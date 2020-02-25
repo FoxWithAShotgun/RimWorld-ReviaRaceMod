@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PawnKindDef>
+  <defName>ReviaRaceMarauder</defName>
+  <label>revia marauder</label>
+  <race>ReviaRaceAlien</race>
+  <combatPower>50</combatPower>
+  <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
+  <itemQuality>Good</itemQuality>
+  <apparelTags>
+    <li>IndustrialAdvanced</li>
+  </apparelTags>
+  <apparelMoney>600~800</apparelMoney>
+  <weaponTags>
+    <li>ReviaBasicMelee</li>
+    <li>ReviaBasicRanged</li>
+  </weaponTags>
+  <weaponMoney>600~800</weaponMoney>
+  <techHediffsChance>0</techHediffsChance>
+  <invNutrition>5</invNutrition>
+  <inventoryOPtions>
+    <skipChance>0</skipChance>
+    <subOptionsChooseOne>
+      <li>
+        <choiceChance>60</choiceChance>
+        <thingDef>MedicineHerbal</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+      <li>
+        <choiceChance>20</choiceChance>
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>1~1</countRange>
+      </li>
+      <li>
+        <choiceChance>20</choiceChance>
+        <thingDef>Silver</thingDef>
+        <countRange>40~100</countRange>
+      </li>
+    </subOptionsChooseOne>
+  </inventoryOPtions>
+</PawnKindDef>

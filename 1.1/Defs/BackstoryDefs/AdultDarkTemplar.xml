@@ -5,18 +5,14 @@
     <defName>ReviaRaceBackstoryAdultDarkTemplar</defName>
     <title>Dark Templar</title>
     <titleShort>Templar</titleShort>
-    <baseDescription>
-      [PAWN_nameDef] is a part of the higher echelons of the dark god's priesthood.
-      Skilled with blades as much as [Pawn_pronoun] is with [Pawn_possessive] wits,
-      [Pawn_pronoun] is as equally charismatic as [Pawn_pronoun] is dangerous.
-      However, menial labour and caretaking is beneath [Pawn_objective], as befitting [Pawn_objective] elite status.
-    </baseDescription>
+    <baseDescription>[PAWN_nameDef] is a part of the higher echelons of the dark god's priesthood. Skilled with blades as much as [Pawn_pronoun] is with [Pawn_possessive] wits, [Pawn_pronoun] is as equally charismatic as [Pawn_pronoun] is dangerous.</baseDescription>
     <bodyTypeGlobal>Thin</bodyTypeGlobal>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>ReviaRaceBackstory</li>
+      <li>ReviaRaceTemplar</li>
     </spawnCategories>
     <skillGains>
       <li>
@@ -32,6 +28,18 @@
         <amount>4</amount>
       </li>
     </skillGains>
+    <forcedTraits>
+      <li>
+        <defName>PsychicSensitivity</defName>
+        <degree>2</degree>
+        <chance>70</chance>
+      </li>
+      <li>
+        <defName>PsychicSensitivity</defName>
+        <degree>1</degree>
+        <chance>80</chance>
+      </li>
+    </forcedTraits>
     <workDisables>
       <li>Caring</li>
     </workDisables>
