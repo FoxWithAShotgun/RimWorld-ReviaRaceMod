@@ -1,40 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <PawnKindDef>
-    <defName>ReviaRaceMarauder</defName>
-    <label>revia marauder</label>
+    <defName>ReviaRaceRaider</defName>
+    <label>revia raider</label>
     <race>ReviaRaceAlien</race>
-    <combatPower>50</combatPower>
-    <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
-    <itemQuality>Good</itemQuality>
+    <combatPower>25</combatPower>
+    <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
+    <itemQuality>Poor</itemQuality>
     <apparelTags>
-      <li>IndustrialAdvanced</li>
+      <li>Medieval</li>
     </apparelTags>
-    <apparelMoney>600~800</apparelMoney>
+    <apparelMoney>0~200</apparelMoney>
     <weaponTags>
-      <li>ReviaBasicMelee</li>
-      <li>ReviaBasicRanged</li>
+      <li>NeolithicMeleeAdvanced</li>
     </weaponTags>
-    <weaponMoney>600~800</weaponMoney>
+    <weaponMoney>100~200</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
-    <invNutrition>5</invNutrition>
+    <invNutrition>0</invNutrition>
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
         <li>
           <choiceChance>60</choiceChance>
           <thingDef>MedicineHerbal</thingDef>
-          <countRange>1~3</countRange>
-        </li>
-        <li>
-          <choiceChance>20</choiceChance>
-          <thingDef>MedicineIndustrial</thingDef>
           <countRange>1~1</countRange>
         </li>
         <li>
           <choiceChance>20</choiceChance>
           <thingDef>Silver</thingDef>
-          <countRange>40~100</countRange>
+          <countRange>10~15</countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>

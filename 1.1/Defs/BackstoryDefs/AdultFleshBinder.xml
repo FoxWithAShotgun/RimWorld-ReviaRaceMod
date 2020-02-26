@@ -11,6 +11,7 @@
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>ReviaRaceBackstory</li>
+      <li>ReviaMarauder</li>
     </spawnCategories>
     <skillGains>
       <li>

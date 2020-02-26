@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>ReviaRaceBerserker</defName>
+    <label>revia berserker</label>
+    <race>ReviaRaceAlien</race>
+    <combatPower>100</combatPower>
+    <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
+    <itemQuality>Excellent</itemQuality>
+    <apparelTags>
+      <li>Medieval</li>
+    </apparelTags>
+    <apparelMoney>800~1000</apparelMoney>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <weaponMoney>2500~3000</weaponMoney>
+    <techHediffsChance>0</techHediffsChance>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

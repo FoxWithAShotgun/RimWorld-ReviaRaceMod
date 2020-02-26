@@ -51,6 +51,7 @@
         </forcedRaceTraitEntries>
         <disallowedTraits>
           <li>Kind</li>
+          <li>Wimp</li>
         </disallowedTraits>
         <allowHumanBios>false</allowHumanBios>
         <humanRecipeImport>true</humanRecipeImport>
