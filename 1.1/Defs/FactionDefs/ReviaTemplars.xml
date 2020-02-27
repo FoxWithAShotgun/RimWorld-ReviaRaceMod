@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef>
+  <FactionDef>
     <defName>ReviaTemplarFaction</defName>
     <label>Revia Templars</label>
     <description>An order of oathsworn warriors. They will not hesitate to crush any who stand in their way.</description>
     <pawnSingular>revia</pawnSingular>
-    <pawnPlural>revia</pawnPlural>
+    <pawnsPlural>revia</pawnsPlural>
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
@@ -13,8 +13,13 @@
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Grand Templar</leaderTitle>
     <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <colorSpectrum>
+      <li>(0.20, 0.20, 0.85)</li>
+      <li>(0.15, 0.15, 0.40)</li>
+    </colorSpectrum>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
+    <pawnNameMaker>NamerPersonRevia</pawnNameMaker>
     <techLevel>Industrial</techLevel>
     <backstoryFilters>
       <li>
@@ -69,5 +74,5 @@
         </guards>
       </li>
     </pawnGroupMakers>
-  </PawnKindDef>
+  </FactionDef>
 </Defs>

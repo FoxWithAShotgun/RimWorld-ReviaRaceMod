@@ -1,1 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Parent="ReviaRaceFactionBase">
+    <defName>ReviaPlayerColony</defName>
+    <label>Revia Exclave</label>
+    <description>Your faction!</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>ReviaRaceColonist</basicMemberKind>
+    <pawnsPlural>frontiersmen</pawnsPlural>
+    <pawnNameMaker>NamerPersonRevia</pawnNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>ReviaRaceBackstory</li>
+    </backstoryCategories>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <colorSpectrum>
+      <li>(0, 0.75, 0.85)</li>
+      <li>(0, 0.70, 0.85</li>
+    </colorSpectrum>
+    <playerInitialSettlementNameMaker>NamerSettlementReviaTemplar</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
+    <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
+    <geneticVariance>1</geneticVariance>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <hairTags>
+      <li>ReviaRaceHair</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+</Defs>
