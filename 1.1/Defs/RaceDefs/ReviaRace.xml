@@ -167,14 +167,14 @@
                 <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
                 <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
                 <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
-                <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
-                <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
+                <ReviaRaceSoulreapTier8>Things/Tails/Tail7</ReviaRaceSoulreapTier8>
+                <ReviaRaceSoulreapTier9>Things/Tails/Tail7</ReviaRaceSoulreapTier9>
               </hediffGraphics>
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(-0.38, 0.50)</Female>
-                    <Thin>(-0.38, 0.50)</Thin>
+                    <Female>(-0.38, 0)</Female>
+                    <Thin>(-0.38, 0)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
@@ -193,7 +193,7 @@
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(-0.22, -0.05)</Female>
+                    <Female>(-0.07, -0.17)</Female>
                     <Thin>(-0.14, -0.22)</Thin>
                   </bodyTypes>
                   <crownTypes>

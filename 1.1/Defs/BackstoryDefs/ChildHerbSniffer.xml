@@ -4,7 +4,7 @@
     <defName>ReviaRaceBackstoryChildHerbSniffer</defName>
     <title>Herb Sniffer</title>
     <titleShort>Sniffer</titleShort>
-    <baseDescription>[PAWN.nameDef] was blessed with an exceptional sense of smell. [PAWN.pronoun] was often used to find medicinal herbs for use in apothecaries, as well as prey for the dinner table.</baseDescription>
+    <baseDescription>[PAWN_nameDef] was blessed with an exceptional sense of smell. [PAWN_pronoun] was often used to find medicinal herbs for use in apothecaries, as well as prey for the dinner table.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Childhood</slot>
