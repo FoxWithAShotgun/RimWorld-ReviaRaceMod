@@ -12,7 +12,8 @@
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Grand Templar</leaderTitle>
-    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <factionIconPath>World/ReviaEmblem</factionIconPath>
+    <settlementTexturePath>World/ReviaEmblem</settlementTexturePath>
     <colorSpectrum>
       <li>(0.20, 0.20, 0.85)</li>
       <li>(0.15, 0.15, 0.40)</li>
@@ -21,13 +22,9 @@
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
     <pawnNameMaker>NamerPersonRevia</pawnNameMaker>
     <techLevel>Industrial</techLevel>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>ReviaTemplar</li>
-        </categories>
-      </li>
-    </backstoryFilters>
+    <backstoryCategories>
+      <li>ReviaRaceTemplar</li>
+    </backstoryCategories>
     <geneticVariance>0.8</geneticVariance>
     <hairTags>
       <li>ReviaRaceHair</li>

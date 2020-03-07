@@ -58,9 +58,6 @@
         <alienPartGenerator>
           <aliencrowntypes>
             <li>Average_Normal</li>
-            <li>Average_Pointy</li>
-            <li>Narrow_Normal</li>
-            <li>Narrow_Pointy</li>
           </aliencrowntypes>
           <alienbodytypes>
             <li>Thin</li>
@@ -157,10 +154,11 @@
           <bodyAddons>
             <li>
               <path>Things/Tails/Tail1</path>
-              <bodyPart>Tail</bodyPart>
+              <bodyPart>tail</bodyPart>
               <inFrontOfBody>false</inFrontOfBody>
               <drawnInBed>false</drawnInBed>
               <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
               <hediffGraphics>
                 <ReviaRaceSoulreapTier1>Things/Tails/Tail1</ReviaRaceSoulreapTier1>
                 <ReviaRaceSoulreapTier2>Things/Tails/Tail2</ReviaRaceSoulreapTier2>
@@ -175,128 +173,112 @@
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.38, 0.50)</Female>
+                    <Thin>(-0.38, 0.50)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </south>
                 <north>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.07, 0.02)</Female>
+                    <Thin>(-0.07, 0.02)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.22, -0.05)</Female>
+                    <Thin>(-0.14, -0.22)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </east>
               </offsets>
             </li>
             <li>
-              <path>Things/Ears/LeftEar</path>
+              <path>Things/Ears/EarLeft</path>
               <bodyPart>left ear</bodyPart>
-              <inFrontOfBody>false</inFrontOfBody>
+              <inFrontOfBody>true</inFrontOfBody>
               <drawnInBed>true</drawnInBed>
               <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.43, 0.65)</Female>
+                    <Thin>(-0.43, 0.65)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </south>
                 <north>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(0, 0.9)</Female>
+                    <Thin>(0, 0.9)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.36, 0.63)</Female>
+                    <Thin>(-0.36, 0.63)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </east>
               </offsets>
             </li>
             <li>
-              <path>Things/Ears/RightEar</path>
+              <path>Things/Ears/EarRight</path>
               <bodyPart>right ear</bodyPart>
-              <inFrontOfBody>false</inFrontOfBody>
+              <inFrontOfBody>true</inFrontOfBody>
               <drawnInBed>true</drawnInBed>
               <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.43, 0.65)</Female>
+                    <Thin>(-0.43, 0.65)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </south>
                 <north>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(0, 0.9)</Female>
+                    <Thin>(0, 0.9)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(0.40, -0.20)</Female>
-                    <Thin>(0.40, -0.20)</Thin>
+                    <Female>(-0.36, 0.63)</Female>
+                    <Thin>(-0.36, 0.63)</Thin>
                   </bodyTypes>
                   <crownTypes>
-                    <Normal_Average>(0.42, -0.20)</Normal_Average>
-                    <Normal_Pointy>(0.42, -0.20)</Normal_Pointy>
-                    <Narrow_Average>(0.42, -0.20)</Narrow_Average>
-                    <Narrow_Pointy>(0.42, -0.20)</Narrow_Pointy>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
                   </crownTypes>
                 </east>
               </offsets>
@@ -308,7 +290,8 @@
         <hasHair>true</hasHair>
         <getsGreyAt>65</getsGreyAt>
         <hairTags>
-          <li>ReviaRaceHair</li>
+          <li>Rural</li>
+          <li>Urban</li>
         </hairTags>
       </hairSettings>
     </alienRace>

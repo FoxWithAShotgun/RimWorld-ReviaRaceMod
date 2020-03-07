@@ -412,6 +412,7 @@
         </li>
         <li>
           <def>ReviaRaceTail</def>
+          <customLabel>tail</customLabel>
           <coverage>0.07</coverage>
           <height>Bottom</height>
           <groups>

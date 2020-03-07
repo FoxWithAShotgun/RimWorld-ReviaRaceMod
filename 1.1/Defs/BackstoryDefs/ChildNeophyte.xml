@@ -4,13 +4,13 @@
     <defName>ReviaRaceBackstoryChildNeophyte</defName>
     <title>Neophyte</title>
     <titleShort>Neophyte</titleShort>
-    <baseDescription>The lucky few who are taken in by the priesthood in Revian society are well cared for, and typically want for nothing. However, their days are filled with memorisation of litanies and chanting of prayers, as well as researching matters of the mundane and the occult. [PAWN_nameDef] was one such child. [PAWN_possessive] physical prowess lagged behind, yet [Pawn_possessive] mind grew by leaps and bounds.</baseDescription>
-    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <baseDescription>The lucky few who are taken in by the priesthood in Revian society are well cared for, and typically want for nothing. However, their days are filled with memorisation of litanies and chanting of prayers, as well as researching matters of the mundane and the occult. [PAWN_nameDef] was one such child. [PAWN_possessive] physical prowess lagged behind, yet [PAWN_possessive] mind grew by leaps and bounds.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>ReviaRaceBackstory</li>
+      <li>ReviaRaceTemplar</li>
     </spawnCategories>
     <skillGains>
       <li>
@@ -26,5 +26,9 @@
         <amount>-2</amount>
       </li>
     </skillGains>
+    <linkedBackstory>ReviaRaceBackstoryAdultAcolyte</linkedBackstory>
+    <forcedHediffs>
+      <li>ReviaRaceSoulreapTier2</li>
+    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

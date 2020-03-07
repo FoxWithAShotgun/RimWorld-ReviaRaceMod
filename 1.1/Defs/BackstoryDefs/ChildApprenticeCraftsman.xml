@@ -4,13 +4,13 @@
     <defName>ReviaRaceBackstoryChildApprenticeCraftsman</defName>
     <title>Apprentice Craftsman</title>
     <titleShort>Apprentice</titleShort>
-    <baseDescription>[PAWN_nameDef] spent [Pawn_possessive] days at the great forges, learning how to shape wood and metal. [PAWN_possessive] work was much appreciated by the warriors, who often left [Pawn_possessive] snacks and gifts in exchange for equipment repairs. However, [Pawn_possessive] love of flames continued to grow unchecked...</baseDescription>
-    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <baseDescription>[PAWN_nameDef] spent [PAWN_possessive] days at the great forges, learning how to shape wood and metal. [PAWN_possessive] work was much appreciated by the warriors, who often left [PAWN_possessive] snacks and gifts in exchange for equipment repairs. However, [PAWN_possessive] love of flames continued to grow unchecked...</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
-    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>ReviaRaceBackstory</li>
+      <li>ReviaRaceTemplar</li>
     </spawnCategories>
     <skillGains>
       <li>
@@ -26,5 +26,9 @@
       <li>Firefighting</li>
       <li>Caring</li>
     </workDisables>
+    <forcedHediffs>
+      <li>ReviaRaceSoulreapTier1</li>
+    </forcedHediffs>
+    <linkedBackstory>ReviaRaceBackstoryAdultWarsmith</linkedBackstory>
   </AlienRace.BackstoryDef>
 </Defs>

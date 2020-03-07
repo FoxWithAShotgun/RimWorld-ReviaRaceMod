@@ -4,8 +4,7 @@
     <defName>ReviaRaceBackstoryAdultAssassin</defName>
     <title>Revia Assassin</title>
     <titleShort>Assassin</titleShort>
-    <baseDescription>[PAWN_nameDef] was a weapon of the high priests to silence their opponents. [PAWN_pronoun] is utterly lethal with a blade, but cares little for what it actually cuts into. As long as it hits something fleshy, [Pawn_pronoun] is satisfied.</baseDescription>
-    <bodyTypeGlobal>Thin</bodyTypeGlobal>
+    <baseDescription>[PAWN_nameDef] was a weapon to silence whoever they were pointed at. [PAWN_pronoun] is utterly lethal with a blade, but cares little for what it actually cuts into. As long as it hits something fleshy, [PAWN_pronoun] is satisfied.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
@@ -34,5 +33,8 @@
       <li>Intellectual</li>
       <li>Artistic</li>
     </workDisables>
+    <forcedHediffs>
+      <li>ReviaRaceSoulreapTier4</li>
+    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>
