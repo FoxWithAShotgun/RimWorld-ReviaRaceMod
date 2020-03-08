@@ -20,10 +20,6 @@
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
-      </recipeUsers>
     </recipeMaker>
     <stuffCategories>
       <li>Metallic</li>

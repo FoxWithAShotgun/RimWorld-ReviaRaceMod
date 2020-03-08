@@ -294,6 +294,17 @@
           <li>Urban</li>
         </hairTags>
       </hairSettings>
+      <raceRestriction>
+        <researchList>
+          <li>
+            <projects>
+              <li>ReviaRaceBasicEquipment</li>
+              <li>ReviaRaceIntermediateEquipment</li>
+              <li>ReviaRaceAdvancedEquipment</li>
+            </projects>
+          </li>
+        </researchList>
+      </raceRestriction>
     </alienRace>
     <statBases>
       <MarketValue>2250</MarketValue>
@@ -411,5 +422,13 @@
         <li>OrganicStandard</li>
       </hediffGiverSets>
     </race>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li>
+        <compClass>ReviaRace.Comps.SoulReaper</compClass>
+      </li>
+    </comps>
   </AlienRace.ThingDef_AlienRace>
 </Defs>

@@ -4,6 +4,7 @@
     <defName>ReviaRaceMarauder</defName>
     <label>revia marauder</label>
     <race>ReviaRaceAlien</race>
+    <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>50</combatPower>
     <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
     <itemQuality>Good</itemQuality>

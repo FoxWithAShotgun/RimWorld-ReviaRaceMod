@@ -4,6 +4,7 @@
     <defName>ReviaRaceBerserker</defName>
     <label>revia berserker</label>
     <race>ReviaRaceAlien</race>
+    <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>100</combatPower>
     <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>

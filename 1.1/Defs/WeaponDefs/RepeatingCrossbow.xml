@@ -11,10 +11,6 @@
     <soundInteract>Bow_Small</soundInteract>
     <recipeMaker>
       <researchPrerequisite>ReviaRaceAdvancedEquipment</researchPrerequisite>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
-      </recipeUsers>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>

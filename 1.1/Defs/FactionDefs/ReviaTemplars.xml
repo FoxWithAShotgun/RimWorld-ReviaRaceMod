@@ -27,7 +27,8 @@
     </backstoryCategories>
     <geneticVariance>0.8</geneticVariance>
     <hairTags>
-      <li>ReviaRaceHair</li>
+      <li>Rural</li>
+      <li>Urban</li>
     </hairTags>
     <allowedArrivalTemperatureRange>-40~55</allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
@@ -69,6 +70,12 @@
         <guards>
           <ReviaRaceTemplar>15</ReviaRaceTemplar>
         </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <ReviaRaceTemplar>30</ReviaRaceTemplar>
+        </options>
       </li>
     </pawnGroupMakers>
   </FactionDef>

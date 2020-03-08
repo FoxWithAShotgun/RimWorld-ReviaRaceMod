@@ -33,10 +33,10 @@
     <comps>
       <li Class="CompProperties_Usable">
         <useJob>UseArtifact</useJob>
-        <useLabel>Activate</useLabel>
+        <useLabel>Make offering</useLabel>
       </li>
       <li Class="CompProperties_UseEffect">
-        <compClass>ReviaRace.InvokeBlessing</compClass>
+        <compClass>ReviaRace.Comps.InvokeBlessing</compClass>
       </li>
     </comps>
   </ThingDef>

@@ -3,6 +3,7 @@
   <PawnKindDef>
     <defName>ReviaRaceTemplar</defName>
     <label>revia templar</label>
+    <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
     <combatPower>100</combatPower>
     <baseRecruitDifficulty>1.0</baseRecruitDifficulty>

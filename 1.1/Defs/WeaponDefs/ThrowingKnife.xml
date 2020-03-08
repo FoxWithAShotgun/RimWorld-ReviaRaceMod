@@ -14,8 +14,6 @@
         <Crafting>3</Crafting>
       </skillRequirements>
       <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
         <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
