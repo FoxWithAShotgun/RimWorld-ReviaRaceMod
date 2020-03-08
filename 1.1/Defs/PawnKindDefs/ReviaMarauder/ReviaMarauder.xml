@@ -12,7 +12,9 @@
     </apparelTags>
     <apparelMoney>600~800</apparelMoney>
     <weaponTags>
-      <li>MedievalMeleeAdvanced</li>
+      <li>ReviaMeleeBasic</li>
+      <li>ReviaMeleeIntermediate</li>
+      <li>ReviaRangedBasic</li>
     </weaponTags>
     <weaponMoney>600~800</weaponMoney>
     <techHediffsChance>0</techHediffsChance>

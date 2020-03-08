@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ReviaBaseRangedWeapon" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>Medieval</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ReviaBaseMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>Medieval</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+</Defs>
