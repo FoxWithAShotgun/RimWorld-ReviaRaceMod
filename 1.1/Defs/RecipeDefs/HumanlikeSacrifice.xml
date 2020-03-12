@@ -38,8 +38,7 @@
       <ReviaRaceBloodstone>1</ReviaRaceBloodstone>
     </products>
     <recipeUsers>
-      <li>ButcherSpot</li>
-      <li>TableButcher</li>
+      <li>ReviaSacrificeSpot</li>
     </recipeUsers>
   </RecipeDef>
 </Defs>
