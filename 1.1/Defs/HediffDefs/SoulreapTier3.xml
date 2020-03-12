@@ -8,7 +8,6 @@
     <stages>
       <li>
         <statFactors>
-          <MaxHitPoints>1.10</MaxHitPoints>
           <IncomingDamageFactor>0.90</IncomingDamageFactor>
         </statFactors>
       </li>

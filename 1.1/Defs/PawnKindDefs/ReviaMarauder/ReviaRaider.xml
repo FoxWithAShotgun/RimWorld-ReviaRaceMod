@@ -5,15 +5,17 @@
     <label>revia raider</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>25</combatPower>
+    <combatPower>120</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <itemQuality>Poor</itemQuality>
     <apparelTags>
+      <li>Neolithic</li>
       <li>Medieval</li>
     </apparelTags>
-    <apparelMoney>0~200</apparelMoney>
+    <apparelMoney>400~600</apparelMoney>
+    <gearHealthRange>0.5~0.8</gearHealthRange>
     <weaponTags>
-      <li>NeolithicMeleeAdvanced</li>
+      <li>NeolithicMeleeDecent</li>
       <li>ReviaMeleeBasic</li>
     </weaponTags>
     <weaponMoney>300~400</weaponMoney>

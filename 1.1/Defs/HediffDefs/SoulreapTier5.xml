@@ -18,7 +18,6 @@
           </li>
         </capMods>
         <statFactors>
-          <MaxHitPoints>1.25</MaxHitPoints>
           <IncomingDamageFactor>0.75</IncomingDamageFactor>
         </statFactors>
       </li>

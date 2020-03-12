@@ -5,7 +5,7 @@
     <label>revia templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
-    <combatPower>100</combatPower>
+    <combatPower>325</combatPower>
     <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
@@ -13,12 +13,15 @@
       <li>IndustrialMilitaryAdvanced</li>
       <li>SpacerMilitary</li>
     </apparelTags>
-    <apparelMoney>1200~1800</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <apparelMoney>2400~3200</apparelMoney>
     <weaponTags>
       <li>MedievalMeleeAdvanced</li>
       <li>Gun</li>
     </weaponTags>
-    <weaponMoney>1800~2200</weaponMoney>
+    <weaponMoney>2400~3000</weaponMoney>
     <techHediffsChance>0.5</techHediffsChance>
     <techHediffsMoney>3000~5000</techHediffsMoney>
     <techHediffsTags>

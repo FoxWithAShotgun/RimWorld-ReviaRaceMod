@@ -16,7 +16,7 @@
       <Mass>3.50</Mass>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>ReviaRaceAdvancedEquipment</researchPrerequisite>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
@@ -25,7 +25,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <weaponTags>
-      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeIntermediate</li>
     </weaponTags>
     <tools>
       <li>
@@ -42,7 +42,7 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>25</power>
+        <power>22</power>
         <cooldownTime>2.50</cooldownTime>
         <armorPenetration>0.20</armorPenetration>
       </li>

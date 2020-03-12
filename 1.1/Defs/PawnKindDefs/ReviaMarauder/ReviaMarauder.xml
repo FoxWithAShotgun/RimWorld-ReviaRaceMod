@@ -5,19 +5,22 @@
     <label>revia marauder</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>50</combatPower>
+    <combatPower>200</combatPower>
+    <canBeSapper>true</canBeSapper>
     <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
     <itemQuality>Good</itemQuality>
     <apparelTags>
-      <li>IndustrialAdvanced</li>
+      <li>Neolithic</li>
+      <li>Medieval</li>
+      <li>IndustrialBasic</li>
     </apparelTags>
-    <apparelMoney>600~800</apparelMoney>
+    <apparelMoney>1200~1800</apparelMoney>
     <weaponTags>
       <li>ReviaMeleeBasic</li>
       <li>ReviaMeleeIntermediate</li>
       <li>ReviaRangedBasic</li>
     </weaponTags>
-    <weaponMoney>600~800</weaponMoney>
+    <weaponMoney>1600~2400</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
     <inventoryOptions>

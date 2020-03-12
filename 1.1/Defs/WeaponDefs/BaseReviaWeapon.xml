@@ -29,7 +29,7 @@
   <ThingDef Name="ReviaBaseMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Medieval</techLevel>
     <weaponTags>
-      <li>Medieval</li>
+      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
     <thingCategories>
       <li>WeaponsMelee</li>
@@ -47,6 +47,31 @@
         <li>FueledSmithy</li>
       </recipeUsers>
       <effectWorking>Smelt</effectWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="ReviaBaseAdvancedMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>IndustrialMeleeAdvanced</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
       <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>

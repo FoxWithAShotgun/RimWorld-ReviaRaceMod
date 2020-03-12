@@ -10,7 +10,7 @@
     </graphicData>
     <soundInteract>Bow_Small</soundInteract>
     <recipeMaker>
-      <researchPrerequisite>ReviaRaceAdvancedEquipment</researchPrerequisite>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>

@@ -5,13 +5,17 @@
     <label>revia berserker</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>100</combatPower>
+    <combatPower>350</combatPower>
     <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
+      <li>Neolithic</li>
       <li>Medieval</li>
     </apparelTags>
-    <apparelMoney>800~1000</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <apparelMoney>600~1000</apparelMoney>
     <weaponTags>
       <li>ReviaMeleeIntermediate</li>
     </weaponTags>

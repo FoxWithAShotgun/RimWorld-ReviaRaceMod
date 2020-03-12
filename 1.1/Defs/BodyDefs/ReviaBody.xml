@@ -122,7 +122,7 @@
               <parts>
                 <li>
                   <def>Skull</def>
-                  <coverage>0.15</coverage>
+                  <coverage>0.35</coverage>
                   <depth>Inside</depth>
                   <groups>
                     <li>UpperHead</li>
@@ -131,7 +131,7 @@
                 </li>
                 <li>
                   <def>Brain</def>
-                  <coverage>0.40</coverage>
+                  <coverage>0.20</coverage>
                   <groups>
                     <li>UpperHead</li>
                     <li>FullHead</li>
