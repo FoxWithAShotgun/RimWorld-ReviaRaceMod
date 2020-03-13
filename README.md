@@ -11,3 +11,7 @@ Features:
 - Revia may wear any clothing that a baseline human can wear, and will NEVER have any restrictions in regards to equipment. I don't believe in restricting the user's choice in what mods are used; season your own game as you need!
 - Revia factions often send out marauding warbands to shed blood in the name of their god. Whether this blood is your colonists', or that of the attacking Revia marauders', matters very little to them -- blood is blood, and they will never retreat.
 - Revia factions are hostile to all except for their own race. However, they are still receptive to gifts (read: tribute). Their constant warring and raiding means that they tend to have highly effective weapons and armour for sale, if you somehow satisfy their thirst for plunder.
+
+Installation:
+For Steam users: Go through Steam Workshop. Don't use this.
+For non-Steam users: Find a release tag, unzip into your RimWorld's mods directory.
