@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ResourceBase">
-    <defName>ReviaRaceBloodstone</defName>
-    <label>bloodstone</label>
-    <description>A blessing given by the Revian pantheon. Supposedly confers divine favour on the user.</description>
+    <defName>ReviaRacePalestone</defName>
+    <label>palestone</label>
+    <description>A lesser blessing given by the Revian pantheon. Supposedly confers divine favour on the user.</description>
     <thingClass>ThingWithComps</thingClass>
     <techLevel>Archotech</techLevel>
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.80</drawSize>
-      <color>(200, 50, 0)</color>
+      <color>(220, 220, 200)</color>
     </graphicData>
-    <stackLimit>75</stackLimit>
+    <stackLimit>2000</stackLimit>
     <thingCategories>
       <li>Artifacts</li>
     </thingCategories>
@@ -22,7 +22,7 @@
     <tradeability>Sellable</tradeability>
     <statBases>
       <Mass>0.01</Mass>
-      <MarketValue>350</MarketValue>
+      <MarketValue>20</MarketValue>
       <MaxHitPoints>1000</MaxHitPoints>
       <Flammability>0.0</Flammability>
       <DeteriorationRate>0.0</DeteriorationRate>
@@ -36,7 +36,7 @@
         <useLabel>Make offering</useLabel>
       </li>
       <li Class="CompProperties_UseEffect">
-        <compClass>ReviaRace.Comps.InvokeGreaterBlessing</compClass>
+        <compClass>ReviaRace.Comps.InvokeLesserBlessing</compClass>
       </li>
     </comps>
   </ThingDef>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using RimWorld;
 
 namespace ReviaRace.Comps
 {
@@ -33,17 +34,17 @@ namespace ReviaRace.Comps
 
             if (SoulReapHediff != null)
             {
-                switch (SoulReapHediff.def.label)
+                switch (SoulReapHediff.def.defName)
                 {
-                    case "Soul Reap (1)": tier = 1; break;
-                    case "Soul Reap (2)": tier = 2; break;
-                    case "Soul Reap (3)": tier = 3; break;
-                    case "Soul Reap (4)": tier = 4; break;
-                    case "Soul Reap (5)": tier = 5; break;
-                    case "Soul Reap (6)": tier = 6; break;
-                    case "Soul Reap (7)": tier = 7; break;
-                    case "Soul Reap (8)": tier = 8; break;
-                    case "Soul Reap (9)": tier = 9; break;
+                    case "ReviaRaceSoulreapTier1": tier = 1; break;
+                    case "ReviaRaceSoulreapTier2": tier = 2; break;
+                    case "ReviaRaceSoulreapTier3": tier = 3; break;
+                    case "ReviaRaceSoulreapTier4": tier = 4; break;
+                    case "ReviaRaceSoulreapTier5": tier = 5; break;
+                    case "ReviaRaceSoulreapTier6": tier = 6; break;
+                    case "ReviaRaceSoulreapTier7": tier = 7; break;
+                    case "ReviaRaceSoulreapTier8": tier = 8; break;
+                    case "ReviaRaceSoulreapTier9": tier = 9; break;
                     default: break;
                 }
             }
@@ -59,7 +60,7 @@ namespace ReviaRace.Comps
             {
                 return;
             }
-
+           
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
             pawn.health.AddHediff(toAdd);
         }
@@ -72,7 +73,7 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var hediffsToRemove = pawn.health.hediffSet.hediffs.Where(hediff => hediff.def.label.Contains("Soul Reap")).ToList();
+            var hediffsToRemove = pawn.health.hediffSet.hediffs.Where(hediff => hediff.def.defName.StartsWith("ReviaRaceSoulreapTier")).ToList();
             foreach (var hediff in hediffsToRemove)
             {
                 pawn.health.RemoveHediff(hediff);

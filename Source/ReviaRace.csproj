@@ -51,9 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\InvokeBlessing.cs" />
+    <Compile Include="Comps\InvokeGreaterBlessing.cs" />
+    <Compile Include="Comps\InvokeLesserBlessing.cs" />
+    <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

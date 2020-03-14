@@ -429,6 +429,9 @@
       <li>
         <compClass>ReviaRace.Comps.SoulReaper</compClass>
       </li>
+      <li>
+        <compClass>ReviaRace.Comps.ReviaRaceOnSpawn</compClass>
+      </li>
     </comps>
   </AlienRace.ThingDef_AlienRace>
 </Defs>

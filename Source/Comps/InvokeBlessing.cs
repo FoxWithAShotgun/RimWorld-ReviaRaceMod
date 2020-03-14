@@ -8,73 +8,97 @@ using Verse;
 
 namespace ReviaRace.Comps
 {
-    public class InvokeBlessing : CompUseEffect
+    public abstract class InvokeBlessing : CompUseEffect
     {
         public override void DoEffect(Pawn pawn)
         {
             base.DoEffect(pawn);
+
+            if (!ViabilityCheck(pawn))
+            {
+                return;
+            }
+
             var srComp = pawn.GetComp<SoulReaper>();
-            Messages.Message($"{pawn.Name} offers some bloodstones to the bloody god.", pawn, MessageTypeDefOf.NeutralEvent, false);
+            var srTier = srComp.GetSoulReapTier();
+            var cost = CalculateAdvanceCost(srTier);
 
-            if (pawn.MapHeld == null || srComp == null)
-            {
-                Messages.Message($"Invalid target. srcomp null = {srComp == null}", pawn, MessageTypeDefOf.CautionInput, false);
-                return;
-            }
-
-            var soulReapTier = srComp.GetSoulReapTier();
-            if (soulReapTier == -1)
-            {
-                Messages.Message("The bloodstone does nothing for the uninitiated...", pawn, MessageTypeDefOf.NegativeEvent, false);
-                return;
-            }
-            else if (soulReapTier == 9)
-            {
-                Messages.Message($"{pawn.Name} is already at the height of {pawn.ProSubj()} power!", pawn, MessageTypeDefOf.NeutralEvent, false);
-                return;
-            }
-
-            // Check that we have enough bloodstones in the stack to proceed.
-            int cost = CalculateAdvanceCost(soulReapTier);
             if (cost > parent.stackCount)
             {
-                Messages.Message($"{pawn.Name}'s offering was rejected. The blood god demands more blood.", pawn, MessageTypeDefOf.NeutralEvent, false);
+                Messages.Message($"{pawn.NameShortColored}'s offering was rejected. The blood god demands more blood.", pawn, MessageTypeDefOf.NeutralEvent, false);
+                Messages.Message($"{cost} {parent.LabelNoCount}s were demanded.", pawn, MessageTypeDefOf.NeutralEvent, false);
                 return;
-            }
-
-            // Blood for the blood god! Skulls for the skull throne!
-            srComp.RemoveSoulReapHediffs();
-            srComp.AddSoulReapTier(soulReapTier + 1);
-            Messages.Message($"The blessing has succeeded, and {pawn.Name} has grown stronger.", pawn, MessageTypeDefOf.PositiveEvent);
-
-            // Destroy the bloodstones that were used up. If there were exactly enough, destroy the stack.
-            if (parent.stackCount == cost)
-            {
-                parent.Destroy();
-            }
+            } 
             else
             {
-                parent.stackCount -= cost;
+                DecrementOnUse(pawn, cost);
+                IncreaseSoulReapTier(pawn);
             }
         }
 
         /// <summary>
-        /// The cost of advancing is 2 ^ (n-2) bloodstones, 
+        /// Increase the soul reap tier of this pawn.
         /// </summary>
-        /// <param name="pawn">The pawn to check</param>
-        /// <returns>True if the random number generated passes the RNG check.
-        /// False if the hediff wasn't a soulreap that can be levelled up, 
-        /// or if the RNG check failed.</returns>
-        private int CalculateAdvanceCost(int tier)
+        /// <param name="pawn">The pawn to increase the Soul Reap tier of.</param>
+        protected void IncreaseSoulReapTier(Pawn pawn)
         {
-            if (tier == -1 || tier == 9)
+            var srComp = pawn.GetComp<SoulReaper>();
+            var soulReapTier = srComp.GetSoulReapTier();
+
+            // Blood for the blood god! Skulls for the skull throne!
+            srComp.RemoveSoulReapHediffs();
+            srComp.AddSoulReapTier(soulReapTier + 1);
+            
+            Messages.Message($"The blessing has succeeded, and {pawn.NameShortColored} has grown stronger.", pawn, MessageTypeDefOf.PositiveEvent);
+        }
+
+        /// <summary>
+        /// Decrement the number of consumed items. If the count would be zero or less, destroy the stack.
+        /// </summary>
+        /// <param name="pawn">The pawn using the stack.</param>
+        /// <param name="cost">The cost of the invocation.</param>
+        protected void DecrementOnUse(Pawn pawn, int cost)
+        {
+            Messages.Message($"{cost} {parent.LabelNoCount}(s) were consumed in {pawn.NameShortColored}'s offering.", pawn, MessageTypeDefOf.NeutralEvent);
+            if (parent.stackCount == cost)
             {
-                return -1;
+                parent.Destroy();
+            }
+            else if (parent.stackCount > cost)
+            {
+                parent.stackCount -= cost;
+            }
+            else
+            {
+                throw new ArgumentException("Attempting to use more items than is available!");
+            }
+        }
+
+        protected abstract int CalculateAdvanceCost(int tier);
+
+        /// <summary>
+        /// Checks if the pawn is eligible to advance soul reap tiers.
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <returns></returns>
+        protected bool ViabilityCheck(Pawn pawn)
+        {
+            var srComp = pawn.GetComp<SoulReaper>();
+            Messages.Message($"{pawn.Name} offers some {parent.LabelNoCount}s to the bloody god.", pawn, MessageTypeDefOf.NeutralEvent, false);
+
+            var soulReapTier = srComp.GetSoulReapTier();
+            if (soulReapTier == -1)
+            {
+                Messages.Message($"The {parent.LabelNoCount} does nothing for the uninitiated...", pawn, MessageTypeDefOf.NegativeEvent, false);
+                return false;
+            }
+            else if (soulReapTier == 9)
+            {
+                Messages.Message($"{pawn.NameShortColored} is already at the height of {pawn.ProSubj()} power!", pawn, MessageTypeDefOf.NeutralEvent, false);
+                return false;
             }
 
-            double cost = Math.Max(1.0, Math.Pow(2, tier - 2));
-
-            return (int)cost;
+            return true;
         }
     }
 }
