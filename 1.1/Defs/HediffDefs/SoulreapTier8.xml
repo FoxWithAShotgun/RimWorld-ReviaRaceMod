@@ -4,6 +4,7 @@
     <defName>ReviaRaceSoulreapTier8</defName>
     <label>Soul Reap (8)</label>
     <description>An indication of how many lives this Revia has taken. Revia grow stronger with the more lives that they take.</description>
+    <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <stages>
       <li>
