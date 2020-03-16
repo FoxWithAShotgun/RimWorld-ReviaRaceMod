@@ -84,7 +84,7 @@ namespace ReviaRace.Comps
         protected bool ViabilityCheck(Pawn pawn)
         {
             var srComp = pawn.GetComp<SoulReaper>();
-            Messages.Message($"{pawn.Name} offers some {parent.LabelNoCount}s to the bloody god.", pawn, MessageTypeDefOf.NeutralEvent, false);
+            Messages.Message($"{pawn.NameShortColored} offers some {parent.LabelNoCount}s to the bloody god.", pawn, MessageTypeDefOf.NeutralEvent, false);
 
             var soulReapTier = srComp.GetSoulReapTier();
             if (soulReapTier == -1)

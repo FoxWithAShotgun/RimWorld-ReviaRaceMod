@@ -5,7 +5,7 @@
     <label>bloodstone</label>
     <description>A blessing given by the Revian pantheon. Supposedly confers divine favour on the user.</description>
     <thingClass>ThingWithComps</thingClass>
-    <techLevel>Archotech</techLevel>
+    <techLevel>Neolithic</techLevel>
     <graphicData>
       <texPath>Things/Item/Health/HealthItem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
