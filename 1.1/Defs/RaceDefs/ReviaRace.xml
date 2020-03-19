@@ -27,7 +27,7 @@
     <drawGUIOverlay>true</drawGUIOverlay>
   </ThingDef>
   
-  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+  <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
     <defName>ReviaRaceAlien</defName>
     <label>Revia</label>
     <description>A bloodthirsty vulpine near-human.</description>
@@ -58,27 +58,13 @@
         <alienPartGenerator>
           <aliencrowntypes>
             <li>Average_Normal</li>
+            <li>Average_Pointy</li>
+            <li>Average_Wide</li>
           </aliencrowntypes>
           <alienbodytypes>
             <li>Thin</li>
             <li>Female</li>
           </alienbodytypes>
-          <alienskincolorgen Class="ColorGenerator_Options">
-            <options>
-              <li>
-                <weight>30</weight>
-                <only>RGBA(0.988, 0.965, 0.860, 1.0)</only>
-              </li>
-              <li>
-                <weight>30</weight>
-                <only>RGBA(0.999, 0.906, 0.839, 1.0)</only>
-              </li>
-              <li>
-                <weight>40</weight>
-                <only>RGBA(0.975, 0.898, 0.882, 1.0)</only>
-              </li>
-            </options>
-          </alienskincolorgen>
           <alienskinsecondcolorgen Class="ColorGenerator_Options">
             <options>
               <li>
@@ -179,6 +165,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </south>
                 <north>
@@ -189,6 +176,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </north>
                 <east>
@@ -199,6 +187,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </east>
               </offsets>
@@ -219,6 +208,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </south>
                 <north>
@@ -229,6 +219,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </north>
                 <east>
@@ -239,6 +230,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </east>
               </offsets>
@@ -259,6 +251,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </south>
                 <north>
@@ -269,6 +262,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </north>
                 <east>
@@ -279,6 +273,7 @@
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
                     <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
                   </crownTypes>
                 </east>
               </offsets>
@@ -377,28 +372,6 @@
       <baseHealthScale>1.15</baseHealthScale>
       <foodType>OmnivoreHuman</foodType>
       <gestationPeriodDays>30.0</gestationPeriodDays>
-      <lifeStageAges>
-        <li>
-          <def>HumanlikeBaby</def>
-          <minAge>0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeToddler</def>
-          <minAge>1.0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeChild</def>
-          <minAge>3.0</minAge>
-        </li>
-        <li>
-          <def>HumanlikeTeenager</def>
-          <minAge>11</minAge>
-        </li>
-        <li>
-          <def>HumanlikeAdult</def>
-          <minAge>16</minAge>
-        </li>
-      </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
