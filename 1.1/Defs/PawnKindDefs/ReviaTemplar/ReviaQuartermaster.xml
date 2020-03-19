@@ -2,7 +2,7 @@
 <Defs>
   <PawnKindDef>
     <defName>ReviaRaceQuartermaster</defName>
-    <label>revia quartermaster</label>
+    <label>Revia quartermaster</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
     <combatPower>125</combatPower>
@@ -13,6 +13,7 @@
       <li>IndustrialMilitaryAdvanced</li>
       <li>SpacerMilitary</li>
     </apparelTags>
+    <isFighter>false</isFighter>
     <apparelRequired>
       <li>Apparel_PlateArmor</li>
     </apparelRequired>

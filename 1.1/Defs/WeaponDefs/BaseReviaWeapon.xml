@@ -51,6 +51,31 @@
     </recipeMaker>
   </ThingDef>
 
+  <ThingDef Name="ReviaBaseAdvancedRangedWeapon" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>IndustrialRangedAdvanced</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
   <ThingDef Name="ReviaBaseAdvancedMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
     <weaponTags>
