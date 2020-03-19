@@ -2,7 +2,7 @@
 <Defs>
   <PawnKindDef>
     <defName>ReviaRaceTemplar</defName>
-    <label>Revia Templar</label>
+    <label>revia templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
     <combatPower>325</combatPower>
@@ -27,7 +27,6 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <isFighter>true</isFighter>
     <invNutrition>5</invNutrition>
     <inventoryOptions>
       <skipChance>0</skipChance>
