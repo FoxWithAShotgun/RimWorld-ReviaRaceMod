@@ -18,11 +18,11 @@
             <li>ElephantTusk</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <products>
-      <ReviaRacePalestone>128</ReviaRacePalestone>
+      <ReviaRacePalestone>16</ReviaRacePalestone>
     </products>
     <recipeUsers>
       <li>ReviaSacrificeSpot</li>
