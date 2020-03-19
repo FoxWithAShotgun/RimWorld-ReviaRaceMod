@@ -6,7 +6,6 @@
     <description>A loose alliance of Revia marauders. These bloodthirsty warriors seek sacrifices and plunder in the honour of their blood god.</description>
     <pawnSingular>revia</pawnSingular>
     <pawnsPlural>revia</pawnsPlural>
-    <listOrderPriority>10</listOrderPriority>
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
@@ -59,7 +58,6 @@
         <options>
           <ReviaRaceMarauder>5</ReviaRaceMarauder>
           <ReviaRaceBerserker>5</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>1</ReviaRaceSkullshatterer>
         </options>
       </li>
       <li>
@@ -69,7 +67,6 @@
           <ReviaRaceMarauder>15</ReviaRaceMarauder>
           <ReviaRaceRaider>15</ReviaRaceRaider>
           <ReviaRaceBerserker>5</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>5</ReviaRaceSkullshatterer>
         </options>
       </li>
     </pawnGroupMakers>
