@@ -42,8 +42,5 @@
     <workDisables>
       <li>Caring</li>
     </workDisables>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier6</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

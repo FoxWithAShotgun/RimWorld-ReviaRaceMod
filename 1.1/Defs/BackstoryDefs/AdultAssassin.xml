@@ -33,8 +33,5 @@
       <li>Intellectual</li>
       <li>Artistic</li>
     </workDisables>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier4</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

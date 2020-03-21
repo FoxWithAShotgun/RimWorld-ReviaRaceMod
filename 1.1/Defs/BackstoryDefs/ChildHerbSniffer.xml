@@ -31,8 +31,5 @@
       </li>
     </skillGains>
     <linkedBackstory>ReviaRaceBackstoryAdultFleshBinder</linkedBackstory>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier2</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

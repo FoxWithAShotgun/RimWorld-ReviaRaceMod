@@ -26,9 +26,6 @@
       <li>Firefighting</li>
       <li>Caring</li>
     </workDisables>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier1</li>
-    </forcedHediffs>
     <linkedBackstory>ReviaRaceBackstoryAdultWarsmith</linkedBackstory>
   </AlienRace.BackstoryDef>
 </Defs>

@@ -27,8 +27,5 @@
       </li>
     </skillGains>
     <linkedBackstory>ReviaRaceBackstoryAdultAcolyte</linkedBackstory>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier2</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

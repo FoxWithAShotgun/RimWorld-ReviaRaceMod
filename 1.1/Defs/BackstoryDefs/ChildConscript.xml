@@ -25,9 +25,6 @@
     <workDisables>
       <li>Caring</li>
     </workDisables>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier3</li>
-    </forcedHediffs>
     <linkedBackstory>ReviaRaceBackstoryAdultShadowGuard</linkedBackstory>
   </AlienRace.BackstoryDef>
 </Defs>

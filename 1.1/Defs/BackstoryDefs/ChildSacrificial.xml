@@ -31,8 +31,5 @@
       <li>Social</li>
     </workDisables>
     <linkedBackstory>ReviaRaceBackstoryAdultWayfarer</linkedBackstory>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier1</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

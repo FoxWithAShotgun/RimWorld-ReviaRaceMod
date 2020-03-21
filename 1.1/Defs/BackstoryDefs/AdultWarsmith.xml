@@ -26,8 +26,5 @@
         <amount>-2</amount>
       </li>
     </skillGains>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier1</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

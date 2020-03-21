@@ -30,8 +30,5 @@
       <li>Intellectual</li>
       <li>Caring</li>
     </workDisables>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier3</li>
-    </forcedHediffs>
   </AlienRace.BackstoryDef>
 </Defs>

@@ -18,9 +18,6 @@
         <amount>6</amount>
       </li>
     </skillGains>
-    <forcedHediffs>
-      <li>ReviaRaceSoulreapTier4</li>
-    </forcedHediffs>
     <linkedBackstory>ReviaRaceBackstoryAdultAssassin</linkedBackstory>
   </AlienRace.BackstoryDef>
 </Defs>
