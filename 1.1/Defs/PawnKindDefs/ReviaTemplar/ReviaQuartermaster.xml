@@ -14,6 +14,7 @@
       <li>SpacerMilitary</li>
     </apparelTags>
     <isFighter>false</isFighter>
+    <trader>true</trader>
     <apparelRequired>
       <li>Apparel_PlateArmor</li>
     </apparelRequired>

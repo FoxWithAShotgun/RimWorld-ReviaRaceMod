@@ -4,7 +4,7 @@
     <defName>ReviaDoBillsUseSacrificeSpot</defName>
     <label>sacrifice things at sacrifice spot</label>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>BasicWorker</workType>
+    <workType>Cooking</workType>
     <priorityInType>100</priorityInType>
     <fixedBillGiverDefs>
       <li>ReviaSacrificeSpot</li>
