@@ -7,7 +7,7 @@ Features:
 - Revia are guaranteed to have the Bloodlust trait, and are likely to have some positive degree of the beauty trait.
 - Revia never have Wimp. One that cannot fight is soon to die.
 - Revia are very likely to have some level of scarring on them.
-- Revia have a mechanic that tracks kills. Visually, this can be seen as extra tails, but they also confer a stat bonus in the way of melee damage, damage reduction and health increases. Tiers range from 1 to 9, where 1 represents a Revia with no kills to her name, and 9 is a Revia who has done (2^8 = 256) kills. Ranged kills are counted as only half of a full kill. Downing an opponent does NOT count towards this total; it has to be a killing blow. (WIP)
+- Revia have a mechanic that lets them grow in stats. Visually, this is seen as additional tails. Levels can be gained by sacrificing humanlikes or trophies, and then offering up increasing amounts of these trophies.
 - Revia may wear any clothing that a baseline human can wear, and will NEVER have any restrictions in regards to equipment. I don't believe in restricting the user's choice in what mods are used; season your own game as you need!
 - Revia factions often send out marauding warbands to shed blood in the name of their god. Whether this blood is your colonists', or that of the attacking Revia marauders', matters very little to them -- blood is blood, and they will never retreat.
 - Revia factions are hostile to all except for their own race. However, they are still receptive to gifts (read: tribute). Their constant warring and raiding means that they tend to have highly effective weapons and armour for sale, if you somehow satisfy their thirst for plunder.
