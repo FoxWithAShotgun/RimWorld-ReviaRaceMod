@@ -12,6 +12,7 @@
     <effectWorking>ButcherFlesh</effectWorking>
     <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
     <interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
+    <autoStripCorpses>false</autoStripCorpses>
     <ingredients>
       <li>
         <filter>

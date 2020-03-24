@@ -4,7 +4,7 @@
     <defName>ReviaDoBillsUseBloodSigil</defName>
     <label>sacrifice things at blood sigil</label>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Cooking</workType>
+    <workType>ReviaSacrifice</workType>
     <priorityInType>100</priorityInType>
     <fixedBillGiverDefs>
       <li>ReviaBloodSigil</li>

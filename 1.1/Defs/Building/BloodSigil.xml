@@ -23,12 +23,13 @@
     </stuffCategories>
     <researchPrerequisites>
       <li>Stonecutting</li>
+      <li>ReviaRaceReligionBase</li>
     </researchPrerequisites>
     <costStuffCount>150</costStuffCount>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>false</useHitPoints>
     <size>(3,3)</size>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>ReviaCategory</designationCategory>
     <rotatable>true</rotatable>
     <passability>Standable</passability>
     <hasInteractionCell>True</hasInteractionCell>
@@ -48,6 +49,7 @@
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <ai_chillDestination>false</ai_chillDestination>
     </building>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <placeWorkers>
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
     </placeWorkers>

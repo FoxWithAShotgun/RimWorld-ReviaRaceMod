@@ -33,10 +33,5 @@
       <li>Rural</li>
       <li>Urban</li>
     </hairTags>
-    <apparelStuffFilter>
-      <thingDefs>
-        <li>DevilstrandCloth</li>
-      </thingDefs>
-    </apparelStuffFilter>
   </FactionDef>
 </Defs>

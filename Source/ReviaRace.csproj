@@ -56,6 +56,7 @@
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -32,6 +32,14 @@
     <hairTags>
       <li>Rural</li>
     </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+        <li>Steel</li>
+        <li>WoodLog</li>
+        <li>Limestone</li>
+      </thingDefs>
+    </apparelStuffFilter>
     <allowedArrivalTemperatureRange>-40~55</allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>

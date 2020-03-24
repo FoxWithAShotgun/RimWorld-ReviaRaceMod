@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>ReviaRaceConsecratedWeaponry</defName>
+    <label>Revian consecrated weaponry</label>
+    <description>Invoking the blessings of the blood god to imbue weapons with greater capacity for carnage.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>ReviaRaceReligionTab</tab>
+    <prerequisites>
+      <li>ReviaRaceReligionBase</li>
+      <li>ReviaRaceAdvancedEquipment</li>
+    </prerequisites>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
+  </ResearchProjectDef>
+</Defs>

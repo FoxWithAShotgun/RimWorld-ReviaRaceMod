@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>ReviaGreaterBloodRuneBlank</defName>
+    <label>Greater Blood Rune (inert)</label>
+    <description>A symbol of Skarne, carefully carved on a richly decorated disc.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(190, 20, 20)</color>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <Mass>0.01</Mass>
+      <MarketValue>3500</MarketValue>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>
+      <Beauty>4</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+  </ThingDef>
+</Defs>

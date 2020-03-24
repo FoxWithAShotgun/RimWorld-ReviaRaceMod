@@ -6,6 +6,7 @@
     <description>Create advanced Revian equipment.</description>
     <baseCost>2500</baseCost>
     <techLevel>Industrial</techLevel>
+    <tab>ReviaRaceEquipmentTab</tab>
     <prerequisites>
       <li>ReviaRaceIntermediateEquipment</li>
       <li>Machining</li>

@@ -31,6 +31,13 @@
       <li>Rural</li>
       <li>Urban</li>
     </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>DevilstrandCloth</li>
+        <li>Plasteel</li>
+        <li>Granite</li>
+      </thingDefs>
+    </apparelStuffFilter>
     <caravanTraderKinds>
       <li>Caravan_Outlander_BulkGoods</li>
       <li>Caravan_Outlander_CombatSupplier</li>
