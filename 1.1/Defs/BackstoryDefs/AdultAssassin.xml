@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryAdultAssassin</defName>
-    <title>Revia Assassin</title>
+    <title>Revian Assassin</title>
     <titleShort>Assassin</titleShort>
     <baseDescription>[PAWN_nameDef] was a weapon to silence whoever they were pointed at. [PAWN_pronoun] is utterly lethal with a blade, but cares little for what it actually cuts into. As long as it hits something fleshy, [PAWN_pronoun] is satisfied.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

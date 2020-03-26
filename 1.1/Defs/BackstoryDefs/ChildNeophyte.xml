@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryChildNeophyte</defName>
-    <title>Neophyte</title>
+    <title>Revian Neophyte</title>
     <titleShort>Neophyte</titleShort>
     <baseDescription>The lucky few who are taken in by the priesthood in Revian society are well cared for, and typically want for nothing. However, their days are filled with memorisation of litanies and chanting of prayers, as well as researching matters of the mundane and the occult. [PAWN_nameDef] was one such child. [PAWN_possessive] physical prowess lagged behind, yet [PAWN_possessive] mind grew by leaps and bounds.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

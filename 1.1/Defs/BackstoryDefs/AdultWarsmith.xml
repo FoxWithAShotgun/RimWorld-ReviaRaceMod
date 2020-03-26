@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryAdultWarsmith</defName>
-    <title>Warsmith</title>
+    <title>Revian Warsmith</title>
     <titleShort>Warsmith</titleShort>
     <baseDescription>[PAWN_nameDef] is a master craftsman of the Revia. [PAWN_pronoun] works metal like a potter would clay, fashioning items of incredible quality.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryChildOrphan</defName>
-    <title>Orphan Child</title>
+    <title>Revian Orphan Child</title>
     <titleShort>Orphan</titleShort>
     <baseDescription>[PAWN_nameDef] was a street rat. [PAWN_possessive] parents were killed in the constant blood wars of Revia society, and [PAWN_pronoun] was taken in by an order of assassins. [PAWN_pronoun] learned much about how to wield blades as a result - and had plenty of practice.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

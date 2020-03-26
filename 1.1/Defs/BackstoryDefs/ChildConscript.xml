@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryChildConscript</defName>
-    <title>Conscript</title>
+    <title>Revian Conscript</title>
     <titleShort>Conscript</titleShort>
     <baseDescription>[PAWN_nameDef] was conscripted at a young age to be toughened up to be a part of the Revian war machine.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

@@ -3,7 +3,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryAdultDarkTemplar</defName>
-    <title>Dark Templar</title>
+    <title>Revian Dark Templar</title>
     <titleShort>Templar</titleShort>
     <baseDescription>[PAWN_nameDef] is a part of the higher echelons of the dark god's priesthood. Skilled with blades as much as [PAWN_pronoun] is with [PAWN_possessive] wits, [PAWN_pronoun] is as equally charismatic as [PAWN_pronoun] is dangerous.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>

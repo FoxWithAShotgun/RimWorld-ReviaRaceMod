@@ -2,7 +2,7 @@
 <Defs>
   <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryAdultReaver</defName>
-    <title>Revia Reaver</title>
+    <title>Revian Reaver</title>
     <titleShort>Reaver</titleShort>
     <baseDescription>[PAWN_nameDef] was once an abandoned child. Now grown, [PAWN_pronoun] wishes to see the world burn for its perceived sins.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
