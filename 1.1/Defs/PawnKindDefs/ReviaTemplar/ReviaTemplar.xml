@@ -5,7 +5,7 @@
     <label>Revia Templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
-    <combatPower>325</combatPower>
+    <combatPower>75</combatPower>
     <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>

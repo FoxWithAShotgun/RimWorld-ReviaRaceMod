@@ -5,7 +5,7 @@
     <label>revia raider</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>120</combatPower>
+    <combatPower>35</combatPower>
     <baseRecruitDifficulty>0.65</baseRecruitDifficulty>
     <itemQuality>Poor</itemQuality>
     <apparelTags>

@@ -5,7 +5,7 @@
     <label>Revia quartermaster</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
-    <combatPower>125</combatPower>
+    <combatPower>55</combatPower>
     <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
