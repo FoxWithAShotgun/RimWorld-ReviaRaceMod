@@ -23,12 +23,14 @@
     <weaponMoney>9999~9999</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
+    <combatEnhancingDrugsChance>1.0</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
         <li>
           <choiceChance>90</choiceChance>
-          <thingDef>Luciferium</thingDef>
+          <thingDef>ReviaRaceRedHaze</thingDef>
           <countRange>1~3</countRange>
         </li>
         <li>

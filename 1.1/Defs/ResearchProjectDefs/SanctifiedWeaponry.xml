@@ -9,7 +9,7 @@
     <tab>ReviaRaceReligionTab</tab>
     <prerequisites>
       <li>ReviaRaceReligionBase</li>
-      <li>ReviaRaceAdvancedEquipment</li>
+      <li>ReviaRaceIntermediateEquipment</li>
     </prerequisites>
     <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>

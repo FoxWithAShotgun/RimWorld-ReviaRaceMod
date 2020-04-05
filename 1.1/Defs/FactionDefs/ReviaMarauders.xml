@@ -46,7 +46,7 @@
       <li>
         <!--Type 1 - high quantity, low quality-->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>30</commonality>
         <options>
           <ReviaRaceRaider>20</ReviaRaceRaider>
           <ReviaRaceMarauder>5</ReviaRaceMarauder>
@@ -55,11 +55,22 @@
       <li>
         <!--Type 2 - high quality, low quantity-->
         <kindDef>Combat</kindDef>
-        <commonality>15</commonality>
+        <commonality>30</commonality>
         <options>
           <ReviaRaceMarauder>5</ReviaRaceMarauder>
           <ReviaRaceBerserker>5</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>1</ReviaRaceSkullshatterer>
+          <ReviaRaceSkullshatterer>5</ReviaRaceSkullshatterer>
+        </options>
+      </li>
+      <li>
+        <!--Type 3 - balanced-->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <ReviaRaceRaider>10</ReviaRaceRaider>
+          <ReviaRaceMarauder>5</ReviaRaceMarauder>
+          <ReviaRaceBerserker>3</ReviaRaceBerserker>
+          <ReviaRaceSkullshatterer>3</ReviaRaceSkullshatterer>
         </options>
       </li>
       <li>
