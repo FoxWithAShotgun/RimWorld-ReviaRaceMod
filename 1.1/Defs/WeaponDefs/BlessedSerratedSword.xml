@@ -29,8 +29,11 @@
       <li>Metallic</li>
     </stuffCategories>
     <weaponTags>
-      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeLegendary</li>
     </weaponTags>
+    <comps>
+      <li Class="CompProperties_BiocodableWeapon"/>
+    </comps>
     <tools>
       <li>
         <label>handle</label>

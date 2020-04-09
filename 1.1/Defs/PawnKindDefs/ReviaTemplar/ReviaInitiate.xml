@@ -28,5 +28,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
   </PawnKindDef>
 </Defs>

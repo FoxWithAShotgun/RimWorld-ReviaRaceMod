@@ -2,9 +2,6 @@
 <Defs>
   <ThingDef Name="ReviaBaseRangedWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>Medieval</li>
-    </weaponTags>
     <thingCategories>
       <li>WeaponsRanged</li>
     </thingCategories>
@@ -28,9 +25,6 @@
 
   <ThingDef Name="ReviaBaseMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>MedievalMeleeAdvanced</li>
-    </weaponTags>
     <thingCategories>
       <li>WeaponsMelee</li>
     </thingCategories>
@@ -53,9 +47,6 @@
 
   <ThingDef Name="ReviaBaseAdvancedRangedWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
-    <weaponTags>
-      <li>IndustrialRangedAdvanced</li>
-    </weaponTags>
     <thingCategories>
       <li>WeaponsRanged</li>
     </thingCategories>
@@ -78,9 +69,6 @@
 
   <ThingDef Name="ReviaBaseAdvancedMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Industrial</techLevel>
-    <weaponTags>
-      <li>IndustrialMeleeAdvanced</li>
-    </weaponTags>
     <thingCategories>
       <li>WeaponsMelee</li>
     </thingCategories>

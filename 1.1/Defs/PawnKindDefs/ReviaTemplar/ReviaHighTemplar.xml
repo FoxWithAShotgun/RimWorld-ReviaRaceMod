@@ -19,15 +19,19 @@
     </apparelRequired>
     <apparelMoney>9999~9999</apparelMoney>
     <weaponTags>
-      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeLegendary</li>
       <li>ReviaRangedAdvanced</li>
     </weaponTags>
+    <biocodeWeaponChance>1.0</biocodeWeaponChance>
     <weaponMoney>9999~9999</weaponMoney>
     <techHediffsChance>1.0</techHediffsChance>
     <techHediffsMoney>9999~9999</techHediffsMoney>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
     <invNutrition>5</invNutrition>
     <inventoryOptions>
       <skipChance>0</skipChance>

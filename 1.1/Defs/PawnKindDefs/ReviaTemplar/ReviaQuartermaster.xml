@@ -29,6 +29,9 @@
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
     <invNutrition>5</invNutrition>
     <inventoryOptions>
       <skipChance>0</skipChance>

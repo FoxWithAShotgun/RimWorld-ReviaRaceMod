@@ -18,13 +18,14 @@
     </apparelRequired>
     <apparelMoney>9999~9999</apparelMoney>
     <weaponTags>
-      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeLegendary</li>
     </weaponTags>
     <weaponMoney>9999~9999</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
     <combatEnhancingDrugsChance>1.0</combatEnhancingDrugsChance>
     <combatEnhancingDrugsCount>1~2</combatEnhancingDrugsCount>
+    <biocodeWeaponChance>1.0</biocodeWeaponChance>
     <inventoryOptions>
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
@@ -40,5 +41,8 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
   </PawnKindDef>
 </Defs>
