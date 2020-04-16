@@ -20,36 +20,24 @@ namespace ReviaRace.Comps
                 // This should have at least tier 1 of soul reap.
                 // Add it now.
                 var rng = new Random();
-                var tier = rng.Next(1, 3);
-                AddSoulReapTier(tier);
+                AddSoulReapTier(rng.Next(1,5));
             }
         }
 
         private Hediff SoulReapHediff => (parent as Pawn)?.health.hediffSet.hediffs
-                                         .FirstOrDefault(hediff => hediff.def.label.Contains("Soul Reap"));
+                                         .FirstOrDefault(hediff => hediff.def.defName.Contains("ReviaRaceSoulreapTier"));
 
         internal int GetSoulReapTier()
         {
-            var tier = -1;
-
             if (SoulReapHediff != null)
             {
-                switch (SoulReapHediff.def.defName)
-                {
-                    case "ReviaRaceSoulreapTier1": tier = 1; break;
-                    case "ReviaRaceSoulreapTier2": tier = 2; break;
-                    case "ReviaRaceSoulreapTier3": tier = 3; break;
-                    case "ReviaRaceSoulreapTier4": tier = 4; break;
-                    case "ReviaRaceSoulreapTier5": tier = 5; break;
-                    case "ReviaRaceSoulreapTier6": tier = 6; break;
-                    case "ReviaRaceSoulreapTier7": tier = 7; break;
-                    case "ReviaRaceSoulreapTier8": tier = 8; break;
-                    case "ReviaRaceSoulreapTier9": tier = 9; break;
-                    default: break;
-                }
+                string tierAsString = SoulReapHediff.def.defName.Replace("ReviaRaceSoulreapTier", "");
+                return int.TryParse(tierAsString, out int tier) ? tier : -1;
             }
-
-            return tier;
+            else
+            {
+                return -1;
+            }
         }
 
         internal void AddSoulReapTier(int tier)
