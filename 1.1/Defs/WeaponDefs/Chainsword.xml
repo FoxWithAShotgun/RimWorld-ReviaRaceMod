@@ -20,7 +20,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <weaponTags>
-      <!-- ==== Insert corresponding weaponTag here ==== -->
+      <li>ReviaMeleeAdvanced</li>
     </weaponTags>
     <statBases>
       <WorkToMake>13200</WorkToMake>

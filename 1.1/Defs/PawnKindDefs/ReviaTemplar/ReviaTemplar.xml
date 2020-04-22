@@ -18,7 +18,8 @@
     </apparelRequired>
     <apparelMoney>2400~3200</apparelMoney>
     <weaponTags>
-      <li>MedievalMeleeAdvanced</li>
+      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeLegendary</li>
       <li>Gun</li>
     </weaponTags>
     <weaponMoney>2400~3000</weaponMoney>

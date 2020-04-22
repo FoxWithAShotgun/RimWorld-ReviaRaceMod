@@ -17,7 +17,8 @@
     </apparelRequired>
     <apparelMoney>600~1000</apparelMoney>
     <weaponTags>
-      <li>ReviaMeleeIntermediate</li>
+      <li>ReviaMeleeAdvanced</li>
+      <li>ReviaMeleeLegendary</li>
     </weaponTags>
     <weaponMoney>2500~3000</weaponMoney>
     <techHediffsChance>0</techHediffsChance>

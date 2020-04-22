@@ -13,7 +13,8 @@
     </apparelTags>
     <apparelMoney>800~1200</apparelMoney>
     <weaponTags>
-      <li>MedievalMeleeAdvanced</li>
+      <li>ReviaMeleeAdvanced</li>
+      <li>Gun</li>
     </weaponTags>
     <weaponMoney>1500~2500</weaponMoney>
     <isFighter>true</isFighter>
