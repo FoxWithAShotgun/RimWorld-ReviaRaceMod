@@ -19,6 +19,9 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
+    <weaponTags>
+      <!-- ==== Insert corresponding weaponTag here ==== -->
+    </weaponTags>
     <statBases>
       <WorkToMake>13200</WorkToMake>
       <Mass>4.00</Mass>
