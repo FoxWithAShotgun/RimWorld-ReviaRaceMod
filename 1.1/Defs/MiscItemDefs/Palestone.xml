@@ -13,13 +13,10 @@
       <color>(220, 220, 200)</color>
     </graphicData>
     <stackLimit>2000</stackLimit>
-    <thingCategories>
-      <li>Artifacts</li>
-    </thingCategories>
     <tradeTags>
       <li>Artifact</li>
     </tradeTags>
-    <tradeability>Sellable</tradeability>
+    <tradeability>None</tradeability>
     <statBases>
       <Mass>0.01</Mass>
       <MarketValue>20</MarketValue>

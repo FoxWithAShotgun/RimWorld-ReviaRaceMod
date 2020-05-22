@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ResearchTabDef>
-    <defName>ReviaRaceReligionTab</defName>
-    <label>Revian Religion</label>
+    <defName>ReviaRaceResearchTab</defName>
+    <label>Revian Technologies</label>
   </ResearchTabDef>
 </Defs>

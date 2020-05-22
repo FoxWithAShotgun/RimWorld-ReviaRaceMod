@@ -6,7 +6,7 @@
     <description>Create intermediate Revian equipment.</description>
     <baseCost>1000</baseCost>
     <techLevel>Medieval</techLevel>
-    <tab>ReviaRaceEquipmentTab</tab>
+    <tab>ReviaRaceResearchTab</tab>
     <prerequisites>
       <li>ReviaRaceBasicEquipment</li>
       <li>RecurveBow</li>

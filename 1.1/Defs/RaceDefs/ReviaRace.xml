@@ -284,6 +284,14 @@
           <li>Urban</li>
         </hairTags>
       </hairSettings>
+      <thoughtSettings>
+        <replacerList>
+          <li>
+            <original>ReviaRaceThoughtSacrificed</original>
+            <replacer>ReviaRaceThoughtSacrificedPositive</replacer>
+          </li>
+        </replacerList>
+      </thoughtSettings>
     </alienRace>
     <statBases>
       <MarketValue>2250</MarketValue>

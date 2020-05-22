@@ -6,12 +6,12 @@
     <description>Invoking the blessings of the blood god to imbue weapons with greater capacity for carnage.</description>
     <baseCost>1000</baseCost>
     <techLevel>Medieval</techLevel>
-    <tab>ReviaRaceReligionTab</tab>
+    <tab>ReviaRaceResearchTab</tab>
     <prerequisites>
       <li>ReviaRaceReligionBase</li>
       <li>ReviaRaceIntermediateEquipment</li>
     </prerequisites>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
 </Defs>

@@ -6,8 +6,8 @@
     <description>Learn the fundamentals of giving proper offerings to the Revian gods.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
-    <tab>ReviaRaceReligionTab</tab>
+    <tab>ReviaRaceResearchTab</tab>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>1.00</researchViewY>
+    <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
 </Defs>
