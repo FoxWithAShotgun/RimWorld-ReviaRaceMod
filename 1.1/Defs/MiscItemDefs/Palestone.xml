@@ -13,9 +13,9 @@
       <color>(220, 220, 200)</color>
     </graphicData>
     <stackLimit>2000</stackLimit>
-    <tradeTags>
-      <li>Artifact</li>
-    </tradeTags>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
     <tradeability>None</tradeability>
     <statBases>
       <Mass>0.01</Mass>
