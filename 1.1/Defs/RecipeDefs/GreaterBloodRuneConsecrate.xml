@@ -10,6 +10,7 @@
     <workSkill>Intellectual</workSkill>
     <effectWorking>Smelt</effectWorking>
     <soundWorking>Recipe_Smelt</soundWorking>
+    <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
     <skillRequirements>
       <Intellectual>14</Intellectual>
     </skillRequirements>

@@ -10,6 +10,7 @@
     <workSkill>Artistic</workSkill>
     <effectWorking>Smelt</effectWorking>
     <soundWorking>Recipe_Smelt</soundWorking>
+    <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
     <skillRequirements>
       <Artistic>8</Artistic>
     </skillRequirements>
