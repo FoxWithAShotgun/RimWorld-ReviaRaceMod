@@ -14,6 +14,7 @@
     <statBases>
       <WorkToBuild>600</WorkToBuild>
       <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
+      <MeditationFocusStrength>0.25</MeditationFocusStrength>
     </statBases>
     <costList>
       <ReviaRaceBloodstone>4</ReviaRaceBloodstone>
@@ -41,6 +42,12 @@
     <comps>
       <li>
         <compClass>CompReportWorkSpeed</compClass>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Morbid</li>
+        </focusTypes>
       </li>
     </comps>
     <building>
