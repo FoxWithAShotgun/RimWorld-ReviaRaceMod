@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaSerratedSword</defName>
+    <label>scourge</label>
+    <description>A cruel sword with a serrated blade. Designed to inflict severe bleeding and grievous wounds.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>100</costStuffCount>
+    <statBases>
+      <WorkToMake>10800</WorkToMake>
+      <Mass>1.50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaMeleeIntermediate</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.08</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.00</cooldownTime>
+        <armorPenetration>0.18</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.00</cooldownTime>
+        <armorPenetration>0.13</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

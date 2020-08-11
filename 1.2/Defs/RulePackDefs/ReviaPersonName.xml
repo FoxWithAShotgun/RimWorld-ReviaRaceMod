@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerPersonRevia</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[formalName] [orderName]</li>
+        <li>name->[formalName] '[givenName]' [orderName]</li>
+
+        <li>givenName->Sapphire</li>
+        <li>givenName->Emerald</li>
+        <li>givenName->Ruby</li>
+        <li>givenName->Citrine</li>
+        <li>givenName->Diamond</li>
+        <li>givenName->Aquamarine</li>
+        <li>givenName->Tourmaline</li>
+        <li>givenName->Garnet</li>
+        <li>givenName->Topaz</li>
+        <li>givenName->Quartz</li>
+        <li>givenName->Lapis</li>
+        <li>givenName->Alexandrite</li>
+        <li>givenName->Azurite</li>
+        <li>givenName->Beryl</li>
+        <li>givenName->Amethyst</li>
+        <li>givenName->Amber</li>
+        <li>givenName->Chrysoberyl</li>
+        <li>givenName->Coral</li>
+        <li>givenName->Bloodstone</li>
+        <li>givenName->Malachite</li>
+        <li>givenName->Carnelian</li>
+        <li>givenName->Druzy</li>
+        <li>givenName->Jade</li>
+        <li>givenName->Kyanite</li>
+        <li>givenName->Opal</li>
+        <li>givenName->Moonstone</li>
+        <li>givenName->Onyx</li>
+        <li>givenName->Pearl</li>
+        <li>givenName->Peridot</li>
+        <li>givenName->Serpentine</li>
+        <li>givenName->Spinel</li>
+        <li>givenName->Tanzanite</li>
+        <li>givenName->Turquoise</li>
+        <li>givenName->Zircon</li>
+
+        <li>formalName->Aurelia</li>
+        <li>formalName->Victoria</li>
+        <li>formalName->Cornelia</li>
+        <li>formalName->Prima</li>
+        <li>formalName->Secunda</li>
+        <li>formalName->Tertia</li>
+        <li>formalName->Quartia</li>
+        <li>formalName->Amelia</li>
+        <li>formalName->Livia</li>
+        <li>formalName->Aeliana</li>
+        <li>formalName->Antonia</li>
+        <li>formalName->Augusta</li>
+        <li>formalName->Invicta</li>
+        <li>formalName->Decima</li>
+        <li>formalName->Flavia</li>
+        <li>formalName->Sabina</li>
+        <li>formalName->Tullia</li>
+        <li>formalName->Priscilla</li>
+        <li>formalName->Octavia</li>
+        <li>formalName->Valentina</li>
+        <li>formalName->Valeria</li>
+        <li>formalName->Aemilia</li>
+        <li>formalName->Julia</li>
+
+        <li>orderName->[totemNouns][lowercaseAdj]</li>
+
+        <li>totemNouns->North</li>
+        <li>totemNouns->South</li>
+        <li>totemNouns->East</li>
+        <li>totemNouns->West</li>
+        <li>totemNouns->Blood</li>
+        <li>totemNouns->Flesh</li>
+        <li>totemNouns->Stone</li>
+        <li>totemNouns->Steel</li>
+        <li>totemNouns->Sky</li>
+        <li>totemNouns->Moon</li>
+        <li>totemNouns->Star</li>
+        <li>totemNouns->Sea</li>
+        <li>totemNouns->Light</li>
+
+        <li>lowercaseAdj->breaker</li>
+        <li>lowercaseAdj->carver</li>
+        <li>lowercaseAdj->scar</li>
+        <li>lowercaseAdj->devourer</li>
+        <li>lowercaseAdj->bane</li>
+        <li>lowercaseAdj->crusher</li>
+        <li>lowercaseAdj->smasher</li>
+        <li>lowercaseAdj->slayer</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>
