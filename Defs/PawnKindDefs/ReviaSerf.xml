@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <defName>ReviaRaceSerf</defName>
+    <label>serf</label>
+    <race>ReviaRaceAlien</race>
+    <chemicalAddictionChance>0.00</chemicalAddictionChance>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelMoney>100~150</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0</techHediffsChance>
+    <combatPower>25</combatPower>
+    <baseRecruitDifficulty>0.5</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>ReviaRaceBackstory</li>
+    </backstoryCategories>
+  </PawnKindDef>
+</Defs>

@@ -2,7 +2,7 @@
 <Defs>
   <TaleDef>
     <defName>ReviaRaceTaleSacrificed</defName>
-    <label>humanlike corpse desecrated</label>
+    <label>humanlike corpse sacrificed</label>
     <taleClass>Tale_SinglePawn</taleClass>
     <type>Expirable</type>
     <usableForArt>false</usableForArt>

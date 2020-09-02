@@ -1,17 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RulePackDef>
-    <defName>NamerFactionReviaMarauder</defName>
+    <defName>NamerSettlementReviaMarauder</defName>
     <rulePack>
       <rulesStrings>
-        <li>r_name->The [Gore] [groupendevil]</li>
-        <li>r_name->The [ColorBadass] [groupendevil]</li>
-        <li>r_name->The [ConceptBadass] [groupendevil]</li>
-
-        <li>groupendevil->Devourers</li>
-        <li>groupendevil->Purgers</li>
-        <li>groupendevil->Marauders</li>
-        <li>groupendevil->Zealots</li>
+        <li>r_name->[ConceptBadass] Lair</li>
+        <li>r_name->[ConceptBadass] Camp</li>
+        <li>r_name->[ColorBadass] [geography]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
