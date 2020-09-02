@@ -25,7 +25,17 @@ namespace ReviaRace.Comps
 
             if (cost > parent.stackCount)
             {
-                Messages.Message($"{pawn.NameShortColored}'s offering was rejected. The blood god demands more blood.", pawn, MessageTypeDefOf.NeutralEvent, false);
+                
+                if (cost / 2.0f > parent.stackCount)
+                {
+                    Messages.Message($"The blood god was gravely insulted by {pawn.NameShortColored}'s paltry offering!", pawn, MessageTypeDefOf.NegativeEvent, false);
+                    new WeatherEvent_LightningFlash(pawn.Map).FireEvent();
+                    new WeatherEvent_LightningStrike(pawn.Map, pawn.Position).FireEvent();
+                }
+                else
+                {
+                    Messages.Message($"{pawn.NameShortColored}'s offering was rejected. The blood god demands more blood.", pawn, MessageTypeDefOf.NeutralEvent, false);
+                }
                 Messages.Message($"{cost} {parent.LabelNoCount}s were demanded.", pawn, MessageTypeDefOf.NeutralEvent, false);
                 return;
             } 

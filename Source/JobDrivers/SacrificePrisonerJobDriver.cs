@@ -58,28 +58,29 @@ namespace ReviaRace.JobDrivers
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return pawn.Reserve(Prisoner, job, 1, -1, null, errorOnFailed) &&
-                   pawn.Reserve(SacrificeSpot, job, 1, -1, null);
+            return pawn.Reserve(Prisoner, this.job) &&
+                   pawn.Reserve(SacrificeSpot, this.job);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            this.job.count = 1;
-
             this.FailOnDestroyedOrNull(iPrisoner);
             this.FailOnDestroyedOrNull(iSacrificeBuilding);
             this.FailOnAggroMentalState(iPrisoner);
-            
+
             yield return Toils_Goto.GotoThing(iPrisoner, PathEndMode.OnCell);
             yield return Toils_Haul.StartCarryThing(iPrisoner, true, false);
             yield return Toils_Goto.GotoThing(iSacrificeBuilding, SacrificeSpot.InteractionCell);
-
-            var dropSacrificePrisoner = Toils_Reserve.Release(iPrisoner);
-            yield return dropSacrificePrisoner;
-
+            yield return Toils_Reserve.Release(iPrisoner);
+            
             var doSacrificePrisoner = new Toil
             {
                 socialMode = RandomSocialMode.Off,
+            };
+            doSacrificePrisoner.initAction = () =>
+            {
+                Sacrificer.carryTracker.TryDropCarriedThing(SacrificeSpot.InteractionCell, ThingPlaceMode.Direct, out var thing, null);
+                Prisoner.jobs.StartJob(JobMaker.MakeJob(Defs.PrisonerWait));
             };
             doSacrificePrisoner.AddFailCondition(() => Prisoner.Dead);
             doSacrificePrisoner.defaultCompleteMode = ToilCompleteMode.Never;
@@ -92,6 +93,7 @@ namespace ReviaRace.JobDrivers
                 }
             });
             yield return doSacrificePrisoner.WithProgressBar(iPawn, () => (float)TicksLeft / TicksMax);
+            
             yield return Toils_Reserve.Release(iSacrificeBuilding);
             var afterSacrificePrisoner = new Toil
             {
@@ -116,24 +118,33 @@ namespace ReviaRace.JobDrivers
                     // Apply thoughts to pawns.
                     foreach (var mapPawn in Map.mapPawns.FreeColonistsAndPrisoners)
                     {
-                        MemoryThoughtHandler memoryHandler = new MemoryThoughtHandler(mapPawn);
                         if (mapPawn.IsPrisoner)
                         {
-                            memoryHandler.TryGainMemory(Defs.SacrificedFear);
+                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedFear);
                         }
                         else if (mapPawn.IsColonist && mapPawn.IsRevia())
                         {
-                            memoryHandler.TryGainMemory(Defs.SacrificedPositive);
+                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
                         }
                         else if (mapPawn.IsColonist &&
                                  mapPawn.IsCannibal() || mapPawn.IsPsychopath() || mapPawn.IsBloodlust())
                         {
-                            memoryHandler.TryGainMemory(Defs.SacrificedNegative);
+                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedNegative);
                         }
                     }
 
                     // Spawn the product.
-                    GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                    var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                    if (Map.GameConditionManager.ConditionIsActive(Defs.Eclipse))
+                    {
+                        thing.stackCount += 2;
+                    }
+                    else if (Map.GameConditionManager.ConditionIsActive(Defs.SolarFlare))
+                    {
+                        
+                        thing.stackCount += 1;
+                    }
+                    
                     TaleRecorder.RecordTale(Defs.TaleSacrificed, new[] { Sacrificer, Prisoner });
                 }
             };

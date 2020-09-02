@@ -19,7 +19,7 @@
       </li>
     </comps>
     <injuryProps>
-      <painPerSeverity>0.0150</painPerSeverity>
+      <painPerSeverity>0.0225</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0.09</bleedRate>
       <canMerge>false</canMerge>

@@ -40,6 +40,7 @@ namespace ReviaRace.Comps
             return new FloatMenuOption($"Sacrifice {prisoner}", () =>
             {
                 var job = JobMaker.MakeJob(Defs.SacrificePrisoner, sacrificer, parent, prisoner);
+                job.count = 1;
                 sacrificer.jobs.TryTakeOrderedJob(job);
             });
         }

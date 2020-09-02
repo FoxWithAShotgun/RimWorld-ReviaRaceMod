@@ -3,3 +3,4 @@ F:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\1.1\Assembl
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Source\obj\Release\ReviaRace.csprojAssemblyReference.cache
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Source\obj\Release\ReviaRace.dll
 F:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Source\obj\Release\ReviaRace.pdb
+F:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Source\obj\Release\ReviaRace.csproj.CopyComplete

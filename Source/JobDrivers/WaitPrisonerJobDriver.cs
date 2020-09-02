@@ -16,19 +16,15 @@ namespace ReviaRace.JobDrivers
             return true; // No reservations.
         }
 
-        private Pawn Prisoner => (Pawn)TargetA;
-        private TargetIndex PrisonerIndex => TargetIndex.A;
-
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            this.FailOnDespawnedNullOrForbidden(PrisonerIndex);
-            this.FailOn(() => Prisoner.Dead);
+            this.FailOn(() => pawn.Dead);
 
             yield return new Toil
             {
                 initAction = () =>
                 {
-                    Prisoner.Reserve(pawn.Position, job);
+                    pawn.Reserve(pawn.Position, job);
                     pawn.pather.StopDead();
                     var driver = pawn.jobs.curDriver;
                     pawn.jobs.posture = PawnPosture.LayingOnGroundFaceUp;

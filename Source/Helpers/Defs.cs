@@ -26,6 +26,10 @@ namespace ReviaRace.Helpers
         internal static ThingDef Bloodstone => DefDatabase<ThingDef>.GetNamed("ReviaRaceBloodstone");
         internal static ThingDef Palestone => DefDatabase<ThingDef>.GetNamed("ReviaRacePalestone");
 
+        // Game Conditions
+        internal static GameConditionDef Eclipse => DefDatabase<GameConditionDef>.GetNamed("Eclipse");
+        internal static GameConditionDef SolarFlare => DefDatabase<GameConditionDef>.GetNamed("SolarFlare");
+
         // DamageDefs
         internal static DamageDef HeartExtraction => DefDatabase<DamageDef>.GetNamed("ReviaRaceSacrificeDamage");
 
