@@ -23,7 +23,8 @@ namespace ReviaRace.Comps
                 // Pick a prisoner to sacrifice.
                 if (pawn.Map.mapPawns.PrisonersOfColonyCount == 0)
                 {
-                    yield return new FloatMenuOption("No prisoners to be sacrificed.", null, MenuOptionPriority.DisabledOption);
+                    var caption = Strings.SacrificePrisonerNone.Translate();
+                    yield return new FloatMenuOption(caption, null, MenuOptionPriority.DisabledOption);
                 }
                 else
                 {
@@ -37,7 +38,8 @@ namespace ReviaRace.Comps
 
         protected FloatMenuOption CreateSacrificeOption(Pawn sacrificer, Pawn prisoner)
         {
-            return new FloatMenuOption($"Sacrifice {prisoner}", () =>
+            var caption = Strings.SacrificePrisonerName.Translate(prisoner);
+            return new FloatMenuOption(caption, () =>
             {
                 var job = JobMaker.MakeJob(Defs.SacrificePrisoner, sacrificer, parent, prisoner);
                 job.count = 1;

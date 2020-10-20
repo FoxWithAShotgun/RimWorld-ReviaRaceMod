@@ -2,7 +2,7 @@
 <Defs>
   <PawnKindDef>
     <defName>ReviaRaceDisgraced</defName>
-    <label>dissolute</label>
+    <label>revian dissolute</label>
     <race>ReviaRaceAlien</race>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>

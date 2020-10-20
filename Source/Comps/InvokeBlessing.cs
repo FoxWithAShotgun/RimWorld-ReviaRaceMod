@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using ReviaRace.Helpers;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,15 +29,19 @@ namespace ReviaRace.Comps
                 
                 if (cost / 2.0f > parent.stackCount)
                 {
-                    Messages.Message($"The blood god was gravely insulted by {pawn.NameShortColored}'s paltry offering!", pawn, MessageTypeDefOf.NegativeEvent, false);
+                    var msg = Strings.SacrificeInsulted.Translate(pawn.NameShortColored);
+                    Messages.Message(msg, pawn, MessageTypeDefOf.NegativeEvent, false);
                     new WeatherEvent_LightningFlash(pawn.Map).FireEvent();
                     new WeatherEvent_LightningStrike(pawn.Map, pawn.Position).FireEvent();
                 }
                 else
                 {
-                    Messages.Message($"{pawn.NameShortColored}'s offering was rejected. The blood god demands more blood.", pawn, MessageTypeDefOf.NeutralEvent, false);
+                    var msg = Strings.SacrificeRejected.Translate(pawn.NameShortColored);
+                    Messages.Message(msg, pawn, MessageTypeDefOf.NeutralEvent, false);
                 }
-                Messages.Message($"{cost} {parent.LabelNoCount}s were demanded.", pawn, MessageTypeDefOf.NeutralEvent, false);
+
+                var stuffCountMsg = Strings.BloodStuffCountDemand.Translate(cost, parent.LabelNoCount);
+                Messages.Message(stuffCountMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
                 return;
             } 
             else
@@ -58,8 +63,9 @@ namespace ReviaRace.Comps
             // Blood for the blood god! Skulls for the skull throne!
             srComp.RemoveSoulReapHediffs();
             srComp.AddSoulReapTier(soulReapTier + 1);
-            
-            Messages.Message($"The blessing has succeeded, and {pawn.NameShortColored} has grown stronger.", pawn, MessageTypeDefOf.PositiveEvent);
+
+            var msg = Strings.SacrificeSuccess.Translate(pawn.NameShortColored);
+            Messages.Message(msg, pawn, MessageTypeDefOf.PositiveEvent);
         }
 
         /// <summary>
@@ -69,7 +75,8 @@ namespace ReviaRace.Comps
         /// <param name="cost">The cost of the invocation.</param>
         protected void DecrementOnUse(Pawn pawn, int cost)
         {
-            Messages.Message($"{cost} {parent.LabelNoCount}(s) were consumed in {pawn.NameShortColored}'s offering.", pawn, MessageTypeDefOf.NeutralEvent);
+            var msg = Strings.BloodStuffCountConsumed.Translate(cost, parent.LabelNoCount, pawn.NameShortColored);
+            Messages.Message(msg, pawn, MessageTypeDefOf.NeutralEvent);
             if (parent.stackCount == cost)
             {
                 parent.Destroy();
@@ -80,7 +87,7 @@ namespace ReviaRace.Comps
             }
             else
             {
-                throw new ArgumentException("Attempting to use more items than is available!");
+                throw new ArgumentException("Attempting to use more items than is available!", nameof(cost));
             }
         }
 
@@ -94,17 +101,19 @@ namespace ReviaRace.Comps
         protected bool ViabilityCheck(Pawn pawn)
         {
             var srComp = pawn.GetComp<SoulReaper>();
-            Messages.Message($"{pawn.NameShortColored} offers some {parent.LabelNoCount}s to the bloody god.", pawn, MessageTypeDefOf.NeutralEvent, false);
+            var startMsg = Strings.OfferingStart.Translate(pawn.NameShortColored, parent.LabelNoCount);
+            Messages.Message(startMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
 
             var soulReapTier = srComp.GetSoulReapTier();
             if (soulReapTier == -1)
             {
-                Messages.Message($"The {parent.LabelNoCount} does nothing for the uninitiated...", pawn, MessageTypeDefOf.NegativeEvent, false);
+                Messages.Message(Strings.OfferingInvalidPawn.Translate(), pawn, MessageTypeDefOf.NegativeEvent, false);
                 return false;
             }
             else if (soulReapTier == 9)
             {
-                Messages.Message($"{pawn.NameShortColored} is already at the height of {pawn.ProSubj()} power!", pawn, MessageTypeDefOf.NeutralEvent, false);
+                var msg = Strings.OfferingMaxLevel.Translate(pawn.NameShortColored, pawn.ProSubj());
+                Messages.Message(msg, pawn, MessageTypeDefOf.NeutralEvent, false);
                 return false;
             }
 

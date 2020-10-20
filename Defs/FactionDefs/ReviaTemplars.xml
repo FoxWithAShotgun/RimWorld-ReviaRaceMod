@@ -2,7 +2,7 @@
 <Defs>
   <FactionDef>
     <defName>ReviaTemplarFaction</defName>
-    <label>Revia Templars</label>
+    <label>Revian Templars</label>
     <description>An order of oathsworn warriors. They will not hesitate to crush any who stand in their way.</description>
     <pawnSingular>revia</pawnSingular>
     <pawnsPlural>revia</pawnsPlural>

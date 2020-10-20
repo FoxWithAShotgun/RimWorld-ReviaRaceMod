@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ReviaRaceSacrificePrisonerNone>No prisoners to be sacrificed.</ReviaRaceSacrificePrisonerNone>
+  <ReviaRaceSacrificePrisonerName>Sacrifice {0}</ReviaRaceSacrificePrisonerName>
+  <ReviaRaceSacrificeInsulted>The blood god was gravely insulted by {0}'s paltry offering!</ReviaRaceSacrificeInsulted>
+  <ReviaRaceSacrificeRejected>{0}'s offering was rejected. The blood god demands more blood.</ReviaRaceSacrificeRejected>
+  <ReviaRaceBloodStuffCountDemand>{0} {1}s were demanded</ReviaRaceBloodStuffCountDemand>
+  <ReviaRaceBloodStuffCountConsumed>{0} {1}(s) were consumed in {2}'s offering.</ReviaRaceBloodStuffCountConsumed>
+  <ReviaRaceSacrificeSuccess>The sacrifice was found worthy, and {0} has grown stronger.</ReviaRaceSacrificeSuccess>
+  <ReviaRaceOfferingStart>{0} offers some {1}s to the blood god.</ReviaRaceOfferingStart>
+  <ReviaRaceOfferingInvalidPawn>The blood god spurns the unitiated's plea.</ReviaRaceOfferingInvalidPawn>
+  <ReviaRaceOfferingMaxLevel>{0} is already at the height of {1} power!</ReviaRaceOfferingMaxLevel>
+</LanguageData>

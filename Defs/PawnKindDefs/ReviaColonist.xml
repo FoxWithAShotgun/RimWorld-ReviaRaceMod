@@ -2,7 +2,7 @@
 <Defs>
   <PawnKindDef>
     <defName>ReviaRaceColonist</defName>
-    <label>colonist</label>
+    <label>revian frontiersman</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>

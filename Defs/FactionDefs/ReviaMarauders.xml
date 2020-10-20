@@ -2,7 +2,7 @@
 <Defs>
   <FactionDef>
     <defName>ReviaMarauderFaction</defName>
-    <label>Revia Marauders</label>
+    <label>Revian Marauders</label>
     <description>A loose alliance of Revia marauders. These bloodthirsty warriors seek sacrifices and plunder in the honour of their blood god.</description>
     <pawnSingular>revia</pawnSingular>
     <pawnsPlural>revia</pawnsPlural>
