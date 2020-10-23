@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using RimWorld;
+using ReviaRace.Helpers;
 
 namespace ReviaRace.Comps
 {
@@ -17,10 +18,21 @@ namespace ReviaRace.Comps
             
             if (pawn != null && GetSoulReapTier() == -1)
             {
-                // This should have at least tier 1 of soul reap.
-                // Add it now.
-                var rng = new Random();
-                AddSoulReapTier(rng.Next(1,5));
+                if (pawn.kindDef == Defs.MarauderSkullshatterer ||
+                    pawn.kindDef == Defs.TemplarHighTemplar)
+                {
+                    AddSoulReapTier(9);
+                    pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
+                    pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
+                    pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+                }
+                else
+                {
+                    // This should have at least tier 1 of soul reap.
+                    // Add it now.
+                    var rng = new Random();
+                    AddSoulReapTier(rng.Next(1, 3));
+                }
             }
         }
 

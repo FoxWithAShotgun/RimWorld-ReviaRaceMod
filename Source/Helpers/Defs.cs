@@ -19,6 +19,9 @@ namespace ReviaRace.Helpers
         internal static ThoughtDef SacrificedNegative => DefDatabase<ThoughtDef>.GetNamed("ReviaRaceThoughtSacrificedNegative");
         internal static ThoughtDef SacrificedPositive => DefDatabase<ThoughtDef>.GetNamed("ReviaRaceThoughtSacrificedPositive");
 
+        // Pawn kinds
+        internal static PawnKindDef MarauderSkullshatterer => DefDatabase<PawnKindDef>.GetNamed("ReviaRaceSkullshatterer");
+        internal static PawnKindDef TemplarHighTemplar => DefDatabase<PawnKindDef>.GetNamed("ReviaRaceHighTemplar");
 
         // Things
         internal static ThingDef BloodMote => DefDatabase<ThingDef>.GetNamed("Mote_FoodBitMeat");

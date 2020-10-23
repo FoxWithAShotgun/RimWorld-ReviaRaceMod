@@ -67,6 +67,11 @@
                 <options>
                   <li>
                     <weight>10</weight>
+                    <min>RGBA(238,207,180,255)</min>
+                    <max>RGBA(255,224,196,255)</max>
+                  </li>
+                  <li>
+                    <weight>10</weight>
                     <only>RGBA(255,224,196,255)</only>
                   </li>
                   <li>
@@ -96,21 +101,34 @@
               <name>hair</name>
               <first Class="ColorGenerator_Options">
                 <options>
+                  <!-- Blondes -->
                   <li>
-                    <weight>10</weight>
-                    <only>RGBA(250,240,190,255)</only>
+                    <weight>15</weight>
+                    <min>RGBA(161,121,48,255)</min>
+                    <max>RGBA(180,130,65,255)</max>
                   </li>
                   <li>
                     <weight>10</weight>
-                    <only>RGBA(191,159,106,255)</only>
+                    <min>RGBA(180,170,65,255)</min>
+                    <max>RGBA(225,200,90,255)</max>
                   </li>
+                  <!-- Redheads -->
                   <li>
-                    <weight>10</weight>
-                    <only>RGBA(247,232,212,255)</only>
+                    <weight>15</weight>
+                    <min>RGBA(225,98,29,255)</min>
+                    <max>RGBA(240,140,55,255)</max>
                   </li>
+                  <!-- Brunettes -->
                   <li>
-                    <weight>10</weight>
-                    <only>RGBA(236,213,167,255)</only>
+                    <weight>20</weight>
+                    <min>RGBA(45,23,14,255)</min>
+                    <max>RGBA(109,71,14,255)</max>
+                  </li>
+                  <!-- Ravens -->
+                  <li>
+                    <weight>20</weight>
+                    <min>RGBA(2,2,2,255)</min>
+                    <max>RGBA(33,33,2,255)</max>
                   </li>
                 </options>
               </first>
@@ -280,14 +298,6 @@
           <li>Urban</li>
         </hairTags>
       </hairSettings>
-      <thoughtSettings>
-        <replacerList>
-          <li>
-            <original>ReviaRaceThoughtSacrificed</original>
-            <replacer>ReviaRaceThoughtSacrificedPositive</replacer>
-          </li>
-        </replacerList>
-      </thoughtSettings>
     </alienRace>
     <statBases>
       <MarketValue>2250</MarketValue>
