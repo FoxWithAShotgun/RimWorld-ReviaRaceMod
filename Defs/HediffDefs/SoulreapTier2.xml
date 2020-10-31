@@ -18,9 +18,9 @@
             <offset>-0.05</offset>
           </li>
         </capMods>
-        <statFactors>
-          <IncomingDamageFactor>0.95</IncomingDamageFactor>
-        </statFactors>
+        <statOffsets>
+          <MarketValue>-100</MarketValue>
+        </statOffsets>
       </li>
     </stages>
   </HediffDef>

@@ -18,6 +18,9 @@
             <offset>-0.10</offset>
           </li>
         </capMods>
+        <statOffsets>
+          <MarketValue>-200</MarketValue>
+        </statOffsets>
       </li>
     </stages>
   </HediffDef>

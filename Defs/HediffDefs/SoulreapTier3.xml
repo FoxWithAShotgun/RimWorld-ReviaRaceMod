@@ -9,7 +9,7 @@
     <stages>
       <li>
         <statFactors>
-          <IncomingDamageFactor>0.90</IncomingDamageFactor>
+          <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
       </li>
     </stages>

@@ -19,10 +19,11 @@
           </li>
         </capMods>
         <statFactors>
-          <IncomingDamageFactor>0.65</IncomingDamageFactor>
+          <IncomingDamageFactor>0.70</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
           <PainShockThreshold>0.20</PainShockThreshold>
+          <MarketValue>1600</MarketValue>
         </statOffsets>
       </li>
     </stages>

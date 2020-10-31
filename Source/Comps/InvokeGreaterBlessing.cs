@@ -17,14 +17,17 @@ namespace ReviaRace.Comps
         /// <returns>The cost (in bloodstones) required to advance the Soul Reap tier.</returns>
         protected override int CalculateAdvanceCost(int tier)
         {
+            return GetAdvanceCost(CostGrowthMode, tier, CostBase, CostGrowthFactor, CostGrowthStartTier);
+        }
+
+        public static int GetAdvanceCost(SacrificeCostGrowth growthMode, int tier, float costBase, float growthFactor, int startTier)
+        {
             if (tier == -1 || tier == 9)
             {
                 return -1;
             }
 
-            double cost = Math.Max(1.0, Math.Pow(2, tier - 2));
-
-            return (int)cost;
+            return CalculateBaseCost(growthMode, tier, costBase, growthFactor, startTier);
         }
     }
 }

@@ -11,6 +11,11 @@ namespace ReviaRace.Comps
 {
     public abstract class InvokeBlessing : CompUseEffect
     {
+        public static SacrificeCostGrowth CostGrowthMode { get; set; }
+        public static float CostBase { get; set; }
+        public static float CostGrowthFactor { get; set; }
+        public static int CostGrowthStartTier { get; set; }
+
         public override void DoEffect(Pawn pawn)
         {
             base.DoEffect(pawn);
@@ -92,6 +97,27 @@ namespace ReviaRace.Comps
         }
 
         protected abstract int CalculateAdvanceCost(int tier);
+        /// <summary>
+        /// Gets the cost of going up tiers according to formula.
+        /// Cost is that of bloodstones.
+        /// </summary>
+        /// <param name="tier">The current tier of soul reap.</param>
+        /// <returns>The base cost of leveling up soul reap, in bloodstones.</returns>
+        protected static int CalculateBaseCost(SacrificeCostGrowth growthMode, int tier, float costBase, float growthFactor, int startTier)
+        {
+            var tierDiff = Math.Max(0, tier - startTier);
+
+            switch (growthMode)
+            {
+                case SacrificeCostGrowth.Linear:
+                    return (int)(costBase + tierDiff * growthFactor);
+                case SacrificeCostGrowth.Exponential:
+                    return (int)(costBase * Math.Max(1, (int)Math.Pow(growthFactor, tierDiff)));
+                case SacrificeCostGrowth.Quadratic:
+                    return (int)(costBase + costBase * tierDiff * tierDiff);
+                default: return 0;
+            }
+        }
 
         /// <summary>
         /// Checks if the pawn is eligible to advance soul reap tiers.
@@ -119,5 +145,12 @@ namespace ReviaRace.Comps
 
             return true;
         }
+    }
+
+    public enum SacrificeCostGrowth
+    {
+        Linear,
+        Quadratic,
+        Exponential,
     }
 }
