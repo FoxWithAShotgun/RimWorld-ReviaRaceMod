@@ -35,7 +35,7 @@ namespace ReviaRace.Comps
             var srHediff = srComp.SoulReapHediff;
 
             var cost = InvokeGreaterBlessing.GetAdvanceCost(CostGrowthMode, srTier, CostBase, CostGrowthFactor, CostGrowthStartTier);
-            var requiredItemCount = Math.Min(1, (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue));
+            var requiredItemCount = Math.Max(1, (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue));
 
             if (requiredItemCount < parent.stackCount)
             {
