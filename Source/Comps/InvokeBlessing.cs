@@ -16,6 +16,11 @@ namespace ReviaRace.Comps
         public static float CostGrowthFactor { get; set; }
         public static int CostGrowthStartTier { get; set; }
 
+        /// <summary>
+        /// Value of a blessing relative to a bloodstone.
+        /// </summary>
+        protected abstract float BlessingValue { get; }
+
         public override void DoEffect(Pawn pawn)
         {
             base.DoEffect(pawn);
@@ -27,32 +32,28 @@ namespace ReviaRace.Comps
 
             var srComp = pawn.GetComp<SoulReaper>();
             var srTier = srComp.GetSoulReapTier();
-            var cost = CalculateAdvanceCost(srTier);
+            var srHediff = srComp.SoulReapHediff;
 
-            if (cost > parent.stackCount)
+            var cost = InvokeGreaterBlessing.GetAdvanceCost(CostGrowthMode, srTier, CostBase, CostGrowthFactor, CostGrowthStartTier);
+            var requiredItemCount = Math.Min(1, (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue));
+
+            if (requiredItemCount < parent.stackCount)
             {
-                
-                if (cost / 2.0f > parent.stackCount)
-                {
-                    var msg = Strings.SacrificeInsulted.Translate(pawn.NameShortColored);
-                    Messages.Message(msg, pawn, MessageTypeDefOf.NegativeEvent, false);
-                    new WeatherEvent_LightningFlash(pawn.Map).FireEvent();
-                    new WeatherEvent_LightningStrike(pawn.Map, pawn.Position).FireEvent();
-                }
-                else
-                {
-                    var msg = Strings.SacrificeRejected.Translate(pawn.NameShortColored);
-                    Messages.Message(msg, pawn, MessageTypeDefOf.NeutralEvent, false);
-                }
-
-                var stuffCountMsg = Strings.BloodStuffCountDemand.Translate(cost, parent.LabelNoCount);
-                Messages.Message(stuffCountMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
-                return;
+                DecrementOnUse(pawn, requiredItemCount);
+                IncreaseSoulReapTier(pawn);
             } 
             else
             {
-                DecrementOnUse(pawn, cost);
-                IncreaseSoulReapTier(pawn);
+                srHediff.Severity += parent.stackCount * BlessingValue;
+                DecrementOnUse(pawn, parent.stackCount);
+
+                var msg = Strings.SacrificeRejected.Translate(pawn.NameShortColored);
+                Messages.Message(msg, pawn, MessageTypeDefOf.NeutralEvent, false);
+
+                var remainingCost = (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue);
+                var stuffCountMsg = Strings.BloodStuffCountDemand.Translate(remainingCost, parent.LabelNoCount);
+                Messages.Message(stuffCountMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
+                return;
             }
         }
 
@@ -96,6 +97,7 @@ namespace ReviaRace.Comps
             }
         }
 
+        
         protected abstract int CalculateAdvanceCost(int tier);
         /// <summary>
         /// Gets the cost of going up tiers according to formula.

@@ -13,7 +13,6 @@ namespace ReviaRace.Helpers
         internal static string ReviaRaceModName => "ReviaRaceModName";
         internal static string SacrificePrisonerNone => "ReviaRaceSacrificePrisonerNone";
         internal static string SacrificePrisonerName => "ReviaRaceSacrificePrisonerName";
-        internal static string SacrificeInsulted => "ReviaRaceSacrificeInsulted";
         internal static string SacrificeRejected => "ReviaRaceSacrificeRejected";
         internal static string BloodStuffCountDemand => "ReviaRaceBloodStuffCountDemand";
         internal static string BloodStuffCountConsumed => "ReviaRaceBloodStuffCountConsumed";

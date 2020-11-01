@@ -2,9 +2,8 @@
 <LanguageData>
   <ReviaRaceSacrificePrisonerNone>No prisoners to be sacrificed.</ReviaRaceSacrificePrisonerNone>
   <ReviaRaceSacrificePrisonerName>Sacrifice {0}</ReviaRaceSacrificePrisonerName>
-  <ReviaRaceSacrificeInsulted>The blood god was gravely insulted by {0}'s paltry offering!</ReviaRaceSacrificeInsulted>
-  <ReviaRaceSacrificeRejected>{0}'s offering was rejected. The blood god demands more blood.</ReviaRaceSacrificeRejected>
-  <ReviaRaceBloodStuffCountDemand>{0} {1}s were demanded</ReviaRaceBloodStuffCountDemand>
+  <ReviaRaceSacrificeRejected>{0}'s offering was accepted, but deemed insufficient. The blood god demands more blood.</ReviaRaceSacrificeRejected>
+  <ReviaRaceBloodStuffCountDemand>An additional {0} {1}s were demanded</ReviaRaceBloodStuffCountDemand>
   <ReviaRaceBloodStuffCountConsumed>{0} {1}(s) were consumed in {2}'s offering.</ReviaRaceBloodStuffCountConsumed>
   <ReviaRaceSacrificeSuccess>The sacrifice was found worthy, and {0} has grown stronger.</ReviaRaceSacrificeSuccess>
   <ReviaRaceOfferingStart>{0} offers some {1}s to the blood god.</ReviaRaceOfferingStart>

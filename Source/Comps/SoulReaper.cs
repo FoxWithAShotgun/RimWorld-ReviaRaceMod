@@ -33,10 +33,12 @@ namespace ReviaRace.Comps
                     var rng = new Random();
                     AddSoulReapTier(rng.Next(1, 3));
                 }
+
+                SoulReapHediff.Severity = 0.0f;
             }
         }
 
-        private Hediff SoulReapHediff => (parent as Pawn)?.health.hediffSet.hediffs
+        internal Hediff SoulReapHediff => (parent as Pawn)?.health.hediffSet.hediffs
                                          .FirstOrDefault(hediff => hediff.def.defName.Contains("ReviaRaceSoulreapTier"));
 
         internal int GetSoulReapTier()

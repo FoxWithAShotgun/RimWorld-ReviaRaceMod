@@ -20,6 +20,8 @@ namespace ReviaRace.Comps
             return GetAdvanceCost(CostGrowthMode, tier, CostBase, CostGrowthFactor, CostGrowthStartTier);
         }
 
+        protected override float BlessingValue => 1.0f / 16.0f;
+
         public static int GetAdvanceCost(SacrificeCostGrowth growthMode, int tier, float costBase, float growthFactor, int startTier)
         {
             if (tier == -1 || tier == 9)
