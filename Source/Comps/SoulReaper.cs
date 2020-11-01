@@ -64,6 +64,7 @@ namespace ReviaRace.Comps
             }
            
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
+            toAdd.initialSeverity = float.Epsilon;
             pawn.health.AddHediff(toAdd);
         }
 

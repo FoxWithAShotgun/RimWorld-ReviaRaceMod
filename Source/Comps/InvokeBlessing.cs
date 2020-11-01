@@ -37,7 +37,7 @@ namespace ReviaRace.Comps
             var cost = InvokeGreaterBlessing.GetAdvanceCost(CostGrowthMode, srTier, CostBase, CostGrowthFactor, CostGrowthStartTier);
             var requiredItemCount = Math.Max(1, (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue));
 
-            if (requiredItemCount < parent.stackCount)
+            if (requiredItemCount <= parent.stackCount)
             {
                 DecrementOnUse(pawn, requiredItemCount);
                 IncreaseSoulReapTier(pawn);
