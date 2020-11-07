@@ -33,6 +33,7 @@
     </weaponTags>
     <comps>
       <li Class="CompProperties_BiocodableWeapon"/>
+      <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
     </comps>
     <tools>
       <li>

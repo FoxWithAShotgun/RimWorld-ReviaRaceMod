@@ -30,6 +30,7 @@
     </stuffCategories>
     <comps>
       <li Class="CompProperties_BiocodableWeapon"/>
+      <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
     </comps>
     <weaponTags>
       <li>ReviaMeleeLegendary</li>
