@@ -17,6 +17,7 @@ namespace ReviaRace.PersistentData
             CostGrowthFactor = 2;
             CostGrowthStartTier = 1;
             CostGrowthMode = SacrificeCostGrowth.Exponential;
+            EnableRandomSoulReapTier = true;
         }
 
         public void ApplySettings()
@@ -24,7 +25,8 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostBase = CostBase;
             InvokeBlessing.CostGrowthFactor = CostGrowthFactor;
             InvokeBlessing.CostGrowthMode = CostGrowthMode;
-            InvokeBlessing.CostGrowthStartTier = 1;
+            InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
+            SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
         }
 
         public float CostBase
@@ -53,12 +55,20 @@ namespace ReviaRace.PersistentData
         }
         internal SacrificeCostGrowth _costGrowthMode;
 
+        public bool EnableRandomSoulReapTier
+        {
+            get => _enableRandomSoulReapTier;
+            set => _enableRandomSoulReapTier = value;
+        }
+        internal bool _enableRandomSoulReapTier;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
             Scribe_Values.Look(ref _costGrowthFactor, GetLabel(nameof(CostGrowthFactor)), 2);
             Scribe_Values.Look(ref _costGrowthStartTier, GetLabel(nameof(CostGrowthStartTier)), 1);
             Scribe_Values.Look(ref _costGrowthMode, GetLabel(nameof(CostGrowthMode)), SacrificeCostGrowth.Exponential);
+            Scribe_Values.Look(ref _enableRandomSoulReapTier, GetLabel(nameof(EnableRandomSoulReapTier)), false);
 
             ApplySettings();
         }

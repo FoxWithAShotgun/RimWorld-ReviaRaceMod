@@ -28,16 +28,24 @@ namespace ReviaRace.Comps
                 }
                 else
                 {
-                    // This should have at least tier 1 of soul reap.
-                    // Add it now.
-                    var rng = new Random();
-                    AddSoulReapTier(rng.Next(1, 3));
+                    if (EnableRandomSoulReapTier)
+                    {
+                        // This should have at least tier 1 of soul reap.
+                        // Add it now.
+                        var rng = new Random();
+                        AddSoulReapTier(rng.Next(1, 3));
+                    }
+                    else
+                    {
+                        AddSoulReapTier(2);
+                    }
                 }
             }
         }
 
         internal Hediff SoulReapHediff => (parent as Pawn)?.health.hediffSet.hediffs
                                          .FirstOrDefault(hediff => hediff.def.defName.Contains("ReviaRaceSoulreapTier"));
+        internal static bool EnableRandomSoulReapTier { get; set; }
 
         internal int GetSoulReapTier()
         {

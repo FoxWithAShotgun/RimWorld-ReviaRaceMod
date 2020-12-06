@@ -68,6 +68,7 @@ namespace ReviaRace
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
 
             sacrificeList.Gap(10);
             DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
@@ -103,6 +104,16 @@ namespace ReviaRace
                     return optionsList;
                 },
                 Translator.Translate(Settings.CostGrowthMode.ToString()));
+        }
+
+        private void DrawCheckBoxWithLabel(Rect elemRect, string taggedLabelID, ref bool setting)
+        {
+            var leftRect = elemRect.LeftPart(0.20f);
+            var rightRect = elemRect.RightPart(0.80f);
+            var x = (float)elemRect.x;
+            var y = (float)(elemRect.y + 0.5 * (elemRect.height - 24));
+            Widgets.Checkbox(x, y, ref setting);
+            Widgets.Label(rightRect, Translator.Translate(taggedLabelID));
         }
 
         private void DrawTextFieldWithLabel(Rect elemRect, string taggedLabelID, ref float setting, ref string buffer, int min = 0, int max = 100000)
