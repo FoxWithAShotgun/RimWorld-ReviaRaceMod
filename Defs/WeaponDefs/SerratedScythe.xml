@@ -3,7 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaSerratedScythe</defName>
     <label>harvester</label>
-    <description>A cruel scythe with a razor sharp blade. Designed to inflict severe bleeding and grievous wounds.</description>
+    <description>A cruel bardiche with a blade of razor-sharp palestone shards. Designed to inflict severe bleeding and grievous wounds.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedScythe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -11,6 +11,9 @@
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
     <costStuffCount>160</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
+    </costList>
     <statBases>
       <WorkToMake>15000</WorkToMake>
       <Mass>3.50</Mass>

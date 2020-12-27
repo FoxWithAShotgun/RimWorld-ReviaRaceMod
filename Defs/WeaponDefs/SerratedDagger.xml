@@ -3,7 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaSerratedDagger</defName>
     <label>eviscerator</label>
-    <description>A cruel sawtoothed dagger with a single-edged blade. Designed to tear tissue and cause grievous bleeding wounds.</description>
+    <description>A cruel dagger with razor-sharp palestone shards lining its blade. Designed to tear tissue and cause grievous bleeding wounds.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedDagger</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -11,6 +11,9 @@
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
     <costStuffCount>65</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>20</ReviaRacePalestone>
+    </costList>
     <statBases>
       <WorkToMake>9000</WorkToMake>
       <Mass>1.00</Mass>

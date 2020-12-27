@@ -3,7 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaSerratedSword</defName>
     <label>scourge</label>
-    <description>A cruel sword with a serrated blade. Designed to inflict severe bleeding and grievous wounds.</description>
+    <description>A cruel sword with a heavy single-edged blade, lined with palestone shards. Designed to inflict severe bleeding and grievous wounds.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -11,6 +11,9 @@
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
     <costStuffCount>100</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
+    </costList>
     <statBases>
       <WorkToMake>10800</WorkToMake>
       <Mass>1.50</Mass>
