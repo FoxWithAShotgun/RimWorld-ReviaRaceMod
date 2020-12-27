@@ -7,6 +7,8 @@
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedScythe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.4</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
