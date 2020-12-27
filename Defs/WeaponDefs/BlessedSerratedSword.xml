@@ -35,6 +35,7 @@
     <comps>
       <li Class="CompProperties_BiocodableWeapon"/>
       <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
     </comps>
     <tools>
       <li>
