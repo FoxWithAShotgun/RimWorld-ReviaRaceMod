@@ -23,10 +23,10 @@
           </li>
         </capMods>
         <statFactors>
-          <IncomingDamageFactor>0.50</IncomingDamageFactor>
+          <IncomingDamageFactor>0.55</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
-          <MarketValue>6400</MarketValue>
+          <MarketValue>3000</MarketValue>
           <PainShockThreshold>0.40</PainShockThreshold>
         </statOffsets>
       </li>

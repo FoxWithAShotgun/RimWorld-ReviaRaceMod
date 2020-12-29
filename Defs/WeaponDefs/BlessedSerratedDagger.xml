@@ -12,8 +12,9 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>65</costStuffCount>
+    <costStuffCount>25</costStuffCount>
     <costList>
+      <ReviaRacePalestone>20</ReviaRacePalestone>
       <ReviaLesserBloodRune>1</ReviaLesserBloodRune>
     </costList>
     <statBases>
@@ -46,7 +47,7 @@
         </capacities>
         <power>16</power>
         <cooldownTime>1.5</cooldownTime>
-        <armorPenetration>0.05</armorPenetration>
+        <armorPenetration>0.12</armorPenetration>
       </li>
       <li>
         <label>point</label>
@@ -55,7 +56,7 @@
         </capacities>
         <power>16</power>
         <cooldownTime>1.75</cooldownTime>
-        <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.22</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -64,7 +65,7 @@
         </capacities>
         <power>16</power>
         <cooldownTime>1.75</cooldownTime>
-        <armorPenetration>0.12</armorPenetration>
+        <armorPenetration>0.22</armorPenetration>
       </li>
     </tools>
   </ThingDef>

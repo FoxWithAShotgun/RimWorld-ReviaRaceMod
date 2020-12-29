@@ -19,7 +19,7 @@
     <tradeability>None</tradeability>
     <statBases>
       <Mass>0.01</Mass>
-      <MarketValue>500</MarketValue>
+      <MarketValue>100</MarketValue>
       <MaxHitPoints>1000</MaxHitPoints>
       <Flammability>0.0</Flammability>
       <DeteriorationRate>0.0</DeteriorationRate>

@@ -12,7 +12,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>160</costStuffCount>
+    <costStuffCount>90</costStuffCount>
     <costList>
       <ReviaRacePalestone>35</ReviaRacePalestone>
     </costList>
@@ -50,9 +50,9 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>22</power>
+        <power>26</power>
         <cooldownTime>2.50</cooldownTime>
-        <armorPenetration>0.20</armorPenetration>
+        <armorPenetration>0.24</armorPenetration>
       </li>
     </tools>
   </ThingDef>

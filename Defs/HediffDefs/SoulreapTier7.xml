@@ -23,7 +23,7 @@
         </statFactors>
         <statOffsets>
           <PainShockThreshold>0.20</PainShockThreshold>
-          <MarketValue>1600</MarketValue>
+          <MarketValue>800</MarketValue>
         </statOffsets>
       </li>
     </stages>

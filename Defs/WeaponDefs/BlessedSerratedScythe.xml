@@ -12,8 +12,9 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>160</costStuffCount>
+    <costStuffCount>90</costStuffCount>
     <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
       <ReviaGreaterBloodRune>1</ReviaGreaterBloodRune>
     </costList>
     <statBases>

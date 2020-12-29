@@ -12,12 +12,12 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>65</costStuffCount>
+    <costStuffCount>25</costStuffCount>
     <costList>
       <ReviaRacePalestone>20</ReviaRacePalestone>
     </costList>
     <statBases>
-      <WorkToMake>9000</WorkToMake>
+      <WorkToMake>6500</WorkToMake>
       <Mass>1.00</Mass>
     </statBases>
     <recipeMaker>
@@ -43,7 +43,7 @@
         </capacities>
         <power>7</power>
         <cooldownTime>1.5</cooldownTime>
-        <armorPenetration>0.05</armorPenetration>
+        <armorPenetration>0.12</armorPenetration>
       </li>
       <li>
         <label>point</label>
@@ -52,7 +52,7 @@
         </capacities>
         <power>12</power>
         <cooldownTime>1.75</cooldownTime>
-        <armorPenetration>0.15</armorPenetration>
+        <armorPenetration>0.18</armorPenetration>
       </li>
       <li>
         <label>edge</label>
@@ -61,7 +61,7 @@
         </capacities>
         <power>12</power>
         <cooldownTime>1.75</cooldownTime>
-        <armorPenetration>0.10</armorPenetration>
+        <armorPenetration>0.14</armorPenetration>
       </li>
     </tools>
   </ThingDef>

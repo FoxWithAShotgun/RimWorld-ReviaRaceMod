@@ -13,6 +13,7 @@
     <techLevel>Medieval</techLevel>
     <costStuffCount>100</costStuffCount>
     <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
       <ReviaBloodRune>1</ReviaBloodRune>
     </costList>
     <statBases>
@@ -45,7 +46,7 @@
         </capacities>
         <power>14</power>
         <cooldownTime>1.5</cooldownTime>
-        <armorPenetration>0.08</armorPenetration>
+        <armorPenetration>0.12</armorPenetration>
       </li>
       <li>
         <label>point</label>
@@ -63,7 +64,7 @@
         </capacities>
         <power>22</power>
         <cooldownTime>2.00</cooldownTime>
-        <armorPenetration>0.20</armorPenetration>
+        <armorPenetration>0.22</armorPenetration>
       </li>
     </tools>
   </ThingDef>

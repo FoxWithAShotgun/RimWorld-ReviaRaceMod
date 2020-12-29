@@ -26,7 +26,7 @@
           <IncomingDamageFactor>0.65</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
-          <MarketValue>3200</MarketValue>
+          <MarketValue>1200</MarketValue>
           <PainShockThreshold>0.20</PainShockThreshold>
         </statOffsets>
       </li>

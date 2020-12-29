@@ -19,10 +19,10 @@
           </li>
         </capMods>
         <statFactors>
-          <IncomingDamageFactor>0.90</IncomingDamageFactor>
+          <IncomingDamageFactor>0.95</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
-          <MarketValue>100</MarketValue>
+          <MarketValue>50</MarketValue>
         </statOffsets>
       </li>
     </stages>
