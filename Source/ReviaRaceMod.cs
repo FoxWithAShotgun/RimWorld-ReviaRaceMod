@@ -49,7 +49,7 @@ namespace ReviaRace
             var sacrificeList = new Listing_Standard();
             var height
                 = 3 * 10
-                + (bodyStyle.lineHeight + 8) * 6
+                + (bodyStyle.lineHeight + 8) * 10
                 + (headerStyle.lineHeight);
                 
             var sacrificeGroupRect = new Rect(inRect.x + 10, inRect.y + 10, inRect.width - 20, height);
@@ -69,6 +69,7 @@ namespace ReviaRace
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
 
             sacrificeList.Gap(10);
             DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));

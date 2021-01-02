@@ -5,10 +5,11 @@
     <label>revia marauder</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>55</combatPower>
+    <combatPower>75</combatPower>
     <canBeSapper>true</canBeSapper>
     <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
     <itemQuality>Good</itemQuality>
+    <gearHealthRange>0.4~1.1</gearHealthRange>
     <apparelTags>
       <li>Neolithic</li>
       <li>Medieval</li>

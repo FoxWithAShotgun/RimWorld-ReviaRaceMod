@@ -5,7 +5,7 @@
     <label>Revia High Templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
     <race>ReviaRaceAlien</race>
-    <combatPower>100</combatPower>
+    <combatPower>350</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
     <baseRecruitDifficulty>1.0</baseRecruitDifficulty>

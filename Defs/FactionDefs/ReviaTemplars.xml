@@ -58,9 +58,19 @@
       <li>
         <!--You done goofed-->
         <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
         <options>
-          <ReviaRaceTemplar>25</ReviaRaceTemplar>
-          <ReviaRaceHighTemplar>3</ReviaRaceHighTemplar>
+          <ReviaRaceTemplar>7</ReviaRaceTemplar>
+          <ReviaRaceHighTemplar>1</ReviaRaceHighTemplar>
+        </options>
+      </li>
+      <li>
+        <!--Scouting party-->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <ReviaRaceInitiate>5</ReviaRaceInitiate>
+          <ReviaRaceTemplar>2</ReviaRaceTemplar>
         </options>
       </li>
       <li>
@@ -93,9 +103,9 @@
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-          <ReviaRaceInitiate>50</ReviaRaceInitiate>
-          <ReviaRaceTemplar>30</ReviaRaceTemplar>
-          <ReviaRaceHighTemplar>5</ReviaRaceHighTemplar>
+          <ReviaRaceInitiate>20</ReviaRaceInitiate>
+          <ReviaRaceTemplar>20</ReviaRaceTemplar>
+          <ReviaRaceHighTemplar>3</ReviaRaceHighTemplar>
         </options>
       </li>
     </pawnGroupMakers>

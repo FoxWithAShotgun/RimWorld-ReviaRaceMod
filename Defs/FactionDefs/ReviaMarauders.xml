@@ -44,33 +44,43 @@
     </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
       <li>
-        <!--Type 1 - high quantity, low quality-->
+        <!--Type 1 - Smaller scouting raid-->
         <kindDef>Combat</kindDef>
-        <commonality>30</commonality>
+        <commonality>60</commonality>
         <options>
-          <ReviaRaceRaider>20</ReviaRaceRaider>
-          <ReviaRaceMarauder>5</ReviaRaceMarauder>
+          <ReviaRaceRaider>5</ReviaRaceRaider>
+          <ReviaRaceMarauder>1</ReviaRaceMarauder>
         </options>
       </li>
       <li>
-        <!--Type 2 - high quality, low quantity-->
+        <!--Type 2 - Moderate sized raid-->
         <kindDef>Combat</kindDef>
         <commonality>30</commonality>
         <options>
           <ReviaRaceMarauder>5</ReviaRaceMarauder>
-          <ReviaRaceBerserker>5</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>5</ReviaRaceSkullshatterer>
+          <ReviaRaceBerserker>2</ReviaRaceBerserker>
         </options>
       </li>
       <li>
-        <!--Type 3 - balanced-->
+        <!--Type 3 - Heavy assault raid-->
         <kindDef>Combat</kindDef>
-        <commonality>30</commonality>
+        <commonality>15</commonality>
         <options>
           <ReviaRaceRaider>10</ReviaRaceRaider>
           <ReviaRaceMarauder>5</ReviaRaceMarauder>
-          <ReviaRaceBerserker>3</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>3</ReviaRaceSkullshatterer>
+          <ReviaRaceBerserker>2</ReviaRaceBerserker>
+          <ReviaRaceSkullshatterer>1</ReviaRaceSkullshatterer>
+        </options>
+      </li>
+      <li>
+        <!--Type 4 - Base siege -->
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <ReviaRaceRaider>15</ReviaRaceRaider>
+          <ReviaRaceMarauder>10</ReviaRaceMarauder>
+          <ReviaRaceBerserker>5</ReviaRaceBerserker>
+          <ReviaRaceSkullshatterer>1</ReviaRaceSkullshatterer>
         </options>
       </li>
       <li>
@@ -80,7 +90,7 @@
           <ReviaRaceMarauder>15</ReviaRaceMarauder>
           <ReviaRaceRaider>15</ReviaRaceRaider>
           <ReviaRaceBerserker>5</ReviaRaceBerserker>
-          <ReviaRaceSkullshatterer>5</ReviaRaceSkullshatterer>
+          <ReviaRaceSkullshatterer>1</ReviaRaceSkullshatterer>
         </options>
       </li>
     </pawnGroupMakers>

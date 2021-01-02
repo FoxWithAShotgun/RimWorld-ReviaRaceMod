@@ -127,7 +127,7 @@ namespace ReviaRace.JobDrivers
                             mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
                         }
                         else if (mapPawn.IsColonist &&
-                                 mapPawn.IsCannibal() || mapPawn.IsPsychopath() || mapPawn.IsBloodlust())
+                                 !(mapPawn.IsCannibal() || mapPawn.IsPsychopath() || mapPawn.IsBloodlust()))
                         {
                             mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedNegative);
                         }

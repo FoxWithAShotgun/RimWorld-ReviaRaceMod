@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.Workers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthMode = CostGrowthMode;
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
             SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
+            SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
         }
 
         public float CostBase
@@ -62,6 +64,13 @@ namespace ReviaRace.PersistentData
         }
         internal bool _enableRandomSoulReapTier;
 
+        public bool EnableCorpseStripOnSacrifice
+        {
+            get => _enableCorpseStripOnSacrifice;
+            set => _enableCorpseStripOnSacrifice = value;
+        }
+        internal bool _enableCorpseStripOnSacrifice;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
@@ -69,6 +78,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _costGrowthStartTier, GetLabel(nameof(CostGrowthStartTier)), 1);
             Scribe_Values.Look(ref _costGrowthMode, GetLabel(nameof(CostGrowthMode)), SacrificeCostGrowth.Exponential);
             Scribe_Values.Look(ref _enableRandomSoulReapTier, GetLabel(nameof(EnableRandomSoulReapTier)), false);
+            Scribe_Values.Look(ref _enableCorpseStripOnSacrifice, GetLabel(nameof(EnableCorpseStripOnSacrifice)), true);
 
             ApplySettings();
         }

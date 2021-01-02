@@ -5,9 +5,10 @@
     <label>revia berserker</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>75</combatPower>
+    <combatPower>95</combatPower>
     <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
+    <gearHealthRange>0.6~1.5</gearHealthRange>
     <apparelTags>
       <li>Neolithic</li>
       <li>Medieval</li>

@@ -5,7 +5,7 @@
     <label>revia skullshatterer</label>
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
-    <combatPower>100</combatPower>
+    <combatPower>350</combatPower>
     <isFighter>true</isFighter>
     <factionLeader>true</factionLeader>
     <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
