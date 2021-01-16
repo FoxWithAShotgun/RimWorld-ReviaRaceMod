@@ -14,7 +14,7 @@
       <li>ReviaRaceBackstory</li>
     </backstoryCategories>
     <settlementTexturePath>World/ReviaEmblem</settlementTexturePath>
-    <factionIconPath>World/ReviaEmblem</factionIconPath>
+    <factionIconPath>World/WorldObjects/DefaultSettlement</factionIconPath>
     <colorSpectrum>
       <li>(0, 0.75, 0.85)</li>
       <li>(0, 0.70, 0.85</li>

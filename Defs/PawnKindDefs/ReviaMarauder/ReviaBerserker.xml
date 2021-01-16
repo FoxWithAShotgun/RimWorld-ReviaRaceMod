@@ -29,7 +29,7 @@
         <li>
           <choiceChance>50</choiceChance>
           <thingDef>MedicineHerbal</thingDef>
-          <countRange>1~3</countRange>
+          <countRange>0~1</countRange>
         </li>
         <li>
           <choiceChance>50</choiceChance>

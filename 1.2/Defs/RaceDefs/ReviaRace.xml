@@ -162,8 +162,8 @@
                 <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
                 <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
                 <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
-                <ReviaRaceSoulreapTier8>Things/Tails/Tail7</ReviaRaceSoulreapTier8>
-                <ReviaRaceSoulreapTier9>Things/Tails/Tail7</ReviaRaceSoulreapTier9>
+                <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
+                <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
               </hediffGraphics>
               <offsets>
                 <south>
@@ -211,8 +211,8 @@
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(-0.43, 0.65)</Female>
-                    <Thin>(-0.43, 0.65)</Thin>
+                    <Female>(-0.475, 0.57)</Female>
+                    <Thin>(-0.475, 0.57)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
@@ -222,8 +222,8 @@
                 </south>
                 <north>
                   <bodyTypes>
-                    <Female>(0, 0.9)</Female>
-                    <Thin>(0, 0.9)</Thin>
+                    <Female>(0.05, 0.9)</Female>
+                    <Thin>(0.05, 0.9)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
@@ -233,8 +233,8 @@
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(-0.36, 0.63)</Female>
-                    <Thin>(-0.36, 0.63)</Thin>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
@@ -265,8 +265,8 @@
                 </south>
                 <north>
                   <bodyTypes>
-                    <Female>(0, 0.9)</Female>
-                    <Thin>(0, 0.9)</Thin>
+                    <Female>(-0.05, 0.9)</Female>
+                    <Thin>(-0.05, 0.9)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>

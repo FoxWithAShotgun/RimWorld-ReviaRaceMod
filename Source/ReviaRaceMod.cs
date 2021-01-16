@@ -1,6 +1,7 @@
 ﻿using ReviaRace.Comps;
 using ReviaRace.Helpers;
 using ReviaRace.PersistentData;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,8 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
+            FactionDef
+
             var headerState = new GUIStyleState
             {
                 textColor = new Color(1.0f, 0.9f, 0.25f, 1.0f),

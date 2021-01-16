@@ -25,14 +25,14 @@
       <skipChance>0</skipChance>
       <subOptionsChooseOne>
         <li>
-          <choiceChance>60</choiceChance>
+          <choiceChance>20</choiceChance>
           <thingDef>MedicineHerbal</thingDef>
-          <countRange>1~1</countRange>
+          <countRange>0~1</countRange>
         </li>
         <li>
-          <choiceChance>20</choiceChance>
+          <choiceChance>60</choiceChance>
           <thingDef>Silver</thingDef>
-          <countRange>10~15</countRange>
+          <countRange>0~10</countRange>
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>

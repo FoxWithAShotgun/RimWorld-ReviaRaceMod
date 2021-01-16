@@ -13,7 +13,7 @@
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>High Templar</leaderTitle>
     <factionIconPath>World/ReviaEmblem</factionIconPath>
-    <settlementTexturePath>World/ReviaEmblem</settlementTexturePath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <colorSpectrum>
       <li>(0.20, 0.20, 0.85)</li>
       <li>(0.15, 0.15, 0.40)</li>
