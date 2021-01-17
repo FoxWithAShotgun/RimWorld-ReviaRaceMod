@@ -254,8 +254,8 @@
               <offsets>
                 <south>
                   <bodyTypes>
-                    <Female>(-0.43, 0.65)</Female>
-                    <Thin>(-0.43, 0.65)</Thin>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
@@ -276,8 +276,8 @@
                 </north>
                 <east>
                   <bodyTypes>
-                    <Female>(-0.36, 0.63)</Female>
-                    <Thin>(-0.36, 0.63)</Thin>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
                   </bodyTypes>
                   <crownTypes>
                     <Normal_Average>(0, 0)</Normal_Average>
