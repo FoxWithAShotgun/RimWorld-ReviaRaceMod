@@ -32,8 +32,6 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            FactionDef
-
             var headerState = new GUIStyleState
             {
                 textColor = new Color(1.0f, 0.9f, 0.25f, 1.0f),
