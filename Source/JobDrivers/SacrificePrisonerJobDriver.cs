@@ -133,16 +133,44 @@ namespace ReviaRace.JobDrivers
                         }
                     }
 
-                    // Spawn the product.
-                    var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                    // Spawn the product, or handle one of the other effects.
                     if (Map.GameConditionManager.ConditionIsActive(Defs.Eclipse))
                     {
-                        thing.stackCount += 2;
+                        var missingParts = pawn.health.hediffSet.GetMissingPartsCommonAncestors();
+                        if (missingParts.Count > 0)
+                        {
+                            var missing = missingParts.RandomElement();
+                            pawn.health.hediffSet.hediffs.Remove(missing);
+                            var maxHp = missing.Part.def.GetMaxHealth(pawn);
+                            
+                            var injuryHediff = pawn.health.AddHediff(HediffDefOf.Cut, missing.Part, new DamageInfo(DamageDefOf.Rotting, 1.0f, 10000.00f));
+                            var permHediffComp = injuryHediff.TryGetComp<HediffComp_GetsPermanent>();
+                            injuryHediff.Severity = maxHp / 2.0f;
+                            permHediffComp.IsPermanent = true;
+                        }
+                        else 
+                        {
+                            var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                            thing.stackCount += 2;
+                        }
                     }
                     else if (Map.GameConditionManager.ConditionIsActive(Defs.SolarFlare))
                     {
-                        
-                        thing.stackCount += 1;
+                        var permInjuries = pawn.health.hediffSet.hediffs.Where(h => h.IsPermanent() && !(h is Hediff_MissingPart)).ToList();
+                        if (permInjuries.Count > 0)
+                        {
+                            var randomInjury = permInjuries.RandomElement();
+                            randomInjury.Severity -= randomInjury.Part.depth == BodyPartDepth.Inside ? 2.0f : 4.0f;
+                        }
+                        else
+                        {
+                            var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                            thing.stackCount += 1;
+                        }
+                    }
+                    else
+                    {
+                        var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
                     }
                     
                     TaleRecorder.RecordTale(Defs.TaleSacrificed, new[] { Sacrificer, Prisoner });
