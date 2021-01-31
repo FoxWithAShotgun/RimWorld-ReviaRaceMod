@@ -49,5 +49,6 @@
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\Things\Tails\Tail7_northm.png~</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\Things\Tails\Tail7_south.png~</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\Things\Tails\Tail7_southm.png~</exclude>
+    <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\World\ReviaEmblem.png~</exclude>
   </Excluded>
 </Configuration>

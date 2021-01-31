@@ -10,6 +10,7 @@
         <li>ReviaPlayerColony</li>
       </value>
     </match>
+    <success>Always</success>
   </Operation>
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -24,5 +25,6 @@
         </li>
       </value>
     </match>
+    <success>Always</success>
   </Operation>
 </Patch>
