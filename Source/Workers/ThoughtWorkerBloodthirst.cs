@@ -15,14 +15,14 @@ namespace ReviaRace.Workers
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
             var bloodthirstNeed = p.needs.TryGetNeed<BloodthirstNeed>();
-
             if (bloodthirstNeed == null)
             {
                 return ThoughtState.Inactive;
             }
 
             var level = bloodthirstNeed.CurLevel;
-            var stage = BloodthirstNeed.Thresholds.FindIndex(t => t >= level);
+            var stage = BloodthirstNeed.Thresholds.FindLastIndex(t => t <= level);
+
             return ThoughtState.ActiveAtStage(stage);
         }
     }

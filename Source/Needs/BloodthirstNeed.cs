@@ -13,10 +13,12 @@ namespace ReviaRace.Needs
         public BloodthirstNeed(Pawn pawn) 
             : base(pawn)
         {
+            threshPercents = Thresholds;
         }
 
         public static readonly List<float> Thresholds = new List<float>()
         {
+            ThreshDesperate,
             ThreshAgitated,
             ThreshFrustrated,
             ThreshItching,
@@ -50,6 +52,11 @@ namespace ReviaRace.Needs
         
         public override void NeedInterval()
         {
+            if (pawn.Map == null)
+            {
+                return;
+            }
+
             curTick++;
 
             if (curTick >= 10)
@@ -58,7 +65,7 @@ namespace ReviaRace.Needs
 
                 if (!PawnAffected)
                 {
-                    CurLevel = ThreshSatisfied;
+                    CurLevel = ThreshItching;
                     return;
                 }
 
