@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ReviaRace.Helpers;
+using ReviaRace.Needs;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
@@ -172,7 +173,12 @@ namespace ReviaRace.JobDrivers
                     {
                         var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
                     }
-                    
+
+                    var bloodthirst = Sacrificer.needs.TryGetNeed<BloodthirstNeed>();
+                    if (bloodthirst != null)
+                    {
+                        bloodthirst.CurLevel += 0.80f * Prisoner.BodySize;
+                    }
                     TaleRecorder.RecordTale(Defs.TaleSacrificed, new[] { Sacrificer, Prisoner });
                 }
             };

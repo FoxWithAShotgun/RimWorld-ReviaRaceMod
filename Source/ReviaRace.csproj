@@ -88,11 +88,13 @@
     <Compile Include="Helpers\Strings.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
+    <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReviaRaceMod.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />
+    <Compile Include="Workers\ThoughtWorkerBloodthirst.cs" />
     <Compile Include="WorkGivers\SacrificePrisonerWorkGiver.cs" />
   </ItemGroup>
   <ItemGroup />

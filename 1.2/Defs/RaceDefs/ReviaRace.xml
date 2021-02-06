@@ -57,6 +57,7 @@
             <defName>Wimp</defName>
           </li>
         </disallowedTraits>
+        
         <allowHumanBios>false</allowHumanBios>
         <humanRecipeImport>true</humanRecipeImport>
         <alienPartGenerator>
@@ -290,6 +291,21 @@
           </bodyAddons>
         </alienPartGenerator>
       </generalSettings>
+      <raceRestriction>
+        <recipeList>
+          <li>ReviaRaceBloodstoneToPalestone</li>
+          <li>ReviaRaceCraftBloodRune</li>
+          <li>ReviaRaceConsecrateBloodRune</li>
+          <li>ReviaRaceSacrificeElephantTusk</li>
+          <li>ReviaRaceConsecrateBloodRuneGreater</li>
+          <li>ReviaRaceCraftGreaterBloodRune</li>
+          <li>ReviaRaceSacrificeCorpse</li>
+          <li>ReviaRaceConsecrateBloodRuneLesser</li>
+          <li>ReviaRaceCraftLesserBloodRune</li>
+          <li>ReviaRaceSacrificeRawMeat</li>
+          <li>ReviaRaceSacrificeThrumboHorn</li>
+        </recipeList>
+      </raceRestriction>
       <hairSettings>
         <hasHair>true</hasHair>
         <getsGreyAt>65</getsGreyAt>

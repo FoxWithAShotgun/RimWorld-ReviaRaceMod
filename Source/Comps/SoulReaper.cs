@@ -6,11 +6,54 @@ using System.Threading.Tasks;
 using Verse;
 using RimWorld;
 using ReviaRace.Helpers;
+using ReviaRace.Needs;
 
 namespace ReviaRace.Comps
 {
     public class SoulReaper : ThingComp
     {
+        public override void Notify_Equipped(Pawn pawn)
+        {
+            Log.Message("Equipped!");
+            base.Notify_Equipped(pawn);
+        }
+
+        private int _lastAttackedTick = -1;
+        private int _btTick = 0;
+        private BloodthirstNeed _btNeed = null; // Caching to avoid frequent casting and searching of the need list. Iterators are bad for performance, mmkay?
+        public override void CompTick()
+        {
+            if (_btTick >= 10)
+            {
+                var pawn = parent as Pawn;
+                _btNeed = _btNeed == null ? pawn.needs.TryGetNeed<BloodthirstNeed>() : _btNeed;
+
+                if (pawn.LastAttackTargetTick != _lastAttackedTick &&
+                    pawn.LastAttackedTarget.Pawn is Pawn victim)
+                {
+                    _lastAttackedTick = pawn.LastAttackTargetTick;
+
+                    if (victim.Dead)
+                    {
+                        // Skulls for the skull throne!
+                        _btNeed.CurLevel += victim.BodySize * 0.80f;
+                    }
+                    else
+                    {
+                        // Blood for the blood god! 
+                        var amount = 0.001f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
+                        _btNeed.CurLevel += amount;
+                    }
+                }
+            }
+            else
+            {
+                _btTick++;
+            }
+            
+            base.CompTick();
+        }
+
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);

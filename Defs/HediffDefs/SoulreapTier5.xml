@@ -3,9 +3,10 @@
   <HediffDef>
     <defName>ReviaRaceSoulreapTier5</defName>
     <label>Soul Reap (5)</label>
-    <description>An indication of how many lives this Revia 1has taken. Revia grow stronger with the more lives that they take.</description>
+    <description>An indication of how many lives this Revia has taken. Revia grow stronger with the more lives that they take.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
     <stages>
       <li>
         <capMods>
