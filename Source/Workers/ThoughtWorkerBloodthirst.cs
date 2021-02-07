@@ -14,6 +14,11 @@ namespace ReviaRace.Workers
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
+            if (!BloodthirstNeed.Enabled)
+            {
+                return ThoughtState.Inactive;
+            }
+
             var bloodthirstNeed = p.needs.TryGetNeed<BloodthirstNeed>();
             if (bloodthirstNeed == null)
             {

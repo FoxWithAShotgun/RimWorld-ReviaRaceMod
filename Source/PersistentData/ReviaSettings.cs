@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.Needs;
 using ReviaRace.Workers;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace ReviaRace.PersistentData
             CostGrowthStartTier = 1;
             CostGrowthMode = SacrificeCostGrowth.Exponential;
             EnableRandomSoulReapTier = true;
+            EnableBloodthirstNeed = true;
         }
 
         public void ApplySettings()
@@ -29,6 +31,7 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
             SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
+            BloodthirstNeed.Enabled = EnableBloodthirstNeed;
         }
 
         public float CostBase
@@ -70,6 +73,13 @@ namespace ReviaRace.PersistentData
             set => _enableCorpseStripOnSacrifice = value;
         }
         internal bool _enableCorpseStripOnSacrifice;
+
+        public bool EnableBloodthirstNeed
+        {
+            get => _enableBloodthirstNeed;
+            set => _enableBloodthirstNeed = true;
+        }
+        internal bool _enableBloodthirstNeed;
 
         public override void ExposeData()
         {

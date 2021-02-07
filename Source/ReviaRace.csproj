@@ -83,6 +83,8 @@
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
+    <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
+    <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
     <Compile Include="Helpers\Strings.cs" />

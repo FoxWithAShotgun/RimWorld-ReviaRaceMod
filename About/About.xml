@@ -24,6 +24,7 @@
   <loadAfter>
     <li>erdelf.HumanoidAlienRaces</li>
     <li>JecsTools</li>
+    <li>brrainz.harmony</li>
   </loadAfter>
   <url>https://github.com/FoxWithAShotgun/RimWorld-ReviaRaceMod/wiki</url>
   <description>

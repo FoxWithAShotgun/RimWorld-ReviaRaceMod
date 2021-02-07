@@ -17,6 +17,7 @@
   <ReviaRaceSettingsSacrificeCostGrowthMode>Cost growth mode</ReviaRaceSettingsSacrificeCostGrowthMode>
   <ReviaRaceSettingsEnableRandomSoulReapTier>Assign random Soul Reap tier on spawn</ReviaRaceSettingsEnableRandomSoulReapTier>
   <ReviaRaceSettingsEnableStripOnSacrifice>Strip corpses on sacrifice</ReviaRaceSettingsEnableStripOnSacrifice>
+  <ReviaRaceSettingsEnableBloodthirstNeed>Enable bloodthirst need</ReviaRaceSettingsEnableBloodthirstNeed>
   <ReviaRaceSettingsSacrificeCostGreater>Bloodstone costs with current settings: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}</ReviaRaceSettingsSacrificeCostGreater>
   <ReviaRaceSettingsSacrificeCostLesser>Palestone costs with current settings: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}</ReviaRaceSettingsSacrificeCostLesser>
   <Linear>Linear</Linear>

@@ -12,12 +12,6 @@ namespace ReviaRace.Comps
 {
     public class SoulReaper : ThingComp
     {
-        public override void Notify_Equipped(Pawn pawn)
-        {
-            Log.Message("Equipped!");
-            base.Notify_Equipped(pawn);
-        }
-
         private int _lastAttackedTick = -1;
         private int _btTick = 0;
         private BloodthirstNeed _btNeed = null; // Caching to avoid frequent casting and searching of the need list. Iterators are bad for performance, mmkay?

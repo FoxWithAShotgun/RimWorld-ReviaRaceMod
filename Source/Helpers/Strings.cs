@@ -27,6 +27,7 @@ namespace ReviaRace.Helpers
         internal static string SettingsSacrificeCostGrowthMode => "ReviaRaceSettingsSacrificeCostGrowthMode";
         internal static string SettingsSacrificeEnableRandomSoulReapTier => "ReviaRaceSettingsEnableRandomSoulReapTier";
         internal static string SettingsSacrificeEnableStripOnSacrifice => "ReviaRaceSettingsEnableStripOnSacrifice";
+        internal static string SettingsEnableBloodthirstNeed => "ReviaRaceSettingsEnableBloodthirstNeed";
         internal static string SettingsSacrificeCostGreater => "ReviaRaceSettingsSacrificeCostGreater";
         internal static string SettingsSacrificeCostLesser => "ReviaRaceSettingsSacrificeCostLesser";
         internal static string SettingsSacrificeCostHeader => "ReviaRaceSettingsSacrificeCostHeader";

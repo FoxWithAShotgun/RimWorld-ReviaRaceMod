@@ -15,6 +15,7 @@ namespace ReviaRace.Needs
         {
             threshPercents = Thresholds;
         }
+        public static bool Enabled { get; set; }
 
         public static readonly List<float> Thresholds = new List<float>()
         {
@@ -52,7 +53,7 @@ namespace ReviaRace.Needs
         
         public override void NeedInterval()
         {
-            if (pawn.Map == null)
+            if (!Enabled || pawn.Map == null)
             {
                 return;
             }
