@@ -15,12 +15,24 @@ namespace ReviaRace.Comps
         private int _lastAttackedTick = -1;
         private int _btTick = 0;
         private BloodthirstNeed _btNeed = null; // Caching to avoid frequent casting and searching of the need list. Iterators are bad for performance, mmkay?
+        private bool _btDisabled = false;
         public override void CompTick()
         {
+            if (_btDisabled)
+            {
+                return;
+            }
+
             if (_btTick >= 10)
             {
                 var pawn = parent as Pawn;
                 _btNeed = _btNeed == null ? pawn.needs.TryGetNeed<BloodthirstNeed>() : _btNeed;
+
+                if (_btNeed == null)
+                {
+                    _btDisabled = true;
+                    return;
+                }
 
                 if (pawn.LastAttackTargetTick != _lastAttackedTick &&
                     pawn.LastAttackedTarget.Pawn is Pawn victim)
@@ -70,11 +82,11 @@ namespace ReviaRace.Comps
                         // This should have at least tier 1 of soul reap.
                         // Add it now.
                         var rng = new Random();
-                        AddSoulReapTier(rng.Next(1, 3));
+                        AddSoulReapTier(rng.Next(SoulReapSpawnRange.min, SoulReapSpawnRange.max));
                     }
                     else
                     {
-                        AddSoulReapTier(2);
+                        AddSoulReapTier(SoulReapSpawnFixed);
                     }
                 }
             }
@@ -83,6 +95,8 @@ namespace ReviaRace.Comps
         internal Hediff SoulReapHediff => (parent as Pawn)?.health.hediffSet.hediffs
                                          .FirstOrDefault(hediff => hediff.def.defName.Contains("ReviaRaceSoulreapTier"));
         internal static bool EnableRandomSoulReapTier { get; set; }
+        internal static IntRange SoulReapSpawnRange { get; set; }
+        internal static int SoulReapSpawnFixed { get; set; }
 
         internal int GetSoulReapTier()
         {

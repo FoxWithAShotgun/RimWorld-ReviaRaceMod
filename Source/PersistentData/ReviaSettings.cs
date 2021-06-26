@@ -20,7 +20,10 @@ namespace ReviaRace.PersistentData
             CostGrowthStartTier = 1;
             CostGrowthMode = SacrificeCostGrowth.Exponential;
             EnableRandomSoulReapTier = true;
+            EnableCorpseStripOnSacrifice = true;
             EnableBloodthirstNeed = true;
+            SoulReapSpawnRange = new IntRange(1, 3);
+            SoulReapSpawnFixed = 2;
         }
 
         public void ApplySettings()
@@ -30,6 +33,8 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthMode = CostGrowthMode;
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
             SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
+            SoulReaper.SoulReapSpawnRange = SoulReapSpawnRange;
+            SoulReaper.SoulReapSpawnFixed = SoulReapSpawnFixed;
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
             BloodthirstNeed.Enabled = EnableBloodthirstNeed;
         }
@@ -77,9 +82,23 @@ namespace ReviaRace.PersistentData
         public bool EnableBloodthirstNeed
         {
             get => _enableBloodthirstNeed;
-            set => _enableBloodthirstNeed = true;
+            set => _enableBloodthirstNeed = value;
         }
         internal bool _enableBloodthirstNeed;
+
+        public IntRange SoulReapSpawnRange
+        {
+            get => _soulReapSpawnRange;
+            set => _soulReapSpawnRange = value;
+        }
+        internal IntRange _soulReapSpawnRange;
+
+        public int SoulReapSpawnFixed
+        {
+            get => _soulReapSpawnFixed;
+            set => _soulReapSpawnFixed = 2;
+        }
+        internal int _soulReapSpawnFixed;
 
         public override void ExposeData()
         {
@@ -89,6 +108,9 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _costGrowthMode, GetLabel(nameof(CostGrowthMode)), SacrificeCostGrowth.Exponential);
             Scribe_Values.Look(ref _enableRandomSoulReapTier, GetLabel(nameof(EnableRandomSoulReapTier)), false);
             Scribe_Values.Look(ref _enableCorpseStripOnSacrifice, GetLabel(nameof(EnableCorpseStripOnSacrifice)), true);
+            Scribe_Values.Look(ref _enableBloodthirstNeed, GetLabel(nameof(EnableBloodthirstNeed)), true);
+            Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1,3));
+            Scribe_Values.Look(ref _soulReapSpawnFixed, GetLabel(nameof(SoulReapSpawnFixed)), 2);
 
             ApplySettings();
         }

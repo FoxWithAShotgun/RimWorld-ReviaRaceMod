@@ -24,6 +24,7 @@ namespace ReviaRace
         private string _baseCostBuf;
         private string _growthFactorBuf;
         private string _growthStartTierBuf;
+        private string _fixedTierBuf;
 
         public override string SettingsCategory()
         {
@@ -50,7 +51,7 @@ namespace ReviaRace
             var sacrificeList = new Listing_Standard();
             var height
                 = 3 * 10
-                + (bodyStyle.lineHeight + 8) * 11
+                + (bodyStyle.lineHeight + 8) * 12
                 + (headerStyle.lineHeight);
                 
             var sacrificeGroupRect = new Rect(inRect.x + 10, inRect.y + 10, inRect.width - 20, height);
@@ -72,6 +73,14 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
+            if (Settings.EnableRandomSoulReapTier)
+            {
+                DrawRangeWidgetWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnRange, ref Settings._soulReapSpawnRange, 1, 9);
+            }
+            else
+            {
+                DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnFixed, ref Settings._soulReapSpawnFixed, ref _fixedTierBuf, 1, 9);
+            }
 
             sacrificeList.Gap(10);
             DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
@@ -119,20 +128,12 @@ namespace ReviaRace
             Widgets.Label(rightRect, Translator.Translate(taggedLabelID));
         }
 
-        private void DrawTextFieldWithLabel(Rect elemRect, string taggedLabelID, ref float setting, ref string buffer, int min = 0, int max = 100000)
+        private void DrawTextFieldWithLabel<T>(Rect elemRect, string taggedLabelID, ref T setting, ref string buffer, int min = 0, int max = 100000) where T:struct
         {
             var leftRect = elemRect.LeftPart(0.33f);
             var rightRect = elemRect.RightPart(0.66f);
             Widgets.Label(leftRect, Translator.Translate(taggedLabelID));
-            Widgets.TextFieldNumeric(rightRect, ref setting, ref buffer, min, max);
-        }
-
-        private void DrawTextFieldWithLabel(Rect elemRect, string taggedLabelID, ref int setting, ref string buffer, int min = 0, int max = 100000)
-        {
-            var leftRect = elemRect.LeftPart(0.33f);
-            var rightRect = elemRect.RightPart(0.66f);
-            Widgets.Label(leftRect, Translator.Translate(taggedLabelID));
-            Widgets.TextFieldNumeric(rightRect, ref setting, ref buffer, min, max);
+            Widgets.TextFieldNumeric<T>(rightRect, ref setting, ref buffer, min, max);
         }
 
         private void DrawCostCalculationLabel(Rect elemRect, Type invokeType)
@@ -164,6 +165,14 @@ namespace ReviaRace
             }
 
             Widgets.Label(elemRect, TranslatorFormattedStringExtensions.Translate(formatString, costs.ToArray()));
+        }
+
+        private void DrawRangeWidgetWithLabel(Rect elemRect, string taggedLabelID, ref IntRange setting, int min, int max)
+        {
+            var leftRect = elemRect.LeftPart(0.33f);
+            var rightRect = elemRect.RightPart(0.66f);
+            Widgets.Label(leftRect, Translator.Translate(taggedLabelID));
+            Widgets.IntRange(rightRect, 1, ref setting, min, max);
         }
     }
 }
