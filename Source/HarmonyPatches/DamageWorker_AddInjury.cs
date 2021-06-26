@@ -33,7 +33,12 @@ namespace ReviaRace.HarmonyPatches
                     return;
                 }
 
-                var btNeed = attacker.needs.TryGetNeed<BloodthirstNeed>();
+                var btNeed = attacker?.needs?.TryGetNeed<BloodthirstNeed>();
+                if (btNeed == null)
+                {
+                    return;
+                }
+
                 if (victim.Dead)
                 {
                     var amount = 0.50f * victim.BodySize;
@@ -41,7 +46,8 @@ namespace ReviaRace.HarmonyPatches
                 }
                 else
                 {
-                    var amount = 0.0025f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
+                    var bleedRate = (victim.health?.hediffSet?.BleedRateTotal ?? 0.0f);
+                    var amount = 0.0025f * bleedRate * victim.BodySize;
                     btNeed.CurLevel += amount;
                 }
             }
