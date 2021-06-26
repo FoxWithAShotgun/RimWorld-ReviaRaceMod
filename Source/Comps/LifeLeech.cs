@@ -23,8 +23,12 @@ namespace ReviaRace.Comps
     {
         public override void Notify_UsedWeapon(Pawn pawn)
         {
-            base.Notify_UsedWeapon(pawn);
+            if (pawn == null)
+            {
+                return;
+            }
 
+            base.Notify_UsedWeapon(pawn);
             var victim = pawn.LastAttackedTarget;
 
             if (!pawn.IsRevia())
@@ -36,7 +40,7 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var bleedRate = victim.Pawn.health.hediffSet.BleedRateTotal;
+            var bleedRate = victim.Pawn.health?.hediffSet?.BleedRateTotal ?? 0.0f;
             if (bleedRate == 0.0f)
             {
                 return;
