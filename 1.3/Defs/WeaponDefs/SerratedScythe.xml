@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
-    <defName>ReviaBlessedSerratedScythe</defName>
-    <label>Vermillion Tide</label>
-    <description>A cruel bardiche with a razor sharp blade. A murderous spirit resides within it.</description>
+    <defName>ReviaSerratedScythe</defName>
+    <label>harvester</label>
+    <description>A cruel bardiche with a blade of razor-sharp palestone shards. Designed to inflict severe bleeding and grievous wounds.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedScythe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -15,28 +15,22 @@
     <costStuffCount>90</costStuffCount>
     <costList>
       <ReviaRacePalestone>35</ReviaRacePalestone>
-      <ReviaGreaterBloodRune>1</ReviaGreaterBloodRune>
     </costList>
     <statBases>
-      <WorkToMake>25600</WorkToMake>
+      <WorkToMake>15000</WorkToMake>
       <Mass>3.50</Mass>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>ReviaRaceConsecratedWeaponry</researchPrerequisite>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
       <skillRequirements>
-        <Crafting>12</Crafting>
-        <Intellectual>12</Intellectual>
+        <Crafting>10</Crafting>
       </skillRequirements>
     </recipeMaker>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
-    </comps>
     <weaponTags>
-      <li>ReviaMeleeLegendary</li>
+      <li>ReviaMeleeIntermediate</li>
     </weaponTags>
     <tools>
       <li>
@@ -44,18 +38,18 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>20</power>
+        <power>12</power>
         <cooldownTime>2.0</cooldownTime>
-        <armorPenetration>0.18</armorPenetration>
+        <armorPenetration>0.12</armorPenetration>
       </li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>36</power>
+        <power>26</power>
         <cooldownTime>2.50</cooldownTime>
-        <armorPenetration>0.26</armorPenetration>
+        <armorPenetration>0.24</armorPenetration>
       </li>
     </tools>
   </ThingDef>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+      <value>
+        <li>ReviaPlayerColony</li>
+      </value>
+    </match>
+    <success>Always</success>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/MeditationFocusDef[defName="Natural"]/requiredBackstoriesAny</xpath>
+      <value>
+        <li>
+          <categoryName>ReviaRaceBackstory</categoryName>
+          <slot>Childhood</slot>
+        </li>
+      </value>
+    </match>
+    <success>Always</success>
+  </Operation>
+</Patch>

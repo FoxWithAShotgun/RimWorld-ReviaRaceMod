@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="ReviaRaceBase" Abstract="True" Class="ReviaRace.ReviaRace">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
+  <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+    <defName>ReviaRaceAlien</defName>
+    <label>Revia</label>
+    <description>A bloodthirsty vulpine near-human.</description>
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>0.0</maleGenderProbability>
+        <forcedRaceTraitEntries>
+          <li>
+            <defName>Bloodlust</defName>
+          </li>
+          <li>
+            <defName>Beauty</defName>
+            <degree>1</degree>
+            <chance>40</chance>
+          </li>
+          <li>
+            <defName>Beauty</defName>
+            <degree>2</degree>
+            <chance>30</chance>
+          </li>
+        </forcedRaceTraitEntries>
+        <disallowedTraits>
+          <li>
+            <defName>Kind</defName>
+          </li>
+          <li>
+            <defName>Wimp</defName>
+          </li>
+        </disallowedTraits>
+        
+        <allowHumanBios>false</allowHumanBios>
+        <humanRecipeImport>true</humanRecipeImport>
+        <alienPartGenerator>
+          <colorChannels>
+            <li>
+              <name>skin</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <min>RGBA(238,207,180,255)</min>
+                    <max>RGBA(255,224,196,255)</max>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,224,196,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,220,177,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(253,228,200,255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(238,207,180,255)</only>
+                  </li>
+                </options>
+              </first>
+              <second Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,224,196,255)</only>
+                  </li>
+                </options>
+              </second>
+            </li>
+            <li>
+              <name>hair</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <!-- Blondes -->
+                  <li>
+                    <weight>15</weight>
+                    <min>RGBA(161,121,48,255)</min>
+                    <max>RGBA(180,130,65,255)</max>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <min>RGBA(180,170,65,255)</min>
+                    <max>RGBA(225,200,90,255)</max>
+                  </li>
+                  <!-- Redheads -->
+                  <li>
+                    <weight>15</weight>
+                    <min>RGBA(225,98,29,255)</min>
+                    <max>RGBA(240,140,55,255)</max>
+                  </li>
+                  <!-- Brunettes -->
+                  <li>
+                    <weight>20</weight>
+                    <min>RGBA(45,23,14,255)</min>
+                    <max>RGBA(109,71,14,255)</max>
+                  </li>
+                  <!-- Ravens -->
+                  <li>
+                    <weight>20</weight>
+                    <min>RGBA(2,2,2,255)</min>
+                    <max>RGBA(33,33,2,255)</max>
+                  </li>
+                </options>
+              </first>
+              <second Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(255,255,255,255)</only>
+                  </li>
+                </options>
+              </second>
+            </li>
+          </colorChannels>
+          <alienbodytypes>
+            <li>Thin</li>
+            <li>Female</li>
+          </alienbodytypes>
+          <bodyAddons>
+            <li>
+              <path>Things/Tails/Tail1</path>
+              <bodyPart>tail</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <drawnInBed>false</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
+              <hediffGraphics>
+                <ReviaRaceSoulreapTier1>Things/Tails/Tail1</ReviaRaceSoulreapTier1>
+                <ReviaRaceSoulreapTier2>Things/Tails/Tail2</ReviaRaceSoulreapTier2>
+                <ReviaRaceSoulreapTier3>Things/Tails/Tail3</ReviaRaceSoulreapTier3>
+                <ReviaRaceSoulreapTier4>Things/Tails/Tail4</ReviaRaceSoulreapTier4>
+                <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
+                <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
+                <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
+                <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
+                <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
+              </hediffGraphics>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(-0.38, 0.12)</Female>
+                    <Thin>(-0.38, 0.12)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(-0.07, 0.02)</Female>
+                    <Thin>(-0.07, 0.02)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(-0.07, -0.17)</Female>
+                    <Thin>(-0.14, -0.22)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Ears/EarLeft</path>
+              <bodyPart>left ear</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(-0.475, 0.57)</Female>
+                    <Thin>(-0.475, 0.57)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(0.05, 0.9)</Female>
+                    <Thin>(0.05, 0.9)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Ears/EarRight</path>
+              <bodyPart>right ear</bodyPart>
+              <inFrontOfBody>true</inFrontOfBody>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>hair</colorChannel>
+              <shaderType>CutoutComplex</shaderType>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <Female>(-0.05, 0.9)</Female>
+                    <Thin>(-0.05, 0.9)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <Female>(-0.375, 0.57)</Female>
+                    <Thin>(-0.375, 0.57)</Thin>
+                  </bodyTypes>
+                  <crownTypes>
+                    <Normal_Average>(0, 0)</Normal_Average>
+                    <Normal_Pointy>(0, 0)</Normal_Pointy>
+                    <Normal_Wide>(0, 0)</Normal_Wide>
+                  </crownTypes>
+                </east>
+              </offsets>
+            </li>
+          </bodyAddons>
+        </alienPartGenerator>
+      </generalSettings>
+      <raceRestriction>
+        <recipeList>
+          <li>ReviaRaceBloodstoneToPalestone</li>
+          <li>ReviaRaceCraftBloodRune</li>
+          <li>ReviaRaceConsecrateBloodRune</li>
+          <li>ReviaRaceSacrificeElephantTusk</li>
+          <li>ReviaRaceConsecrateBloodRuneGreater</li>
+          <li>ReviaRaceCraftGreaterBloodRune</li>
+          <li>ReviaRaceSacrificeCorpse</li>
+          <li>ReviaRaceConsecrateBloodRuneLesser</li>
+          <li>ReviaRaceCraftLesserBloodRune</li>
+          <li>ReviaRaceSacrificeRawMeat</li>
+          <li>ReviaRaceSacrificeThrumboHorn</li>
+        </recipeList>
+      </raceRestriction>
+      <hairSettings>
+        <hasHair>true</hasHair>
+        <getsGreyAt>65</getsGreyAt>
+        <hairTags>
+          <li>Rural</li>
+          <li>Urban</li>
+        </hairTags>
+      </hairSettings>
+    </alienRace>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <MoveSpeed>5.25</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>36</ComfyTemperatureMax>
+      <LeatherAmount>45</LeatherAmount>
+      <ResearchSpeed>0.90</ResearchSpeed>
+      <MiningSpeed>1.25</MiningSpeed>
+      <SocialImpact>0.95</SocialImpact>
+      <MeleeDodgeChance>1.30</MeleeDodgeChance>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>25</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>14</power>
+        
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.4</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>110</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>ReviaRaceBody</body>
+      <baseBodySize>0.95</baseBodySize>
+      <baseHealthScale>1.15</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>30.0</gestationPeriodDays>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li>(10,0)</li>
+          <li>(11,15)</li>
+          <li>(12,20)</li>
+          <li>(14,40)</li>
+          <li>(16,60)</li>
+          <li>(20,100)</li>
+          <li>(30,100)</li>
+          <li>(35,60)</li>
+          <li>(40,40)</li>
+          <li>(50,10)</li>
+          <li>(60,5)</li>
+          <li>(70,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+      <li>
+        <compClass>ReviaRace.Comps.SoulReaper</compClass>
+      </li>
+      <li>
+        <compClass>ReviaRace.Comps.ReviaRaceOnSpawn</compClass>
+      </li>
+    </comps>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>

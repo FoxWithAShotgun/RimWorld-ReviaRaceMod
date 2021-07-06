@@ -1,42 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
-    <defName>ReviaBlessedSerratedDagger</defName>
-    <label>Crimson Blossom</label>
-    <description>A cruel sawtoothed dagger bearing a bloodthirsty spirit.</description>
+    <defName>ReviaSerratedSword</defName>
+    <label>scourge</label>
+    <description>A cruel sword with a heavy single-edged blade, lined with palestone shards. Designed to inflict severe bleeding and grievous wounds.</description>
     <graphicData>
-      <texPath>Things/Item/Weapons/SerratedDagger</texPath>
+      <texPath>Things/Item/Weapons/SerratedSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>0.6</drawSize>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <costStuffCount>25</costStuffCount>
+    <costStuffCount>40</costStuffCount>
     <costList>
-      <ReviaRacePalestone>20</ReviaRacePalestone>
-      <ReviaLesserBloodRune>1</ReviaLesserBloodRune>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
     </costList>
     <statBases>
-      <WorkToMake>25600</WorkToMake>
-      <Mass>1.00</Mass>
+      <WorkToMake>12800</WorkToMake>
+      <Mass>1.50</Mass>
     </statBases>
     <recipeMaker>
-      <researchPrerequisite>ReviaRaceConsecratedWeaponry</researchPrerequisite>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
-        <Intellectual>6</Intellectual>
       </skillRequirements>
     </recipeMaker>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <comps>
-      <li Class="CompProperties_Biocodable"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
-    </comps>
     <weaponTags>
-      <li>ReviaMeleeLegendary</li>
+      <li>ReviaMeleeIntermediate</li>
     </weaponTags>
     <tools>
       <li>
@@ -44,7 +37,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>16</power>
+        <power>9</power>
         <cooldownTime>1.5</cooldownTime>
         <armorPenetration>0.12</armorPenetration>
       </li>
@@ -54,7 +47,7 @@
           <li>Gash</li>
         </capacities>
         <power>16</power>
-        <cooldownTime>1.75</cooldownTime>
+        <cooldownTime>2.00</cooldownTime>
         <armorPenetration>0.22</armorPenetration>
       </li>
       <li>
@@ -62,9 +55,9 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>16</power>
-        <cooldownTime>1.75</cooldownTime>
-        <armorPenetration>0.22</armorPenetration>
+        <power>18</power>
+        <cooldownTime>2.00</cooldownTime>
+        <armorPenetration>0.18</armorPenetration>
       </li>
     </tools>
   </ThingDef>
