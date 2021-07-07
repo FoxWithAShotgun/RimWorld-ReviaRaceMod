@@ -4,6 +4,8 @@
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\.git</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\.vs</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\1.1\Assemblies\ReviaRace.pdb</exclude>
+    <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\1.2\Assemblies\ReviaRace.pdb</exclude>
+    <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\1.3\Assemblies\ReviaRace.pdb</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Source</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\Things\Item\Weapons\SerratedDagger.png~</exclude>
     <exclude>G:\SteamLibrary\steamapps\common\RimWorld\Mods\RimWorld-ReviaRaceMod\Textures\Things\Item\Weapons\SerratedScythe.png~</exclude>
