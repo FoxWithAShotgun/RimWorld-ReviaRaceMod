@@ -14,6 +14,19 @@
     <leaderTitle>High Templar</leaderTitle>
     <factionIconPath>World/ReviaEmblem</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceSkarniteMeme</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+    </allowedMemes>
+    <allowedCultures>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceHighCulture</li>
+    </allowedCultures>
     <colorSpectrum>
       <li>(0.20, 0.20, 0.85)</li>
       <li>(0.15, 0.15, 0.40)</li>

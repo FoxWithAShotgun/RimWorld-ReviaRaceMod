@@ -4,10 +4,10 @@
     <defName>ReviaRaceHighCulture</defName>
     <label>Imperial Revian</label>
     <description>A fanatical theocratic culture revolving around the worship of a bloody goddess.</description>
-    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaIdeoNamer</ideoNameMaker>
-    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerDeity</deityNameMaker>
-    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerDeityType</deityTypeMaker>
-    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerLeaderPriest</leaderTitleMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaHighIdeoNamer</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaHighNamerDeity</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaHighNamerDeityType</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaHighNamerLeader</leaderTitleMaker>
     <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerFestival</festivalNameMaker>
     <allowedPlaceTags>
       <li>OriginTribal</li>
@@ -15,7 +15,8 @@
     <iconPath>World/ReviaEmblem</iconPath>
     <iconColor>(0.8, 0.2, 0.05)</iconColor>
     <preferredWeaponClasses>
-      <noble>Medieval</noble>
+      <noble>Melee</noble>
+      <despised>Ranged</despised>
     </preferredWeaponClasses>
     <styleItemTags>
       <li>

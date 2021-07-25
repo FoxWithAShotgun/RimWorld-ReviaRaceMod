@@ -29,9 +29,6 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <comps>
-      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon"/>
-    </comps>
     <weaponTags>
       <li>ReviaMeleeIntermediate</li>
     </weaponTags>

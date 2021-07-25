@@ -15,6 +15,19 @@
     <leaderTitle>Skullshatterer</leaderTitle>
     <factionIconPath>World/ReviaEmblem</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceSkarniteMeme</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </allowedMemes>
+    <allowedCultures>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceRaiderCulture</li>
+    </allowedCultures>
     <colorSpectrum>
       <li>(0.60, 0.60, 0.05)</li>
       <li>(0.85, 0.65, 0.05)</li>

@@ -4,10 +4,10 @@
     <defName>ReviaRaceRaiderCulture</defName>
     <label>Barbarian Revian</label>
     <description>A loosely structured barbaric culture revolving around bloodshed and ritual sacrifice.</description>
-    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaIdeoNamer</ideoNameMaker>
-    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerDeity</deityNameMaker>
-    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerDeityType</deityTypeMaker>
-    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerLeaderPriestBarbaric</leaderTitleMaker>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaRaiderIdeoNamer</ideoNameMaker>
+    <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaRaiderNamerDeity</deityNameMaker>
+    <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaRaiderNamerDeityType</deityTypeMaker>
+    <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaRaiderNamerLeader</leaderTitleMaker>
     <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">ReviaNamerFestival</festivalNameMaker>
     <allowedPlaceTags>
       <li>OriginTribal</li>
@@ -15,8 +15,8 @@
     <iconPath>World/ReviaEmblem</iconPath>
     <iconColor>(0.3, 0.3, 0.3)</iconColor>
     <preferredWeaponClasses>
-      <noble>Medieval</noble>
-      <despised>Ultratech</despised>
+      <noble>Melee</noble>
+      <despised>Ranged</despised>
     </preferredWeaponClasses>
     <thingStyleCategories>
       <li MayRequire="Ludeon.RimWorld.Ideology">

@@ -315,15 +315,7 @@
           <li>ReviaRaceSacrificeThrumboHorn</li>
         </recipeList>
       </raceRestriction>
-      <hairSettings>
-        <hasHair>true</hasHair>
-        <getsGreyAt>65</getsGreyAt>
-        <hairTags>
-          <li>Rural</li>
-          <li>Urban</li>
-        </hairTags>
-      </hairSettings>
-    </alienRace>
+          </alienRace>
     <statBases>
       <MarketValue>3500</MarketValue>
       <MoveSpeed>5.25</MoveSpeed>
