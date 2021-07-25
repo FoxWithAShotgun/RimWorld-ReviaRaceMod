@@ -9,7 +9,7 @@
     <isFighter>true</isFighter>
     <factionLeader>true</factionLeader>
     <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
-    <itemQuality>Masterwork</itemQuality>
+    <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>Medieval</li>
     </apparelTags>
@@ -18,7 +18,7 @@
     </apparelRequired>
     <apparelMoney>9999~9999</apparelMoney>
     <weaponTags>
-      <li>ReviaMeleeLegendary</li>
+      <li>ReviaMeleeAdvanced</li>
     </weaponTags>
     <weaponMoney>9999~9999</weaponMoney>
     <initialWillRange>1.0~1.0</initialWillRange>
