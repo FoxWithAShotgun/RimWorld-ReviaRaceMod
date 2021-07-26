@@ -104,7 +104,7 @@ namespace ReviaRace.JobDrivers
                     var heartBpr = Prisoner.RaceProps.body.AllParts.Find(bpr => bpr.def.defName == "Heart");
                     var dInfo = new DamageInfo(Defs.HeartExtraction, 99999f, armorPenetration: 999f, hitPart: heartBpr);
                     Prisoner.Kill(dInfo);
-                    ThoughtUtility.GiveThoughtsForPawnExecuted(Prisoner, PawnExecutionKind.GenericBrutal);
+                    ThoughtUtility.GiveThoughtsForPawnExecuted(Prisoner, Sacrificer, PawnExecutionKind.GenericBrutal);
 
                     // Apply negative relations modifier.
                     if (pawn.Faction != null && Prisoner.Faction != null)
