@@ -22,6 +22,7 @@ namespace ReviaRace.PersistentData
             EnableRandomSoulReapTier = true;
             EnableCorpseStripOnSacrifice = true;
             EnableBloodthirstNeed = true;
+            BloodthirstDaysToEmpty = 7.0f;
             SoulReapSpawnRange = new IntRange(1, 3);
             SoulReapSpawnFixed = 2;
         }
@@ -37,6 +38,7 @@ namespace ReviaRace.PersistentData
             SoulReaper.SoulReapSpawnFixed = SoulReapSpawnFixed;
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
             BloodthirstNeed.Enabled = EnableBloodthirstNeed;
+            BloodthirstNeed.DaysToEmpty = BloodthirstDaysToEmpty;
         }
 
         public float CostBase
@@ -100,6 +102,13 @@ namespace ReviaRace.PersistentData
         }
         internal int _soulReapSpawnFixed;
 
+        public float BloodthirstDaysToEmpty
+        {
+            get => _bloodthirstDaysToEmpty;
+            set => _bloodthirstDaysToEmpty = 7.0f;
+        }
+        internal float _bloodthirstDaysToEmpty;
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
@@ -109,6 +118,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _enableRandomSoulReapTier, GetLabel(nameof(EnableRandomSoulReapTier)), false);
             Scribe_Values.Look(ref _enableCorpseStripOnSacrifice, GetLabel(nameof(EnableCorpseStripOnSacrifice)), true);
             Scribe_Values.Look(ref _enableBloodthirstNeed, GetLabel(nameof(EnableBloodthirstNeed)), true);
+            Scribe_Values.Look(ref _bloodthirstDaysToEmpty, GetLabel(nameof(BloodthirstDaysToEmpty)), 7.0f);
             Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1,3));
             Scribe_Values.Look(ref _soulReapSpawnFixed, GetLabel(nameof(SoulReapSpawnFixed)), 2);
 

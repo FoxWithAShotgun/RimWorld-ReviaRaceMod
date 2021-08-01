@@ -20,11 +20,13 @@ namespace ReviaRace
             Settings = base.GetSettings<ReviaSettings>();
             Settings.ApplySettings();
         }
+
         public ReviaSettings Settings { get; set; }
         private string _baseCostBuf;
         private string _growthFactorBuf;
         private string _growthStartTierBuf;
         private string _fixedTierBuf;
+        private string _bloodthirstDaysToEmptyBuf;
 
         public override string SettingsCategory()
         {
@@ -33,6 +35,8 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
+            const int numRows = 13;
+
             var headerState = new GUIStyleState
             {
                 textColor = new Color(1.0f, 0.9f, 0.25f, 1.0f),
@@ -51,7 +55,7 @@ namespace ReviaRace
             var sacrificeList = new Listing_Standard();
             var height
                 = 3 * 10
-                + (bodyStyle.lineHeight + 8) * 12
+                + (bodyStyle.lineHeight + 8) * numRows
                 + (headerStyle.lineHeight);
                 
             var sacrificeGroupRect = new Rect(inRect.x + 10, inRect.y + 10, inRect.width - 20, height);
@@ -73,6 +77,11 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
+            if (Settings.EnableBloodthirstNeed)
+            {
+                DrawTextFieldWithLabel<float>(sacrificeList.GetRect(lineHeight), Strings.SettingsBloodthirstDaysToEmpty, ref Settings._bloodthirstDaysToEmpty, ref _bloodthirstDaysToEmptyBuf, 1, 60);
+            }
+
             if (Settings.EnableRandomSoulReapTier)
             {
                 DrawRangeWidgetWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnRange, ref Settings._soulReapSpawnRange, 1, 9);
@@ -128,7 +137,7 @@ namespace ReviaRace
             Widgets.Label(rightRect, Translator.Translate(taggedLabelID));
         }
 
-        private void DrawTextFieldWithLabel<T>(Rect elemRect, string taggedLabelID, ref T setting, ref string buffer, int min = 0, int max = 100000) where T:struct
+        private void DrawTextFieldWithLabel<T>(Rect elemRect, string taggedLabelID, ref T setting, ref string buffer, float min = 0, float max = 100000) where T:struct
         {
             var leftRect = elemRect.LeftPart(0.33f);
             var rightRect = elemRect.RightPart(0.66f);

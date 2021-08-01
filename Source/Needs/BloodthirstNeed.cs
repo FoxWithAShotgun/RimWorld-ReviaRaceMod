@@ -17,6 +17,17 @@ namespace ReviaRace.Needs
         }
         public static bool Enabled { get; set; }
 
+        public static float DaysToEmpty 
+        {
+            get => _daysToEmpty;
+            set 
+            {
+                _daysToEmpty = value;
+                DecayPerDay = 1.0f / DaysToEmpty;
+            }
+        }
+        private static float _daysToEmpty;
+
         public static readonly List<float> Thresholds = new List<float>()
         {
             ThreshDesperate,
@@ -32,7 +43,7 @@ namespace ReviaRace.Needs
             set => base.CurLevel = Math.Min(value, 1.0f); 
         }
 
-        public static float DecayPerDay => 0.150f;
+        private static float DecayPerDay { get; set; }
         public static int TickMultTimer => 10;
 
         public static float ThreshDesperate => 0.00f;
