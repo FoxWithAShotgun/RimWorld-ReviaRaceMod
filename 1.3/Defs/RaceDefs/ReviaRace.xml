@@ -314,8 +314,20 @@
           <li>ReviaRaceSacrificeRawMeat</li>
           <li>ReviaRaceSacrificeThrumboHorn</li>
         </recipeList>
+        <researchList>
+          <li>
+            <projects>
+              <li>ReviaRaceAdvancedEquipment</li>
+              <li>ReviaRaceBloodBenediction</li>
+              <li>ReviaRaceBasicEquipment</li>
+              <li>ReviaRaceIntermediateEquipment</li>
+              <li>ReviaRaceReligionBase</li>
+              <li>ReviaRaceConsecratedWeaponry</li>
+            </projects>
+          </li>
+        </researchList>
       </raceRestriction>
-          </alienRace>
+    </alienRace>
     <statBases>
       <MarketValue>3500</MarketValue>
       <MoveSpeed>5.25</MoveSpeed>

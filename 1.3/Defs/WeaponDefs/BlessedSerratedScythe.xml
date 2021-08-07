@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedScythe</defName>
     <label>Vermillion Tide</label>
+    <relicChance>1</relicChance>
     <description>A cruel bardiche with a razor sharp blade. A murderous spirit resides within it.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedScythe</texPath>

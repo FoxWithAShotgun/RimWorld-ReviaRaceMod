@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedDagger</defName>
     <label>Crimson Blossom</label>
+    <relicChance>1</relicChance>
     <description>A cruel sawtoothed dagger bearing a bloodthirsty spirit.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedDagger</texPath>

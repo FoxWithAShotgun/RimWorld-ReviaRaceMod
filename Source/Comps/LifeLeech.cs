@@ -31,7 +31,7 @@ namespace ReviaRace.Comps
             base.Notify_UsedWeapon(pawn);
             var victim = pawn.LastAttackedTarget;
 
-            if (!pawn.IsRevia())
+            if (!pawn.IsRevia() && !pawn.IsSkarnite())
             {
                 return;
             }

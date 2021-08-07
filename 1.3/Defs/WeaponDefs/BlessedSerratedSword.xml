@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedSword</defName>
     <label>Red Inquisitor</label>
+    <relicChance>1</relicChance>
     <description>A cruel sword with a serrated blade, containing a hateful spirit.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedSword</texPath>

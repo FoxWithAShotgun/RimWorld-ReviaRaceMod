@@ -77,6 +77,7 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
+
             if (Settings.EnableBloodthirstNeed)
             {
                 DrawTextFieldWithLabel<float>(sacrificeList.GetRect(lineHeight), Strings.SettingsBloodthirstDaysToEmpty, ref Settings._bloodthirstDaysToEmpty, ref _bloodthirstDaysToEmptyBuf, 1, 60);
@@ -101,6 +102,7 @@ namespace ReviaRace
         {
             var rectLabel = elemRect.LeftPart(0.33f);
             var rectComboBox = elemRect.RightPart(0.66f);
+
             Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsSacrificeCostGrowthMode));
             Widgets.Dropdown<SacrificeCostGrowth, SacrificeCostGrowth>(
                 rectComboBox,

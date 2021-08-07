@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <MemeDef>
+  <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
     <defName>ReviaRaceSkarniteMeme</defName>
     <label>skarnite</label>
     <description>A person's greatest aspiration is to serve the bloody goddess, in all her forms. All hail Skarne!</description>
@@ -12,6 +12,17 @@
     <consumableBuildings>
       <li>Effigy</li>
     </consumableBuildings>
+    <startingResearchProjects>
+      <li>ReviaRaceReligionBase</li>
+    </startingResearchProjects>
+    <agreeableTraits>
+      <li>Bloodlust</li>
+      <li>Tough</li>
+    </agreeableTraits>
+    <disagreeableTraits>
+      <li>Wimp</li>
+      <li>Kind</li>
+    </disagreeableTraits>
     <requireOne>
       <li>
         <li>Raiding_Respected</li>
