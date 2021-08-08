@@ -29,6 +29,8 @@
         <li>Raiding_Required</li>
       </li>
       <li>
+        <li>Execution_DontCare</li>
+        <li>Execution_RespectedIfGuilty</li>
         <li>Execution_Required</li>
       </li>
       <li>
