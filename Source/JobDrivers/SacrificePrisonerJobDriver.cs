@@ -93,9 +93,8 @@ namespace ReviaRace.JobDrivers
                     ReadyForNextToil();
                 }
             });
-            yield return doSacrificePrisoner.WithProgressBar(iPawn, () => (float)TicksLeft / TicksMax);
-            
-            yield return Toils_Reserve.Release(iSacrificeBuilding);
+            yield return doSacrificePrisoner.WithProgressBar(iPawn, () => (TicksMax - (float)TicksLeft) / TicksMax);
+
             var afterSacrificePrisoner = new Toil
             {
                 defaultCompleteMode = ToilCompleteMode.Instant,
@@ -135,6 +134,19 @@ namespace ReviaRace.JobDrivers
                     }
 
                     // Spawn the product, or handle one of the other effects.
+                    // Find a good spot to spawn the product.
+                    IntVec3 spawnPos = CellFinder.FindNoWipeSpawnLocNear(
+                        Prisoner.Position,
+                        Map,
+                        Defs.Bloodstone,
+                        Rot4.Random, 6, pos =>
+                        {
+                            return
+                            (pos.x < Prisoner.Position.x - 1 || pos.x > Prisoner.Position.x + 1) &&
+                            // Fuck you Tynan. Learn your coordinates!
+                            (pos.z < Prisoner.Position.z - 1 || pos.z > Prisoner.Position.z + 1);
+                        });
+
                     if (Map.GameConditionManager.ConditionIsActive(Defs.Eclipse))
                     {
                         var missingParts = pawn.health.hediffSet.GetMissingPartsCommonAncestors();
@@ -151,7 +163,7 @@ namespace ReviaRace.JobDrivers
                         }
                         else 
                         {
-                            var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                            var thing = GenSpawn.Spawn(Defs.Bloodstone, spawnPos, Map);
                             thing.stackCount += 2;
                         }
                     }
@@ -165,13 +177,13 @@ namespace ReviaRace.JobDrivers
                         }
                         else
                         {
-                            var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                            var thing = GenSpawn.Spawn(Defs.Bloodstone, spawnPos, Map);
                             thing.stackCount += 1;
                         }
                     }
                     else
                     {
-                        var thing = GenSpawn.Spawn(Defs.Bloodstone, Prisoner.Position, Map);
+                        var thing = GenSpawn.Spawn(Defs.Bloodstone, spawnPos, Map);
                     }
 
                     var bloodthirst = Sacrificer.needs.TryGetNeed<BloodthirstNeed>();
@@ -180,9 +192,25 @@ namespace ReviaRace.JobDrivers
                         bloodthirst.CurLevel += 0.80f * Prisoner.BodySize;
                     }
                     TaleRecorder.RecordTale(Defs.TaleSacrificed, new[] { Sacrificer, Prisoner });
+
+                    // Find a good spot to move the prisoner corpse.
+                    IntVec3 movePos = CellFinder.FindNoWipeSpawnLocNear(
+                        Prisoner.Position,
+                        Map,
+                        Prisoner.Corpse.def,
+                        Rot4.Random, 6, pos =>
+                        {
+                            return
+                            (pos.x < Prisoner.Position.x - 1 || pos.x > Prisoner.Position.x + 1) &&
+                            // Fuck you Tynan. Learn your coordinates!
+                            (pos.z < Prisoner.Position.z - 1 || pos.z > Prisoner.Position.z + 1);
+                        });
+                    Prisoner.Corpse.Position = movePos;
                 }
             };
             yield return afterSacrificePrisoner;
+
+            
         }
     }
 }

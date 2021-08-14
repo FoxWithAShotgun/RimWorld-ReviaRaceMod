@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <!--Empire not auto-hostile-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Royalty</li>
@@ -12,6 +13,8 @@
     </match>
     <success>Always</success>
   </Operation>
+  
+  <!--Revians can meditate natural foci-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Royalty</li>
@@ -26,5 +29,43 @@
       </value>
     </match>
     <success>Always</success>
+  </Operation>
+  
+  <!--Revians should correctly appear in faction quests-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+          <value>
+            <li>
+              <factionDef>ReviaTemplarFaction</factionDef>
+              <pawnKinds>
+                <li>ReviaRaceInitiate</li>
+                <li>ReviaRaceTemplar</li>
+                <li>ReviaRaceQuartermaster</li>
+                <li>ReviaRaceHighTemplar</li>
+              </pawnKinds>  
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+          <value>
+            <li>
+              <factionDef>ReviaTemplarFaction</factionDef>
+              <pawnKinds>
+                <li>ReviaRaceInitiate</li>
+                <li>ReviaRaceTemplar</li>
+                <li>ReviaRaceHighTemplar</li>
+              </pawnKinds>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 </Patch>
