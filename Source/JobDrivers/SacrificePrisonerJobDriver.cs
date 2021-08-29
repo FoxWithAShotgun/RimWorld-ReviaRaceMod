@@ -68,7 +68,7 @@ namespace ReviaRace.JobDrivers
             this.FailOnDestroyedOrNull(iPrisoner);
             this.FailOnDestroyedOrNull(iSacrificeBuilding);
             this.FailOnAggroMentalState(iPrisoner);
-
+            
             yield return Toils_Goto.GotoThing(iPrisoner, PathEndMode.OnCell);
             yield return Toils_Haul.StartCarryThing(iPrisoner, true, false);
             yield return Toils_Goto.GotoThing(iSacrificeBuilding, SacrificeSpot.InteractionCell);
@@ -122,7 +122,7 @@ namespace ReviaRace.JobDrivers
                         {
                             mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedFear);
                         }
-                        else if (mapPawn.IsColonist && mapPawn.IsRevia())
+                        else if (mapPawn.IsColonist && (mapPawn.IsRevia() || mapPawn.IsSkarnite()))
                         {
                             mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
                         }
