@@ -19,6 +19,8 @@ namespace ReviaRace
         {
             Settings = base.GetSettings<ReviaSettings>();
             Settings.ApplySettings();
+
+            LongEventHandler.ExecuteWhenFinished(AddLifeLeechComp);
         }
 
         public ReviaSettings Settings { get; set; }
@@ -31,6 +33,17 @@ namespace ReviaRace
         public override string SettingsCategory()
         {
             return Translator.Translate(Strings.ReviaRaceModName);
+        }
+
+        private static void AddLifeLeechComp()
+        {
+            var things = DefDatabase<ThingDef>.AllDefs
+                .Where(def => def.IsMeleeWeapon && !def.HasComp(typeof(LifeLeech)));
+
+            foreach (var thing in things)
+            {
+                thing.comps.Add(new LifeLeech_CompProperties()); // Default life leech = 0.
+            }
         }
 
         public override void DoSettingsWindowContents(Rect inRect)

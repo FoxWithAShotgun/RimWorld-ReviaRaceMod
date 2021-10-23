@@ -15,12 +15,25 @@ namespace ReviaRace.Comps
         public LifeLeech_CompProperties() : 
             base(typeof(LifeLeech))
         {
-
+            
         }
+
+        public float LeechStrength { get; set; }
     }
 
     public class LifeLeech : ThingComp
     {
+        private const string LifeLeechLabel = "LifeLeech_LeechStrength";
+
+        public override string GetDescriptionPart()
+        {
+            var props = this.props as LifeLeech_CompProperties;
+
+            return props.LeechStrength > 0
+                ? Strings.SanctifyDescPart.Translate()
+                : null;
+        }
+
         public override void Notify_UsedWeapon(Pawn pawn)
         {
             if (pawn == null)
@@ -46,8 +59,9 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var healAmount = bleedRate * 4.0f;
-            var bloodRegenAmount = bleedRate * 0.05f;
+            var props = this.props as LifeLeech_CompProperties;
+            var healAmount = bleedRate * 2.0f * props.LeechStrength;
+            var bloodRegenAmount = bleedRate * 0.05f * props.LeechStrength;
 
             ApplyHealing(pawn, healAmount, bloodRegenAmount);
         }

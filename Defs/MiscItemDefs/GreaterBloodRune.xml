@@ -28,6 +28,15 @@
       <DeteriorationRate>0.0</DeteriorationRate>
       <Beauty>4</Beauty>
     </statBases>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Sanctify equipped weapon</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>ReviaRace.Comps.InvokeGreaterSanctify</compClass>
+      </li>
+    </comps>
     <altitudeLayer>Item</altitudeLayer>
     <tickerType>Never</tickerType>
   </ThingDef>

@@ -126,6 +126,7 @@
               <bodyPart>tail</bodyPart>
               <inFrontOfBody>false</inFrontOfBody>
               <drawnInBed>false</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <hediffGraphics>
@@ -183,6 +184,7 @@
               <bodyPart>left ear</bodyPart>
               <inFrontOfBody>true</inFrontOfBody>
               <drawnInBed>true</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>
@@ -229,6 +231,7 @@
               <bodyPart>right ear</bodyPart>
               <inFrontOfBody>true</inFrontOfBody>
               <drawnInBed>true</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>

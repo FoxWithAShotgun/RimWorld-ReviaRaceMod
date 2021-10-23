@@ -20,6 +20,15 @@
       <li>Artifact</li>
     </tradeTags>
     <tradeability>Sellable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Sanctify equipped weapon</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>ReviaRace.Comps.InvokeLesserSanctify</compClass>
+      </li>
+    </comps>
     <statBases>
       <Mass>0.01</Mass>
       <MarketValue>100</MarketValue>

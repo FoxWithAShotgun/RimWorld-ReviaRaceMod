@@ -34,5 +34,9 @@ namespace ReviaRace.Helpers
         internal static string SettingsSacrificeCostGreater => "ReviaRaceSettingsSacrificeCostGreater";
         internal static string SettingsSacrificeCostLesser => "ReviaRaceSettingsSacrificeCostLesser";
         internal static string SettingsSacrificeCostHeader => "ReviaRaceSettingsSacrificeCostHeader";
+        internal static string SanctifyNonMeleeWeapon => "ReviaRaceSanctifyNonMeleeWeapon";
+        internal static string SanctifyNonReviaNonSkarnite => "ReviaRaceSanctifyNonReviaNonSkarnite";
+        internal static string SanctifyAlreadySanctified => "ReviaRaceSanctifyAlreadySanctified";
+        internal static string SanctifyDescPart => "ReviaRaceSanctifyDescPart";
     }
 }

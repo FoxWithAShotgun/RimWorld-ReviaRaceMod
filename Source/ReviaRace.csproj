@@ -89,6 +89,7 @@
     <Compile Include="Comps\InvokeBlessing.cs" />
     <Compile Include="Comps\InvokeGreaterBlessing.cs" />
     <Compile Include="Comps\InvokeLesserBlessing.cs" />
+    <Compile Include="Comps\InvokeSanctify.cs" />
     <Compile Include="Comps\LifeLeech.cs" />
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />

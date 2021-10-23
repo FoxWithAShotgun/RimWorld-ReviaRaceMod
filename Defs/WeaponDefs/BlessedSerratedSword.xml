@@ -35,7 +35,9 @@
     </weaponTags>
     <comps>
       <li Class="CompProperties_BiocodableWeapon"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties"/>
+      <li Class="ReviaRace.Comps.LifeLeech_CompProperties">
+        <LeechStrength>1.50</LeechStrength>
+      </li>
     </comps>
     <tools>
       <li>
