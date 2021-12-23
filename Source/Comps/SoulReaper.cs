@@ -73,7 +73,11 @@ namespace ReviaRace.Comps
                     AddSoulReapTier(9);
                     pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
                     pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
-                    pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+
+                    if (!pawn.story.traits.HasTrait(TraitDefOf.Tough))
+                    {
+                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+                    }
                 }
                 else
                 {

@@ -129,6 +129,12 @@ namespace ReviaRace.Comps
         protected bool ViabilityCheck(Pawn pawn)
         {
             var srComp = pawn.GetComp<SoulReaper>();
+            if (srComp == null)
+            {
+                Messages.Message(Strings.OfferingInvalidPawn.Translate(), pawn, MessageTypeDefOf.NegativeEvent, false);
+                return false;
+            }
+
             var startMsg = Strings.OfferingStart.Translate(pawn.NameShortColored, parent.LabelNoCount);
             Messages.Message(startMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
 

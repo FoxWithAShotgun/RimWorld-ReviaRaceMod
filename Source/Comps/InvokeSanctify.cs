@@ -15,7 +15,7 @@ namespace ReviaRace.Comps
 
         public override bool CanBeUsedBy(Pawn p, out string failReason)
         {
-            var llComp = p.equipment.PrimaryEq.parent.TryGetComp<LifeLeech>();
+            var llComp = p.equipment?.PrimaryEq?.parent?.TryGetComp<LifeLeech>();
 
             if (llComp == null)
             {
