@@ -10,28 +10,25 @@ using Verse;
 
 namespace ReviaRace.Comps
 {
-    public class LifeLeech_CompProperties : CompProperties
+    public class CompProperties_LifeLeech : CompProperties
     {
-        public LifeLeech_CompProperties()
-            : this(0) { }
-        public LifeLeech_CompProperties(float leechStrength = 0) : 
-            base(typeof(LifeLeech))
+        public float LeechStrength; // This was meant to be a property, but Tynan said fuck you, it needs to be a field.
+        
+        public CompProperties_LifeLeech()
         {
-            LeechStrength = leechStrength; 
+            this.compClass = typeof(CompLifeLeech);
         }
-
-        public float LeechStrength { get; set; }
     }
 
-    public class LifeLeech : ThingComp
+    public class CompLifeLeech : ThingComp
     {
         private const string LifeLeechLabel = "LifeLeech_LeechStrength";
+        public CompProperties_LifeLeech Props => this.props as CompProperties_LifeLeech;
+        public float LeechStrength => Props.LeechStrength;
 
         public override string GetDescriptionPart()
         {
-            var props = this.props as LifeLeech_CompProperties;
-
-            return props.LeechStrength > 0
+            return LeechStrength > 0
                 ? Strings.SanctifyDescPart.Translate()
                 : null;
         }
@@ -61,7 +58,7 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var props = this.props as LifeLeech_CompProperties;
+            var props = this.props as CompProperties_LifeLeech;
             if (props.LeechStrength <= 0.0f)
             {
 #if DEBUG
@@ -101,7 +98,7 @@ namespace ReviaRace.Comps
                 return; 
             }
 
-            var props = this.props as LifeLeech_CompProperties;
+            var props = this.props as CompProperties_LifeLeech;
 
             if (props.LeechStrength > 0)
             {

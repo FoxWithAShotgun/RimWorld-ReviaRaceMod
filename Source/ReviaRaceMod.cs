@@ -37,13 +37,26 @@ namespace ReviaRace
 
         private static void AddLifeLeechComp()
         {
-            var things = DefDatabase<ThingDef>.AllDefs
-                .Where(def => def.IsMeleeWeapon && !def.HasComp(typeof(LifeLeech)));
+            var meleeWeaponDefs = DefDatabase<ThingDef>.AllDefs
+                .Where(def => def.IsMeleeWeapon );
 
-            foreach (var thing in things)
+            foreach (var thing in meleeWeaponDefs)
             {
-                var llStrength = GetDefaultLifeLeech(thing.defName);
-                thing.comps.Add(new LifeLeech_CompProperties(llStrength)); // Default life leech = 0.
+                if (!thing.HasComp(typeof(CompProperties_LifeLeech)))
+                {
+                    var llStrength = GetDefaultLifeLeech(thing.defName);
+                    thing.comps.Add(new CompProperties_LifeLeech() { LeechStrength = llStrength });
+#if DEBUG
+                    Log.Message($"Adding LifeLeech to {thing} with strength {llStrength}");
+#endif
+                }
+                else
+                {
+                    var llcp = thing.comps.First(comp => comp is CompProperties_LifeLeech);
+#if DEBUG
+                    Log.Message($"LifeLeech already exists on {thing} with strength {(llcp as CompProperties_LifeLeech).LeechStrength}");
+#endif
+                }
             }
         }
 

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}</ProjectGuid>
     <OutputType>Library</OutputType>
-	<LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ReviaRace</RootNamespace>
     <AssemblyName>ReviaRace</AssemblyName>
@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\1.3\Assemblies\</OutputPath>
-	<LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -28,7 +28,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\1.1\Assemblies\</OutputPath>
-	<LangVersion>latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -92,7 +92,7 @@
     <Compile Include="Comps\InvokeGreaterBlessing.cs" />
     <Compile Include="Comps\InvokeLesserBlessing.cs" />
     <Compile Include="Comps\InvokeSanctify.cs" />
-    <Compile Include="Comps\LifeLeech.cs" />
+    <Compile Include="Comps\CompLifeLeech.cs" />
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SoulReaper.cs" />

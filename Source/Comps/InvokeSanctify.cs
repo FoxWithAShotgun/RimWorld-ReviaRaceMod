@@ -15,14 +15,14 @@ namespace ReviaRace.Comps
 
         public override bool CanBeUsedBy(Pawn p, out string failReason)
         {
-            var llComp = p.equipment?.PrimaryEq?.parent?.TryGetComp<LifeLeech>();
+            var llComp = p.equipment?.PrimaryEq?.parent?.TryGetComp<CompLifeLeech>();
 
             if (llComp == null)
             {
                 failReason = Strings.SanctifyNonMeleeWeapon.Translate();
                 return false;
             }
-            else if (llComp.props is LifeLeech_CompProperties llcp &&
+            else if (llComp.props is CompProperties_LifeLeech llcp &&
                 llcp.LeechStrength > 0)
             {
                 failReason = Strings.SanctifyAlreadySanctified.Translate();
@@ -42,8 +42,8 @@ namespace ReviaRace.Comps
         {
             base.DoEffect(usedBy);
             
-            var llComp = usedBy.equipment.PrimaryEq.parent.TryGetComp<LifeLeech>();
-            (llComp.props as LifeLeech_CompProperties).LeechStrength = GetSanctifyStrength();
+            var llComp = usedBy.equipment.PrimaryEq.parent.TryGetComp<CompLifeLeech>();
+            (llComp.props as CompProperties_LifeLeech).LeechStrength = GetSanctifyStrength();
 
             parent.stackCount--;
             if (parent.stackCount <= 0)
