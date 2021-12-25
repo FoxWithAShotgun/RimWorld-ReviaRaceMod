@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef>
+  <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceSkullshatterer</defName>
     <label>revia skullshatterer</label>
     <race>ReviaRaceAlien</race>

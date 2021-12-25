@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <PawnKindDef>
+  <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceHighTemplar</defName>
     <label>Revia High Templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>

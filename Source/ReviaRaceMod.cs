@@ -42,7 +42,22 @@ namespace ReviaRace
 
             foreach (var thing in things)
             {
-                thing.comps.Add(new LifeLeech_CompProperties()); // Default life leech = 0.
+                var llStrength = GetDefaultLifeLeech(thing.defName);
+                thing.comps.Add(new LifeLeech_CompProperties(llStrength)); // Default life leech = 0.
+            }
+        }
+
+        private static float GetDefaultLifeLeech(string thingDefName)
+        {
+            switch (thingDefName)
+            {
+                case "ReviaBlessedSerratedDagger":
+                    return 0.75f;
+                case "ReviaBlessedSerratedScythe":
+                    return 2.50f;
+                case "ReviaBlessedSerratedSword":
+                    return 1.50f;
+                default: return 0.0f;
             }
         }
 
