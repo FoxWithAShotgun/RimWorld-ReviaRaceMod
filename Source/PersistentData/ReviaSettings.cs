@@ -25,6 +25,7 @@ namespace ReviaRace.PersistentData
             BloodthirstDaysToEmpty = 7.0f;
             SoulReapSpawnRange = new IntRange(1, 3);
             SoulReapSpawnFixed = 2;
+            SoulReapSpawnByAge = true;
         }
 
         public void ApplySettings()
@@ -35,6 +36,7 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
             SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
             SoulReaper.SoulReapSpawnRange = SoulReapSpawnRange;
+            SoulReaper.SoulReapSpawnByAge = SoulReapSpawnByAge;
             SoulReaper.SoulReapSpawnFixed = SoulReapSpawnFixed;
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
             BloodthirstNeed.Enabled = EnableBloodthirstNeed;
@@ -95,6 +97,13 @@ namespace ReviaRace.PersistentData
         }
         internal IntRange _soulReapSpawnRange;
 
+        public bool SoulReapSpawnByAge
+        {
+            get => _soulReapSpawnByAge;
+            set => _soulReapSpawnByAge = value;
+        }
+        internal bool _soulReapSpawnByAge;
+
         public int SoulReapSpawnFixed
         {
             get => _soulReapSpawnFixed;
@@ -120,6 +129,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _enableBloodthirstNeed, GetLabel(nameof(EnableBloodthirstNeed)), true);
             Scribe_Values.Look(ref _bloodthirstDaysToEmpty, GetLabel(nameof(BloodthirstDaysToEmpty)), 7.0f);
             Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1,3));
+            Scribe_Values.Look(ref _soulReapSpawnByAge, GetLabel(nameof(SoulReapSpawnByAge)), true);
             Scribe_Values.Look(ref _soulReapSpawnFixed, GetLabel(nameof(SoulReapSpawnFixed)), 2);
 
             ApplySettings();

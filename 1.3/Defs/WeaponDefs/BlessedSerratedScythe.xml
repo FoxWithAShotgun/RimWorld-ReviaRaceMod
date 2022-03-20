@@ -34,7 +34,9 @@
     </stuffCategories>
     <comps>
       <li Class="CompProperties_Biocodable"/>
-      <li Class="ReviaRace.Comps.CompProperties_LifeLeech"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+        <LeechStrength>2.50</LeechStrength>
+      </li>
     </comps>
     <weaponTags>
       <li>ReviaMeleeLegendary</li>

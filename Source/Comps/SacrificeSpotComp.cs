@@ -21,19 +21,27 @@ namespace ReviaRace.Comps
             else if (pawn.Map != null && pawn.Map == Find.CurrentMap)
             {
                 // Pick a prisoner to sacrifice.
-                if (pawn.Map.mapPawns.PrisonersOfColonyCount == 0)
+                var sacrificeTargets = pawn.Map.mapPawns.AllPawns.Where(p => IsValidSacrificeOption(pawn, p)).ToList();
+                if (sacrificeTargets.Count == 0)
                 {
                     var caption = Strings.SacrificePrisonerNone.Translate();
                     yield return new FloatMenuOption(caption, null, MenuOptionPriority.DisabledOption);
                 }
                 else
                 {
-                    foreach (var prisoner in pawn.Map.mapPawns.PrisonersOfColony)
+                    foreach (var target in sacrificeTargets)
                     {
-                        yield return CreateSacrificeOption(pawn, prisoner);
+                        yield return CreateSacrificeOption(pawn, target);
                     }
                 }
             }
+        }
+
+        private bool IsValidSacrificeOption(Pawn sacrificer, Pawn victim)
+        {
+            return victim.IsHumanlike() &&
+                (victim.IsPrisonerOfColony ||
+                 victim.Downed && !victim.Faction.AllyOrNeutralTo(sacrificer.Faction));
         }
 
         protected FloatMenuOption CreateSacrificeOption(Pawn sacrificer, Pawn prisoner)

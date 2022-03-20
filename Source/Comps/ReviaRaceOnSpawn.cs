@@ -34,6 +34,13 @@ namespace ReviaRace.Comps
             {
                 pawn.story.traits.allTraits.Remove(wimpTrait);
             }
+
+            // All Revia must be female.
+            if (pawn.gender == Gender.Male)
+            {
+                pawn.gender = Gender.Female;
+                var random = new Random();
+            }
         }
     }
 }

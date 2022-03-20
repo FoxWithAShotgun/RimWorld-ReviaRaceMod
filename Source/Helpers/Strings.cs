@@ -31,6 +31,7 @@ namespace ReviaRace.Helpers
         internal static string SettingsBloodthirstDaysToEmpty => "ReviaRaceSettingsBloodthirstDaysToEmpty";
         internal static string SettingsSoulReapSpawnRange => "ReviaRaceSettingsSoulReapSpawnRange";
         internal static string SettingsSoulReapSpawnFixed => "ReviaRaceSettingsSoulReapSpawnFixed";
+        internal static string SettingsSoulReapSpawnAgeCurve => "ReviaRaceSettingsSoulReapSpawnAgeCurve";
         internal static string SettingsSacrificeCostGreater => "ReviaRaceSettingsSacrificeCostGreater";
         internal static string SettingsSacrificeCostLesser => "ReviaRaceSettingsSacrificeCostLesser";
         internal static string SettingsSacrificeCostHeader => "ReviaRaceSettingsSacrificeCostHeader";

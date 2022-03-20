@@ -42,10 +42,19 @@ namespace ReviaRace
 
             foreach (var thing in meleeWeaponDefs)
             {
-                if (!thing.HasComp(typeof(CompProperties_LifeLeech)))
+                if (!thing.HasComp(typeof(CompLifeLeech)))
                 {
+#if DEBUG
+                    Log.Message($"{thing} has no LifeLeech. Adding...");
+#endif
                     var llStrength = GetDefaultLifeLeech(thing.defName);
-                    thing.comps.Add(new CompProperties_LifeLeech() { LeechStrength = llStrength });
+                    if (llStrength == 0)
+                    {
+                        thing.comps.Add(new CompProperties_LifeLeech() 
+                        {
+                            LeechStrength = llStrength 
+                        });
+                    }
 #if DEBUG
                     Log.Message($"Adding LifeLeech to {thing} with strength {llStrength}");
 #endif
@@ -60,7 +69,7 @@ namespace ReviaRace
             }
         }
 
-        private static float GetDefaultLifeLeech(string thingDefName)
+        internal static float GetDefaultLifeLeech(string thingDefName)
         {
             switch (thingDefName)
             {
@@ -76,7 +85,7 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            const int numRows = 13;
+            const int numRows = 14;
 
             var headerState = new GUIStyleState
             {
@@ -126,7 +135,11 @@ namespace ReviaRace
 
             if (Settings.EnableRandomSoulReapTier)
             {
-                DrawRangeWidgetWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnRange, ref Settings._soulReapSpawnRange, 1, 9);
+                DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnAgeCurve, ref Settings._soulReapSpawnByAge);
+                if (!Settings.SoulReapSpawnByAge)
+                {
+                    DrawRangeWidgetWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnRange, ref Settings._soulReapSpawnRange, 1, 9);
+                }
             }
             else
             {

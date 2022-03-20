@@ -12,6 +12,18 @@ namespace ReviaRace.Comps
 {
     public class SoulReaper : ThingComp
     {
+        private static SimpleCurve TailAgeCurve = new SimpleCurve(new CurvePoint[]
+        {
+            new CurvePoint(0, 1),
+            new CurvePoint(12, 2),
+            new CurvePoint(25, 3),
+            new CurvePoint(30, 4),
+            new CurvePoint(40, 5),
+            new CurvePoint(45, 6),
+            new CurvePoint(50, 7),
+            new CurvePoint(70, 8),
+            new CurvePoint(110, 9),
+        });
         private int _lastAttackedTick = -1;
         private int _btTick = 0;
         private BloodthirstNeed _btNeed = null; // Caching to avoid frequent casting and searching of the need list. Iterators are bad for performance, mmkay?
@@ -86,7 +98,18 @@ namespace ReviaRace.Comps
                         // This should have at least tier 1 of soul reap.
                         // Add it now.
                         var rng = new Random();
-                        AddSoulReapTier(rng.Next(SoulReapSpawnRange.min, SoulReapSpawnRange.max));
+                        if (SoulReapSpawnByAge)
+                        {
+                            float ageTails = TailAgeCurve.Evaluate(pawn.ageTracker.AgeBiologicalYears);
+                            float deviation = (float)(rng.NextDouble());
+
+                            var tails = (int)Math.Max(1, Math.Min(9, ageTails + deviation - 0.5));
+                            AddSoulReapTier(tails);
+                        }
+                        else
+                        {
+                            AddSoulReapTier(rng.Next(SoulReapSpawnRange.min, SoulReapSpawnRange.max));
+                        }
                     }
                     else
                     {
@@ -100,6 +123,7 @@ namespace ReviaRace.Comps
                                          .FirstOrDefault(hediff => hediff.def.defName.Contains("ReviaRaceSoulreapTier"));
         internal static bool EnableRandomSoulReapTier { get; set; }
         internal static IntRange SoulReapSpawnRange { get; set; }
+        internal static bool SoulReapSpawnByAge { get; set; }
         internal static int SoulReapSpawnFixed { get; set; }
 
         internal int GetSoulReapTier()

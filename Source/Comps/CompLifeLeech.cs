@@ -33,6 +33,22 @@ namespace ReviaRace.Comps
                 : null;
         }
 
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+
+            var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
+            if (defaultLeech > 0 &&
+                defaultLeech != Props.LeechStrength)
+            {
+#if DEBUG
+                Log.Message("Leech strength doesn't match what it should be. Resetting.");
+#endif
+                Props.LeechStrength = defaultLeech;
+            }
+
+        }
+
         public override void Notify_UsedWeapon(Pawn pawn)
         {
             if (pawn == null)
@@ -136,6 +152,24 @@ namespace ReviaRace.Comps
             }
 #if DEBUG
             Log.Message("No more injuries to heal.");
+#endif
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+
+            var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
+            if (defaultLeech != 0)
+            {
+                Props.LeechStrength = defaultLeech;
+            }
+            else
+            {
+                Scribe_Values.Look<float>(ref Props.LeechStrength, "LeechStrength", defaultLeech);
+            }
+#if DEBUG
+            Log.Message($"{this.parent}: LeechStrength = {Props.LeechStrength}");
 #endif
         }
     }
