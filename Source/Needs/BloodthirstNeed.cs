@@ -52,7 +52,7 @@ namespace ReviaRace.Needs
         public static float ThreshItching => 0.50f;
         public static float ThreshSatisfied => 0.70f;
 
-        public bool PawnAffected => !pawn.WorkTagIsDisabled(WorkTags.Violent);
+        public bool PawnAffected => !pawn.WorkTagIsDisabled(WorkTags.Violent) && pawn.ageTracker.CurLifeStageIndex > 1;
         public float PawnAffectedMult => PawnAffected ? 1.0f : 0.0f;
         public float PawnRedHazeMult => pawn.health.hediffSet.HasHediff(HediffDef.Named("ReviaRaceRedHazeAddiction")) ? 1.5f : 1.0f;
 
