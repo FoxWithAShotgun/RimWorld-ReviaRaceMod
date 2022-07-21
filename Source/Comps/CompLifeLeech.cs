@@ -22,9 +22,7 @@ namespace ReviaRace.Comps
 
     public class CompLifeLeech : ThingComp
     {
-        private const string LifeLeechLabel = "LifeLeech_LeechStrength";
-        public CompProperties_LifeLeech Props => this.props as CompProperties_LifeLeech;
-        public float LeechStrength => Props.LeechStrength;
+        public float LeechStrength;
 
         public override string GetDescriptionPart()
         {
@@ -39,12 +37,12 @@ namespace ReviaRace.Comps
 
             var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
             if (defaultLeech > 0 &&
-                defaultLeech != Props.LeechStrength)
+                defaultLeech != LeechStrength)
             {
 #if DEBUG
                 Log.Message("Leech strength doesn't match what it should be. Resetting.");
 #endif
-                Props.LeechStrength = defaultLeech;
+                LeechStrength = defaultLeech;
             }
 
         }
@@ -74,8 +72,7 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var props = this.props as CompProperties_LifeLeech;
-            if (props.LeechStrength <= 0.0f)
+            if (LeechStrength <= 0.0f)
             {
 #if DEBUG
                 Log.Message("Leech strength is zero.");
@@ -92,11 +89,11 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var healAmount = bleedRate * 2.0f * props.LeechStrength;
-            var bloodRegenAmount = bleedRate * 0.05f * props.LeechStrength;
+            var healAmount = bleedRate * 2.0f * LeechStrength;
+            var bloodRegenAmount = bleedRate * 0.05f * LeechStrength;
 
 #if DEBUG
-            Log.Message($"Bleed Rate = {bleedRate}, Leech Strength = {props.LeechStrength}");
+            Log.Message($"Bleed Rate = {bleedRate}, Leech Strength = {LeechStrength}");
             Log.Message($"Heal = {healAmount}, Blood regen = {bloodRegenAmount}");
 #endif
             ApplyHealing(pawn, healAmount, bloodRegenAmount);
@@ -114,9 +111,7 @@ namespace ReviaRace.Comps
                 return; 
             }
 
-            var props = this.props as CompProperties_LifeLeech;
-
-            if (props.LeechStrength > 0)
+            if (LeechStrength > 0)
             {
 #if DEBUG
                 Log.Message("Applying kill healing burst");
@@ -162,14 +157,14 @@ namespace ReviaRace.Comps
             var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
             if (defaultLeech != 0)
             {
-                Props.LeechStrength = defaultLeech;
+                LeechStrength = defaultLeech;
             }
             else
             {
-                Scribe_Values.Look<float>(ref Props.LeechStrength, "LeechStrength", defaultLeech);
+                Scribe_Values.Look<float>(ref LeechStrength, "LeechStrength", defaultLeech);
             }
 #if DEBUG
-            Log.Message($"{this.parent}: LeechStrength = {Props.LeechStrength}");
+            Log.Message($"{this.parent}: LeechStrength = {LeechStrength}");
 #endif
         }
     }

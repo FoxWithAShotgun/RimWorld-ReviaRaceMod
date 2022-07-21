@@ -15,19 +15,26 @@ namespace ReviaRace.Comps
 
         public override bool CanBeUsedBy(Pawn p, out string failReason)
         {
-            var llComp = p.equipment?.PrimaryEq?.parent?.TryGetComp<CompLifeLeech>();
+            var weapon = p.equipment?.Primary;
+#if DEBUG
+            Log.Message($"Weapon: {weapon.ToString()}");
+#endif
 
-            if (llComp == null)
+            if (weapon == null || weapon.def.Verbs.Any(v => !v.IsMeleeAttack))
             {
                 failReason = Strings.SanctifyNonMeleeWeapon.Translate();
                 return false;
             }
-            else if (llComp.props is CompProperties_LifeLeech llcp &&
+
+            var llcp = weapon.GetComp<CompLifeLeech>();
+
+            if (llcp != null &&
                 llcp.LeechStrength > 0)
             {
                 failReason = Strings.SanctifyAlreadySanctified.Translate();
                 return false;
             }
+
             else if (!p.IsRevia() && !p.IsSkarnite())
             {
                 failReason = Strings.SanctifyNonReviaNonSkarnite.Translate();
@@ -41,9 +48,17 @@ namespace ReviaRace.Comps
         public override void DoEffect(Pawn usedBy)
         {
             base.DoEffect(usedBy);
-            
-            var llComp = usedBy.equipment.PrimaryEq.parent.TryGetComp<CompLifeLeech>();
-            (llComp.props as CompProperties_LifeLeech).LeechStrength = GetSanctifyStrength();
+
+            var weapon = usedBy.equipment.Primary;
+            var llcp = weapon.GetComp<CompLifeLeech>();
+
+            if (llcp == null)
+            {
+                llcp = new CompLifeLeech();
+                weapon.AllComps.Add(llcp);
+            }
+
+            llcp.LeechStrength = GetSanctifyStrength();
 
             parent.stackCount--;
             if (parent.stackCount <= 0)

@@ -21,6 +21,15 @@
     <playerInitialSettlementNameMaker>NamerSettlementReviaTemplar</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
+    <allowedCultures>
+      <li>ReviaRaceHighCulture</li>
+    </allowedCultures>
+    <disallowedMemes>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+    </structureMemeWeights>
     <raidLootValueFromPointsCurve>
       <points>
         <li>(35,     15)</li>
