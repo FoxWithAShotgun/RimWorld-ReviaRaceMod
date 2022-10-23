@@ -2,9 +2,9 @@
 Temporary and limited 1.4 update until FoxWithAShotgun updates the mod
 Not tested much beyond embark.
 known issues:
--Misses baby foxgirls. We all want floofy baby foxes...
--Randomizes 1-9 tails at character creation (instead of 1 or 2 or so)
--?? Who knows! But hey, homicidal foxgirls! Right?
+- Misses baby foxgirls. We all want floofy baby foxes...
+- Randomizes 1-9 tails at character creation (instead of 1 or 2 or so)
+- ?? Who knows! But hey, homicidal foxgirls! Right?
 
 
 An alien race mod for bloodthirsty foxgirls.
