@@ -116,10 +116,12 @@
               </second>
             </li>
           </colorChannels>
-          <bodyTypes Inherit="False">
+          <bodyTypes Inherit="false">
             <li>Thin</li>
             <li>Female</li>
-          </bodyTypes>
+            <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+			    </bodyTypes>          
           <bodyAddons>
             <li>
               <path>Things/Tails/Tail1</path>
@@ -146,6 +148,8 @@
                   <bodyTypes>
                     <Female>(-0.38, 0.12)</Female>
                     <Thin>(-0.38, 0.12)</Thin>
+                    <!-- <Child>(-0.38, 0.12)</Child> not working anyways, but who knows what the future holds!
+                    <Baby>(-0.38, 0.12)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -158,6 +162,8 @@
                   <bodyTypes>
                     <Female>(-0.07, 0.02)</Female>
                     <Thin>(-0.07, 0.02)</Thin>
+                    <!-- <Child>(-0.07, 0.02)</Child>
+                    <Baby>(-0.07, 0.02)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -170,6 +176,8 @@
                   <bodyTypes>
                     <Female>(-0.07, -0.17)</Female>
                     <Thin>(-0.14, -0.22)</Thin>
+                   <!--  <Child>(-0.14, -0.22)</Child>
+                    <Baby>(-0.14, -0.22)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -193,6 +201,8 @@
                   <bodyTypes>
                     <Female>(-0.475, 0.57)</Female>
                     <Thin>(-0.475, 0.57)</Thin>
+                    <!-- <Child>(-0.18, -0.13)</Child>
+                    <Baby>(-0.18, -0.13)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -205,6 +215,8 @@
                   <bodyTypes>
                     <Female>(0.05, 0.9)</Female>
                     <Thin>(0.05, 0.9)</Thin>
+                    <!-- <Child>(-0.18, -0.13)</Child>
+                    <Baby>(-0.18, -0.13)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -217,6 +229,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
+                    <!-- <Child>(-0.18, -0.13)</Child>
+                    <Baby>(-0.18, -0.13)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -240,6 +254,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
+                   <!-- <Child>(0.48, 0.35)</Child> 
+                    <Baby>(0.48, 0.35)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -252,6 +268,8 @@
                   <bodyTypes>
                     <Female>(-0.05, 0.9)</Female>
                     <Thin>(-0.05, 0.9)</Thin>
+                    <!-- <Child>(0.04, -0.78)</Child>
+                    <Baby>(0.04, -0.78)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -264,6 +282,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
+                    <!-- <Child>(-0.18, -0.13)</Child>
+                    <Baby>(-0.18, -0.13)</Baby> -->
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -374,16 +394,75 @@
       <baseBodySize>0.95</baseBodySize>
       <baseHealthScale>1.15</baseHealthScale>
       <foodType>OmnivoreHuman</foodType>
-      <gestationPeriodDays>30.0</gestationPeriodDays>
+      <gestationPeriodDays>18</gestationPeriodDays>
+      <litterSizeCurve Inherit="false">
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges Inherit="false">
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>6</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>8</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>10</minAge>
+				</li>
+			</lifeStageAges>
+      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech" Inherit="false">
+        <Firefighter>5</Firefighter>
+        <Patient>0</Patient>
+        <Doctor>5</Doctor>
+        <PatientBedRest>0</PatientBedRest>
+        <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+        <BasicWorker>5</BasicWorker>
+        <Warden>5</Warden>
+        <Handling>5</Handling>
+        <Cooking>5</Cooking>
+        <Hunting>5</Hunting>
+        <Construction>7</Construction>
+        <Growing>5</Growing>
+        <Mining>5</Mining>
+        <PlantCutting>6</PlantCutting>
+        <Smithing>9</Smithing>
+        <Tailoring>5</Tailoring>
+        <Art>5</Art>
+        <Crafting>5</Crafting>
+        <Hauling>2</Hauling>
+        <Cleaning>2</Cleaning>
+        <Research>7</Research>
+      </lifeStageWorkSettings>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>      
       <ageGenerationCurve Inherit="false">
         <points>
-          <li>(10,0)</li>
-          <li>(11,15)</li>
-          <li>(12,20)</li>
-          <li>(14,85)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(9.5,110)</li>  <!-- Exclude 9.5-10 years to avoid spawning pawns who are very close to becoming adults -->  
+          <li MayRequire="Ludeon.RimWorld.Biotech">(9.51,0)</li>  
+          <li MayRequire="Ludeon.RimWorld.Biotech">(10,0)</li>      
+          <li MayRequire="Ludeon.RimWorld.Biotech">(10.001,110)</li><!-- End exclude -->
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,110)</li>
+          <li>(14,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,110)</li>
           <li>(16,100)</li>
           <li>(20,100)</li>
           <li>(30,40)</li>
@@ -395,9 +474,9 @@
           <li>(80,3)</li>
           <li>(90,2)</li>
           <li>(100,1)</li>
-          <li>(110,0)</li>
+          <li>(110,0)</li>          
         </points>
-      </ageGenerationCurve>
+      </ageGenerationCurve>      
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
