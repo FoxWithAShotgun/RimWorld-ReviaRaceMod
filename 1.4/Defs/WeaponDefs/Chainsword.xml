@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseAdvancedMeleeWeapon">
+    <defName>ReviaChainSword</defName>
+    <label>shredder</label>
+    <description>A weaponised chainsaw with hardened plasteel teeth. The teeth are angled outwards to maximise wound size.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/Chainsword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Industrial</techLevel>
+    <costList>
+      <Plasteel>75</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <Chemfuel>50</Chemfuel>
+    </costList>
+    <costStuffCount>125</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaMeleeAdvanced</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>13200</WorkToMake>
+      <Mass>4.00</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceAdvancedEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.10</armorPenetration>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>2.65</cooldownTime>
+        <armorPenetration>0.32</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

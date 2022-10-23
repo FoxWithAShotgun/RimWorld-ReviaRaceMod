@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.BackstoryDef>
+  <AlienRace.AlienBackstoryDef>
     <defName>ReviaRaceBackstoryChildApprenticeCraftsman</defName>
     <title>Revian Apprentice Craftsman</title>
     <titleShort>Apprentice</titleShort>
-    <baseDescription>[PAWN_nameDef] spent [PAWN_possessive] days at the great forges, learning how to shape wood and metal. [PAWN_possessive] work was much appreciated by the warriors, who often left [PAWN_possessive] snacks and gifts in exchange for equipment repairs. However, [PAWN_possessive] love of flames continued to grow unchecked...</baseDescription>
+    <baseDesc>[PAWN_nameDef] spent [PAWN_possessive] days at the great forges, learning how to shape wood and metal. [PAWN_possessive] work was much appreciated by the warriors, who often left [PAWN_possessive] snacks and gifts in exchange for equipment repairs. However, [PAWN_possessive] love of flames continued to grow unchecked...</baseDesc>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Childhood</slot>
@@ -14,12 +14,12 @@
     </spawnCategories>
     <skillGains>
       <li>
-        <defName>Crafting</defName>
-        <amount>6</amount>
+        <key>Crafting</key>
+        <value>6</value>
       </li>
       <li>
-        <defName>Construction</defName>
-        <amount>2</amount>
+        <key>Construction</key>
+        <value>2</value>
       </li>
     </skillGains>
     <workDisables>
@@ -27,5 +27,5 @@
       <li>Caring</li>
     </workDisables>
     <linkedBackstory>ReviaRaceBackstoryAdultWarsmith</linkedBackstory>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
 </Defs>

@@ -22,7 +22,7 @@
     <playerInitialSettlementNameMaker>NamerSettlementReviaTemplar</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
-    <geneticVariance>1</geneticVariance>
+    <melaninRange>1</melaninRange>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>

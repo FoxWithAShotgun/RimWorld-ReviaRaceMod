@@ -7,7 +7,6 @@
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>75</combatPower>
     <canBeSapper>true</canBeSapper>
-    <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
     <itemQuality>Poor</itemQuality>
     <gearHealthRange>0.6~0.8</gearHealthRange>
     <apparelTags>

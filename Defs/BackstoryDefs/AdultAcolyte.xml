@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.BackstoryDef>
+  <AlienRace.AlienBackstoryDef>
     <defName>ReviaRaceBackstoryAdultAcolyte</defName>
     <title>Revian Skarne Acolyte</title>
     <titleShort>Acolyte</titleShort>
-    <baseDescription>[PAWN_nameDef] is an acolyte of the bloody god of the Revia. [PAWN_pronoun] often sacrifices animals, humanlikes or any other living creature that [PAWN_pronoun] can get a hold of. Despite having the fiery fervour to deliver truly gripping sermons, [PAWN_pronoun] is often shunned by animals and humans alike, perhaps fearing that they would be next on the altar.</baseDescription>
+    <baseDesc>[PAWN_nameDef] is an acolyte of the bloody god of the Revia. [PAWN_pronoun] often sacrifices animals, humanlikes or any other living creature that [PAWN_pronoun] can get a hold of. Despite having the fiery fervour to deliver truly gripping sermons, [PAWN_pronoun] is often shunned by animals and humans alike, perhaps fearing that they would be next on the altar.</baseDesc>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
@@ -13,17 +13,17 @@
     </spawnCategories>
     <skillGains>
       <li>
-        <defName>Medicine</defName>
-        <amount>3</amount>
+        <key>Medicine</key>
+        <value>3</value>
       </li>
       <li>
-        <defName>Social</defName>
-        <amount>-1</amount>
+        <key>Social</key>
+        <value>-1</value>
       </li>
       <li>
-        <defName>Animals</defName>
-        <amount>-2</amount>
+        <key>Animals</key>
+        <value>-2</value>
       </li>
     </skillGains>
-  </AlienRace.BackstoryDef>
+  </AlienRace.AlienBackstoryDef>
 </Defs>
