@@ -1,13 +1,6 @@
 # RimWorld-ReviaRaceMod
 Temporary and limited 1.4 update until FoxWithAShotgun updates the mod
 Not tested much beyond embark.
-known issues:
-- Haven't added stuff for baby's and children yet.
-- Randomizes 1-9 tails at character creation (instead of 1 or 2 or so)
-- Child revian ears and tails are not offset yet. So ears float and they have giant tails. But no worries, they'll grow out of it
-- Children can generate a adulthood backstory for some reason
-- ?? Who knows! But hey, homicidal foxgirls! Right?
-
 
 An alien race mod for bloodthirsty foxgirls.
 
