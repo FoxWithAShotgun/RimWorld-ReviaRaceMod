@@ -121,9 +121,11 @@
             <li>Female</li>
             <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
             <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
-			    </bodyTypes>          
+		  </bodyTypes>          
           <bodyAddons>
             <li>
+              <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<debug>false</debug>
               <path>Things/Tails/Tail1</path>
               <bodyPartLabel>tail</bodyPartLabel>
               <inFrontOfBody>false</inFrontOfBody>
@@ -148,8 +150,8 @@
                   <bodyTypes>
                     <Female>(-0.38, 0.12)</Female>
                     <Thin>(-0.38, 0.12)</Thin>
-                    <!-- <Child>(-0.38, 0.12)</Child> not working anyways, but who knows what the future holds!
-                    <Baby>(-0.38, 0.12)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.35, 0.2)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.35, 0.3)</Child>                    
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -162,8 +164,8 @@
                   <bodyTypes>
                     <Female>(-0.07, 0.02)</Female>
                     <Thin>(-0.07, 0.02)</Thin>
-                    <!-- <Child>(-0.07, 0.02)</Child>
-                    <Baby>(-0.07, 0.02)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -176,8 +178,8 @@
                   <bodyTypes>
                     <Female>(-0.07, -0.17)</Female>
                     <Thin>(-0.14, -0.22)</Thin>
-                   <!--  <Child>(-0.14, -0.22)</Child>
-                    <Baby>(-0.14, -0.22)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.33, 0.08)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.235, 0.03)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -188,6 +190,8 @@
               </offsets>
             </li>
             <li>
+              <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+			  <debug>true</debug>
               <path>Things/Ears/EarLeft</path>
               <bodyPartLabel>left ear</bodyPartLabel>
               <inFrontOfBody>true</inFrontOfBody>
@@ -201,8 +205,8 @@
                   <bodyTypes>
                     <Female>(-0.475, 0.57)</Female>
                     <Thin>(-0.475, 0.57)</Thin>
-                    <!-- <Child>(-0.18, -0.13)</Child>
-                    <Baby>(-0.18, -0.13)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Child>                    
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -215,8 +219,8 @@
                   <bodyTypes>
                     <Female>(0.05, 0.9)</Female>
                     <Thin>(0.05, 0.9)</Thin>
-                    <!-- <Child>(-0.18, -0.13)</Child>
-                    <Baby>(-0.18, -0.13)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -229,8 +233,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <!-- <Child>(-0.18, -0.13)</Child>
-                    <Baby>(-0.18, -0.13)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4,0.47)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.4,0.51)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -241,6 +245,8 @@
               </offsets>
             </li>
             <li>
+              <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+			  <debug>false</debug>
               <path>Things/Ears/EarRight</path>
               <bodyPartLabel>right ear</bodyPartLabel>
               <inFrontOfBody>true</inFrontOfBody>
@@ -254,8 +260,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                   <!-- <Child>(0.48, 0.35)</Child> 
-                    <Baby>(0.48, 0.35)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -268,8 +274,8 @@
                   <bodyTypes>
                     <Female>(-0.05, 0.9)</Female>
                     <Thin>(-0.05, 0.9)</Thin>
-                    <!-- <Child>(0.04, -0.78)</Child>
-                    <Baby>(0.04, -0.78)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -278,12 +284,13 @@
                   </headTypes>
                 </north>
                 <east>
+                  <layerOffset>-1</layerOffset>
                   <offset>(0.42, -0.22)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <!-- <Child>(-0.18, -0.13)</Child>
-                    <Baby>(-0.18, -0.13)</Baby> -->
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Baby>
+					<Child MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -403,14 +410,14 @@
           <li>(3.5, 0)</li>
         </points>
       </litterSizeCurve>
-      <lifeStageAges Inherit="false">
+      <lifeStageAges Inherit="false">  
 				<li>
 					<def>HumanlikeBaby</def>
 					<minAge>0</minAge>
 				</li>
 				<li>
 					<def>HumanlikeChild</def>
-					<minAge>3</minAge>
+					<minAge>2</minAge>
 				</li>
 				<li MayRequire="Ludeon.RimWorld.Biotech">
 					<def>HumanlikePreTeenager</def>
@@ -474,7 +481,7 @@
           <li>(80,3)</li>
           <li>(90,2)</li>
           <li>(100,1)</li>
-          <li>(110,0)</li>          
+          <li>(110,0)</li>                 
         </points>
       </ageGenerationCurve>      
       <hediffGiverSets>
