@@ -8,6 +8,7 @@
     <combatPower>350</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
+    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <gearHealthRange>1~1</gearHealthRange>
     <itemQuality>Masterwork</itemQuality>
     <apparelTags>

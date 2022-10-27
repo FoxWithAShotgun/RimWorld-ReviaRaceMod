@@ -6,6 +6,7 @@
     <race>ReviaRaceAlien</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>95</combatPower>
+    <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Good</itemQuality>
     <gearHealthRange>0.8~1.0</gearHealthRange>
     <apparelTags>

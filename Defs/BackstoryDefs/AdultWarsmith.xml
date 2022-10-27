@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.AlienBackstoryDef>
+  <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryAdultWarsmith</defName>
     <title>Revian Warsmith</title>
     <titleShort>Warsmith</titleShort>
-    <baseDesc>[PAWN_nameDef] is a master craftsman of the Revia. [PAWN_pronoun] works metal like a potter would clay, fashioning items of incredible quality.</baseDesc>
+    <baseDescription>[PAWN_nameDef] is a master craftsman of the Revia. [PAWN_pronoun] works metal like a potter would clay, fashioning items of incredible quality.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Adulthood</slot>
@@ -14,17 +14,17 @@
     </spawnCategories>
     <skillGains>
       <li>
-        <key>Crafting</key>
-        <value>6</value>
+        <defName>Crafting</defName>
+        <amount>6</amount>
       </li>
       <li>
-        <key>Construction</key>
-        <value>2</value>
+        <defName>Construction</defName>
+        <amount>2</amount>
       </li>
       <li>
-        <key>Animals</key>
-        <value>-2</value>
+        <defName>Animals</defName>
+        <amount>-2</amount>
       </li>
     </skillGains>
-  </AlienRace.AlienBackstoryDef>
+  </AlienRace.BackstoryDef>
 </Defs>

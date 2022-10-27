@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.AlienBackstoryDef>
+  <AlienRace.BackstoryDef>
     <defName>ReviaRaceBackstoryChildNeophyte</defName>
     <title>Revian Neophyte</title>
     <titleShort>Neophyte</titleShort>
-    <baseDesc>The lucky few who are taken in by the priesthood in Revian society are well cared for, and typically want for nothing. However, their days are filled with memorisation of litanies and chanting of prayers, as well as researching matters of the mundane and the occult. [PAWN_nameDef] was one such child. [PAWN_possessive] physical prowess lagged behind, yet [PAWN_possessive] mind grew by leaps and bounds.</baseDesc>
+    <baseDescription>The lucky few who are taken in by the priesthood in Revian society are well cared for, and typically want for nothing. However, their days are filled with memorisation of litanies and chanting of prayers, as well as researching matters of the mundane and the occult. [PAWN_nameDef] was one such child. [PAWN_possessive] physical prowess lagged behind, yet [PAWN_possessive] mind grew by leaps and bounds.</baseDescription>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
     <slot>Childhood</slot>
@@ -14,18 +14,18 @@
     </spawnCategories>
     <skillGains>
       <li>
-        <key>Intellectual</key>
-        <value>4</value>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
       </li>
       <li>
-        <key>Melee</key>
-        <value>-2</value>
+        <defName>Melee</defName>
+        <amount>-2</amount>
       </li>
       <li>
-        <key>Shooting</key>
-        <value>-2</value>
+        <defName>Shooting</defName>
+        <amount>-2</amount>
       </li>
     </skillGains>
     <linkedBackstory>ReviaRaceBackstoryAdultAcolyte</linkedBackstory>
-  </AlienRace.AlienBackstoryDef>
+  </AlienRace.BackstoryDef>
 </Defs>

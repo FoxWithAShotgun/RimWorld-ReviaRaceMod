@@ -8,6 +8,7 @@
     <combatPower>350</combatPower>
     <isFighter>true</isFighter>
     <factionLeader>true</factionLeader>
+    <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>Medieval</li>

@@ -14,6 +14,7 @@
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsChance>0</techHediffsChance>
     <combatPower>25</combatPower>
+    <baseRecruitDifficulty>0.5</baseRecruitDifficulty>
     <backstoryCategories>
       <li>ReviaRaceBackstory</li>
     </backstoryCategories>
