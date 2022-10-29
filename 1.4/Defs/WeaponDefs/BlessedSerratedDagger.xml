@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaBlessedSerratedDagger</defName>
+    <label>Crimson Blossom</label>
+    <relicChance>1</relicChance>
+    <description>A cruel sawtoothed dagger bearing a bloodthirsty spirit.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedDagger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>20</ReviaRacePalestone>
+      <ReviaLesserBloodRune>1</ReviaLesserBloodRune>
+    </costList>
+    <statBases>
+      <WorkToMake>25600</WorkToMake>
+      <Mass>1.00</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceConsecratedWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+        <LeechStrength>0.75</LeechStrength>
+      </li>
+    </comps>
+    <weaponTags>
+      <li>ReviaMeleeLegendary</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.22</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.22</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

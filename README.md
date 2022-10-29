@@ -1,4 +1,7 @@
 # RimWorld-ReviaRaceMod
+Temporary and limited 1.4 update until FoxWithAShotgun updates the mod
+Not tested much beyond embark.
+
 An alien race mod for bloodthirsty foxgirls.
 
 Revia grow stronger with the more humanlike kills they get, which also increases the number of tails they possess. A Revia with no kills to her name is slightly weaker than a baseline human, while those with hundreds to their name and a full set of nine tails is incredibly dangerous and durable. Their lifespan is slightly longer than a human's, though their bloodthirsty nature usually means that they often meet a violent end before they die a natural death. Their society holds a dark god in the highest regard, performing daily sacrifices in the name of a certain deity that sits upon a throne of bleached skulls.

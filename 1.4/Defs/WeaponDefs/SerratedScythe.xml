@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaSerratedScythe</defName>
+    <label>harvester</label>
+    <description>A cruel bardiche with a blade of razor-sharp palestone shards. Designed to inflict severe bleeding and grievous wounds.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedScythe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>90</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
+    </costList>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>3.50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceIntermediateEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaMeleeIntermediate</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.0</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.50</cooldownTime>
+        <armorPenetration>0.24</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>
