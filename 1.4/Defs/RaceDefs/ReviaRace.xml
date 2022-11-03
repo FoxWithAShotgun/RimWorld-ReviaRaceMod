@@ -410,51 +410,51 @@
           <li>(3.5, 0)</li>
         </points>
       </litterSizeCurve>
-      <lifeStageAges Inherit="false">  
-				<li>
-					<def>HumanlikeBaby</def>
-					<minAge>0</minAge>
-				</li>
-				<li>
-					<def>HumanlikeChild</def>
-					<minAge>2</minAge>
-				</li>
-				<li MayRequire="Ludeon.RimWorld.Biotech">
-					<def>HumanlikePreTeenager</def>
-					<minAge>6</minAge>
-				</li>
-				<li>
-					<def>HumanlikeTeenager</def>
-					<minAge>8</minAge>
-				</li>
-				<li>
-					<def>HumanlikeAdult</def>
-					<minAge>10</minAge>
-				</li>
-			</lifeStageAges>
-      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech" Inherit="false">
-        <Firefighter>5</Firefighter>
-        <Patient>0</Patient>
-        <Doctor>5</Doctor>
-        <PatientBedRest>0</PatientBedRest>
-        <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
-        <BasicWorker>5</BasicWorker>
-        <Warden>5</Warden>
-        <Handling>5</Handling>
-        <Cooking>5</Cooking>
-        <Hunting>5</Hunting>
-        <Construction>7</Construction>
-        <Growing>5</Growing>
-        <Mining>5</Mining>
-        <PlantCutting>6</PlantCutting>
-        <Smithing>9</Smithing>
-        <Tailoring>5</Tailoring>
-        <Art>5</Art>
-        <Crafting>5</Crafting>
-        <Hauling>2</Hauling>
-        <Cleaning>2</Cleaning>
-        <Research>7</Research>
-      </lifeStageWorkSettings>
+		<lifeStageAges Inherit="false">
+			<li>
+				<def>HumanlikeBaby</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>HumanlikeChild</def>
+				<minAge>3</minAge>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<def>HumanlikePreTeenager</def>
+				<minAge>9</minAge>
+			</li>
+			<li>
+				<def>HumanlikeTeenager</def>
+				<minAge>13</minAge>
+			</li>
+			<li>
+				<def>HumanlikeAdult</def>
+				<minAge>18</minAge>
+			</li>
+		</lifeStageAges>
+		<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+			<Firefighter>7</Firefighter>
+			<Patient>0</Patient>
+			<Doctor>10</Doctor>
+			<PatientBedRest>0</PatientBedRest>
+			<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+			<BasicWorker>7</BasicWorker>
+			<Warden>10</Warden>
+			<Handling>7</Handling>
+			<Cooking>7</Cooking>
+			<Hunting>7</Hunting>
+			<Construction>10</Construction>
+			<Growing>7</Growing>
+			<Mining>7</Mining>
+			<PlantCutting>7</PlantCutting>
+			<Smithing>13</Smithing>
+			<Tailoring>7</Tailoring>
+			<Art>10</Art>
+			<Crafting>7</Crafting>
+			<Hauling>3</Hauling>
+			<Cleaning>3</Cleaning>
+			<Research>13</Research>
+		</lifeStageWorkSettings>		
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>      
