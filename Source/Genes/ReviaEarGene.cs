@@ -20,7 +20,7 @@ namespace ReviaRace.Genes
                 var btNeed= pawn.needs.TryGetNeed<BloodthirstNeed>();
                 if(btNeed!=null)
                 pawn.needs.AllNeeds.Remove(btNeed);
-                Vector3Utility
+                
                 
             }
         }
