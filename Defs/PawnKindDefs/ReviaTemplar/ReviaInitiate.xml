@@ -4,9 +4,8 @@
     <defName>ReviaRaceInitiate</defName>
     <label>Revia Initiate</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <combatPower>55</combatPower>
-    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>IndustrialAdvanced</li>
@@ -16,6 +15,8 @@
       <li>ReviaMeleeAdvanced</li>
       <li>Gun</li>
     </weaponTags>
+    <initialWillRange>0.6~0.8</initialWillRange>
+    <initialResistanceRange>12~15</initialResistanceRange>
     <weaponMoney>1500~2500</weaponMoney>
     <isFighter>true</isFighter>
     <invNutrition>2</invNutrition>
@@ -32,5 +33,11 @@
     <techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

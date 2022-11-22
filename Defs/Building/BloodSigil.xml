@@ -3,8 +3,14 @@
   <ThingDef ParentName="BuildingBase">
     <defName>ReviaBloodSigil</defName>
     <label>blood sigil</label>
+    <ideoBuildingNamerBase>ReviaRaceNamerBloodSigil</ideoBuildingNamerBase>
     <description>A place to dedicate offerings to the blood god.</description>
     <thingClass>Building_WorkTable</thingClass>
+    <isAltar>True</isAltar>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>All</allowedSpectateSides>
+    </ritualFocus>
     <graphicData>
       <texPath>Things/Building/BloodSigil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -15,10 +21,12 @@
       <WorkToBuild>600</WorkToBuild>
       <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
       <MeditationFocusStrength>0.25</MeditationFocusStrength>
+      <Beauty>10</Beauty>
     </statBases>
     <costList>
       <ReviaRaceBloodstone>4</ReviaRaceBloodstone>
     </costList>
+    <defaultStuff>BlocksMarble</defaultStuff>
     <stuffCategories>
       <li>Stony</li>
     </stuffCategories>
@@ -40,6 +48,7 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <comps>
+      <li Class="CompProperties_Styleable"/>
       <li>
         <compClass>ReviaRace.Comps.SacrificeSpotComp</compClass>
       </li>
@@ -58,10 +67,14 @@
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
       <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
     </building>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <placeWorkers>
       <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li>PlaceWorker_RitualFocus</li>
     </placeWorkers>
   </ThingDef>
 </Defs>

@@ -4,7 +4,8 @@
     <defName>ReviaRaceBloodthirstNeed</defName>
     <needClass>ReviaRace.Needs.BloodthirstNeed</needClass>
     <label>bloodthirst</label>
-    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <!--<onlyIfCausedByHediff>true</onlyIfCausedByHediff>-->
+    <onlyIfCausedByGene>true</onlyIfCausedByGene>
     <description>This pawn feels as though a day gone by without fighting is a day wasted. Fighting and/or killing enemies will satisfy this need.</description>
     <listPriority>45</listPriority>
     <fallPerDay>0.150</fallPerDay>

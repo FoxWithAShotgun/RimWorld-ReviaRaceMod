@@ -8,7 +8,6 @@
     <basicMemberKind>ReviaRaceColonist</basicMemberKind>
     <pawnSingular>frontiersman</pawnSingular>
     <pawnsPlural>frontiersmen</pawnsPlural>
-    <pawnNameMaker>NamerPersonRevia</pawnNameMaker>
     <techLevel>Medieval</techLevel>
     <backstoryCategories>
       <li>ReviaRaceBackstory</li>
@@ -22,7 +21,26 @@
     <playerInitialSettlementNameMaker>NamerSettlementReviaTemplar</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
-    <geneticVariance>1</geneticVariance>
+    <allowedCultures>
+      <li>ReviaRaceHighCulture</li>
+    </allowedCultures>
+    <disallowedMemes>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+    </structureMemeWeights>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <raidLootMaker>ReviaRaiderLootMaker</raidLootMaker>
+    <melaninRange>1</melaninRange>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>
@@ -30,9 +48,11 @@
       <li>TribalStart</li>
       <li>TribalStartTechprints</li>
     </startingTechprintsResearchTags>
-    <hairTags>
-      <li>Rural</li>
-      <li>Urban</li>
-    </hairTags>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </FactionDef>
 </Defs>

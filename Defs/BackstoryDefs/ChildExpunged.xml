@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <AlienRace.BackstoryDef>
+  <BackstoryDef>
     <defName>ReviaRaceBackstoryChildExpunged</defName>
     <title>Revian Expunged Child</title>
     <titleShort>Exile</titleShort>
-    <baseDescription>Revian priests inspect newborn children for infirmities, and those that were found weak are exposed to weather until they die. [PAWN_nameDef] was one such case, though [PAWN_pronoun] was rescued by other such exiles from a slow death.</baseDescription>
+    <baseDesc>Revian priests inspect newborn children for infirmities, and those that were found weak are exposed to weather until they die. [PAWN_nameDef] was one such case, though [PAWN_pronoun] was rescued by other such exiles from a slow death.</baseDesc>
     <bodyTypeMale>Thin</bodyTypeMale>
     <bodyTypeFemale>Thin</bodyTypeFemale>
     <slot>Childhood</slot>
@@ -14,14 +14,14 @@
     </spawnCategories>
     <skillGains>
       <li>
-        <defName>Melee</defName>
-        <amount>1</amount>
+        <key>Melee</key>
+        <value>1</value>
       </li>
       <li>
-        <defName>Shooting</defName>
-        <amount>1</amount>
+        <key>Shooting</key>
+        <value>1</value>
       </li>
     </skillGains>
-    <linkedBackstory>ReviaRaceBackstoryAdultReaver</linkedBackstory>
-  </AlienRace.BackstoryDef>
+    <!--<linkedBackstory>ReviaRaceBackstoryAdultReaver</linkedBackstory>-->
+  </BackstoryDef>
 </Defs>

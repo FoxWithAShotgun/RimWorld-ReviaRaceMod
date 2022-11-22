@@ -3,20 +3,28 @@
   <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceColonist</defName>
     <label>revian frontiersman</label>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <defaultFactionType>PlayerColony</defaultFactionType>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
     <apparelTags>
       <li>IndustrialBasic</li>
     </apparelTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>12~15</initialResistanceRange>
     <apparelMoney>200~400</apparelMoney>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <techHediffsChance>0</techHediffsChance>
     <combatPower>25</combatPower>
-    <baseRecruitDifficulty>0.5</baseRecruitDifficulty>
     <backstoryCategories>
       <li>ReviaRaceBackstory</li>
     </backstoryCategories>
+    <fixedGender>Female</fixedGender>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

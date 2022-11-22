@@ -10,6 +10,7 @@ using ReviaRace.Needs;
 
 namespace ReviaRace.Comps
 {
+    [Obsolete]
     public class SoulReaper : ThingComp
     {
         private static SimpleCurve TailAgeCurve = new SimpleCurve(new CurvePoint[]

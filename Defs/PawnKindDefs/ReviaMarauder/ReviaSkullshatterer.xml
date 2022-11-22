@@ -3,12 +3,11 @@
   <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceSkullshatterer</defName>
     <label>revia skullshatterer</label>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>350</combatPower>
     <isFighter>true</isFighter>
     <factionLeader>true</factionLeader>
-    <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>Medieval</li>
@@ -21,6 +20,8 @@
       <li>ReviaMeleeAdvanced</li>
     </weaponTags>
     <weaponMoney>9999~9999</weaponMoney>
+    <initialWillRange>1.0~1.0</initialWillRange>
+    <initialResistanceRange>30~45</initialResistanceRange>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
     <combatEnhancingDrugsChance>1.0</combatEnhancingDrugsChance>
@@ -44,5 +45,11 @@
     <techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

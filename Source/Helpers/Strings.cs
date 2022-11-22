@@ -10,6 +10,7 @@ namespace ReviaRace.Helpers
 {
     internal static class Strings
     {
+        internal static string NonSkarniteOrReviaSacrificing => "NonSkarniteOrReviaSacrificing";
         internal static string ReviaRaceModName => "ReviaRaceModName";
         internal static string SacrificePrisonerNone => "ReviaRaceSacrificePrisonerNone";
         internal static string SacrificePrisonerName => "ReviaRaceSacrificePrisonerName";

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>ReviaRaceQuartermaster</defName>
+    <label>Revia quartermaster</label>
+    <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
+    <race>ReviaRaceAlien</race>
+    <combatPower>80</combatPower>
+    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
+    <itemQuality>Excellent</itemQuality>
+    <apparelTags>
+      <li>IndustrialAdvanced</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+    </apparelTags>
+    <isFighter>false</isFighter>
+    <trader>true</trader>
+    <apparelRequired>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <apparelMoney>2200~2500</apparelMoney>
+    <weaponTags>
+      <li>ReviaMeleeAdvanced</li>
+      <li>Gun</li>
+    </weaponTags>
+    <weaponMoney>2200~2500</weaponMoney>
+    <techHediffsChance>0.5</techHediffsChance>
+    <techHediffsMoney>3000~5000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>100</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>2000~2250</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>

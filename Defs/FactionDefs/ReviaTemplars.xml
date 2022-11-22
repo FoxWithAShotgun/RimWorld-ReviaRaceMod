@@ -14,23 +14,32 @@
     <leaderTitle>High Templar</leaderTitle>
     <factionIconPath>World/ReviaEmblem</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceSkarniteMeme</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+    </requiredMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+    </allowedMemes>
+    <allowedCultures>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ReviaRaceHighCulture</li>
+    </allowedCultures>
     <colorSpectrum>
       <li>(0.20, 0.20, 0.85)</li>
       <li>(0.15, 0.15, 0.40)</li>
     </colorSpectrum>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
     <settlementNameMaker>NamerSettlementReviaTemplar</settlementNameMaker>
-    <pawnNameMaker>NamerPersonRevia</pawnNameMaker>
     <techLevel>Industrial</techLevel>
     <backstoryCategories>
       <li>ReviaRaceTemplar</li>
     </backstoryCategories>
     <listOrderPriority>10</listOrderPriority>
-    <geneticVariance>0.8</geneticVariance>
-    <hairTags>
-      <li>Rural</li>
-      <li>Urban</li>
-    </hairTags>
+    <melaninRange>0.8</melaninRange>
+    <raidLootMaker>ReviaTemplarLootMaker</raidLootMaker>
     <caravanTraderKinds>
       <li>Caravan_Outlander_BulkGoods</li>
       <li>Caravan_Outlander_CombatSupplier</li>
@@ -54,6 +63,15 @@
         <li>(500000, 100000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(2000,  2500)</li>
+        <li>(4000,  5000)</li>
+        <li>(16000, 20000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
     <pawnGroupMakers>
       <li>
         <!--You done goofed-->
@@ -109,5 +127,11 @@
         </options>
       </li>
     </pawnGroupMakers>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </FactionDef>
 </Defs>

@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedSword</defName>
     <label>Red Inquisitor</label>
+    <relicChance>1</relicChance>
     <description>A cruel sword with a serrated blade, containing a hateful spirit.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedSword</texPath>
@@ -34,8 +35,8 @@
       <li>ReviaMeleeLegendary</li>
     </weaponTags>
     <comps>
-      <li Class="CompProperties_BiocodableWeapon"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties">
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
         <LeechStrength>1.50</LeechStrength>
       </li>
     </comps>

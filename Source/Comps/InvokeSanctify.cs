@@ -19,7 +19,6 @@ namespace ReviaRace.Comps
 #if DEBUG
             Log.Message($"Weapon: {weapon.ToString()}");
 #endif
-
             if (weapon == null || weapon.def.Verbs.Any(v => !v.IsMeleeAttack))
             {
                 failReason = Strings.SanctifyNonMeleeWeapon.Translate();

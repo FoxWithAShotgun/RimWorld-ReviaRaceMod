@@ -20,25 +20,34 @@ namespace ReviaRace.Comps
             }
             else if (pawn.Map != null && pawn.Map == Find.CurrentMap)
             {
-                // Pick a prisoner to sacrifice.
-                var sacrificeTargets = pawn.Map.mapPawns.AllPawns.Where(p => IsValidSacrificeOption(pawn, p)).ToList();
-                if (sacrificeTargets.Count == 0)
+                if (pawn.IsRevia() || pawn.IsSkarnite())
                 {
-                    var caption = Strings.SacrificePrisonerNone.Translate();
-                    yield return new FloatMenuOption(caption, null, MenuOptionPriority.DisabledOption);
+                    // Pick a prisoner to sacrifice.
+                    var sacrificeTargets = pawn.Map.mapPawns.AllPawns.Where(p => IsValidSacrificeOption(pawn, p)).ToList();
+                    if (sacrificeTargets.Count == 0)
+                    {
+                        var caption = Strings.SacrificePrisonerNone.Translate();
+                        yield return new FloatMenuOption(caption, null, MenuOptionPriority.DisabledOption);
+                    }
+                    else
+                    {
+                        foreach (var target in sacrificeTargets)
+                        {
+                            yield return CreateSacrificeOption(pawn, target);
+                        }
+                    }
                 }
                 else
                 {
-                    foreach (var target in sacrificeTargets)
-                    {
-                        yield return CreateSacrificeOption(pawn, target);
-                    }
+                    var caption = Strings.NonSkarniteOrReviaSacrificing.Translate();
+                    yield return new FloatMenuOption(caption, null, MenuOptionPriority.DisabledOption);
                 }
             }
         }
 
         private bool IsValidSacrificeOption(Pawn sacrificer, Pawn victim)
         {
+
             return victim.IsHumanlike() &&
                 (victim.IsPrisonerOfColony ||
                  victim.Downed && !victim.Faction.AllyOrNeutralTo(sacrificer.Faction));

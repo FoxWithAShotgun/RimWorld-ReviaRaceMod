@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+  <NonSkarniteOrReviaSacrificing>Pawn is not skarnite or revia</NonSkarniteOrReviaSacrificing>
   <ReviaRaceSacrificePrisonerNone>No prisoners to be sacrificed.</ReviaRaceSacrificePrisonerNone>
   <ReviaRaceSacrificePrisonerName>Sacrifice {0}</ReviaRaceSacrificePrisonerName>
   <ReviaRaceSacrificeRejected>{0}'s offering was accepted, but deemed insufficient. The blood god demands more blood.</ReviaRaceSacrificeRejected>

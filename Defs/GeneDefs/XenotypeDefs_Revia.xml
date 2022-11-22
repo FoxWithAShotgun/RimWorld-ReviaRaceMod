@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>RevianXenotype</defName>
+		<label>revia</label>
+		<description>Revia. Just revia</description>
+		<descriptionShort>revia</descriptionShort>
+		<iconPath>UI/icons/Revia_XenotypeIcon</iconPath>-
+		<inheritable>true</inheritable>
+		<combatPowerFactor>1.0</combatPowerFactor>
+		<nameMaker>NamerPersonRevia</nameMaker>
+		<!--<nameMakerFemale>NamerPersonRevia</nameMakerFemale>-->
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+      <li>ReviaTail</li>
+      <li>ReviaEars</li>
+      <li>Body_Thin</li>
+      <li>Body_Standard</li>
+      <li>Beauty_Beautiful</li>
+      <li>MeleeDamage_Strong</li>
+      <li>RevianTeeth</li>
+      <li>ReviaClaws</li>
+			<!--<li>Hair_Ferian</li>
+			<li>Ears_Ferian</li>
+			<li>Ferian_Furry</li>
+			<li>Ferian_skin</li>
+			<li>Skin_White</li>
+			<li>Hair_SnowWhite</li>
+			<li>Body_Thin</li>
+			<li>FerianHand</li>
+			<li>Jaw_Ferian</li>
+			<li>VoiceFerian</li>
+			<li>DarkVision</li>
+			<li>PsychicBonding</li>
+			<li>Aggression_DeadCalm</li>
+			<li>Libido_Low</li>
+			<li>Sleepy</li>
+			<li>MaxTemp_SmallDecrease</li>
+			<li>MinTemp_SmallDecrease</li>
+			<li>MeleeDamage_Weak</li>-->
+		</genes>
+	</XenotypeDef>
+
+
+</Defs>

@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedDagger</defName>
     <label>Crimson Blossom</label>
+    <relicChance>1</relicChance>
     <description>A cruel sawtoothed dagger bearing a bloodthirsty spirit.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedDagger</texPath>
@@ -32,8 +33,8 @@
       <li>Metallic</li>
     </stuffCategories>
     <comps>
-      <li Class="CompProperties_BiocodableWeapon"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties">
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
         <LeechStrength>0.75</LeechStrength>
       </li>
     </comps>

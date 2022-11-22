@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.Helpers;
 using ReviaRace.Needs;
 using ReviaRace.Workers;
 using System;
@@ -34,10 +35,11 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthFactor = CostGrowthFactor;
             InvokeBlessing.CostGrowthMode = CostGrowthMode;
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
-            SoulReaper.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
-            SoulReaper.SoulReapSpawnRange = SoulReapSpawnRange;
-            SoulReaper.SoulReapSpawnByAge = SoulReapSpawnByAge;
-            SoulReaper.SoulReapSpawnFixed = SoulReapSpawnFixed;
+            SoulReaperWorker.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
+            Log.Message($"Setting: {SoulReapSpawnRange}, {SoulReapSpawnByAge}, {SoulReapSpawnFixed}");
+            SoulReaperWorker.SoulReapSpawnRange = SoulReapSpawnRange;
+            SoulReaperWorker.SoulReapSpawnByAge = SoulReapSpawnByAge;
+            SoulReaperWorker.SoulReapSpawnFixed = SoulReapSpawnFixed;
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
             BloodthirstNeed.Enabled = EnableBloodthirstNeed;
             BloodthirstNeed.DaysToEmpty = BloodthirstDaysToEmpty;

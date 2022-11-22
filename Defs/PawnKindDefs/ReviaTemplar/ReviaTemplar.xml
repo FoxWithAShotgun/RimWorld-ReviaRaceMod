@@ -4,9 +4,8 @@
     <defName>ReviaRaceTemplar</defName>
     <label>Revia Templar</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <combatPower>125</combatPower>
-    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>IndustrialAdvanced</li>
@@ -21,6 +20,8 @@
       <li>ReviaMeleeAdvanced</li>
       <li>Gun</li>
     </weaponTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>25~40</initialResistanceRange>
     <weaponMoney>2400~3000</weaponMoney>
     <techHediffsChance>0.5</techHediffsChance>
     <techHediffsMoney>3000~5000</techHediffsMoney>
@@ -52,5 +53,11 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

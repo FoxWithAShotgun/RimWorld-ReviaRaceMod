@@ -3,6 +3,7 @@
   <ThingDef ParentName="ReviaBaseMeleeWeapon">
     <defName>ReviaBlessedSerratedScythe</defName>
     <label>Vermillion Tide</label>
+    <relicChance>1</relicChance>
     <description>A cruel bardiche with a razor sharp blade. A murderous spirit resides within it.</description>
     <graphicData>
       <texPath>Things/Item/Weapons/SerratedScythe</texPath>
@@ -32,9 +33,9 @@
       <li>Metallic</li>
     </stuffCategories>
     <comps>
-      <li Class="CompProperties_BiocodableWeapon"/>
-      <li Class="ReviaRace.Comps.LifeLeech_CompProperties">
-        <LeechStrength>2.5</LeechStrength>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+        <LeechStrength>2.50</LeechStrength>
       </li>
     </comps>
     <weaponTags>

@@ -3,11 +3,11 @@
   <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceMarauder</defName>
     <label>revia marauder</label>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>75</combatPower>
     <canBeSapper>true</canBeSapper>
-    <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
+
     <itemQuality>Poor</itemQuality>
     <gearHealthRange>0.6~0.8</gearHealthRange>
     <apparelTags>
@@ -20,6 +20,8 @@
       <li>ReviaRangedBasic</li>
       <li>ReviaRangedIntermediate</li>
     </weaponTags>
+    <initialWillRange>0.5~0.8</initialWillRange>
+    <initialResistanceRange>8~14</initialResistanceRange>
     <weaponMoney>1600~2400</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
@@ -38,5 +40,11 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

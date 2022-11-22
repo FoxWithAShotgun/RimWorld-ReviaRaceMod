@@ -12,10 +12,10 @@ namespace ReviaRace.Comps
     {
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
+            Log.Message("Something happend " + respawningAfterLoad);
             base.PostSpawnSetup(respawningAfterLoad);
 
             Pawn pawn = parent as Pawn;
-
             if (pawn == null)
             {
                 // Only applies against pawns.
@@ -41,6 +41,25 @@ namespace ReviaRace.Comps
                 pawn.gender = Gender.Female;
                 var random = new Random();
             }
+        }
+        public MyExampleCompProperties Props => (MyExampleCompProperties)this.props;
+    }
+    public class MyExampleCompProperties : CompProperties
+    {
+        public bool myExampleBool;
+        public float myExampleFloat;
+
+        /// <summary>
+        /// These constructors aren't strictly required if the compClass is set in the XML.
+        /// </summary>
+        public MyExampleCompProperties()
+        {
+            this.compClass = typeof(ReviaRaceOnSpawn);
+        }
+
+        public MyExampleCompProperties(Type compClass) : base(compClass)
+        {
+            this.compClass = compClass;
         }
     }
 }

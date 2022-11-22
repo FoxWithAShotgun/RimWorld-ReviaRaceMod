@@ -3,15 +3,13 @@
   <PawnKindDef ParentName="ReviaPawnBase">
     <defName>ReviaRaceBerserker</defName>
     <label>revia berserker</label>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
     <combatPower>95</combatPower>
-    <baseRecruitDifficulty>1.00</baseRecruitDifficulty>
     <itemQuality>Good</itemQuality>
     <gearHealthRange>0.8~1.0</gearHealthRange>
     <apparelTags>
       <li>Neolithic</li>
-      <li>Medieval</li>
     </apparelTags>
     <apparelRequired>
       <li>Apparel_PlateArmor</li>
@@ -20,6 +18,8 @@
     <weaponTags>
       <li>ReviaMeleeAdvanced</li>
     </weaponTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>20~25</initialResistanceRange>
     <weaponMoney>2500~3000</weaponMoney>
     <techHediffsChance>0</techHediffsChance>
     <invNutrition>5</invNutrition>
@@ -38,5 +38,11 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>

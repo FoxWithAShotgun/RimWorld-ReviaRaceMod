@@ -30,9 +30,9 @@ namespace ReviaRace.Comps
                 return;
             }
 
-            var srComp = pawn.GetComp<SoulReaper>();
-            var srTier = srComp.GetSoulReapTier();
-            var srHediff = srComp.SoulReapHediff;
+            //var srComp = pawn.GetComp<SoulReaper>();
+            var srTier = SoulReaperWorker.GetSoulReapTier(pawn);
+            var srHediff = PawnHelpers.SoulReapHediff(pawn);
 
             var cost = InvokeGreaterBlessing.GetAdvanceCost(CostGrowthMode, srTier, CostBase, CostGrowthFactor, CostGrowthStartTier);
             var requiredItemCount = Math.Max(1, (int)Math.Ceiling((cost - srHediff.Severity) / BlessingValue));
@@ -63,12 +63,12 @@ namespace ReviaRace.Comps
         /// <param name="pawn">The pawn to increase the Soul Reap tier of.</param>
         protected void IncreaseSoulReapTier(Pawn pawn)
         {
-            var srComp = pawn.GetComp<SoulReaper>();
-            var soulReapTier = srComp.GetSoulReapTier();
+            //var srComp = pawn.GetComp<SoulReaper>();
+            var soulReapTier = SoulReaperWorker.GetSoulReapTier(pawn);
 
             // Blood for the blood god! Skulls for the skull throne!
-            srComp.RemoveSoulReapHediffs();
-            srComp.AddSoulReapTier(soulReapTier + 1);
+            SoulReaperWorker.RemoveSoulReapHediffs(pawn);
+            SoulReaperWorker.AddSoulReapTier(pawn,soulReapTier + 1);
 
             var msg = Strings.SacrificeSuccess.Translate(pawn.NameShortColored);
             Messages.Message(msg, pawn, MessageTypeDefOf.PositiveEvent);
@@ -128,17 +128,17 @@ namespace ReviaRace.Comps
         /// <returns></returns>
         protected bool ViabilityCheck(Pawn pawn)
         {
-            var srComp = pawn.GetComp<SoulReaper>();
-            if (srComp == null)
-            {
-                Messages.Message(Strings.OfferingInvalidPawn.Translate(), pawn, MessageTypeDefOf.NegativeEvent, false);
-                return false;
-            }
+            //var srComp = pawn.GetComp<SoulReaper>();
+            //if (srComp == null)
+            //{
+            //    Messages.Message(Strings.OfferingInvalidPawn.Translate(), pawn, MessageTypeDefOf.NegativeEvent, false);
+            //    return false;
+            //}
 
             var startMsg = Strings.OfferingStart.Translate(pawn.NameShortColored, parent.LabelNoCount);
             Messages.Message(startMsg, pawn, MessageTypeDefOf.NeutralEvent, false);
 
-            var soulReapTier = srComp.GetSoulReapTier();
+            var soulReapTier = SoulReaperWorker.GetSoulReapTier(pawn);
             if (soulReapTier == -1)
             {
                 Messages.Message(Strings.OfferingInvalidPawn.Translate(), pawn, MessageTypeDefOf.NegativeEvent, false);

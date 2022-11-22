@@ -16,8 +16,14 @@ namespace ReviaRace.Helpers
         internal static bool IsBloodlust(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Bloodlust");
         internal static bool IsCannibal(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Cannibal");
         internal static bool IsPsychopath(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Psychopath");
-        internal static bool IsRevia(this Pawn pawn) => pawn.kindDef.race.defName.ToLower().Contains("revia");
+        internal static bool IsRevia(this Pawn pawn) => pawn
+            //.kindDef.race.defName
+            //.ToLower().Contains("revia");
+            .genes?.HasGene(Defs.Tail)??false;
         internal static bool IsHumanlike(this Pawn pawn) => pawn.RaceProps.Humanlike;
         internal static bool IsSkarnite(this Pawn pawn) => ModLister.IdeologyInstalled && (pawn?.ideo?.Ideo?.HasMeme(Defs.Skarnite) ?? false);
+        internal static bool IsHediffActive(this Pawn pawn) => pawn.health.hediffSet.hediffs.Any(x => x.def.label.StartsWith("ReviaRaceSoulreap"));
+        internal static Hediff SoulReapHediff(this Pawn pawn)=>pawn?.health.hediffSet.hediffs
+                                         .FirstOrDefault(hediff => hediff.def.defName.StartsWith("ReviaRaceSoulreapTier"));
     }
 }

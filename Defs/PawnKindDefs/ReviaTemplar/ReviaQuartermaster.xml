@@ -4,9 +4,8 @@
     <defName>ReviaRaceQuartermaster</defName>
     <label>Revia quartermaster</label>
     <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
-    <race>ReviaRaceAlien</race>
+    <race>Human</race>
     <combatPower>80</combatPower>
-    <baseRecruitDifficulty>1.0</baseRecruitDifficulty>
     <itemQuality>Excellent</itemQuality>
     <apparelTags>
       <li>IndustrialAdvanced</li>
@@ -23,6 +22,8 @@
       <li>ReviaMeleeAdvanced</li>
       <li>Gun</li>
     </weaponTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>20~25</initialResistanceRange>
     <weaponMoney>2200~2500</weaponMoney>
     <techHediffsChance>0.5</techHediffsChance>
     <techHediffsMoney>3000~5000</techHediffsMoney>
@@ -43,5 +44,11 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
   </PawnKindDef>
 </Defs>
