@@ -80,9 +80,11 @@
     <graphicData>
       <graphicPath>Things/Tails/Tail1</graphicPath>
       <colorType>Hair</colorType>
-      <!--<drawOffsetNorth>(0.1, 0.2, -0.45)</drawOffsetNorth>
-      <drawOffsetSouth>(0.2, -0.1, -0.05)</drawOffsetSouth>
-      <drawOffsetEast>(-0.75, -0.1, -0.15)</drawOffsetEast>-->
+      <drawLoc>Tailbone</drawLoc>
+      <drawScale>1.00</drawScale>
+      <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
+      <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+      <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
     </graphicData>
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
     <modExtensions>
@@ -126,22 +128,22 @@
         <disableBodyTypeScaleForAdult>true</disableBodyTypeScaleForAdult>
         <disableBodyTypeScaleForChildren>false</disableBodyTypeScaleForChildren>
         <bodyTypeOffsetNorth>
-          <female>(0.05, 0.9, 0)</female>
-          <thin>(-0.05, -0,02, 0)</thin>
+          <female>(-0.06, 0.9, -0.5)</female>
+          <thin>(-0.08, 0.2, -0.45)</thin>
           <baby>(-0.007, 0.83, 0)</baby>
-          <child>(-0.007, 0.83, 0)</child>
+          <child>(-0.04, 0.92, -0.37)</child>
         </bodyTypeOffsetNorth>
         <bodyTypeOffsetSouth>
-          <female>(-0.475, 0.57, 0)</female>
-          <thin>(-0.475, 0.57, 0)</thin>
-          <baby>(-0.40, 0.56, 0)</baby>
-          <child>(-0.40, 0.56, 0)</child>
+          <female>(0, -0.4, 0)</female>
+          <thin>(0.05, -0.4, -0.0)</thin>
+          <baby>(-0.40, -0.4, 0)</baby>
+          <child>(-0.03, -0.1, 0)</child>
         </bodyTypeOffsetSouth>
         <bodyTypeOffsetEast>
-          <female>(-0.375, 0.57, 0)</female>
-          <thin>(-0.375, 0.57, 0)</thin>
-          <baby>(-0.4, 0.47, 0)</baby>
-          <child>(-0.4, 0.51, 0)</child>
+          <female>(-0.375, -0.4, -0.40)</female>
+          <thin>(-0.52, -0.4, -0.4)</thin>
+          <baby>(-0.4, -0.4, 0)</baby>
+          <child>(-0.31, -0.4, -0.32)</child>
         </bodyTypeOffsetEast>
       </li>
     </modExtensions>
@@ -156,6 +158,9 @@
     <label>Revian claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
     <description>Revia claws - biotech port.</description>
+    <damageFactors>
+      <ScratchToxic>100</ScratchToxic>
+    </damageFactors>
   </GeneDef>
   <GeneDef ParentName="GeneEarsBase">
     <defName>ReviaEars</defName>
@@ -164,6 +169,10 @@
     <description>Revia ear - biotech port.</description>
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
     <graphicData>
+    <drawScale>1.00</drawScale>
+      <drawOffsetNorth>(0, -0.3, 0.0)</drawOffsetNorth>
+      <drawOffsetSouth>(0, 0, 0.0)</drawOffsetSouth>
+      <drawOffsetEast>(-0.10, 0, 0.03)</drawOffsetEast>
       <graphicPath>Things/Ears/EarMerged</graphicPath>
       <colorType>Hair</colorType>
       <useSkinShader>False</useSkinShader>
@@ -180,6 +189,8 @@
       <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
         <ages>
           <li>0</li>
+          <li>3</li>
+          
         </ages>
         <bodyPartExpressions>
           <li>Left ear|Right ear</li>
@@ -188,13 +199,36 @@
           <li>!Left ear|!Right ear</li>
         </bodyPartExpressions>
         <graphicPaths>
-          <li>Things/Ears/EarMerged</li>
-          <li>Things/Ears/EarRight</li>
-          <li>Things/Ears/EarLeft</li>
-          <li>Things/Ears/EarNone</li>
+          <!--baby-->
+          <li>Things/Ears/Baby/EarMerged/EarMerged</li>
+          <li>Things/Ears/Baby/EarRight/EarRight</li>
+          <li>Things/Ears/Baby/EarLeft/EarLeft</li>
+          <li>Things/Ears/EarNone/EarNone</li>
+
+          <!--adult-->
+          <li>Things/Ears/Adult/EarMerged/EarMerged</li>
+          <li>Things/Ears/Adult/EarRight/EarMerged</li>
+          <li>Things/Ears/Adult/EarLeft/EarMerged</li>
+          <li>Things/Ears/EarNone/EarNone</li>
         </graphicPaths>
       </li>
-      
+      <li Class="BetterGeneGraphicsFramework.BetterTailRendering">
+        <disableBodyTypeScaleForAdult>true</disableBodyTypeScaleForAdult>
+        <disableBodyTypeScaleForChildren>false</disableBodyTypeScaleForChildren>
+        <bodyTypeOffsetNorth>
+          
+          <baby>(1,1,1)</baby>
+          <child>(1,1,1)</child>
+        </bodyTypeOffsetNorth>
+        <bodyTypeOffsetSouth>
+          <baby>(1,1,1)</baby>
+          <child>(1,1,1)</child>
+        </bodyTypeOffsetSouth>
+        <bodyTypeOffsetEast>
+          <baby>(1,1,1)</baby>
+          <child>(1,1,1)</child>
+        </bodyTypeOffsetEast>
+      </li>
       <li Class="BetterGeneGraphicsFramework.ShaderSupport">
         <shaderType>CutoutComplex</shaderType>
         <colorType>Hair</colorType>
