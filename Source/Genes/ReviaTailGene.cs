@@ -22,10 +22,6 @@ namespace ReviaRace.Genes
             if (pawn.gender != Gender.Female)
             {
                 pawn.genes.RemoveGene(this);
-                var btNeed = pawn.needs.TryGetNeed<BloodthirstNeed>();
-                if (btNeed != null)
-                    pawn.needs.AllNeeds.Remove(btNeed);
-
             }
             else
             {
@@ -33,6 +29,14 @@ namespace ReviaRace.Genes
                 flag = true;
 
             }
+        }
+        public override void PostRemove()
+        {
+            base.PostRemove();
+            var btNeed = pawn.needs.TryGetNeed<BloodthirstNeed>();
+            if (btNeed != null)
+                pawn.needs.AllNeeds.Remove(btNeed);
+            pawn.RemoveSoulReapHediffs();
         }
     }
 }

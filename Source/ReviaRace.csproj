@@ -77,8 +77,14 @@
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
+    <Compile Include="Comps\VerbFixComponent.cs" />
+    <Compile Include="DebugActions.cs" />
+    <Compile Include="CustomDefs\CustomTool.cs" />
+    <Compile Include="Genes\ReviaBaseGene.cs" />
+    <Compile Include="Genes\ReviaClawsGene.cs" />
     <Compile Include="Genes\ReviaEarGene.cs" />
     <Compile Include="Genes\ReviaTailGene.cs" />
+    <Compile Include="Genes\ReviaTeethGene.cs" />
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="Helpers\Defs.cs" />
@@ -109,9 +115,6 @@
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TailTestWalking.rws" />

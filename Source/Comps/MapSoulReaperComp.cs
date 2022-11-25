@@ -33,16 +33,15 @@ namespace ReviaRace.Comps
             if (ShouldRefreshList())
             {
                 var def = GenDefDatabase.GetDef(typeof(GeneDef), "ReviaTail") as GeneDef;
-                //Log.Message($"Found a def: " + def.defName+$" {def.GetType().Name}");
                 revias = map.mapPawns.AllPawns.Where(x => x.IsRevia()).Select(x=>new ReviaComp(x)).ToList();
                 pawnCount = map.mapPawns.AllPawnsCount;
-                //Log.Message("List has been refreshed. Revias: " + string.Join(", ", revias.Select(x => x.pawn.Name.ToStringFull)));
+                
 
             }
             foreach (var revia in revias)
                 revia.CompTick();
           
-            //Log.Message($"Revias on map: {string.Join(", ", revias.Select(x => x.Name.ToStringFull))}");
+           
 
         }
         

@@ -59,5 +59,10 @@ namespace ReviaRace.Helpers
 
         internal static GeneDef Tail => _tail??=DefDatabase<GeneDef>.GetNamed("ReviaTail");
         private static GeneDef _tail;
+        internal static GeneDef Claws => _claws??=DefDatabase<GeneDef>.GetNamed("ReviaClaws");
+        private static GeneDef _claws;
+
+        internal static GeneDef Teeth => _teeth ??= DefDatabase<GeneDef>.GetNamed("ReviaTeeth");
+        private static GeneDef _teeth;
     }
 }

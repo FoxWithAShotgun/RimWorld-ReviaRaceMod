@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ReviaRace.CustomDefs.CustomTool>
+    <defName>RevianClaws</defName>
+    <chanceFactor>1</chanceFactor>
+    <untranslatedLabel>Revian claws</untranslatedLabel>
+    <capacities>
+      <li>Cut</li>
+      <li>Blunt</li>
+    </capacities>
+    <power>6</power>
+    <cooldownTime>1.2</cooldownTime> 
+    <surpriseAttack>
+      <extraMeleeDamages>
+        <li>
+          <def>Cut</def>
+          <amount>13</amount>
+        </li>
+        <li>
+          <def>Stun</def>
+          <amount>25</amount>
+        </li>
+      </extraMeleeDamages>
+    </surpriseAttack>
+  </ReviaRace.CustomDefs.CustomTool>
+  <ReviaRace.CustomDefs.CustomTool>
+    <defName>RevianTeeth</defName>
+    <untranslatedLabel>Revian teeths</untranslatedLabel>
+    <capacities>
+      <li>Bite</li>
+    </capacities>
+    <power>11</power>
+
+    <cooldownTime>1.8</cooldownTime>
+    <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+    <chanceFactor>0.4</chanceFactor>
+  </ReviaRace.CustomDefs.CustomTool>
+
+</Defs>

@@ -33,7 +33,6 @@ namespace ReviaRace.HarmonyPatches
         
         public static void PawnAllowedToStartAnewPostfix(Pawn p, Bill __instance, ref bool __result)
         {
-            Log.Message("Craft patch log");
             RecipeDef recipe = __instance.recipe;
 
             if (__result)
@@ -42,7 +41,6 @@ namespace ReviaRace.HarmonyPatches
 
         public static void ShouldSkipResearchPostfix(Pawn pawn, ref bool __result)
         {
-            Log.Message("Research patch log");
             if (__result) return;
             ResearchProjectDef project = Find.ResearchManager.currentProj;
 

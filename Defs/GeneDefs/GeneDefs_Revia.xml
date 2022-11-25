@@ -1,67 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!--<GeneDef>
-    <defName>Ferian_skin</defName>
-    <label>ferianskin</label>
-    <labelShortAdj>ferianskinned</labelShortAdj>
-    <description>Carriers of this gene grow thick fur all over their body, which protects them from cold temperatures.</description>
-    <skinColorOverride>(255, 255, 255)</skinColorOverride>
-    <biostatCpx>1</biostatCpx>
-    <biostatMet>4</biostatMet>
-    <displayCategory>Miscellaneous</displayCategory>
-    <displayOrderInCategory>400</displayOrderInCategory>
-    <iconPath>UI/Icons/Genes/Gene_Ferian</iconPath>
-    <iconColor>(0.75, 0.75, 0.75)</iconColor>
-    <forcedHeadTypes>
-						<li>Ferian_Male_FACE_A</li>
-						<li>Ferian_Male_FACE_B</li>
-						<li>Ferian_Male_FACE_C</li>
-						<li>Ferian_Male_FACE_D</li>
-						<li>Ferian_Male_FACE_F</li>
-						<li>Ferian_female_FACE_A</li>
-						<li>Ferian_female_FACE_B</li>
-						<li>Ferian_female_FACE_C</li>
-						<li>Ferian_female_FACE_D</li>
-						<li>Ferian_female_FACE_F</li>
-    </forcedHeadTypes>
-    <forcedTraits>
-      <li>
-        <def>Miraculous</def>
-      </li>
-    </forcedTraits>
-		<statOffsets>
-			<BedHungerRateFactor>-0.5</BedHungerRateFactor>
-			<MoveSpeed>0.8</MoveSpeed>
-            <MiningSpeed>-0.25</MiningSpeed>
-			<ConstructionSpeed>-0.25</ConstructionSpeed>
-            <ResearchSpeed>0.2</ResearchSpeed>
-			<AnimalGatherSpeed>0.2</AnimalGatherSpeed>
-			<AnimalGatherYield>0.2</AnimalGatherYield>
-			<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
-            <PsychicSensitivity>0.5</PsychicSensitivity>
-			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
-            <ComfyTemperatureMin>-12</ComfyTemperatureMin>
-            <ComfyTemperatureMax>-6</ComfyTemperatureMax>
-		</statOffsets>
-    <beardTagFilter>
-      <whitelist>true</whitelist>
-      <tags>
-        <li>Furskin</li>
-      </tags>
-    </beardTagFilter>
-    <exclusionTags>
-      <li>HairStyle</li>
-      <li>Fur</li>
-    </exclusionTags>
-    <missingGeneRomanceChanceFactor>0.5</missingGeneRomanceChanceFactor>
-    <graphicData>
-      <fur>Ferianskin</fur>
-      <colorType>Hair</colorType>
-      <skinIsHairColor>true</skinIsHairColor>
-      <tattoosVisible>false</tattoosVisible>
-    </graphicData>
-  </GeneDef>-->
-
   <GeneDef ParentName="GeneTailBase">
     <defName>ReviaTail</defName>
     <label>Revian tail</label>
@@ -153,14 +91,14 @@
       </li>
     </forcedTraits>
   </GeneDef>
+  
+  
   <GeneDef>
     <defName>ReviaClaws</defName>
     <label>Revian claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
     <description>Revia claws - biotech port.</description>
-    <damageFactors>
-      <ScratchToxic>100</ScratchToxic>
-    </damageFactors>
+    <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
   </GeneDef>
   <GeneDef ParentName="GeneEarsBase">
     <defName>ReviaEars</defName>
@@ -170,27 +108,25 @@
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
     <graphicData>
     <drawScale>1.00</drawScale>
-      <drawOffsetNorth>(0, -0.3, 0.0)</drawOffsetNorth>
-      <drawOffsetSouth>(0, 0, 0.0)</drawOffsetSouth>
-      <drawOffsetEast>(-0.10, 0, 0.03)</drawOffsetEast>
-      <graphicPath>Things/Ears/EarMerged</graphicPath>
+<drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
+
+      <graphicPath>Things/Ears/Adult/EarMerged/EarMerged</graphicPath>
       <colorType>Hair</colorType>
       <useSkinShader>False</useSkinShader>
     </graphicData>
     <capMods>
       <li>
         <capacity>Hearing</capacity>
-        <postFactor>1.25</postFactor>
+        <postFactor>1.15</postFactor>
       </li>
     </capMods>
     <biostatCpx>1</biostatCpx>
     <biostatMet>-1</biostatMet>
-    <modExtensions>
+   <modExtensions>
       <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
         <ages>
-          <li>0</li>
-          <li>3</li>
-          
+          <li>-1</li>
+
         </ages>
         <bodyPartExpressions>
           <li>Left ear|Right ear</li>
@@ -199,115 +135,28 @@
           <li>!Left ear|!Right ear</li>
         </bodyPartExpressions>
         <graphicPaths>
-          <!--baby-->
-          <li>Things/Ears/Baby/EarMerged/EarMerged</li>
-          <li>Things/Ears/Baby/EarRight/EarRight</li>
-          <li>Things/Ears/Baby/EarLeft/EarLeft</li>
-          <li>Things/Ears/EarNone/EarNone</li>
 
           <!--adult-->
           <li>Things/Ears/Adult/EarMerged/EarMerged</li>
-          <li>Things/Ears/Adult/EarRight/EarMerged</li>
-          <li>Things/Ears/Adult/EarLeft/EarMerged</li>
+          <li>Things/Ears/Adult/EarRight/EarRight</li>
+          <li>Things/Ears/Adult/EarLeft/EarLeft</li>
           <li>Things/Ears/EarNone/EarNone</li>
         </graphicPaths>
       </li>
-      <li Class="BetterGeneGraphicsFramework.BetterTailRendering">
-        <disableBodyTypeScaleForAdult>true</disableBodyTypeScaleForAdult>
-        <disableBodyTypeScaleForChildren>false</disableBodyTypeScaleForChildren>
-        <bodyTypeOffsetNorth>
-          
-          <baby>(1,1,1)</baby>
-          <child>(1,1,1)</child>
-        </bodyTypeOffsetNorth>
-        <bodyTypeOffsetSouth>
-          <baby>(1,1,1)</baby>
-          <child>(1,1,1)</child>
-        </bodyTypeOffsetSouth>
-        <bodyTypeOffsetEast>
-          <baby>(1,1,1)</baby>
-          <child>(1,1,1)</child>
-        </bodyTypeOffsetEast>
-      </li>
+
       <li Class="BetterGeneGraphicsFramework.ShaderSupport">
         <shaderType>CutoutComplex</shaderType>
         <colorType>Hair</colorType>
       </li>
     </modExtensions>
   </GeneDef>
-
-  <!--<GeneDef ParentName="GeneHairStyleBase">
-    <defName>Hair_Ferian</defName>
-    <label>ferian hair</label>
-    <description>This is not genetics, but rather determines the shape of the accessories you put on your hair.</description>
-    <iconPath>UI/Icons/Genes/Gene_FerianHair</iconPath>
-    <displayOrderInCategory>58</displayOrderInCategory>
-    <hairTagFilter>
-      <whitelist>true</whitelist>
-      <tags>
-        <li>Ferian</li>
-      </tags>
-    </hairTagFilter>
-  </GeneDef>-->
-
-  <!--<GeneDef ParentName="GeneHandsBase">
-    <defName>FerianHand</defName>
-    <label>ferian Hand</label>
-    <description>Ferian, which contains animal genes, is not very different from human hands, but has sharp nails and paw pad that animals have.</description>
-    <iconPath>UI/Icons/Genes/Gene_HandsFerian</iconPath>
-    <displayOrderInCategory>321</displayOrderInCategory>
-    <biostatCpx>1</biostatCpx>
-    <capMods>
-      <li>
-        <capacity>Manipulation</capacity>
-        <postFactor>1.05</postFactor>
-      </li>
-    </capMods>
-  </GeneDef>-->
-
-  <!--<GeneDef ParentName="GeneJawBase">
-    <defName>Jaw_Ferian</defName>
-    <label>ferian fox jaw</label>
-    <description>Carriers of this gene have jaws that resemble foxes.</description>
-    <iconPath>UI/Icons/Genes/Gene_JawFerian</iconPath>
-    <displayOrderInCategory>91</displayOrderInCategory>
-    <biostatCpx>1</biostatCpx>
-    <capMods>
-      <li>
-        <capacity>Talking</capacity>
-        <postFactor>1.1</postFactor>
-      </li>
-    </capMods>
-    <canGenerateInGeneSet>false</canGenerateInGeneSet>
-  </GeneDef>-->
-
-  <!--<GeneDef ParentName="GeneVoiceBase">
-    <defName>VoiceFerian</defName>
-    <label>ferian voice</label>
-    <description>Carrier has a high-pitched voice similar to that of a fox.</description>
-    <iconPath>UI/Icons/Genes/Gene_VoiceFerian</iconPath>
-    <statOffsets>
-       <SocialImpact>0.15</SocialImpact>
-    </statOffsets>
-    <displayOrderInCategory>121</displayOrderInCategory>
-  </GeneDef>-->
-
-  <!--<GeneDef ParentName="GeneSkinColorOverride">
-    <defName>Skin_White</defName>
-    <label>white skin</label>
-    <labelShortAdj>pale</labelShortAdj>
-    <description>Carriers of this gene have white skin, unlike natural skin tones, due to a special engineered reflective cell covering.</description>
-    <skinColorOverride>(255, 255, 255)</skinColorOverride>
-    <randomBrightnessFactor>0</randomBrightnessFactor>
-    <displayOrderInCategory>94</displayOrderInCategory>
-  </GeneDef>-->
+  
+  
   <GeneDef>
-    <defName>RevianTeeth</defName>
+    <defName>ReviaTeeth</defName>
     <label>Revian teeth</label>
     <iconPath>UI/icons/ReviaTooth_icon</iconPath>
     <description>Sharp teeth that cause the victim to bleed</description>
-    <damageFactors>
-      <ToxicBite>100</ToxicBite>
-    </damageFactors>
+    <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
   </GeneDef>
 </Defs>

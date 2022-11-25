@@ -8,21 +8,10 @@ using Verse;
 
 namespace ReviaRace.Genes
 {
-    public class ReviaEarGene:Gene
+    public class ReviaEarGene:ReviaBaseGene
     {
         public ReviaEarGene() : base() { }
-        public override void PostAdd()
-        {
-            base.PostAdd();
-            if (pawn.gender != Gender.Female)
-            {
-                pawn.genes.RemoveGene(this);
-                var btNeed= pawn.needs.TryGetNeed<BloodthirstNeed>();
-                if(btNeed!=null)
-                pawn.needs.AllNeeds.Remove(btNeed);
-                
-                
-            }
-        }
+      
+        
     }
 }
