@@ -3,17 +3,17 @@
   <GeneDef ParentName="GeneTailBase">
     <defName>ReviaTail</defName>
     <label>Revian tail</label>
-    <description>Revia ear - biotech port.</description>
+    <description>Revian tail.People say that Skarne blesses their carriers.</description>
     <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
     <iconPath>UI/icons/ReviaTail_icon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>1000</displayOrderInCategory>
     <statOffsets>
-      <MeleeDodgeChance>0.25</MeleeDodgeChance>
-      <MoveSpeed>1.0</MoveSpeed>
-      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      <MeleeDodgeChance>0.12</MeleeDodgeChance>
+      <MoveSpeed>0.3</MoveSpeed>
     </statOffsets>
-    <biostatMet>6</biostatMet>
+    <biostatMet>-2</biostatMet>
+    <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
     <graphicData>
       <graphicPath>Things/Tails/Tail1</graphicPath>
@@ -97,18 +97,20 @@
     <defName>ReviaClaws</defName>
     <label>Revian claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
-    <description>Revia claws - biotech port.</description>
+    <description>Sharp revian claws. Makes enemy bleeding</description>
     <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
   </GeneDef>
   <GeneDef ParentName="GeneEarsBase">
     <defName>ReviaEars</defName>
     <label>Revian ears</label>
     <iconPath>UI/icons/ReviaEar_icon</iconPath>
-    <description>Revia ear - biotech port.</description>
+    <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
     <graphicData>
     <drawScale>1.00</drawScale>
-<drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
+    <drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
 
       <graphicPath>Things/Ears/Adult/EarMerged/EarMerged</graphicPath>
       <colorType>Hair</colorType>
@@ -156,7 +158,7 @@
     <defName>ReviaTeeth</defName>
     <label>Revian teeth</label>
     <iconPath>UI/icons/ReviaTooth_icon</iconPath>
-    <description>Sharp teeth that cause the victim to bleed</description>
+    <description>Sharp teeth that cause the victim to bleed.</description>
     <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
   </GeneDef>
 </Defs>

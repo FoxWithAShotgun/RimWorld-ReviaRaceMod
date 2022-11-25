@@ -16,8 +16,6 @@ namespace ReviaRace.Genes
         internal static bool flag;
         public override void PostAdd()
         {
-            bool onCreation = PawnGenerator.IsBeingGenerated(pawn);
-            //Log.Message( ? "Gene added on generation" : "Gene added in game");
             base.PostAdd();
             if (pawn.gender != Gender.Female)
             {

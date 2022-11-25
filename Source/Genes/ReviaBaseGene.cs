@@ -1,4 +1,5 @@
-﻿using ReviaRace.Needs;
+﻿using ReviaRace.Helpers;
+using ReviaRace.Needs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,8 @@ namespace ReviaRace.Genes
             if (shouldInstantlyRemove)
                 pawn.genes.RemoveGene(this);
             if (shouldInstantlyKill || PawnGenerator.IsBeingGenerated(pawn))
-                if (!pawn.Dead) pawn.Kill(null);
+                if (!pawn.Dead)
+                    pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
         }
         public override void PostRemove()
         {

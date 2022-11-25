@@ -64,5 +64,8 @@ namespace ReviaRace.Helpers
 
         internal static GeneDef Teeth => _teeth ??= DefDatabase<GeneDef>.GetNamed("ReviaTeeth");
         private static GeneDef _teeth;
+
+        internal static HediffDef GeneRejection => _geneRejection ??= DefDatabase<HediffDef>.GetNamed("GeneRejection");
+        private static HediffDef _geneRejection;
     }
 }

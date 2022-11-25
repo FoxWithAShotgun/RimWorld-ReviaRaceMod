@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>GeneRejection</defName>
+    <label>Revia gene rejection</label>
+    <description>Skarne punished this unworthy person</description>
+    <isBad>true</isBad>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <stages>
+      
+    </stages>
+  </HediffDef>
+</Defs>

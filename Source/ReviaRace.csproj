@@ -116,8 +116,5 @@
       <Version>2.2.2</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="TailTestWalking.rws" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
