@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-  <name>Revia Race</name>
+  <name>Revia Race - biotech</name>
   <author>Fox with a Shotgun, Shashlichnik ;p (aka Шашлычник ;р)</author>
   <supportedVersions>
     <li>1.4</li>
@@ -27,25 +27,22 @@
   <url>https://github.com/MaxDorob/RimWorld-ReviaRaceMod</url>
   <description>
     A race mod for bloodthirsty foxgirls in RimWorld.
-    
+
     Revia are near-humans with vulpine traits. Feared in the sector of the galaxy that they exist in for their warlike natures, it is said that Revia accept only one absolute law in their society: the strong live and prosper, and the weak serve the strong in whatever way they are able.
     Their society worships bloodshed in the name of a certain deity that sits upon a throne of bleached skulls, and will stop at nothing to slake his thirst.
-    
+
     Features:
     - A foxgirl race with guaranteed Bloodlust trait.
     - A mechanic which allows them to grow extra tails as they offer more sacrifices to their blood god. They become stronger in melee, take less damage, and have more hitpoints as they gain more tails. Caps out at 9.
     - A faction of their kind which acts hostile, and whose raiders will never retreat. Blood is blood, no matter whose side spills it!
     - Some weapons that fit with their bloodthirsty nature. Their weapons have lower armor penetration than standard ones, however they inflict significantly greater bleed damage.
     - No racial clothes limitations! No hair limitations! These foxgirls are very much humanlike. Pick and choose your favourite cosmetic mods and roll with it!
-    
-    Suggested mods to go with this one:
-    - Some form of hat-hiding mod. Hats for humans clash badly with fox ears.
-    - A Rimworld of Magic
-    - JecsTools, for oversized weapon drawing.
-	
-	Credits:
-	- Erdelf, for his absolutely necessary Humanoid Alien Races mod.
-	- Marnador, for the fan-made RimWorld font used for the preview
-	- Lolidrop, for the awesome hair in the preview 
+
+    Credits:
+    - Marnador, for the fan-made RimWorld font used for the preview
+    - Lolidrop, for the awesome hair in the preview
+    - Lost, for icon-textures and offset setting
+    - Shashlichnik (aka Шашлычник ;р), for porting mod onto biotech
+    - Fox with a Shotgun, for that awesome mode)
   </description>
 </ModMetaData>

@@ -9,7 +9,7 @@ using Verse;
 
 namespace ReviaRace.Genes
 {
-    public class ReviaTailGene : Gene
+    public class ReviaTailGene : ReviaBaseGene
     {
 
         public ReviaTailGene() : base() { }

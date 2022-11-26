@@ -21,6 +21,7 @@ namespace ReviaRace.Genes
             }
             else
                 Added = true;
+            CheckGenesForIncompleteness();
         }
         bool shouldInstantlyRemove = true, shouldInstantlyKill = true;
         private void OnWrongAdd()
@@ -34,6 +35,36 @@ namespace ReviaRace.Genes
         public override void PostRemove()
         {
             base.PostRemove();
+            CheckGenesForIncompleteness();
+        }
+        void CheckGenesForIncompleteness()
+        {
+            if (pawn.Dead) return;
+            if (pawn.genes.HasGene(Defs.Tail))
+            {
+                TryRemoveDebuff();
+            }
+            else
+            {
+                if (pawn.genes.HasGene(Defs.Teeth) || pawn.genes.HasGene(Defs.Claws) || pawn.genes.HasGene(Defs.Ears))
+                {
+                    TryAddDebuff();
+                }
+                else TryRemoveDebuff();
+            }
+        }
+
+        private void TryAddDebuff()
+        {
+            if (!pawn.health.hediffSet.HasHediff(Defs.IncompleteHediff))
+                pawn.health.AddHediff(Defs.IncompleteHediff);
+        }
+
+        private void TryRemoveDebuff()
+        {
+            var hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Defs.IncompleteHediff);
+            if (hediff != null)
+                pawn.health.RemoveHediff(hediff);
         }
     }
 }

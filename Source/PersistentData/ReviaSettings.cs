@@ -36,7 +36,6 @@ namespace ReviaRace.PersistentData
             InvokeBlessing.CostGrowthMode = CostGrowthMode;
             InvokeBlessing.CostGrowthStartTier = CostGrowthStartTier;
             SoulReaperWorker.EnableRandomSoulReapTier = EnableRandomSoulReapTier;
-            Log.Message($"Setting: {SoulReapSpawnRange}, {SoulReapSpawnByAge}, {SoulReapSpawnFixed}");
             SoulReaperWorker.SoulReapSpawnRange = SoulReapSpawnRange;
             SoulReaperWorker.SoulReapSpawnByAge = SoulReapSpawnByAge;
             SoulReaperWorker.SoulReapSpawnFixed = SoulReapSpawnFixed;

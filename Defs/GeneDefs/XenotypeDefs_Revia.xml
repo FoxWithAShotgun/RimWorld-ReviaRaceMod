@@ -19,6 +19,9 @@
       <li>MeleeDamage_Strong</li>
       <li>ReviaTeeth</li>
       <li>ReviaClaws</li>
+      <li>Aggression_Aggressive</li>
+      <li>AptitudePoor_Plants</li>
+      <li>AptitudePoor_Mining</li>
 		</genes>
 	</XenotypeDef>
 

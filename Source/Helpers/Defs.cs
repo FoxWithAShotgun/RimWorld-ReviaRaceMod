@@ -67,5 +67,11 @@ namespace ReviaRace.Helpers
 
         internal static HediffDef GeneRejection => _geneRejection ??= DefDatabase<HediffDef>.GetNamed("GeneRejection");
         private static HediffDef _geneRejection;
+
+    
+        internal static GeneDef Ears => _ear ??= DefDatabase<GeneDef>.GetNamed("ReviaEars");
+        private static GeneDef _ear;
+        internal static HediffDef IncompleteHediff => _incompleteHediff ??= DefDatabase<HediffDef>.GetNamed("ReviaGeneSetIncompled");
+        private static HediffDef _incompleteHediff;
     }
 }
