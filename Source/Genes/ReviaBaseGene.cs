@@ -22,6 +22,7 @@ namespace ReviaRace.Genes
             else
                 Added = true;
             CheckGenesForIncompleteness();
+            RefreshAttackHediffs(pawn);
         }
         bool shouldInstantlyRemove = true, shouldInstantlyKill = true;
         private void OnWrongAdd()
@@ -36,35 +37,78 @@ namespace ReviaRace.Genes
         {
             base.PostRemove();
             CheckGenesForIncompleteness();
+            RefreshAttackHediffs(pawn);
         }
         void CheckGenesForIncompleteness()
         {
             if (pawn.Dead) return;
             if (pawn.genes.HasGene(Defs.Tail))
             {
-                TryRemoveDebuff();
+                TryRemoveDebuff(pawn,Defs.IncompleteHediff);
             }
             else
             {
                 if (pawn.genes.HasGene(Defs.Teeth) || pawn.genes.HasGene(Defs.Claws) || pawn.genes.HasGene(Defs.Ears))
                 {
-                    TryAddDebuff();
+                    TryAddDebuff(pawn, Defs.IncompleteHediff);
                 }
-                else TryRemoveDebuff();
+                else TryRemoveDebuff(pawn, Defs.IncompleteHediff);
             }
         }
 
-        private void TryAddDebuff()
+        private static void TryAddDebuff(Pawn pawn,HediffDef hediffDef, BodyPartRecord bodyPart = null)
         {
-            if (!pawn.health.hediffSet.HasHediff(Defs.IncompleteHediff))
-                pawn.health.AddHediff(Defs.IncompleteHediff);
+            if (!pawn.health.hediffSet.HasHediff(hediffDef, bodyPart))
+                pawn.health.AddHediff(hediffDef, bodyPart);
         }
 
-        private void TryRemoveDebuff()
+        private static void TryRemoveDebuff(Pawn pawn, HediffDef hediffDef, BodyPartRecord bodyPart = null)
         {
-            var hediff = pawn.health.hediffSet.GetFirstHediffOfDef(Defs.IncompleteHediff);
+            var hediff = pawn.health.hediffSet.hediffs.FirstOrDefault(x => x.def == hediffDef && x.Part == bodyPart);
             if (hediff != null)
                 pawn.health.RemoveHediff(hediff);
+        }
+        private static BodyPartRecord jawRecord,rightFist,leftFist;
+
+        public static void RefreshAttackHediffs(Pawn pawn)
+        {
+            if (pawn.genes == null) return;
+
+            if (jawRecord == null) jawRecord = pawn.def.race.body.AllParts.First(x => x.def.defName == "Jaw");
+            if (leftFist == null) leftFist = pawn.def.race.body.AllParts.First(x => x.untranslatedCustomLabel == "left hand");
+            if (rightFist == null) rightFist = pawn.def.race.body.AllParts.First(x => x.untranslatedCustomLabel == "right hand");
+
+
+            if (pawn.genes.HasGene(Defs.Teeth) && !pawn.health.hediffSet.PartIsMissing(jawRecord))
+                TryAddDebuff(pawn, Defs.TeethHediff, jawRecord);
+            else
+                TryRemoveDebuff(pawn, Defs.TeethHediff, jawRecord);
+
+            if (pawn.genes.HasGene(Defs.Claws))
+            {
+                if (!IsMissingFistAndFingers(pawn, leftFist))
+                    TryAddDebuff(pawn, Defs.ClawsHediff, leftFist);
+                else
+                    TryRemoveDebuff(pawn, Defs.ClawsHediff, leftFist);
+
+                if (!IsMissingFistAndFingers(pawn, rightFist))
+                    TryAddDebuff(pawn, Defs.ClawsHediff, rightFist);
+                else
+                    TryRemoveDebuff(pawn, Defs.ClawsHediff, rightFist);
+            }
+            else
+            {
+                TryRemoveDebuff(pawn, Defs.ClawsHediff, rightFist);
+                TryRemoveDebuff(pawn, Defs.ClawsHediff, leftFist);
+            }
+        }
+        static bool IsMissingFistAndFingers(Pawn pawn,BodyPartRecord fistRecord)
+        {
+            if (pawn.health.hediffSet.PartIsMissing(fistRecord))
+                return true;
+            if (fistRecord.GetDirectChildParts().All(x => pawn.health.hediffSet.PartIsMissing(x)))
+                return true;
+            return false;
         }
     }
 }

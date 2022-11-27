@@ -77,9 +77,7 @@
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
-    <Compile Include="Comps\VerbFixComponent.cs" />
     <Compile Include="DebugActions.cs" />
-    <Compile Include="CustomDefs\CustomTool.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />
     <Compile Include="Genes\ReviaClawsGene.cs" />
     <Compile Include="Genes\ReviaEarGene.cs" />
@@ -116,5 +114,6 @@
       <Version>2.2.2</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using ReviaRace.Genes;
 using ReviaRace.Helpers;
 using RimWorld;
 using System;
@@ -23,6 +24,21 @@ namespace ReviaRace.HarmonyPatches
                 postfix: new HarmonyMethod(patchType, nameof(ShouldSkipResearchPostfix)));
             harmony.Patch(AccessTools.Method(typeof(Bill), nameof(Bill.PawnAllowedToStartAnew)),
                 postfix: new HarmonyMethod(patchType, nameof(PawnAllowedToStartAnewPostfix)));
+            harmony.Patch(AccessTools.Method(typeof(Hediff), nameof(Hediff.PostAdd)),
+                postfix: new HarmonyMethod(patchType, nameof(HediffPostAdd)));
+            harmony.Patch(AccessTools.Method(typeof(Hediff), nameof(Hediff.PostRemoved)),
+                postfix: new HarmonyMethod(patchType, nameof(HediffPostRemove)));
+        }
+
+        private static void HediffPostRemove(Hediff __instance)
+        {
+            if (__instance.pawn == null) return;
+            ReviaBaseGene.RefreshAttackHediffs(__instance.pawn);
+        }
+        private static void HediffPostAdd(Hediff __instance)
+        {
+            if (__instance.pawn == null) return;
+            ReviaBaseGene.RefreshAttackHediffs(__instance.pawn);
         }
         private static bool CanDoRecipe(Pawn pawn, RecipeDef recipe)
         {
@@ -46,5 +62,6 @@ namespace ReviaRace.HarmonyPatches
 
             if (project?.defName?.StartsWith("Revia")??false) __result = !pawn.IsRevia();
         }
+       
     }
 }

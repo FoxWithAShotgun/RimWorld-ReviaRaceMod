@@ -13,13 +13,13 @@ namespace ReviaRace.Genes
         public override void PostAdd()
         {
             base.PostAdd();
-            if (Added)
-                Current.Game.GetComponent<VerbFixComponent>().AddPawn(pawn);
+            //if (Added)
+                //Current.Game.GetComponent<VerbFixComponent>().AddPawn(pawn);
         }
         public override void PostRemove()
         {
             base.PostRemove();
-            Current.Game.GetComponent<VerbFixComponent>().RemovePawn(pawn);
+            //Current.Game.GetComponent<VerbFixComponent>().RemovePawn(pawn);
         }
     }
 }

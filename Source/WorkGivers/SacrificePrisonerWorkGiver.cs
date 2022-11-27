@@ -18,6 +18,7 @@ namespace ReviaRace.WorkGivers
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            if (!pawn.IsRevia()) return false;
             if (!forced)
             {
                 return false;
