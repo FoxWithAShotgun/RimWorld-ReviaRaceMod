@@ -19,7 +19,7 @@
       <graphicPath>Things/Tails/Tail1</graphicPath>
       <colorType>Hair</colorType>
       <drawLoc>Tailbone</drawLoc>
-      <drawScale>1.00</drawScale>
+      <drawScale>1.70</drawScale>
       <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
       <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
       <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
@@ -66,16 +66,16 @@
         <disableBodyTypeScaleForAdult>true</disableBodyTypeScaleForAdult>
         <disableBodyTypeScaleForChildren>false</disableBodyTypeScaleForChildren>
         <bodyTypeOffsetNorth>
-          <female>(-0.06, 0.9, -0.5)</female>
-          <thin>(-0.08, 0.2, -0.45)</thin>
+          <female>(-0.09, 0.9, -0.44)</female>
+          <thin>(-0.15, 0.2, -0.45)</thin>
           <baby>(-0.007, 0.83, 0)</baby>
-          <child>(-0.04, 0.92, -0.37)</child>
+          <child>(-0.09, 0.92, -0.37)</child>
         </bodyTypeOffsetNorth>
         <bodyTypeOffsetSouth>
-          <female>(0, -0.4, 0)</female>
-          <thin>(0.05, -0.4, -0.0)</thin>
+          <female>(-0.08, -0.4, 0)</female>
+          <thin>(-0.12, -0.4, 0)</thin>
           <baby>(-0.40, -0.4, 0)</baby>
-          <child>(-0.03, -0.1, 0)</child>
+          <child>(-0.08, -0.1, 0.17)</child>
         </bodyTypeOffsetSouth>
         <bodyTypeOffsetEast>
           <female>(-0.375, -0.4, -0.40)</female>
