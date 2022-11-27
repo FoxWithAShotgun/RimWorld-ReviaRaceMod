@@ -35,16 +35,16 @@ namespace ReviaRace.HarmonyPatches
         {
             RecipeDef recipe = __instance.recipe;
 
-            if (__result)
+            if (__result&&recipe!=null)
                 __result = CanDoRecipe(p, recipe);
         }
 
         public static void ShouldSkipResearchPostfix(Pawn pawn, ref bool __result)
         {
             if (__result) return;
-            ResearchProjectDef project = Find.ResearchManager.currentProj;
+            ResearchProjectDef project = Find.ResearchManager?.currentProj;
 
-            if (project.defName.StartsWith("Revia")) __result = !pawn.IsRevia();
+            if (project?.defName?.StartsWith("Revia")??false) __result = !pawn.IsRevia();
         }
     }
 }
