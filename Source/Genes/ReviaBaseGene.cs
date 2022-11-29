@@ -12,6 +12,10 @@ namespace ReviaRace.Genes
     public class ReviaBaseGene : Gene
     {
         protected bool Added { get; private set; }
+        public static bool DisableUncompleteDebuff_Claws { get; internal set; }
+        public static bool DisableUncompleteDebuff_Ears { get; internal set; }
+        public static bool DisableUncompleteDebuff_Teeth { get; internal set; }
+
         public override void PostAdd()
         {
             base.PostAdd();
@@ -48,7 +52,9 @@ namespace ReviaRace.Genes
             }
             else
             {
-                if (pawn.genes.HasGene(Defs.Teeth) || pawn.genes.HasGene(Defs.Claws) || pawn.genes.HasGene(Defs.Ears))
+                if ((!DisableUncompleteDebuff_Teeth&& pawn.genes.HasGene(Defs.Teeth)) 
+                    || (!DisableUncompleteDebuff_Claws&& pawn.genes.HasGene(Defs.Claws))
+                    || (!DisableUncompleteDebuff_Ears&& pawn.genes.HasGene(Defs.Ears)))
                 {
                     TryAddDebuff(pawn, Defs.IncompleteHediff);
                 }

@@ -10,6 +10,9 @@ namespace ReviaRace.Helpers
 {
     internal static class Strings
     {
+        internal static string SettingsDisableUncompleteDebuff_Ears => "ReviaDisableUncompleteDebuff_Ears";
+        internal static string SettingsDisableUncompleteDebuff_Claws=> "ReviaDisableUncompleteDebuff_Claws";
+        internal static string SettingsDisableUncompleteDebuff_Teeth => "ReviaDisableUncompleteDebuff_Teeth";
         internal static string NonSkarniteOrReviaSacrificing => "NonSkarniteOrReviaSacrificing";
         internal static string ReviaRaceModName => "ReviaRaceModName";
         internal static string SacrificePrisonerNone => "ReviaRaceSacrificePrisonerNone";

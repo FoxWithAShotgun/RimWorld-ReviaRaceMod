@@ -15,6 +15,11 @@ namespace ReviaRace
 {
     public class ReviaRaceMod : Verse.Mod
     {
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            Settings.ApplySettings();
+        }
         public ReviaRaceMod(ModContentPack content) : base(content)
         {
             Settings = base.GetSettings<ReviaSettings>();
@@ -127,7 +132,9 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
-
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsDisableUncompleteDebuff_Ears, ref Settings._DisableUncompleteDebuff_Ears);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsDisableUncompleteDebuff_Teeth, ref Settings._DisableUncompleteDebuff_Teeth);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsDisableUncompleteDebuff_Claws, ref Settings._DisableUncompleteDebuff_Claws);
             if (Settings.EnableBloodthirstNeed)
             {
                 DrawTextFieldWithLabel<float>(sacrificeList.GetRect(lineHeight), Strings.SettingsBloodthirstDaysToEmpty, ref Settings._bloodthirstDaysToEmpty, ref _bloodthirstDaysToEmptyBuf, 1, 60);

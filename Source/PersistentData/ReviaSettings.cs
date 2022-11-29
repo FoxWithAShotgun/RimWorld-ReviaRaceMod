@@ -42,6 +42,10 @@ namespace ReviaRace.PersistentData
             SacrificeWorker.EnableCorpseStripOnSacrifice = EnableCorpseStripOnSacrifice;
             BloodthirstNeed.Enabled = EnableBloodthirstNeed;
             BloodthirstNeed.DaysToEmpty = BloodthirstDaysToEmpty;
+            Genes.ReviaBaseGene.DisableUncompleteDebuff_Claws = DisableUncompleteDebuff_Claws;
+            Genes.ReviaBaseGene.DisableUncompleteDebuff_Ears = DisableUncompleteDebuff_Ears;
+            Genes.ReviaBaseGene.DisableUncompleteDebuff_Teeth = DisableUncompleteDebuff_Teeth;
+            Log.Message("Settings applied");
         }
 
         public float CostBase
@@ -119,6 +123,10 @@ namespace ReviaRace.PersistentData
         }
         internal float _bloodthirstDaysToEmpty;
 
+        internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth;
+        public bool DisableUncompleteDebuff_Ears { get=> _DisableUncompleteDebuff_Ears; set=>_DisableUncompleteDebuff_Ears=value; }
+        public bool DisableUncompleteDebuff_Claws { get=>_DisableUncompleteDebuff_Claws; set=>_DisableUncompleteDebuff_Claws=value; }
+        public bool DisableUncompleteDebuff_Teeth { get=>_DisableUncompleteDebuff_Teeth; set=>_DisableUncompleteDebuff_Teeth=value; }
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
@@ -132,7 +140,9 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1,3));
             Scribe_Values.Look(ref _soulReapSpawnByAge, GetLabel(nameof(SoulReapSpawnByAge)), true);
             Scribe_Values.Look(ref _soulReapSpawnFixed, GetLabel(nameof(SoulReapSpawnFixed)), 2);
-
+            Scribe_Values.Look(ref _DisableUncompleteDebuff_Ears, GetLabel(nameof(DisableUncompleteDebuff_Ears)),false);
+            Scribe_Values.Look(ref _DisableUncompleteDebuff_Claws, GetLabel(nameof(DisableUncompleteDebuff_Claws)), false);
+            Scribe_Values.Look(ref _DisableUncompleteDebuff_Teeth, GetLabel(nameof(DisableUncompleteDebuff_Teeth)), false);
             ApplySettings();
         }
 

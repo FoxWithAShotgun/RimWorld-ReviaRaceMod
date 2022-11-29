@@ -29,6 +29,9 @@
   <ReviaRaceSanctifyNonReviaNonSkarnite>The rune does not respond in the hands of infidels.</ReviaRaceSanctifyNonReviaNonSkarnite>
   <ReviaRaceSanctifyAlreadySanctified>The weapon is already blessed with a bloodthirsty spirit.</ReviaRaceSanctifyAlreadySanctified>
   <ReviaRaceSanctifyDescPart>A bloodthirsty spirit inhabits this weapon, granting the faithful of Skarne health in exchange for spilled blood.</ReviaRaceSanctifyDescPart>
+  <ReviaDisableUncompleteDebuff_Teeth>Disable debuff for teeth</ReviaDisableUncompleteDebuff_Teeth>
+  <ReviaDisableUncompleteDebuff_Ears>Disable debuff for ears</ReviaDisableUncompleteDebuff_Ears>
+  <ReviaDisableUncompleteDebuff_Claws>Disable debuff for claws</ReviaDisableUncompleteDebuff_Claws>
   <Linear>Linear</Linear>
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>
