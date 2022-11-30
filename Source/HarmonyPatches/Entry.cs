@@ -15,6 +15,8 @@ namespace ReviaRace.HarmonyPatches
     [StaticConstructorOnStartup]
     internal static class Entry
     {
+        internal static bool NoProjectLimitations { get; set; }
+        internal static bool NoCraftLimitation { get; set; }
         private static readonly Type patchType = typeof(Entry);
         static Entry()
         {
@@ -42,26 +44,28 @@ namespace ReviaRace.HarmonyPatches
         }
         private static bool CanDoRecipe(Pawn pawn, RecipeDef recipe)
         {
-            if (recipe.defName.StartsWith("Revia"))
+            if ((recipe.defName.StartsWith("Revia")||(recipe?.ProducedThingDef?.defName?.StartsWith("Revia")??false)))
                 return pawn.IsRevia();
             return true;
         }
-        
+
         public static void PawnAllowedToStartAnewPostfix(Pawn p, Bill __instance, ref bool __result)
         {
+            if (NoCraftLimitation) return;
             RecipeDef recipe = __instance.recipe;
 
-            if (__result&&recipe!=null)
+            if (__result && recipe != null)
                 __result = CanDoRecipe(p, recipe);
         }
 
         public static void ShouldSkipResearchPostfix(Pawn pawn, ref bool __result)
         {
+            if (NoProjectLimitations) return;
             if (__result) return;
             ResearchProjectDef project = Find.ResearchManager?.currentProj;
 
-            if (project?.defName?.StartsWith("Revia")??false) __result = !pawn.IsRevia();
+            if (project?.defName?.StartsWith("Revia") ?? false) __result = !pawn.IsRevia();
         }
-       
+
     }
 }

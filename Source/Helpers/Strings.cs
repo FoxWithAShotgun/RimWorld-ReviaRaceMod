@@ -10,6 +10,9 @@ namespace ReviaRace.Helpers
 {
     internal static class Strings
     {
+        internal static string SettingsReviaNoProjectLimitaions => "ReviaNoProjectLimitaions";
+        internal static string SettingsReviaNoCraftLimitaions => "ReviaNoCraftLimitaions";
+
         internal static string SettingsDisableUncompleteDebuff_Ears => "ReviaDisableUncompleteDebuff_Ears";
         internal static string SettingsDisableUncompleteDebuff_Claws=> "ReviaDisableUncompleteDebuff_Claws";
         internal static string SettingsDisableUncompleteDebuff_Teeth => "ReviaDisableUncompleteDebuff_Teeth";

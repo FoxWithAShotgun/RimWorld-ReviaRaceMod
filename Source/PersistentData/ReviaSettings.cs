@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.HarmonyPatches;
 using ReviaRace.Helpers;
 using ReviaRace.Needs;
 using ReviaRace.Workers;
@@ -45,6 +46,8 @@ namespace ReviaRace.PersistentData
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Claws = DisableUncompleteDebuff_Claws;
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Ears = DisableUncompleteDebuff_Ears;
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Teeth = DisableUncompleteDebuff_Teeth;
+            Entry.NoCraftLimitation = NoCraftLimitations;
+            Entry.NoProjectLimitations = NoProjectLimitations;
             Log.Message("Settings applied");
         }
 
@@ -123,10 +126,12 @@ namespace ReviaRace.PersistentData
         }
         internal float _bloodthirstDaysToEmpty;
 
-        internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth;
+        internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth, _NoProjectLimitations,_NoCraftLimitations;
         public bool DisableUncompleteDebuff_Ears { get=> _DisableUncompleteDebuff_Ears; set=>_DisableUncompleteDebuff_Ears=value; }
         public bool DisableUncompleteDebuff_Claws { get=>_DisableUncompleteDebuff_Claws; set=>_DisableUncompleteDebuff_Claws=value; }
         public bool DisableUncompleteDebuff_Teeth { get=>_DisableUncompleteDebuff_Teeth; set=>_DisableUncompleteDebuff_Teeth=value; }
+        public bool NoProjectLimitations { get => _NoProjectLimitations; set => _NoProjectLimitations = value; }
+        public bool NoCraftLimitations { get => _NoCraftLimitations; set => _NoCraftLimitations = value; }
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
@@ -143,6 +148,8 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Ears, GetLabel(nameof(DisableUncompleteDebuff_Ears)),false);
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Claws, GetLabel(nameof(DisableUncompleteDebuff_Claws)), false);
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Teeth, GetLabel(nameof(DisableUncompleteDebuff_Teeth)), false);
+            Scribe_Values.Look(ref _NoProjectLimitations, GetLabel(nameof(NoProjectLimitations)), false);
+            Scribe_Values.Look(ref _NoCraftLimitations, GetLabel(nameof(NoCraftLimitations)), false);
             ApplySettings();
         }
 
