@@ -70,18 +70,28 @@
           <thin>(-0.15, 0.2, -0.45)</thin>
           <baby>(-0.007, 0.83, 0)</baby>
           <child>(-0.09, 0.92, -0.37)</child>
+          <hulk>(-0.09, 0.9, -0.52)</hulk>
+          <fat>(-0.06, 0.9, -0.51)</fat>
+          <male>(-0.09, 0.9, -0.59)</male>
         </bodyTypeOffsetNorth>
         <bodyTypeOffsetSouth>
           <female>(-0.08, -0.4, 0)</female>
           <thin>(-0.12, -0.4, 0)</thin>
           <baby>(-0.40, -0.4, 0)</baby>
           <child>(-0.08, -0.1, 0.17)</child>
+          <hulk>(-0.08, -0.4, 0)</hulk>
+          <fat>(-0.02, -0.4, -0.13)</fat>
+          <male>(-0.08, -0.4, 0)</male>
+
         </bodyTypeOffsetSouth>
         <bodyTypeOffsetEast>
-          <female>(-0.375, -0.4, -0.40)</female>
-          <thin>(-0.52, -0.4, -0.4)</thin>
+          <female>(-0.375, -0.4, -0.5)</female>
+          <thin>(-0.52, -0.4, -0.5)</thin>
           <baby>(-0.4, -0.4, 0)</baby>
           <child>(-0.31, -0.4, -0.32)</child>
+          <fat>(-0.375, -0.4, -0.41)</fat>
+          <hulk>(-0.5, -0.4, -0.52)</hulk>
+          <male>(-0.387, -0.4, -0.58)</male>
         </bodyTypeOffsetEast>
       </li>
     </modExtensions>
