@@ -10,6 +10,8 @@ namespace ReviaRace.Helpers
 {
     internal static class Strings
     {
+        internal static  string SettingsRejectionType =>"ReviaRejectionType";
+
         internal static string SettingsReviaNoProjectLimitaions => "ReviaNoProjectLimitaions";
         internal static string SettingsReviaNoCraftLimitaions => "ReviaNoCraftLimitaions";
 

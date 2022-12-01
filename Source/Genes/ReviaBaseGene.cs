@@ -1,4 +1,5 @@
-﻿using ReviaRace.Helpers;
+﻿using ReviaRace.Comps;
+using ReviaRace.Helpers;
 using ReviaRace.Needs;
 using System;
 using System.Collections.Generic;
@@ -28,21 +29,58 @@ namespace ReviaRace.Genes
             CheckGenesForIncompleteness();
             RefreshAttackHediffs(pawn);
         }
-        bool shouldInstantlyRemove = true, shouldInstantlyKill = true;
-        private void OnWrongAdd()
+        //bool shouldInstantlyRemove = true, shouldInstantlyKill = true;
+        internal static RejectionType RejectionType { get; set; }
+        protected virtual void OnWrongAdd()
         {
-            if (shouldInstantlyRemove)
-                pawn.genes.RemoveGene(this);
-            if (shouldInstantlyKill || PawnGenerator.IsBeingGenerated(pawn))
-                if (!pawn.Dead)
-                    pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
+            switch (RejectionType)
+            {
+                case RejectionType.InstaKill:
+                    pawn.genes.RemoveGene(this);
+                    if (!pawn.Dead)
+                        pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
+                    break;
+                case RejectionType.Disease:
+                    if (PawnGenerator.IsBeingGenerated(pawn))
+                        if (!pawn.Dead)
+                            pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
+                    if(!pawn.health.hediffSet.HasHediff(Defs.GeneRejection))
+                    pawn.health.AddHediff(Defs.GeneRejection);
+                    break;
+                case RejectionType.NoRejection:
+                    break;
+                default:
+                    break;
+            }
+            
+            
+        }
+        protected void TryRemoveRejection()
+        {
+            if (!pawn.Dead)
+            {
+                if (pawn.health.hediffSet.HasHediff(Defs.GeneRejection))
+                {
+                    if (RejectionType==RejectionType.NoRejection||((DisableUncompleteDebuff_Teeth || !pawn.genes.HasGene(Defs.Teeth))
+                    && (DisableUncompleteDebuff_Claws || !pawn.genes.HasGene(Defs.Claws))
+                    && (DisableUncompleteDebuff_Ears || !pawn.genes.HasGene(Defs.Ears))
+                    && !pawn.genes.HasGene(Defs.Tail)))
+                        TryRemoveDebuff(pawn, Defs.GeneRejection);
+                    
+                    
+                }
+            }
         }
         public override void PostRemove()
         {
             base.PostRemove();
+            TryRemoveRejection();
             CheckGenesForIncompleteness();
             RefreshAttackHediffs(pawn);
         }
+
+        
+
         void CheckGenesForIncompleteness()
         {
             if (pawn.Dead) return;

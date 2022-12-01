@@ -68,6 +68,8 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comps\GeneRejectionHediff.cs" />
+    <Compile Include="Comps\RejectionType.cs" />
     <Compile Include="Comps\InvokeBlessing.cs" />
     <Compile Include="Comps\InvokeGreaterBlessing.cs" />
     <Compile Include="Comps\InvokeLesserBlessing.cs" />

@@ -46,6 +46,7 @@ namespace ReviaRace.PersistentData
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Claws = DisableUncompleteDebuff_Claws;
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Ears = DisableUncompleteDebuff_Ears;
             Genes.ReviaBaseGene.DisableUncompleteDebuff_Teeth = DisableUncompleteDebuff_Teeth;
+            Genes.ReviaBaseGene.RejectionType = RejectionType;
             Entry.NoCraftLimitation = NoCraftLimitations;
             Entry.NoProjectLimitations = NoProjectLimitations;
             Log.Message("Settings applied");
@@ -76,7 +77,12 @@ namespace ReviaRace.PersistentData
             set => _costGrowthMode = value;
         }
         internal SacrificeCostGrowth _costGrowthMode;
-
+        public RejectionType RejectionType
+        {
+            get => _rejectionType;
+            set => _rejectionType = value;
+        }
+        internal RejectionType _rejectionType;
         public bool EnableRandomSoulReapTier
         {
             get => _enableRandomSoulReapTier;
@@ -150,6 +156,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Teeth, GetLabel(nameof(DisableUncompleteDebuff_Teeth)), false);
             Scribe_Values.Look(ref _NoProjectLimitations, GetLabel(nameof(NoProjectLimitations)), false);
             Scribe_Values.Look(ref _NoCraftLimitations, GetLabel(nameof(NoCraftLimitations)), false);
+            Scribe_Values.Look(ref _rejectionType, GetLabel(nameof(RejectionType)), RejectionType.Disease);
             ApplySettings();
         }
 

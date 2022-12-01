@@ -125,6 +125,7 @@ namespace ReviaRace
             sacrificeList.Gap(10);
 
             var lineHeight = bodyStyle.lineHeight + 8;
+            DrawRejectionDropDown(sacrificeList.GetRect(lineHeight));
             DrawSacrificeDropDown(sacrificeList.GetRect(lineHeight));
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
@@ -190,6 +191,36 @@ namespace ReviaRace
                     return optionsList;
                 },
                 Translator.Translate(Settings.CostGrowthMode.ToString()));
+        }
+        private void DrawRejectionDropDown(Rect elemRect)
+        {
+            var rectLabel = elemRect.LeftPart(0.33f);
+            var rectComboBox = elemRect.RightPart(0.66f);
+
+            Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsRejectionType));
+            Widgets.Dropdown<RejectionType, RejectionType>(
+                rectComboBox,
+                RejectionType.Disease,
+                mode => mode,
+                (s) =>
+                {
+                    var optionsList = new List<DropdownMenuElement<RejectionType>>();
+
+                    foreach (var mode in Enum.GetValues(typeof(RejectionType)).OfType<RejectionType>())
+                    {
+                        optionsList.Add(new DropdownMenuElement<RejectionType>
+                        {
+                            option = new FloatMenuOption(
+                                Translator.Translate(mode.ToString()),
+                                () => Settings.RejectionType = mode
+                                ),
+                            payload = (RejectionType)mode
+                        });
+                    }
+
+                    return optionsList;
+                },
+                Translator.Translate(Settings.RejectionType.ToString()));
         }
 
         private void DrawCheckBoxWithLabel(Rect elemRect, string taggedLabelID, ref bool setting)

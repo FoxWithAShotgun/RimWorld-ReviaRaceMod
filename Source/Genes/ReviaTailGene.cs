@@ -17,16 +17,11 @@ namespace ReviaRace.Genes
         public override void PostAdd()
         {
             base.PostAdd();
-            if (pawn.gender != Gender.Female)
-            {
-                pawn.genes.RemoveGene(this);
-            }
-            else
-            {
-                pawn.SetSoulReaperLevel();
-                flag = true;
 
-            }
+            pawn.SetSoulReaperLevel();
+            flag = true;
+
+
         }
         public override void PostRemove()
         {
