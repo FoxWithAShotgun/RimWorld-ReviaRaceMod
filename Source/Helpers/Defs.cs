@@ -79,5 +79,11 @@ namespace ReviaRace.Helpers
 
         internal static HediffDef TeethHediff => _teethHediff ??= DefDatabase<HediffDef>.GetNamed("ReviaTeeth");
         private static HediffDef _teethHediff;
+
+        internal static XenotypeDef XenotypeDef=> _xenotypeDef ??= DefDatabase<XenotypeDef>.GetNamed("RevianXenotype");
+        private static XenotypeDef _xenotypeDef;
+
+        internal static PawnKindDef ColonistKind => _colonistKind ??= DefDatabase<PawnKindDef>.GetNamed("ReviaRaceColonist");
+        private static PawnKindDef _colonistKind;
     }
 }

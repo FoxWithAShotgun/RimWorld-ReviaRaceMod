@@ -11,6 +11,7 @@
     <statOffsets>
       <MeleeDodgeChance>0.12</MeleeDodgeChance>
       <MoveSpeed>0.3</MoveSpeed>
+      <LifespanFactor>1.7</LifespanFactor>
     </statOffsets>
     <biostatMet>-2</biostatMet>
     <biostatCpx>2</biostatCpx>

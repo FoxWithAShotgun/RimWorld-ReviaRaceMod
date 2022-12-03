@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.HarmonyPatches;
 using ReviaRace.Helpers;
 using ReviaRace.Needs;
 using System;
@@ -37,13 +38,10 @@ namespace ReviaRace.Genes
             {
                 case RejectionType.InstaKill:
                     pawn.genes.RemoveGene(this);
-                    if (!pawn.Dead)
+                    if (!pawn.Dead&&!PawnGenerator.IsBeingGenerated(pawn))
                         pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
                     break;
                 case RejectionType.Disease:
-                    if (PawnGenerator.IsBeingGenerated(pawn))
-                        if (!pawn.Dead)
-                            pawn.Kill(null, pawn.health.AddHediff(Defs.GeneRejection));
                     if(!pawn.health.hediffSet.HasHediff(Defs.GeneRejection))
                     pawn.health.AddHediff(Defs.GeneRejection);
                     break;
@@ -61,6 +59,7 @@ namespace ReviaRace.Genes
             {
                 if (pawn.health.hediffSet.HasHediff(Defs.GeneRejection))
                 {
+                    if(Entry.GeneCanBeAdded(this.pawn,this.def))
                     if (RejectionType==RejectionType.NoRejection||((DisableUncompleteDebuff_Teeth || !pawn.genes.HasGene(Defs.Teeth))
                     && (DisableUncompleteDebuff_Claws || !pawn.genes.HasGene(Defs.Claws))
                     && (DisableUncompleteDebuff_Ears || !pawn.genes.HasGene(Defs.Ears))
