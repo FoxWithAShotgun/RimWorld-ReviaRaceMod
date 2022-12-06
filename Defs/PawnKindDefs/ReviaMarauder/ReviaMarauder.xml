@@ -19,6 +19,7 @@
       <li>ReviaMeleeIntermediate</li>
       <li>ReviaRangedBasic</li>
       <li>ReviaRangedIntermediate</li>
+      <li>ReviaRangedAdvanced</li>
     </weaponTags>
     <initialWillRange>0.5~0.8</initialWillRange>
     <initialResistanceRange>8~14</initialResistanceRange>
