@@ -85,5 +85,8 @@ namespace ReviaRace.Helpers
 
         internal static PawnKindDef ColonistKind => _colonistKind ??= DefDatabase<PawnKindDef>.GetNamed("ReviaRaceColonist");
         private static PawnKindDef _colonistKind;
+
+        internal static List<XenotypeDef> XenotypesExcludeRevia => _xenotypesExcludeRevia ??= DefDatabase<XenotypeDef>.AllDefs.Except(XenotypeDef).ToList();
+        private static List<XenotypeDef> _xenotypesExcludeRevia;
     }
 }

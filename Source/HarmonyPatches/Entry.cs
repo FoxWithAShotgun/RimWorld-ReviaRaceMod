@@ -31,8 +31,12 @@ namespace ReviaRace.HarmonyPatches
                 postfix: new HarmonyMethod(patchType, nameof(HediffPostAdd)));
             harmony.Patch(AccessTools.Method(typeof(Hediff), nameof(Hediff.PostRemoved)),
                 postfix: new HarmonyMethod(patchType, nameof(HediffPostRemove)));
-            harmony.Patch(AccessTools.Method(typeof(StartingPawnUtility), nameof(StartingPawnUtility.GetGenerationRequest), new Type[] { typeof(int) }),
-               postfix: new HarmonyMethod(patchType, nameof(EnableForcedGender)));
+            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) }),
+               prefix: new HarmonyMethod(patchType, nameof(PreGeneratePawn)));
+            harmony.Patch(AccessTools.Method(typeof(PawnBioAndNameGenerator), "GiveAppropriateBioAndNameTo"),
+   prefix: new HarmonyMethod(patchType, nameof(PreGiveAppropriateBioAndNameTo)));
+            harmony.Patch(AccessTools.Method(typeof(PawnRelationWorker_Sibling), "GenerateParent"),
+                            transpiler: new HarmonyMethod(patchType, nameof(GenerateParentTranspiler)));
 
             try
             {
@@ -43,10 +47,65 @@ namespace ReviaRace.HarmonyPatches
                         harmony.Patch(AccessTools.Method(typeof(AlphaGenes.Gene_Randomizer), nameof(AlphaGenes.Gene_Randomizer.PostAdd)),
                              transpiler: new HarmonyMethod(patchType, nameof(Gene_Randomizer_Transpiler)));
                     }
-                    
+
                 }))();
             }
             catch (TypeLoadException) { }
+        }
+
+
+        private static IEnumerable<CodeInstruction> GenerateParentTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilg)
+        {
+            MethodInfo pawnGenerateMI = typeof(PawnGenerator).GetMethod(nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) });
+            foreach (var ins in instructions)
+            {
+                if (ins.Calls(pawnGenerateMI))
+                    yield return CodeInstruction.Call(patchType, nameof(FixGenerationRequest));
+                yield return ins;
+            }
+        }
+
+        private static PawnGenerationRequest FixGenerationRequest(PawnGenerationRequest originalRequest)
+        {
+            if (originalRequest.FixedGender == Gender.Male && (originalRequest.KindDef.defName.StartsWith("Revia") || originalRequest.ForcedXenotype == Defs.XenotypeDef || (originalRequest.Faction?.def?.defName?.StartsWith("Revia") ?? false)))
+            {
+                originalRequest.KindDef = DefDatabase<PawnKindDef>.GetNamed("Slave");
+                originalRequest.ForcedXenotype = null;
+                originalRequest.AllowedXenotypes = Defs.XenotypesExcludeRevia;
+                originalRequest.Faction = null;
+            }
+            return originalRequest;
+        }
+
+        public static void PreGiveAppropriateBioAndNameTo(Pawn pawn, string requiredLastName, ref FactionDef factionType, bool forceNoBackstory, bool newborn, XenotypeDef xenotype)
+        {
+            if (factionType.defName.StartsWith("Revia") && pawn.Faction == null && xenotype != Defs.XenotypeDef)
+            {
+                //Try to change factionType to some other
+                Faction nonReviaFaction = null;
+                int num = 0;
+                do
+                {
+                    num++;
+                    Faction faction;
+                    if (Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out faction, false, true, TechLevel.Undefined, false) && !faction.def.defName.StartsWith("Revia"))
+                        nonReviaFaction = faction;
+                } while (num < 100 && nonReviaFaction == null);
+                factionType = nonReviaFaction.def;
+            }
+        }
+
+
+        public static void PreGeneratePawn(ref PawnGenerationRequest request)
+        {
+
+
+
+            if ((request.ForcedXenotype?.Equals(Defs.XenotypeDef) ?? false) || (request.Faction?.def?.defName?.StartsWith("Revia") ?? false))
+            {
+                request.FixedGender = Gender.Female;
+                request.ForcedXenotype = Defs.XenotypeDef;
+            }
         }
 
         private static void HediffPostRemove(Hediff __instance)
@@ -96,16 +155,16 @@ namespace ReviaRace.HarmonyPatches
         {
             MethodInfo addGeneMI = typeof(Pawn_GeneTracker).GetMethod(nameof(Pawn_GeneTracker.AddGene), new Type[] { typeof(GeneDef), typeof(bool) });
             MethodInfo checkMI = patchType.GetMethod(nameof(GeneCanBeAdded));
-            
+
             foreach (var instruction in instructions)
             {
                 var potentialGeneAdd = instructions.SkipWhile(x => x != instruction).Take(9);
                 if (potentialGeneAdd.Last().Calls(addGeneMI))
                 {
-                    var label = instructions.SkipWhile(x => x != instruction).Select(x=>x.labels).FirstOrDefault(x=>x!=null&&x.Count>0)[0]; ;
+                    var label = instructions.SkipWhile(x => x != instruction).Select(x => x.labels).FirstOrDefault(x => x != null && x.Count > 0)[0]; ;
                     yield return new CodeInstruction(OpCodes.Ldarg_0);
                     yield return CodeInstruction.LoadField(typeof(Gene), nameof(Gene.pawn));
-                    yield return new CodeInstruction(OpCodes.Ldloc_S,7);
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, 7);
                     yield return new CodeInstruction(OpCodes.Call, checkMI);
                     yield return new CodeInstruction(OpCodes.Brfalse, label);
                 }
