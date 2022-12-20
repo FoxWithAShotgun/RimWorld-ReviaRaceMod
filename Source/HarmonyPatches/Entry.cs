@@ -142,15 +142,7 @@ namespace ReviaRace.HarmonyPatches
 
             if (project?.defName?.StartsWith("Revia") ?? false) __result = !pawn.IsRevia();
         }
-        public static void EnableForcedGender(ref PawnGenerationRequest __result)
-        {
-            if (__result.ForcedXenotype?.Equals(Defs.XenotypeDef) ?? false)
-            {
-                __result.FixedGender = Gender.Female;
-                __result.KindDef = Defs.ColonistKind;
-            }
 
-        }
         public static IEnumerable<CodeInstruction> Gene_Randomizer_Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             MethodInfo addGeneMI = typeof(Pawn_GeneTracker).GetMethod(nameof(Pawn_GeneTracker.AddGene), new Type[] { typeof(GeneDef), typeof(bool) });
@@ -177,8 +169,6 @@ namespace ReviaRace.HarmonyPatches
             if (!typeof(ReviaBaseGene).IsAssignableFrom(gene.geneClass)) return true; // We dont care about not revian genes
             return false;
         }
-
-
 
     }
 }
