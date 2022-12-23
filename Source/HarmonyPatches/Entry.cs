@@ -37,6 +37,8 @@ namespace ReviaRace.HarmonyPatches
    prefix: new HarmonyMethod(patchType, nameof(PreGiveAppropriateBioAndNameTo)));
             harmony.Patch(AccessTools.Method(typeof(PawnRelationWorker_Sibling), "GenerateParent"),
                             transpiler: new HarmonyMethod(patchType, nameof(GenerateParentTranspiler)));
+            harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.AdjustXenotypeForFactionlessPawn)),
+   postfix: new HarmonyMethod(patchType, nameof(AdjustXenotypeForFactionlessPawn_Postfix)));
 
             try
             {
@@ -161,6 +163,26 @@ namespace ReviaRace.HarmonyPatches
                     yield return new CodeInstruction(OpCodes.Brfalse, label);
                 }
                 yield return instruction;
+            }
+        }
+        public static void AdjustXenotypeForFactionlessPawn_Postfix(Pawn pawn, ref PawnGenerationRequest request, ref XenotypeDef xenotype)
+        {
+            XenotypeDef xenotypeDef;
+            if (pawn.gender == Gender.Male && xenotype == Defs.XenotypeDef)
+            {
+                int num = 0;
+                while (xenotype == Defs.XenotypeDef && num < 100)
+                {
+                    if (DefDatabase<XenotypeDef>.AllDefs.TryRandomElementByWeight((XenotypeDef x) => x.factionlessGenerationWeight, out xenotypeDef))
+                    {
+                        xenotype = xenotypeDef;
+                    }
+                    num++;
+                }
+                if(xenotype==Defs.XenotypeDef)
+                {
+                    Log.Error("Tried to change revia xenotype to other, but failed");
+                }
             }
         }
         public static bool GeneCanBeAdded(Pawn pawn, GeneDef gene)
