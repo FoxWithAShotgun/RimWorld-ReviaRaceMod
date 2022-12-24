@@ -13,5 +13,5 @@ jobs:
       - name: Build
         run: 
           cd source;
-          dotnet build --configuration Release --no-restore
+          dotnet build --configuration Release --Platform "Any CPU" --no-restore
      
