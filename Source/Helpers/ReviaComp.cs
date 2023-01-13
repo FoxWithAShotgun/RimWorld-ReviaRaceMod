@@ -25,39 +25,30 @@ namespace ReviaRace.Helpers
             {
                 return;
             }
+            _btNeed = _btNeed == null ? pawn.needs.TryGetNeed<BloodthirstNeed>() : _btNeed;
 
-            if (_btTick >= 10)
+            if (_btNeed == null)
             {
-                
-                _btNeed = _btNeed == null ? pawn.needs.TryGetNeed<BloodthirstNeed>() : _btNeed;
-
-                if (_btNeed == null)
-                {
-                    _btDisabled = true;
-                    return;
-                }
-
-                if (pawn.LastAttackTargetTick != _lastAttackedTick &&
-                    pawn.LastAttackedTarget.Pawn is Pawn victim)
-                {
-                    _lastAttackedTick = pawn.LastAttackTargetTick;
-
-                    if (victim.Dead)
-                    {
-                        // Skulls for the skull throne!
-                        _btNeed.CurLevel += victim.BodySize * 0.80f;
-                    }
-                    else
-                    {
-                        // Blood for the blood god! 
-                        var amount = 0.001f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
-                        _btNeed.CurLevel += amount;
-                    }
-                }
+                _btDisabled = true;
+                return;
             }
-            else
+
+            if (pawn.LastAttackTargetTick != _lastAttackedTick &&
+                pawn.LastAttackedTarget.Pawn is Pawn victim)
             {
-                _btTick++;
+                _lastAttackedTick = pawn.LastAttackTargetTick;
+
+                if (victim.Dead)
+                {
+                    // Skulls for the skull throne!
+                    _btNeed.CurLevel += victim.BodySize * 0.80f;
+                }
+                else
+                {
+                    // Blood for the blood god! 
+                    var amount = 0.001f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
+                    _btNeed.CurLevel += amount;
+                }
             }
 
         }

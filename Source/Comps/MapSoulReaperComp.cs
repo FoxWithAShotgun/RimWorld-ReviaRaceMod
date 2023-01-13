@@ -1,5 +1,6 @@
 ﻿using ReviaRace.Genes;
 using ReviaRace.Helpers;
+using ReviaRace.Needs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace ReviaRace.Comps
         {
 
         }
+        private int _btTick = 0;
         IList<ReviaComp> revias;
         int pawnCount = -1;
         bool ShouldRefreshList()
@@ -30,6 +32,12 @@ namespace ReviaRace.Comps
         public override void MapComponentTick()
         {
             base.MapComponentTick();
+            if (_btTick < 10)
+            {
+                _btTick++;
+                return;
+            }
+            _btTick = 0;
             if (ShouldRefreshList())
             {
                 var def = GenDefDatabase.GetDef(typeof(GeneDef), "ReviaTail") as GeneDef;
@@ -40,8 +48,8 @@ namespace ReviaRace.Comps
             }
             foreach (var revia in revias)
                 revia.CompTick();
-          
-           
+
+
 
         }
         
