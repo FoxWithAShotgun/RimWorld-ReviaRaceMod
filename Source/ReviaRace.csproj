@@ -82,6 +82,7 @@
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SoulReaper.cs" />
     <Compile Include="DebugActions.cs" />
+    <Compile Include="Enums\BornSettingsEnum.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />
     <Compile Include="Genes\ReviaClawsGene.cs" />
     <Compile Include="Genes\ReviaEarGene.cs" />
@@ -89,10 +90,12 @@
     <Compile Include="Genes\ReviaTeethGene.cs" />
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
+    <Compile Include="HarmonyPatches\HeredityPatcher.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
     <Compile Include="Helpers\ReviaComp.cs" />
     <Compile Include="Helpers\SoulReaperWorker.cs" />
+    <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />

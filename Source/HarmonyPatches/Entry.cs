@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using ReviaRace.Enums;
 using ReviaRace.Genes;
 using ReviaRace.Helpers;
 using RimWorld;
@@ -18,6 +19,7 @@ namespace ReviaRace.HarmonyPatches
     {
         internal static bool NoProjectLimitations { get; set; }
         internal static bool NoCraftLimitation { get; set; }
+        internal static BornSettingsEnum BornSettings {get;set;}
         private static readonly Type patchType = typeof(Entry);
         static Entry()
         {
@@ -39,6 +41,7 @@ namespace ReviaRace.HarmonyPatches
                             transpiler: new HarmonyMethod(patchType, nameof(GenerateParentTranspiler)));
             harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.AdjustXenotypeForFactionlessPawn)),
    postfix: new HarmonyMethod(patchType, nameof(AdjustXenotypeForFactionlessPawn_Postfix)));
+            
 
             try
             {
@@ -53,6 +56,7 @@ namespace ReviaRace.HarmonyPatches
                 }))();
             }
             catch (TypeLoadException) { }
+            
         }
 
 
@@ -191,6 +195,26 @@ namespace ReviaRace.HarmonyPatches
             if (!typeof(ReviaBaseGene).IsAssignableFrom(gene.geneClass)) return true; // We dont care about not revian genes
             return false;
         }
+         
+        
+        //public static IEnumerable<CodeInstruction> ApplyBirthOutcomeTranspiler(IEnumerable<CodeInstruction> instructions)
+        //{
+
+        //    foreach (var ci in instructions)
+        //    {
+        //        yield return ci;
+        //        //if (ci.opcode == OpCodes.Initobj && ci.operand.ToString().Contains("Gender"))
+        //        //{
+        //        //    yield return new CodeInstruction(OpCodes.Ldarg_S, "geneticMother");
+        //        //    yield return new CodeInstruction(OpCodes.Ldloc_S, 15);
+        //        //    yield return CodeInstruction.Call(typeof(Entry), nameof(SelectGender));
+        //        //    yield return new CodeInstruction(OpCodes.Stloc_S, 15);
+        //        //}
+        //    }
+        //}
+       
+        
+
 
     }
 }

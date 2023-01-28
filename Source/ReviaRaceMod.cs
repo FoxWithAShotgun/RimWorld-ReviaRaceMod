@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.Enums;
 using ReviaRace.Helpers;
 using ReviaRace.PersistentData;
 using RimWorld;
@@ -127,6 +128,7 @@ namespace ReviaRace
             var lineHeight = bodyStyle.lineHeight + 8;
             DrawRejectionDropDown(sacrificeList.GetRect(lineHeight));
             DrawSacrificeDropDown(sacrificeList.GetRect(lineHeight));
+            DrawBornOptionDropDown(sacrificeList.GetRect(lineHeight));
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
@@ -221,6 +223,37 @@ namespace ReviaRace
                     return optionsList;
                 },
                 Translator.Translate(Settings.RejectionType.ToString()));
+        }
+
+        private void DrawBornOptionDropDown(Rect elemRect)
+        {
+            var rectLabel = elemRect.LeftPart(0.33f);
+            var rectComboBox = elemRect.RightPart(0.66f);
+
+            Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsRejectionType));
+            Widgets.Dropdown<BornSettingsEnum, BornSettingsEnum>(
+                rectComboBox,
+                BornSettingsEnum.NoMaleBorn,
+                mode => mode,
+                (s) =>
+                {
+                    var optionsList = new List<DropdownMenuElement<BornSettingsEnum>>();
+
+                    foreach (var mode in Enum.GetValues(typeof(BornSettingsEnum)).OfType<BornSettingsEnum>())
+                    {
+                        optionsList.Add(new DropdownMenuElement<BornSettingsEnum>
+                        {
+                            option = new FloatMenuOption(
+                                Translator.Translate(mode.ToString()),
+                                () => Settings.BornSettings = mode
+                                ),
+                            payload = (BornSettingsEnum)mode
+                        });
+                    }
+
+                    return optionsList;
+                },
+                Translator.Translate(Settings.BornSettings.ToString()));
         }
 
         private void DrawCheckBoxWithLabel(Rect elemRect, string taggedLabelID, ref bool setting)

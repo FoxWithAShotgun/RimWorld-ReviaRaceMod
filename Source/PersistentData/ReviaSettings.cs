@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Comps;
+using ReviaRace.Enums;
 using ReviaRace.HarmonyPatches;
 using ReviaRace.Helpers;
 using ReviaRace.Needs;
@@ -49,6 +50,7 @@ namespace ReviaRace.PersistentData
             Genes.ReviaBaseGene.RejectionType = RejectionType;
             Entry.NoCraftLimitation = NoCraftLimitations;
             Entry.NoProjectLimitations = NoProjectLimitations;
+            StaticModVariables.BornSettings = BornSettings;
             Log.Message("Settings applied");
         }
 
@@ -133,11 +135,15 @@ namespace ReviaRace.PersistentData
         internal float _bloodthirstDaysToEmpty;
 
         internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth, _NoProjectLimitations,_NoCraftLimitations;
+        private BornSettingsEnum _BornSettings;
+
         public bool DisableUncompleteDebuff_Ears { get=> _DisableUncompleteDebuff_Ears; set=>_DisableUncompleteDebuff_Ears=value; }
         public bool DisableUncompleteDebuff_Claws { get=>_DisableUncompleteDebuff_Claws; set=>_DisableUncompleteDebuff_Claws=value; }
         public bool DisableUncompleteDebuff_Teeth { get=>_DisableUncompleteDebuff_Teeth; set=>_DisableUncompleteDebuff_Teeth=value; }
         public bool NoProjectLimitations { get => _NoProjectLimitations; set => _NoProjectLimitations = value; }
         public bool NoCraftLimitations { get => _NoCraftLimitations; set => _NoCraftLimitations = value; }
+        public BornSettingsEnum BornSettings { get=> _BornSettings; set=>_BornSettings=value; }
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref _costBase, GetLabel(nameof(CostBase)), 1);
@@ -157,6 +163,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _NoProjectLimitations, GetLabel(nameof(NoProjectLimitations)), false);
             Scribe_Values.Look(ref _NoCraftLimitations, GetLabel(nameof(NoCraftLimitations)), false);
             Scribe_Values.Look(ref _rejectionType, GetLabel(nameof(RejectionType)), RejectionType.Disease);
+            Scribe_Values.Look(ref _BornSettings, GetLabel(nameof(BornSettings)), BornSettingsEnum.ForceBornRevia);
             ApplySettings();
         }
 
