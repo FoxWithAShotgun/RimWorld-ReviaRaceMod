@@ -40,7 +40,6 @@
       </points>
     </raidLootValueFromPointsCurve>
     <raidLootMaker>ReviaRaiderLootMaker</raidLootMaker>
-    <melaninRange>1</melaninRange>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>
