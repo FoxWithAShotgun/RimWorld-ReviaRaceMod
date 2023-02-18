@@ -38,4 +38,10 @@
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>
   <ReviaRaceConvertName>Change xenotype for {0}</ReviaRaceConvertName>
+  <ReviaRaceSettingsBornType>Born type</ReviaRaceSettingsBornType>
+  <NoMaleBorn>Revia born only female</NoMaleBorn>
+  <ForceBornRevia>Revia born only revia</ForceBornRevia>
+  <ReviaRejectionType>Revia genes rejection type</ReviaRejectionType>
+  <InstaKill>Instant kills pawn</InstaKill>
+  <NoRejection>No rejection</NoRejection>
 </LanguageData>

@@ -26,13 +26,6 @@ namespace ReviaRace.JobDrivers
         {
             get
             {
-                //switch ((Thing)job.GetTarget(iPawn))
-                //{
-                //    case Pawn pawnSacrificer:
-                //        return pawnSacrificer;
-                //    default:
-                //        return null;
-                //}
                 return pawn;
             }
         }
@@ -67,7 +60,6 @@ namespace ReviaRace.JobDrivers
         }
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            //this.FailOnDestroyedOrNull(iConverting);
             this.FailOnDestroyedOrNull(iSacrificeBuilding);
             this.FailOnAggroMentalState(iConverting);
             var convertingPawn = ConvertingPawn;
@@ -85,13 +77,10 @@ namespace ReviaRace.JobDrivers
             });
             yield return toil;
             yield return Toils_Reserve.Reserve(BloodsoneIndex,1,-1,null);
-            //Log.Message("Toil goto " + ConvertingPawn?.Name);
             Toil goToTakee = Toils_Goto.GotoThing(iConverting, PathEndMode.ClosestTouch)
                 .FailOnDespawnedNullOrForbidden(TargetIndex.A)
                 .FailOnDespawnedNullOrForbidden(TargetIndex.C)
-                //.FailOn(() => this.job.def == JobDefOf.Arrest && !this.ConvertingPawn.CanBeArrestedBy(this.pawn))
                 .FailOn(() => !this.pawn.CanReach(this.SacrificeSpot, PathEndMode.OnCell, Danger.Deadly, false, false, TraverseMode.ByPawn))
-                //.FailOn(() => (this.job.def == JobDefOf.Rescue || this.job.def == JobDefOf.Capture) && !this.ConvertingPawn.Downed)
                 .FailOnSomeonePhysicallyInteracting(iConverting)
                 ;
 

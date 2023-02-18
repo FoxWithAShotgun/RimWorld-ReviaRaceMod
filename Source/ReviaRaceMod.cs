@@ -230,7 +230,7 @@ namespace ReviaRace
             var rectLabel = elemRect.LeftPart(0.33f);
             var rectComboBox = elemRect.RightPart(0.66f);
 
-            Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsRejectionType));
+            Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsBornType));
             Widgets.Dropdown<BornSettingsEnum, BornSettingsEnum>(
                 rectComboBox,
                 BornSettingsEnum.NoMaleBorn,

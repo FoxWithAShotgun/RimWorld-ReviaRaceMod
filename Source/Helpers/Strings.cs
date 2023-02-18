@@ -11,6 +11,7 @@ namespace ReviaRace.Helpers
     internal static class Strings
     {
         internal static string ConvertXenotypeName => "ReviaRaceConvertName";
+        internal static string SettingsBornType => "ReviaRaceSettingsBornType";
 
         internal static  string SettingsRejectionType =>"ReviaRejectionType";
 

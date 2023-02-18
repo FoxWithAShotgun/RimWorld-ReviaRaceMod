@@ -42,22 +42,16 @@ namespace ReviaRace.Comps
                     int needed = neededCount;
 
                     var bloodstonesOnSpot = parent.Map.thingGrid.ThingsListAt(parent.InteractionCell).FirstOrDefault(x => x.def == Defs.Bloodstone);
-                    Log.Message("thing on grid " + bloodstonesOnSpot);
-
                     if (bloodstonesOnSpot != null && bloodstonesOnSpot.def == Defs.Bloodstone)
                     {
-                        //bloodstonesStacks.Add(bloodstonesOnSpot);
                         needed -= bloodstonesOnSpot.stackCount;
-                        Log.Message("Found on spot. Needed: " + needed);
                     }
-                    /*pawn.Position.GetThingList(pawn.Map).Where(x=>x.)*/
                     if (needed > 0)
                         bloodstonesStacks.AddRange(parent.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Except(bloodstonesOnSpot));
                     var thingCountList = new List<ThingCount>();
                     if (TryGetClosestBloodstones(pawn.Position, bloodstonesStacks, thingCountList,needed))
                         foreach (var convertable in convertTargets)
                         {
-                            Log.Message("Select stacks:\n" + string.Join("\n", thingCountList.Select(x => x.Thing.ToString() + ": " + x.Count)));
                             yield return CreateConvertOption(pawn, convertable, thingCountList,bloodstonesOnSpot);
                         }
                 }
@@ -81,14 +75,12 @@ namespace ReviaRace.Comps
             availableThings.Sort(comparison);
             while (availableThings.Count != 0)
             {
-                //Log.Message($"Next iteration. Needed {needed}");
                 chosen.Add(new ThingCount(availableThings[0], Math.Min(availableThings[0].stackCount, needed)));
                 needed -= chosen.Last().Count;
                 availableThings.RemoveAt(0);
                 if (needed <= 0)
                     return true;
             }
-            Log.Message("False");
             return false;
 
         }
@@ -112,9 +104,6 @@ namespace ReviaRace.Comps
             var caption = Strings.ConvertXenotypeName.Translate(converting);
             return new FloatMenuOption(caption, () =>
             {
-                //var haulOffJob = WorkGiverUtility.HaulStuffOffBillGiverJob(sacrificer, parent as IBillGiver, null);
-                //if(haulOffJob!=null)
-                //    sacrificer.jobs.TryTakeOrderedJob(haulOffJob);
                 var job = JobMaker.MakeJob(Defs.ConvertXenotype, parent, bloodstonesOnSpot, converting);
                 job.targetQueueB = new List<LocalTargetInfo>(bloodstones.Count);
                 job.countQueue = new List<int>(bloodstones.Count);
@@ -125,7 +114,6 @@ namespace ReviaRace.Comps
                 }
                 job.count = 1;
                 job.haulMode = HaulMode.ToCellNonStorage;
-                sacrificer.jobs.debugLog = true;
                 sacrificer.jobs.TryTakeOrderedJob(job);
             });
         }
