@@ -37,4 +37,5 @@
   <Linear>Linear</Linear>
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>
+  <ReviaRaceConvertName>Change xenotype for {0}</ReviaRaceConvertName>
 </LanguageData>

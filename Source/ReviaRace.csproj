@@ -58,9 +58,8 @@
     <OutputPath>..\1.4\Assemblies\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlphaGenes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\workshop\content\294100\2891845502\1.4\Assemblies\AlphaGenes.dll</HintPath>
+    <Reference Include="AlphaGenes">
+      <HintPath>..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\2891845502\1.4\Assemblies\AlphaGenes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Core" />
@@ -97,6 +96,7 @@
     <Compile Include="Helpers\SoulReaperWorker.cs" />
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
+    <Compile Include="JobDrivers\ConversationRitualJobDriver.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />
@@ -106,7 +106,6 @@
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />
     <Compile Include="Workers\ThoughtWorkerBloodthirst.cs" />
-    <Compile Include="WorkGivers\SacrificePrisonerWorkGiver.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
@@ -120,6 +119,9 @@
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WorkGivers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

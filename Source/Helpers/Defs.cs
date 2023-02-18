@@ -53,6 +53,9 @@ namespace ReviaRace.Helpers
         internal static JobDef PrisonerWait => _prisonerWait ??= DefDatabase<JobDef>.GetNamed("ReviaRaceSacrificedPrisonerWait");
         private static JobDef _prisonerWait;
 
+        internal static JobDef ConvertXenotype => _convertXenotype ??= DefDatabase<JobDef>.GetNamed("ReviaRaceXenotypeConversation");
+        private static JobDef _convertXenotype;
+
         // Ideology
         internal static MemeDef Skarnite => _skarnite ??= DefDatabase<MemeDef>.GetNamed("ReviaRaceSkarniteMeme");
         private static MemeDef _skarnite;

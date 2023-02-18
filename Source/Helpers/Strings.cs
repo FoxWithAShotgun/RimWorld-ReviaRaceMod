@@ -10,6 +10,8 @@ namespace ReviaRace.Helpers
 {
     internal static class Strings
     {
+        internal static string ConvertXenotypeName => "ReviaRaceConvertName";
+
         internal static  string SettingsRejectionType =>"ReviaRejectionType";
 
         internal static string SettingsReviaNoProjectLimitaions => "ReviaNoProjectLimitaions";
