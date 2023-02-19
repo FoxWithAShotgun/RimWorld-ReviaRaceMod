@@ -41,8 +41,7 @@ namespace ReviaRace.HarmonyPatches
                             transpiler: new HarmonyMethod(patchType, nameof(GenerateParentTranspiler)));
             harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.AdjustXenotypeForFactionlessPawn)),
    postfix: new HarmonyMethod(patchType, nameof(AdjustXenotypeForFactionlessPawn_Postfix)));
-            harmony.Patch(AccessTools.Method(typeof(PawnSkinColors), nameof(PawnSkinColors.RandomSkinColorGene)),
-   postfix: new HarmonyMethod(patchType, nameof(RandomSkinColorGenePostfix)));
+
 
 
             try
@@ -61,11 +60,6 @@ namespace ReviaRace.HarmonyPatches
             
         }
 
-        public static void RandomSkinColorGenePostfix(Pawn pawn,GeneDef __result)
-        {
-            Log.Message($"Selected skin gene: {__result.defName}\n" +
-                $"Range {pawn.Faction?.def.melaninRange.ToString() ?? "faction is nulll"}");
-        }
 
         private static IEnumerable<CodeInstruction> GenerateParentTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator ilg)
         {
