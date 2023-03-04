@@ -16,7 +16,7 @@ namespace ReviaRace.Helpers
         internal static bool IsBloodlust(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Bloodlust");
         internal static bool IsCannibal(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Cannibal");
         internal static bool IsPsychopath(this Pawn pawn) => pawn.HasTraits() && pawn.HasTrait("Psychopath");
-        internal static bool IsRevia(this Pawn pawn) => pawn
+        internal static bool IsRevia(this Pawn pawn) => pawn?
             //.kindDef.race.defName
             //.ToLower().Contains("revia");
             .genes?.HasGene(Defs.Tail)??false;
