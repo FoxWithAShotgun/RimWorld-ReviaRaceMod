@@ -112,7 +112,7 @@ namespace ReviaRace.HarmonyPatches
             {
                 request.FixedGender = Gender.Female;
                 request.ForcedXenotype = Defs.XenotypeDef;
-                Log.Message(nameof(PreGeneratePawn) + " called");
+                //Log.Message(nameof(PreGeneratePawn) + " called");
             }
         }
 

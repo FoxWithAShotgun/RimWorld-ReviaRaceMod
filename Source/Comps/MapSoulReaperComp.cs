@@ -16,9 +16,10 @@ namespace ReviaRace.Comps
         {
 
         }
+        internal bool pawnsChanged = true;
         private int _btTick = 0;
         IList<ReviaComp> revias;
-        int pawnCount = -1;
+        //int pawnCount = -1;
         bool ShouldRefreshList()
         {
             if (map == null) return false;
@@ -27,7 +28,9 @@ namespace ReviaRace.Comps
                 ReviaTailGene.flag = false;
                 return true;
             }
-            return pawnCount != map.mapPawns.AllPawnsCount;
+            return pawnsChanged;
+            //Log.Message("AllPawnsCount: " + map.mapPawns.AllPawnsCount);
+            //return pawnCount != map.mapPawns.AllPawnsUnspawnedCount;
         }
         public override void MapComponentTick()
         {
@@ -42,7 +45,8 @@ namespace ReviaRace.Comps
             {
                 var def = GenDefDatabase.GetDef(typeof(GeneDef), "ReviaTail") as GeneDef;
                 revias = map.mapPawns.AllPawns.Where(x => x.IsRevia()).Select(x=>new ReviaComp(x)).ToList();
-                pawnCount = map.mapPawns.AllPawnsCount;
+                //pawnCount = map.mapPawns.AllPawnsCount;
+                pawnsChanged = false;
                 
 
             }
