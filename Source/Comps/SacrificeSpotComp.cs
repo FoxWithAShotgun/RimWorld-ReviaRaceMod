@@ -37,7 +37,7 @@ namespace ReviaRace.Comps
                             yield return CreateSacrificeOption(pawn, target);
                         }
                     }
-                    var convertTargets = pawn.Map.mapPawns.AllPawns.Where(p => IsValidConvertOption(p)).ToList();
+                    var convertTargets = pawn.Map.mapPawns.AllPawns.Where(p => IsValidConvertOption(p)).Except(pawn).ToList();
                     List<Thing> bloodstonesStacks = new List<Thing>();
                     int needed = neededCount;
 
