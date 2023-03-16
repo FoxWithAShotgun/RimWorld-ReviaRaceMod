@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
-
+using ReviaRace.HarmonyPatches;
 namespace ReviaRace.Genes
 {
     public class ReviaTailGene : ReviaBaseGene
@@ -20,7 +20,7 @@ namespace ReviaRace.Genes
 
             pawn.SetSoulReaperLevel();
             flag = true;
-
+            if (HarmonyPatch_FacialAnimation.PatchActive) HarmonyPatch_FacialAnimation.ResetFaceType(pawn);
 
         }
         public override void PostRemove()
@@ -30,6 +30,7 @@ namespace ReviaRace.Genes
             if (btNeed != null)
                 pawn.needs.AllNeeds.Remove(btNeed);
             pawn.RemoveSoulReapHediffs();
+            if (HarmonyPatch_FacialAnimation.PatchActive) HarmonyPatch_FacialAnimation.ResetFaceType(pawn);
         }
     }
 }
