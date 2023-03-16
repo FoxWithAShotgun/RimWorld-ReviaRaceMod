@@ -115,7 +115,7 @@ namespace ReviaRace.Genes
 
         public static void RefreshAttackHediffs(Pawn pawn)
         {
-            if (pawn.genes == null) return;
+            if (pawn.genes == null||pawn.def.defName!="Human") return;
 
             if (jawRecord == null) jawRecord = pawn.def.race.body.AllParts.First(x => x.def.defName == "Jaw");
             if (leftFist == null) leftFist = pawn.def.race.body.AllParts.First(x => x.untranslatedCustomLabel == "left hand");
