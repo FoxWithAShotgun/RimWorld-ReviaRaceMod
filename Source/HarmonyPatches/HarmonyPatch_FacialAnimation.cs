@@ -105,7 +105,7 @@ namespace ReviaRace.HarmonyPatches
             {
                 try
                 {
-                    return FaceTypeGenerator<C>.GetFaceTypeDefsForRace("ReviaRaceAlien", pawn.gender);
+                    return FaceTypeGenerator<C>.GetFaceTypeDefsForRace("ReviaRaceAlien", pawn.gender).Union(FaceTypeGenerator<C>.GetFaceTypeDefsForRace(pawn.def.defName, pawn.gender));
                 }
                 catch (Exception)
                 {
