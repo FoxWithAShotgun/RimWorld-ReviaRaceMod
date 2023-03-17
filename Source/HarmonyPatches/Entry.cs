@@ -17,6 +17,11 @@ namespace ReviaRace.HarmonyPatches
     [StaticConstructorOnStartup]
     internal static class Entry
     {
+        internal static bool FacialAnimationActive =>
+            ModLister.HasActiveModWithName("[NL] Facial Animation - WIP");
+        internal static bool ReviaFacialAnimationActive =>
+        ModLister.HasActiveModWithName("Revia Race - Facial Animation");
+        internal static bool FAPatchActive { get; private set; } = false;
         internal static bool NoProjectLimitations { get; set; }
         internal static bool NoCraftLimitation { get; set; }
         internal static BornSettingsEnum BornSettings {get;set;}
@@ -52,6 +57,29 @@ namespace ReviaRace.HarmonyPatches
                     {
                         harmony.Patch(AccessTools.Method(typeof(AlphaGenes.Gene_Randomizer), nameof(AlphaGenes.Gene_Randomizer.PostAdd)),
                              transpiler: new HarmonyMethod(patchType, nameof(Gene_Randomizer_Transpiler)));
+                    }
+
+                }))();
+            }
+            catch (TypeLoadException) { }
+            try
+            {
+                ((Action)(() =>
+                {
+                    if (!FacialAnimationActive && ReviaFacialAnimationActive)
+                    {
+                        Log.Error("Loaded Revia Facial Animation without [NL] Facial Animation - WIP!");
+                        return;
+                    }
+                    if (FacialAnimationActive && !ReviaFacialAnimationActive)
+                    {
+                        Log.Warning("Facial animation active, but there is no revia facial animation. There will be default");
+                        return;
+                    }
+                    if (FacialAnimationActive && ReviaFacialAnimationActive)
+                    {
+                        HarmonyPatch_FacialAnimation.Patch();
+                        FAPatchActive = true;
                     }
 
                 }))();
