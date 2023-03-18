@@ -3,6 +3,7 @@ using HarmonyLib;
 using ReviaRace.Helpers;
 using RimWorld;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -10,26 +11,31 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using HeadTypeDef = FacialAnimation.HeadTypeDef;
+
 
 namespace ReviaRace.HarmonyPatches
 {
 
-    //[StaticConstructorOnStartup]
-    public static class HarmonyPatch_FacialAnimation
+    [StaticConstructorOnStartup]
+    internal static class HarmonyPatch_FacialAnimation
     {
         static Harmony harmony = new Harmony("ReviaRace");
-        
+
+        static HarmonyPatch_FacialAnimation()
+        {
+            Log.Message("Something called this patch");
+        }
+        private static readonly Type faceTypeGenerator = AccessTools.TypeByName("FacialAnimation.FaceTypeGenerator`1");
         internal static void Patch()
         {
-            
+
             {
                 try
                 {
                     var methodToPatch = AccessTools.Method("FacialAnimation.DrawFaceGraphicsComp:DrawBodyPart").MakeGenericMethod(typeof(IFacialAnimationController));//Unfortunatly, i cant directly patch ControllerBaseComp.InitIfNeeded
                     harmony.Patch(methodToPatch,
                                      prefix: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Prefix)));
-                    harmony.Patch(AccessTools.Method(typeof(NL_SelectPartWindow),nameof(NL_SelectPartWindow.DrawControl)),
+                    harmony.Patch(AccessTools.Method(typeof(NL_SelectPartWindow), nameof(NL_SelectPartWindow.DrawControl)),
                                     transpiler: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Transpiler)));
                     Log.Message("Succesfully patched [NL] Facial Animation - WIP for Revia biotech");
                 }
@@ -39,7 +45,7 @@ namespace ReviaRace.HarmonyPatches
                 }
             }
         }
-        
+
         public static void Prefix(ref int drawCount, ref object controller, bool isBottomLayer, ref Vector3 headOffset, Quaternion quaternion, Rot4 facing, bool portrait, bool headStump, RotDrawMode mode)
         {
             if (controller == null) return;
@@ -48,10 +54,9 @@ namespace ReviaRace.HarmonyPatches
             if (faceTypeField.GetValue() == null && pawn.IsRevia())
             {
                 var typeOfFaceTypeDef = controller.GetType().BaseType.GetGenericArguments().First();
-                var type1 = AccessTools.TypeByName("FacialAnimation.FaceTypeGenerator`1");
-                var type2 = type1.MakeGenericType(typeOfFaceTypeDef);
+                var type = faceTypeGenerator.MakeGenericType(typeOfFaceTypeDef);
 
-                var method = AccessTools.Method(type2, "GetRandomDef");
+                var method = AccessTools.Method(type, "GetRandomDef");
                 object result;
                 try
                 {
@@ -72,7 +77,7 @@ namespace ReviaRace.HarmonyPatches
             var list = instructions.ToList();
             for (int i = 0; i < list.Count; i++)
             {
-                if (TryReplace<HeadTypeDef>(list, i)) continue;
+                if (TryReplace<FacialAnimation.HeadTypeDef>(list, i)) continue;
                 if (TryReplace<BrowTypeDef>(list, i)) continue;
                 if (TryReplace<LidTypeDef>(list, i)) continue;
                 if (TryReplace<EyeballTypeDef>(list, i)) continue;
@@ -83,11 +88,12 @@ namespace ReviaRace.HarmonyPatches
             return list.Where(x => x != null);
         }
 
-        private static bool TryReplace<T>(IList<CodeInstruction> instructions, int position) where T : FaceTypeDef,new()
+        private static bool TryReplace<T>(IList<CodeInstruction> instructions, int position)
         {
-            if (instructions[position]==null|| instructions[position].opcode != OpCodes.Ldloc_0) return false;
-          
-            var method = AccessTools.Method( typeof(FaceTypeGenerator<T>),"GetFaceTypeDefsForRace");
+            if (instructions[position] == null || instructions[position].opcode != OpCodes.Ldloc_0) return false;
+
+            var type =faceTypeGenerator?.MakeGenericType(typeof(T));
+            var method = AccessTools.Method(type, "GetFaceTypeDefsForRace");
             if (instructions[position + 5].Calls(method))
             {
                 instructions[position + 1] = null;
@@ -99,19 +105,27 @@ namespace ReviaRace.HarmonyPatches
             }
             return false;
         }
-        public static IEnumerable<C> GetFaceTypeDefsForRaceExtended<C>(Pawn pawn) where C : FaceTypeDef, new()
+        public static IEnumerable<C> GetFaceTypeDefsForRaceExtended<C>(Pawn pawn)
         {
             if (pawn.IsRevia())
             {
                 try
                 {
-                    return FaceTypeGenerator<C>.GetFaceTypeDefsForRace("ReviaRaceAlien", pawn.gender).Union(FaceTypeGenerator<C>.GetFaceTypeDefsForRace(pawn.def.defName, pawn.gender));
+                    return CallGetFaceTypeDefsForRace<C>("ReviaRaceAlien", pawn.gender).Union(CallGetFaceTypeDefsForRace<C>(pawn.def.defName, pawn.gender));
                 }
                 catch (Exception)
                 {
                 }
             }
-            return FaceTypeGenerator<C>.GetFaceTypeDefsForRace(pawn.def.defName, pawn.gender);
+            return CallGetFaceTypeDefsForRace<C>(pawn.def.defName, pawn.gender);
+        }
+        private static IEnumerable<T> CallGetFaceTypeDefsForRace<T>(string raceName, Gender gender)
+        {
+            var result = faceTypeGenerator
+                .MakeGenericType(typeof(T))
+                .GetMethod("GetFaceTypeDefsForRace", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
+                .Invoke(null, new object[] { raceName, gender });
+            return (result as IEnumerable).Cast<T>();
         }
 
         internal static void ResetFaceType(Pawn pawn)

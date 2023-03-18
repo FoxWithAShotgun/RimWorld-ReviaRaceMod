@@ -85,7 +85,7 @@ namespace ReviaRace.HarmonyPatches
                 }))();
             }
             catch (TypeLoadException) { }
-            
+
         }
 
 

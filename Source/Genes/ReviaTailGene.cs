@@ -20,7 +20,7 @@ namespace ReviaRace.Genes
 
             pawn.SetSoulReaperLevel();
             flag = true;
-            if (Entry.FAPatchActive) ((Action)(() => HarmonyPatch_FacialAnimation.ResetFaceType(pawn)))();
+            //if (Entry.FAPatchActive) ((Action)(() => HarmonyPatch_FacialAnimation.ResetFaceType(pawn)))();
 
         }
         public override void PostRemove()
@@ -30,7 +30,7 @@ namespace ReviaRace.Genes
             if (btNeed != null)
                 pawn.needs.AllNeeds.Remove(btNeed);
             pawn.RemoveSoulReapHediffs();
-            if (Entry.FAPatchActive)((Action)(()=> HarmonyPatch_FacialAnimation.ResetFaceType(pawn)))();
+            //if (Entry.FAPatchActive)((Action)(()=> HarmonyPatch_FacialAnimation.ResetFaceType(pawn)))();
         }
     }
 }
