@@ -12,8 +12,9 @@ namespace ReviaRace.RoomRoleWorkers
     {
         public override float GetScore(Room room)
         {
-            float score = room.ContainsThing(ThingDef.Named("ReviaBloodSigil")) ? 1.0f : 0.0f;
+            float score = room.ContainsThing(ThingDef.Named("ReviaBloodSigil")) ? 10000.0f : 0.0f;
             return score;
         }
+
     }
 }
