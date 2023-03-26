@@ -91,7 +91,7 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            const int numRows = 14;
+            const int numRows = 19;
 
             var headerState = new GUIStyleState
             {
