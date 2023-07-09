@@ -8,7 +8,7 @@
       <summary>Three Revian renegades, trying to establish their independence.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
-        <factionDef>PlayerColony</factionDef>
+        <factionDef>ReviaPlayerColony</factionDef>
       </playerFaction>
       <parts>
         <!--<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
@@ -21,7 +21,6 @@
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnChoiceCount>6</pawnChoiceCount>
-          <customSummary>Start with one adult or child sanguophage and one other colonist of any age.</customSummary>
           <xenotypeCounts>
             <li>
               <xenotype>RevianXenotype</xenotype>
