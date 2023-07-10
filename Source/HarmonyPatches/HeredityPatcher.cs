@@ -71,7 +71,7 @@ namespace ReviaRace.HarmonyPatches
         }
         public static void TryGetInheritedXenotypePostfix(Pawn mother, Pawn father, ref XenotypeDef xenotype,ref bool __result)
         {
-            if (mother?.IsRevia() ?? false)
+            if (StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia && (mother?.IsRevia() ?? false))
             {
                 xenotype = Defs.XenotypeDef;
                 __result = true;

@@ -96,7 +96,8 @@ namespace ReviaRace.Comps
 
             return converting.IsHumanlike() && converting.IsColonist
                 && converting.genes.GenesListForReading.Any(x => x.def.defName.Contains("Revia"))
-                && converting.genes.Xenotype != Defs.XenotypeDef;
+                && (converting.genes.Xenotype != Defs.XenotypeDef 
+                    || (converting.genes.Xenotype == Defs.XenotypeDef && Defs.XenotypeDef.genes.Any(x=>!converting.genes.Endogenes.Select(x=>x.def).Contains(x))));
 
         }
         protected FloatMenuOption CreateConvertOption(Pawn sacrificer, Pawn converting, List<ThingCount> bloodstones,Thing bloodstonesOnSpot =null)
