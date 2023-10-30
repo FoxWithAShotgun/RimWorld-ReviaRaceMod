@@ -55,15 +55,11 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 1.4|AnyCPU'">
-    <OutputPath>..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AlphaGenes">
-      <HintPath>..\..\..\..\..\workshop\content\294100\2891845502\1.4\Assemblies\AlphaGenes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FacialAnimation">
-      <HintPath>..\..\..\..\..\workshop\content\294100\1635901197\1.4\Assemblies\FacialAnimation.dll</HintPath>
+      <HintPath>..\ThirdPartyAssemblies\AlphaGenes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Core" />

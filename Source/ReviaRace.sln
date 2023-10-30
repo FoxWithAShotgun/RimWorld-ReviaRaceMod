@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviaRace", "ReviaRace.csproj", "{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviaRace", "Main/ReviaRace.csproj", "{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

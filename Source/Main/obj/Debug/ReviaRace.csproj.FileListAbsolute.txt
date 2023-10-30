@@ -1,0 +1,2 @@
+H:\SteamLibrary\steamapps\common\RimWorld\Mods\Revia-Biotech\Source\Main\obj\Debug\ReviaRace.csproj.AssemblyReference.cache
+H:\SteamLibrary\steamapps\common\RimWorld\Mods\Revia-Biotech\Source\Main\obj\Debug\ReviaRace.csproj.CoreCompileInputs.cache
