@@ -78,7 +78,7 @@ namespace ReviaRace.HarmonyPatches
                     }
                     if (FacialAnimationActive && ReviaFacialAnimationActive)
                     {
-                        HarmonyPatch_FacialAnimation.Patch();
+                        //HarmonyPatch_FacialAnimation.Patch();
                         FAPatchActive = true;
                     }
 

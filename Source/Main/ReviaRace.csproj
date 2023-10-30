@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\1.4\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
     <LangVersion>latest</LangVersion>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -87,7 +87,6 @@
     <Compile Include="Genes\ReviaEarGene.cs" />
     <Compile Include="Genes\ReviaTailGene.cs" />
     <Compile Include="Genes\ReviaTeethGene.cs" />
-    <Compile Include="HarmonyPatches\HarmonyPatch_FacialAnimation.cs" />
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="HarmonyPatches\HeredityPatcher.cs" />

@@ -13,17 +13,17 @@ using UnityEngine;
 using Verse;
 
 
-namespace ReviaRace.HarmonyPatches
+namespace ReviaRace.FA_Compat
 {
 
     [StaticConstructorOnStartup]
-    internal static class HarmonyPatch_FacialAnimation
+    public static class HarmonyPatch_FacialAnimation
     {
-        static Harmony harmony = new Harmony("ReviaRace");
+        static Harmony harmony = new Harmony("ReviaRace_FA");
 
         static HarmonyPatch_FacialAnimation()
         {
-            Log.Message("Something called this patch");
+            Log.Warning("Something called this patch");
         }
         private static readonly Type faceTypeGenerator = AccessTools.TypeByName("FacialAnimation.FaceTypeGenerator`1");
         internal static void Patch()
@@ -35,7 +35,7 @@ namespace ReviaRace.HarmonyPatches
                     var methodToPatch = AccessTools.Method("FacialAnimation.DrawFaceGraphicsComp:DrawBodyPart").MakeGenericMethod(typeof(IFacialAnimationController));//Unfortunatly, i cant directly patch ControllerBaseComp.InitIfNeeded
                     harmony.Patch(methodToPatch,
                                      prefix: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Prefix)));
-                    harmony.Patch(AccessTools.Method(typeof(NL_SelectPartWindow), nameof(NL_SelectPartWindow.DrawControl)),
+                    harmony.Patch(AccessTools.Method(typeof(NL_SelectPartWindow), nameof(NL_SelectPartWindow.DrawAnimationPawnParamFacial)),
                                     transpiler: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Transpiler)));
                     Log.Message("Succesfully patched [NL] Facial Animation - WIP for Revia biotech");
                 }

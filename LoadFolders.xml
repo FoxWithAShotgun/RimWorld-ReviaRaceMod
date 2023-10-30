@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <loadFolders>
 	<v1.4>
-		<li>/</li>
+		<li>1.4</li>
+    <li>/</li>
+		<li IfModActive="Nals.FacialAnimation">FA_Compat</li>
 	</v1.4>
 </loadFolders>
