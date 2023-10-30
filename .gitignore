@@ -36,3 +36,5 @@ UnityEngine.dll
 
 .idea/
 /Source/FA_Patch/obj
+/Source/Main/obj/Debug
+/Source/Main/obj
