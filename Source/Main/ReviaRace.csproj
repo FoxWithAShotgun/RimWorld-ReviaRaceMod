@@ -58,10 +58,6 @@
     <OutputPath>..\..\1.4\Assemblies\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlphaGenes">
-      <HintPath>..\ThirdPartyAssemblies\AlphaGenes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />

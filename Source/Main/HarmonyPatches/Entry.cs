@@ -55,7 +55,7 @@ namespace ReviaRace.HarmonyPatches
                 {
                     if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "sarg.alphagenes"))
                     {
-                        harmony.Patch(AccessTools.Method(typeof(AlphaGenes.Gene_Randomizer), nameof(AlphaGenes.Gene_Randomizer.PostAdd)),
+                        harmony.Patch(AccessTools.Method(AccessTools.TypeByName("Gene_Randomizer"), "PostAdd"),
                              transpiler: new HarmonyMethod(patchType, nameof(Gene_Randomizer_Transpiler)));
                     }
 
