@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,120 +25,51 @@ namespace ReviaRace.FA_Compat
         static HarmonyPatch_FacialAnimation()
         {
             Log.Warning("Something called this patch");
+            LongEventHandler.ExecuteWhenFinished(() => harmony.PatchAll());
         }
-        private static readonly Type faceTypeGenerator = AccessTools.TypeByName("FacialAnimation.FaceTypeGenerator`1");
-        internal static void Patch()
-        {
+    }
 
+    [HarmonyPatch(typeof(ControllerBaseComp<FaceTypeDef, BrowShapeDef>), "InitIfNeed")]
+    internal static class ControllerBaseComp_Patch
+    {
+        public static bool Prefix(ThingComp __instance, ref Pawn ___pawn, ref Gender ___prevGender, ref Color ___color, ref FaceTypeDef ___faceType, Thing ___parent)
+        {
+            if (___pawn != null)
             {
-                try
-                {
-                    var methodToPatch = AccessTools.Method("FacialAnimation.DrawFaceGraphicsComp:DrawBodyPart").MakeGenericMethod(typeof(IFacialAnimationController));//Unfortunatly, i cant directly patch ControllerBaseComp.InitIfNeeded
-                    harmony.Patch(methodToPatch,
-                                     prefix: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Prefix)));
-                    harmony.Patch(AccessTools.Method(typeof(NL_SelectPartWindow), nameof(NL_SelectPartWindow.DrawAnimationPawnParamFacial)),
-                                    transpiler: new HarmonyMethod(typeof(HarmonyPatch_FacialAnimation), nameof(Transpiler)));
-                    Log.Message("Succesfully patched [NL] Facial Animation - WIP for Revia biotech");
-                }
-                catch (Exception ex)
-                {
-                    Log.Warning("Something went wrong while patching [NL] Facial Animation - WIP\n" + ex.ToString());
-                }
+                return false;
             }
-        }
-
-        public static void Prefix(ref int drawCount, ref object controller, bool isBottomLayer, ref Vector3 headOffset, Quaternion quaternion, Rot4 facing, bool portrait, bool headStump, RotDrawMode mode)
-        {
-            if (controller == null) return;
-            var pawn = (controller as ThingComp).parent as Pawn;
-            var faceTypeField = new Traverse(controller).Field("faceType");
-            if (faceTypeField.GetValue() == null && pawn.IsRevia())
+            ___pawn = (___parent as Pawn);
+            ___prevGender = ___pawn.gender;
+            if (___faceType == null)
             {
-                var typeOfFaceTypeDef = controller.GetType().BaseType.GetGenericArguments().First();
-                var type = faceTypeGenerator.MakeGenericType(typeOfFaceTypeDef);
-
-                var method = AccessTools.Method(type, "GetRandomDef");
-                object result;
-                try
-                {
-                    result = method.Invoke(null, new object[] { "ReviaRaceAlien", pawn.gender });
-                }
-                catch (Exception)
-                {
-                    result = method.Invoke(null, new object[] { "Human", pawn.gender });
-                }
-                faceTypeField.SetValue(result);
-
+                var race = ___pawn.IsRevia() ? "ReviaRaceAlien" : ___pawn.def.defName;
+                ___faceType = __instance.GetRandomDef(race, ___pawn.def.defName, ___pawn.gender);
             }
-
-        }
-        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
-        {
-            Log.Warning("Patching NL_SelectPartWindow");
-            var list = instructions.ToList();
-            for (int i = 0; i < list.Count; i++)
+            if (__instance.GetCurrentColor() == Color.clear)
             {
-                if (TryReplace<FacialAnimation.HeadTypeDef>(list, i)) continue;
-                if (TryReplace<BrowTypeDef>(list, i)) continue;
-                if (TryReplace<LidTypeDef>(list, i)) continue;
-                if (TryReplace<EyeballTypeDef>(list, i)) continue;
-                if (TryReplace<MouthTypeDef>(list, i)) continue;
-                if (TryReplace<SkinTypeDef>(list, i)) continue;
-
-            }
-            return list.Where(x => x != null);
-        }
-
-        private static bool TryReplace<T>(IList<CodeInstruction> instructions, int position)
-        {
-            if (instructions[position] == null || instructions[position].opcode != OpCodes.Ldloc_0) return false;
-
-            var type =faceTypeGenerator?.MakeGenericType(typeof(T));
-            var method = AccessTools.Method(type, "GetFaceTypeDefsForRace");
-            if (instructions[position + 5].Calls(method))
-            {
-                instructions[position + 1] = null;
-                instructions[position + 2] = null;
-                instructions[position + 3] = null;
-                instructions[position + 4] = null;
-                instructions[position + 5] = CodeInstruction.Call(typeof(HarmonyPatch_FacialAnimation), nameof(GetFaceTypeDefsForRaceExtended), generics: new Type[] { typeof(T) });
-                return true;
+                ___color = __instance.ResetColor();
             }
             return false;
         }
-        public static IEnumerable<C> GetFaceTypeDefsForRaceExtended<C>(Pawn pawn)
+        internal static FaceTypeDef GetRandomDef(this ThingComp instance, string race, string defaultRace, Gender gender)
         {
-            if (pawn.IsRevia())
+            var faceTypeGenerator = typeof(FaceTypeGenerator<>).MakeGenericType(instance.GetType().BaseType.GetGenericArguments()[0]);
+            try
             {
-                try
-                {
-                    return CallGetFaceTypeDefsForRace<C>("ReviaRaceAlien", pawn.gender).Union(CallGetFaceTypeDefsForRace<C>(pawn.def.defName, pawn.gender));
-                }
-                catch (Exception)
-                {
-                }
+                return faceTypeGenerator.GetMethod("GetRandomDef").Invoke(null, new object[] { race, gender }) as FaceTypeDef;
             }
-            return CallGetFaceTypeDefsForRace<C>(pawn.def.defName, pawn.gender);
-        }
-        private static IEnumerable<T> CallGetFaceTypeDefsForRace<T>(string raceName, Gender gender)
-        {
-            var result = faceTypeGenerator
-                .MakeGenericType(typeof(T))
-                .GetMethod("GetFaceTypeDefsForRace", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)
-                .Invoke(null, new object[] { raceName, gender });
-            return (result as IEnumerable).Cast<T>();
-        }
-
-        internal static void ResetFaceType(Pawn pawn)
-        {
-            foreach (var item in pawn.AllComps.Where(x => x is IFacialAnimationController))
+            catch
             {
-                new Traverse(item).Field("faceType").SetValue(null);
-                new Traverse(item).Field("pawn").SetValue(null);
-                new Traverse(item).Method("SetDirty").GetValue();
+                return faceTypeGenerator.GetMethod("GetRandomDef").Invoke(null, new object[] { defaultRace, gender }) as FaceTypeDef;
             }
-            PortraitsCache.SetDirty(pawn);
-
+        }
+        internal static Color GetCurrentColor(this ThingComp instance)
+        {
+            return (Color)(new Traverse(instance).Method("GetCurrentColor").GetValue());
+        }
+        internal static Color ResetColor(this ThingComp instance)
+        {
+            return (Color)(new Traverse(instance).Method("ResetColor").GetValue());
         }
     }
 }
