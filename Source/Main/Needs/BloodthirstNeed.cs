@@ -10,17 +10,17 @@ namespace ReviaRace.Needs
 {
     public class BloodthirstNeed : Need
     {
-        public BloodthirstNeed(Pawn pawn) 
+        public BloodthirstNeed(Pawn pawn)
             : base(pawn)
         {
             threshPercents = Thresholds;
         }
         public static bool Enabled { get; set; }
 
-        public static float DaysToEmpty 
+        public static float DaysToEmpty
         {
             get => _daysToEmpty;
-            set 
+            set
             {
                 _daysToEmpty = value;
                 DecayPerDay = 1.0f / DaysToEmpty;
@@ -37,10 +37,10 @@ namespace ReviaRace.Needs
             ThreshSatisfied,
         };
 
-        public override float CurLevel 
+        public override float CurLevel
         {
             get => base.CurLevel;
-            set => base.CurLevel = Math.Min(value, 1.0f); 
+            set => base.CurLevel = Math.Min(value, 1.0f);
         }
 
         private static float DecayPerDay { get; set; }
@@ -60,8 +60,6 @@ namespace ReviaRace.Needs
         {
             return (DecayPerDay / 60000.0f) * PawnAffectedMult * PawnRedHazeMult;
         }
-        private int curTick = 0;
-        private int _lastAttackedTick = -1;
 
         public override void NeedInterval()
         {
@@ -69,42 +67,18 @@ namespace ReviaRace.Needs
             {
                 return;
             }
-
-            curTick++;
-
-            if (curTick >= 10)
+            if (!PawnAffected)
             {
-                curTick = 0;
+                CurLevel = ThreshItching;
+                return;
+            }
 
-                if (!PawnAffected)
-                {
-                    CurLevel = ThreshItching;
-                    return;
-                }
-
-                if (!def.freezeWhileSleeping || pawn.Awake())
-                {
-                    // 150 ticks per NeedInterval call. 
-                    CurLevel -= 150 * TickMultTimer * GetFallPerTick();
-                }
-                if (pawn.LastAttackTargetTick != _lastAttackedTick &&
-                pawn.LastAttackedTarget.Pawn is Pawn victim)
-                {
-                    _lastAttackedTick = pawn.LastAttackTargetTick;
-
-                    if (victim.Dead)
-                    {
-                        // Skulls for the skull throne!
-                        CurLevel += victim.BodySize * 0.80f;
-                    }
-                    else
-                    {
-                        // Blood for the blood god! 
-                        var amount = 0.001f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
-                        CurLevel += amount;
-                    }
-                }
+            if (!def.freezeWhileSleeping || pawn.Awake())
+            {
+                // 150 ticks per NeedInterval call. 
+                CurLevel -= 150 * GetFallPerTick();
             }
         }
+
     }
 }
