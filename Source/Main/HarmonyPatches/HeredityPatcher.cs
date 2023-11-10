@@ -20,7 +20,7 @@ namespace ReviaRace.HarmonyPatches
         {
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.ApplyBirthOutcome)),
                transpiler: new HarmonyMethod(typeof(HeredityPatcher), nameof(ApplyBirthOutcomeTranspiler)));
-            harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.GetInheritedGeneSet),parameters:new Type[] {typeof(Pawn),typeof(Pawn),typeof(bool).MakeByRefType() }),
+            harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.GetInheritedGeneSet), parameters: new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool).MakeByRefType() }),
                  postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(GetInheritedGeneSetPostfix)));
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "ShouldByHybrid"),
                  postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(ShouldByHybridPostfix)));
@@ -45,7 +45,7 @@ namespace ReviaRace.HarmonyPatches
         }
         public static Gender? SelectGender(Pawn mother, Gender? gender)
         {
-            if (mother.IsRevia() && gender == null&&StaticModVariables.BornSettings!=BornSettingsEnum.Default)
+            if (mother.IsRevia() && gender == null && StaticModVariables.BornSettings != BornSettingsEnum.Default)
                 gender = Gender.Female;
             return gender;
         }
@@ -54,22 +54,22 @@ namespace ReviaRace.HarmonyPatches
         {
             var bornSettings = StaticModVariables.BornSettings;
             if (success && mother.IsRevia() && bornSettings == BornSettingsEnum.ForceBornRevia)
-                    ApplyReviaXenotype(mother, __result);
+                ApplyReviaXenotype(mother, __result);
 
         }
         private static void ApplyReviaXenotype(Pawn mother, GeneSet genes)
         {
             foreach (var geneDef in Defs.XenotypeDef.AllGenes)
                 genes.AddGene(geneDef);
-            
+
             genes.SetNameDirect(mother.genes.xenotypeName);
         }
-        public static void ShouldByHybridPostfix(Pawn mother,Pawn father,ref bool __result)
+        public static void ShouldByHybridPostfix(Pawn mother, Pawn father, ref bool __result)
         {
-            if (__result && mother.IsRevia() && StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia&&(father==null|| father.genes.Xenotype==DefDatabase<XenotypeDef>.GetNamed("Baseliner")))
+            if (__result && mother.IsRevia() && StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia && (father == null || father.genes.Xenotype == DefDatabase<XenotypeDef>.GetNamed("Baseliner")))
                 __result = false;
         }
-        public static void TryGetInheritedXenotypePostfix(Pawn mother, Pawn father, ref XenotypeDef xenotype,ref bool __result)
+        public static void TryGetInheritedXenotypePostfix(Pawn mother, Pawn father, ref XenotypeDef xenotype, ref bool __result)
         {
             if (StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia && (mother?.IsRevia() ?? false))
             {
