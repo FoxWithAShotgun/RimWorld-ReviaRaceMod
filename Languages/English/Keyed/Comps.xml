@@ -34,6 +34,7 @@
   <ReviaDisableUncompleteDebuff_Claws>Disable debuff for claws</ReviaDisableUncompleteDebuff_Claws>
   <ReviaNoProjectLimitaions>No limitations for revia projects</ReviaNoProjectLimitaions>
   <ReviaNoCraftLimitaions>No limitations for revia crafts</ReviaNoCraftLimitaions>
+  <ReviaRaceSettingsNoHybrid>No hybrids with revia</ReviaRaceSettingsNoHybrid>
   <Linear>Linear</Linear>
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>

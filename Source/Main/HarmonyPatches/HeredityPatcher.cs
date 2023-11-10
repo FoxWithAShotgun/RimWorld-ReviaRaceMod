@@ -5,6 +5,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,8 @@ namespace ReviaRace.HarmonyPatches
                  postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(ShouldByHybridPostfix)));
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "TryGetInheritedXenotype"),
                  postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(TryGetInheritedXenotypePostfix)));
+            harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.GetInheritedGenes), parameters: new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool).MakeByRefType() }),
+                transpiler: new HarmonyMethod(typeof(HeredityPatcher), nameof(GetInheritedGenesTranspiler)));
 
         }
         public static IEnumerable<CodeInstruction> ApplyBirthOutcomeTranspiler(IEnumerable<CodeInstruction> instructions)
@@ -66,7 +69,7 @@ namespace ReviaRace.HarmonyPatches
         }
         public static void ShouldByHybridPostfix(Pawn mother, Pawn father, ref bool __result)
         {
-            if (__result && mother.IsRevia() && StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia && (father == null || father.genes.Xenotype == DefDatabase<XenotypeDef>.GetNamed("Baseliner")))
+            if (__result && mother.IsRevia() && StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia && (StaticModVariables.NoHybrid || father == null || father.genes.Xenotype == DefDatabase<XenotypeDef>.GetNamed("Baseliner")))
                 __result = false;
         }
         public static void TryGetInheritedXenotypePostfix(Pawn mother, Pawn father, ref XenotypeDef xenotype, ref bool __result)
@@ -76,6 +79,32 @@ namespace ReviaRace.HarmonyPatches
                 xenotype = Defs.XenotypeDef;
                 __result = true;
             }
+        }
+        public static IEnumerable<CodeInstruction> GetInheritedGenesTranspiler(IEnumerable<CodeInstruction> instructions)
+        {
+            FieldInfo field = AccessTools.Field("Verse.GeneDef:biostatArc");
+            List<CodeInstruction> _instructions = instructions.ToList();
+            for (int i = 0; i < _instructions.Count; i++)
+            {
+                var current = _instructions[i];
+                if (current.LoadsField(field))
+                {
+                    Label label = (Label)_instructions[i + 2].operand;
+                    _instructions.Insert(i + 3, new CodeInstruction(OpCodes.Ldarg_1));
+                    _instructions.Insert(i + 4, CodeInstruction.Call(typeof(HeredityPatcher), nameof(InheritFatherGenes)));
+                    _instructions.Insert(i + 5, new CodeInstruction(OpCodes.Brfalse_S, label));
+                    break;
+                }
+            }
+            return _instructions;
+        }
+        public static bool InheritFatherGenes(Pawn mother)
+        {
+            if(mother?.IsRevia() ?? false)
+            {
+                return !StaticModVariables.NoHybrid;
+            }
+            return true;
         }
     }
 }

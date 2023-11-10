@@ -51,6 +51,7 @@ namespace ReviaRace.PersistentData
             Entry.NoCraftLimitation = NoCraftLimitations;
             Entry.NoProjectLimitations = NoProjectLimitations;
             StaticModVariables.BornSettings = BornSettings;
+            StaticModVariables.NoHybrid = NoHybrid;
             Log.Message("Settings applied");
         }
 
@@ -136,7 +137,8 @@ namespace ReviaRace.PersistentData
 
         internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth, _NoProjectLimitations,_NoCraftLimitations;
         private BornSettingsEnum _BornSettings;
-
+        internal bool _noHybrid;
+        public bool NoHybrid { get => _noHybrid; set => _noHybrid = value; }
         public bool DisableUncompleteDebuff_Ears { get=> _DisableUncompleteDebuff_Ears; set=>_DisableUncompleteDebuff_Ears=value; }
         public bool DisableUncompleteDebuff_Claws { get=>_DisableUncompleteDebuff_Claws; set=>_DisableUncompleteDebuff_Claws=value; }
         public bool DisableUncompleteDebuff_Teeth { get=>_DisableUncompleteDebuff_Teeth; set=>_DisableUncompleteDebuff_Teeth=value; }
@@ -164,6 +166,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _NoCraftLimitations, GetLabel(nameof(NoCraftLimitations)), false);
             Scribe_Values.Look(ref _rejectionType, GetLabel(nameof(RejectionType)), RejectionType.Disease);
             Scribe_Values.Look(ref _BornSettings, GetLabel(nameof(BornSettings)), BornSettingsEnum.ForceBornRevia);
+            Scribe_Values.Look(ref _noHybrid, GetLabel(nameof(NoHybrid)), false);
             ApplySettings();
         }
 

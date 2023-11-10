@@ -91,7 +91,7 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            const int numRows = 19;
+            const int numRows = 20;
 
             var headerState = new GUIStyleState
             {
@@ -129,6 +129,7 @@ namespace ReviaRace
             DrawRejectionDropDown(sacrificeList.GetRect(lineHeight));
             DrawSacrificeDropDown(sacrificeList.GetRect(lineHeight));
             DrawBornOptionDropDown(sacrificeList.GetRect(lineHeight));
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsNoHybrid, ref Settings._noHybrid, Settings.BornSettings != BornSettingsEnum.ForceBornRevia);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
@@ -256,13 +257,13 @@ namespace ReviaRace
                 Translator.Translate(Settings.BornSettings.ToString()));
         }
 
-        private void DrawCheckBoxWithLabel(Rect elemRect, string taggedLabelID, ref bool setting)
+        private void DrawCheckBoxWithLabel(Rect elemRect, string taggedLabelID, ref bool setting, bool disabled = false)
         {
             var leftRect = elemRect.LeftPart(0.20f);
             var rightRect = elemRect.RightPart(0.80f);
             var x = (float)elemRect.x;
             var y = (float)(elemRect.y + 0.5 * (elemRect.height - 24));
-            Widgets.Checkbox(x, y, ref setting);
+            Widgets.Checkbox(x, y, ref setting, disabled: disabled);
             Widgets.Label(rightRect, Translator.Translate(taggedLabelID));
         }
 
