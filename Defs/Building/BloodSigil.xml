@@ -38,7 +38,7 @@
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>false</useHitPoints>
     <size>(3,3)</size>
-    <designationCategory>ReviaCategory</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <rotatable>true</rotatable>
     <passability>Standable</passability>
     <hasInteractionCell>True</hasInteractionCell>

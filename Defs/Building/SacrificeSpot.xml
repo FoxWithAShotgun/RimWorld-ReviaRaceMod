@@ -18,7 +18,7 @@
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <useHitPoints>false</useHitPoints>
     <size>(1,1)</size>
-    <designationCategory>ReviaCategory</designationCategory>
+    <designationCategory>Misc</designationCategory>
     <passability>Standable</passability>
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
