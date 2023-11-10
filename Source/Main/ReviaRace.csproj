@@ -75,7 +75,6 @@
     <Compile Include="Comps\MapSoulReaperComp.cs" />
     <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
-    <Compile Include="Comps\SoulReaper.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="Enums\BornSettingsEnum.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />

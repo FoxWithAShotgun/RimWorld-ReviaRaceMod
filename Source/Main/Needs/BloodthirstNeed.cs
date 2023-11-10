@@ -61,7 +61,8 @@ namespace ReviaRace.Needs
             return (DecayPerDay / 60000.0f) * PawnAffectedMult * PawnRedHazeMult;
         }
         private int curTick = 0;
-        
+        private int _lastAttackedTick = -1;
+
         public override void NeedInterval()
         {
             if (!Enabled || pawn.Map == null)
@@ -85,6 +86,23 @@ namespace ReviaRace.Needs
                 {
                     // 150 ticks per NeedInterval call. 
                     CurLevel -= 150 * TickMultTimer * GetFallPerTick();
+                }
+                if (pawn.LastAttackTargetTick != _lastAttackedTick &&
+                pawn.LastAttackedTarget.Pawn is Pawn victim)
+                {
+                    _lastAttackedTick = pawn.LastAttackTargetTick;
+
+                    if (victim.Dead)
+                    {
+                        // Skulls for the skull throne!
+                        CurLevel += victim.BodySize * 0.80f;
+                    }
+                    else
+                    {
+                        // Blood for the blood god! 
+                        var amount = 0.001f * victim.health.hediffSet.BleedRateTotal * victim.BodySize;
+                        CurLevel += amount;
+                    }
                 }
             }
         }
