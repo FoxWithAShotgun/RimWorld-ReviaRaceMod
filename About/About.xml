@@ -23,6 +23,7 @@
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>telardo.BetterGeneGraphicsFramework</li>
+    <li>Nals.FacialAnimation</li>
   </loadAfter>
   <url>https://github.com/MaxDorob/RimWorld-ReviaRaceMod</url>
   <description>
