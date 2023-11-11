@@ -178,23 +178,31 @@ namespace ReviaRace.HarmonyPatches
 
             if (project?.defName?.StartsWith("Revia") ?? false) __result = !pawn.IsRevia();
         }
-
+        static bool doLogging = true;
         public static IEnumerable<CodeInstruction> Gene_Randomizer_Transpiler(IEnumerable<CodeInstruction> instructions)
         {
             MethodInfo addGeneMI = typeof(Pawn_GeneTracker).GetMethod(nameof(Pawn_GeneTracker.AddGene), new Type[] { typeof(GeneDef), typeof(bool) });
             MethodInfo checkMI = patchType.GetMethod(nameof(GeneCanBeAdded));
+            if (doLogging) Log.Message($"[AG-Patch] {addGeneMI == null}");
 
             foreach (var instruction in instructions)
             {
                 var potentialGeneAdd = instructions.SkipWhile(x => x != instruction).Take(9);
                 if (potentialGeneAdd.Last().Calls(addGeneMI))
                 {
-                    var label = instructions.SkipWhile(x => x != instruction).Select(x => x.labels).FirstOrDefault(x => x != null && x.Count > 0)[0]; ;
+                    var label = instructions.SkipWhile(x => x != instruction).Select(x => x.labels).FirstOrDefault(x => x != null && x.Count > 0)[0];
                     yield return new CodeInstruction(OpCodes.Ldarg_0);
-                    yield return CodeInstruction.LoadField(typeof(Gene), nameof(Gene.pawn));
+                    yield return CodeInstruction.LoadField(AccessTools.TypeByName("Verse.Gene"), "pawn");
                     yield return new CodeInstruction(OpCodes.Ldloc_S, 7);
-                    yield return new CodeInstruction(OpCodes.Call, checkMI);
+                    yield return CodeInstruction.Call(patchType, nameof(GeneCanBeAdded));
                     yield return new CodeInstruction(OpCodes.Brfalse, label);
+                    if (doLogging)
+                    {
+                        doLogging = false;
+                        Log.Warning($"[AG-Patch] Inserted GeneCanBeAdded method.\n {string.Join("\n", Gene_Randomizer_Transpiler(instructions).Select(x=>$"{x.opcode} - {x.operand}"))}");
+                        doLogging = true;
+                    }
+
                 }
                 yield return instruction;
             }
