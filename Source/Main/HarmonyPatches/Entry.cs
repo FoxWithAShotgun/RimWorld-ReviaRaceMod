@@ -181,7 +181,7 @@ namespace ReviaRace.HarmonyPatches
         static bool doLogging = true;
         public static IEnumerable<CodeInstruction> Gene_Randomizer_Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            MethodInfo addGeneMI = typeof(Pawn_GeneTracker).GetMethod(nameof(Pawn_GeneTracker.AddGene), new Type[] { typeof(GeneDef), typeof(bool) });
+            MethodInfo addGeneMI = AccessTools.Method("RimWorld.Pawn_GeneTracker:AddGene", new Type[] { typeof(GeneDef), typeof(bool) });
             MethodInfo checkMI = patchType.GetMethod(nameof(GeneCanBeAdded));
             if (doLogging) Log.Message($"[AG-Patch] {addGeneMI == null}");
 
