@@ -72,8 +72,6 @@
     <Compile Include="Comps\InvokeLesserBlessing.cs" />
     <Compile Include="Comps\InvokeSanctify.cs" />
     <Compile Include="Comps\CompLifeLeech.cs" />
-    <Compile Include="Comps\MapSoulReaperComp.cs" />
-    <Compile Include="Comps\ReviaRaceOnSpawn.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="Enums\BornSettingsEnum.cs" />
@@ -85,10 +83,8 @@
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="HarmonyPatches\HeredityPatcher.cs" />
-    <Compile Include="HarmonyPatches\MapEventPatcher.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
-    <Compile Include="Helpers\ReviaComp.cs" />
     <Compile Include="Helpers\SoulReaperWorker.cs" />
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
@@ -110,7 +106,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.3580</Version>
+      <Version>1.4.3901</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>

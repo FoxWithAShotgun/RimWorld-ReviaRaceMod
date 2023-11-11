@@ -24,7 +24,7 @@ namespace ReviaRace.HarmonyPatches
         internal static bool FAPatchActive { get; private set; } = false;
         internal static bool NoProjectLimitations { get; set; }
         internal static bool NoCraftLimitation { get; set; }
-        internal static BornSettingsEnum BornSettings {get;set;}
+        internal static BornSettingsEnum BornSettings { get; set; }
         private static readonly Type patchType = typeof(Entry);
         static Entry()
         {
@@ -55,13 +55,13 @@ namespace ReviaRace.HarmonyPatches
                 {
                     if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "sarg.alphagenes"))
                     {
-                        harmony.Patch(AccessTools.Method(AccessTools.TypeByName("Gene_Randomizer"), "PostAdd"),
+                        harmony.Patch(AccessTools.Method("AlphaGenes.Gene_Randomizer:PostAdd"),
                              transpiler: new HarmonyMethod(patchType, nameof(Gene_Randomizer_Transpiler)));
                     }
 
                 }))();
             }
-            catch (TypeLoadException) { }
+            catch (TypeLoadException ex) { }
             try
             {
                 ((Action)(() =>
@@ -213,7 +213,7 @@ namespace ReviaRace.HarmonyPatches
                     }
                     num++;
                 }
-                if(xenotype==Defs.XenotypeDef)
+                if (xenotype == Defs.XenotypeDef)
                 {
                     Log.Error("Tried to change revia xenotype to other, but failed");
                 }
@@ -225,8 +225,8 @@ namespace ReviaRace.HarmonyPatches
             if (!typeof(ReviaBaseGene).IsAssignableFrom(gene.geneClass)) return true; // We dont care about not revian genes
             return false;
         }
-         
-        
+
+
         //public static IEnumerable<CodeInstruction> ApplyBirthOutcomeTranspiler(IEnumerable<CodeInstruction> instructions)
         //{
 
@@ -242,8 +242,8 @@ namespace ReviaRace.HarmonyPatches
         //        //}
         //    }
         //}
-       
-        
+
+
 
 
     }
