@@ -100,7 +100,7 @@ namespace ReviaRace.HarmonyPatches
         }
         public static bool InheritFatherGenes(Pawn mother)
         {
-            if(mother?.IsRevia() ?? false)
+            if((mother?.IsRevia() ?? false) && StaticModVariables.BornSettings == BornSettingsEnum.ForceBornRevia)
             {
                 return !StaticModVariables.NoHybrid;
             }
