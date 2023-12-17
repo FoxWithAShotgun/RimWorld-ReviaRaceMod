@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
     <defName>ReviaClaws</defName>
     <label>claws</label>
     <hediffClass>Hediff_Implant</hediffClass>
@@ -32,7 +32,7 @@
       <betterThanNatural>False</betterThanNatural>
     </addedPartProps>
   </HediffDef>
-  <HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
     <defName>ReviaTeeth</defName>
     <label>teeth</label>
     <description>Revia attack</description>
