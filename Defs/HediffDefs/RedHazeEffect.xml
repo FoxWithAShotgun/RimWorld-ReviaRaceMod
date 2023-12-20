@@ -8,6 +8,7 @@
     <defaultLabelColor>(0.9,0.9,0.1)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
+    <allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_HealPermanentWounds"/>
