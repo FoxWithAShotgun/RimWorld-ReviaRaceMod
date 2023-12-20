@@ -116,22 +116,7 @@ namespace ReviaRace.JobDrivers
                     }
 
                     // Apply thoughts to pawns.
-                    foreach (var mapPawn in Map.mapPawns.FreeColonistsAndPrisoners)
-                    {
-                        if (mapPawn.IsPrisoner)
-                        {
-                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedFear);
-                        }
-                        else if (mapPawn.IsColonist && (mapPawn.IsRevia() || mapPawn.IsSkarnite()))
-                        {
-                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
-                        }
-                        else if (mapPawn.IsColonist &&
-                                 !(mapPawn.IsCannibal() || mapPawn.IsPsychopath() || mapPawn.IsBloodlust()))
-                        {
-                            mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedNegative);
-                        }
-                    }
+                    Utils.PostSacrifide(Map);
 
                     // Spawn the product, or handle one of the other effects.
                     // Find a good spot to spawn the product.
