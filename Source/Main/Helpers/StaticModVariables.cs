@@ -12,5 +12,6 @@ namespace ReviaRace.Helpers
         public static BornSettingsEnum BornSettings { get; internal set; }
         public static int BloodstonesCountForConversation { get; internal set; } = 10;
         public static bool NoHybrid { get; internal set; }
+        public static bool BirthOutcome { get; internal set; }
     }
 }

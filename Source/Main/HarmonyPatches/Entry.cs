@@ -130,17 +130,13 @@ namespace ReviaRace.HarmonyPatches
             }
         }
 
-
         public static void PreGeneratePawn(ref PawnGenerationRequest request)
         {
-
-
-
+            if (StaticModVariables.BirthOutcome) return;
             if ((request.ForcedXenotype?.Equals(Defs.XenotypeDef) ?? false) || (request.Faction?.def?.defName?.StartsWith("Revia") ?? false))
             {
                 request.FixedGender = Gender.Female;
                 request.ForcedXenotype = Defs.XenotypeDef;
-                //Log.Message(nameof(PreGeneratePawn) + " called");
             }
         }
 
@@ -233,26 +229,6 @@ namespace ReviaRace.HarmonyPatches
             if (!typeof(ReviaBaseGene).IsAssignableFrom(gene.geneClass)) return true; // We dont care about not revian genes
             return false;
         }
-
-
-        //public static IEnumerable<CodeInstruction> ApplyBirthOutcomeTranspiler(IEnumerable<CodeInstruction> instructions)
-        //{
-
-        //    foreach (var ci in instructions)
-        //    {
-        //        yield return ci;
-        //        //if (ci.opcode == OpCodes.Initobj && ci.operand.ToString().Contains("Gender"))
-        //        //{
-        //        //    yield return new CodeInstruction(OpCodes.Ldarg_S, "geneticMother");
-        //        //    yield return new CodeInstruction(OpCodes.Ldloc_S, 15);
-        //        //    yield return CodeInstruction.Call(typeof(Entry), nameof(SelectGender));
-        //        //    yield return new CodeInstruction(OpCodes.Stloc_S, 15);
-        //        //}
-        //    }
-        //}
-
-
-
 
     }
 }

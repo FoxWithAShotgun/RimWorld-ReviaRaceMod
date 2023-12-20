@@ -20,7 +20,10 @@ namespace ReviaRace.HarmonyPatches
         static HeredityPatcher()
         {
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.ApplyBirthOutcome)),
-               transpiler: new HarmonyMethod(typeof(HeredityPatcher), nameof(ApplyBirthOutcomeTranspiler)));
+                transpiler: new HarmonyMethod(typeof(HeredityPatcher), nameof(ApplyBirthOutcomeTranspiler)),
+                prefix: new HarmonyMethod(typeof(HeredityPatcher), nameof(ApplyBirthOutcomePrefix)),
+                postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(ApplyBirthOutcomePostfix))
+                );
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), nameof(PregnancyUtility.GetInheritedGeneSet), parameters: new Type[] { typeof(Pawn), typeof(Pawn), typeof(bool).MakeByRefType() }),
                  postfix: new HarmonyMethod(typeof(HeredityPatcher), nameof(GetInheritedGeneSetPostfix)));
             harmony.Patch(AccessTools.Method(typeof(PregnancyUtility), "ShouldByHybrid"),
@@ -45,6 +48,14 @@ namespace ReviaRace.HarmonyPatches
                     yield return new CodeInstruction(OpCodes.Stloc_S, 15);
                 }
             }
+        }
+        public static void ApplyBirthOutcomePrefix()
+        {
+            StaticModVariables.BirthOutcome = true;
+        }
+        public static void ApplyBirthOutcomePostfix()
+        {
+            StaticModVariables.BirthOutcome = false;
         }
         public static Gender? SelectGender(Pawn mother, Gender? gender)
         {
