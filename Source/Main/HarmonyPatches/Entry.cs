@@ -112,7 +112,7 @@ namespace ReviaRace.HarmonyPatches
             return originalRequest;
         }
 
-        public static void PreGiveAppropriateBioAndNameTo(Pawn pawn, string requiredLastName, ref FactionDef factionType, bool forceNoBackstory, bool newborn, XenotypeDef xenotype)
+        public static void PreGiveAppropriateBioAndNameTo(Pawn pawn, ref FactionDef factionType, XenotypeDef xenotype)
         {
             if (factionType.defName.StartsWith("Revia") && pawn.Faction == null && xenotype != Defs.XenotypeDef)
             {
