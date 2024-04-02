@@ -27,7 +27,8 @@
     </graphicData>-->
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
     <renderNodeProperties>
-      <li>
+      <li Class="ReviaRace.PawnRendererNodeProperties_TextureByHediff">
+        <nodeClass>ReviaRace.PawnRenderNode_TextureByHediff</nodeClass>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
         <texPath>Things/Tails/Tail9</texPath>
         <colorType>Hair</colorType>
@@ -53,6 +54,17 @@
             <offset>(0.5, 0, -0.15)</offset>
           </dataWest>
         </drawData>
+        <hediffTex>
+          <ReviaRaceSoulreapTier1>Things/Tails/Tail1</ReviaRaceSoulreapTier1>
+          <ReviaRaceSoulreapTier2>Things/Tails/Tail2</ReviaRaceSoulreapTier2>
+          <ReviaRaceSoulreapTier3>Things/Tails/Tail3</ReviaRaceSoulreapTier3>
+          <ReviaRaceSoulreapTier4>Things/Tails/Tail4</ReviaRaceSoulreapTier4>
+          <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
+          <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
+          <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
+          <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
+          <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
+        </hediffTex>
       </li>
     </renderNodeProperties>
     <forcedTraits>
