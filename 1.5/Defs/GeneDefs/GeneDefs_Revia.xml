@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>ReviaTail</defName>
+    <label>Revian tail</label>
+    <description>Revian tail.People say that Skarne blesses their carriers.</description>
+    <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
+    <iconPath>UI/icons/ReviaTail_icon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1000</displayOrderInCategory>
+    <statOffsets>
+      <MeleeDodgeChance>0.12</MeleeDodgeChance>
+      <MoveSpeed>0.3</MoveSpeed>
+      <LifespanFactor>1.7</LifespanFactor>
+    </statOffsets>
+    <biostatMet>-2</biostatMet>
+    <biostatCpx>2</biostatCpx>
+    <minAgeActive>3</minAgeActive>
+    <!--<graphicData>
+      <graphicPath>Things/Tails/Tail1</graphicPath>
+      <colorType>Hair</colorType>
+      <drawLoc>Tailbone</drawLoc>
+      <drawScale>1.70</drawScale>
+      <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
+      <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
+      <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
+    </graphicData>-->
+    <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Tails/Tail9</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.15)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(-0, 0, -0.15)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.5, 0, -0.15)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.5, 0, -0.15)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <forcedTraits>
+      <li>
+        <def>Bloodlust</def>
+      </li>
+    </forcedTraits>
+  </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>ReviaClaws</defName>
+    <label>Revian claws</label>
+    <iconPath>UI/icons/ReviaClaw_icon</iconPath>
+    <description>Sharp revian claws. Makes enemy bleeding</description>
+    <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>ReviaEars</defName>
+    <label>Revian ears</label>
+    <iconPath>UI/icons/ReviaEar_icon</iconPath>
+    <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
+    <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
+    <!--<graphicData>
+    <drawScale>1.00</drawScale>
+    <drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
+
+      <graphicPath>Things/Ears/Adult/EarMerged/EarMerged</graphicPath>
+      <colorType>Hair</colorType>
+      <useSkinShader>False</useSkinShader>
+    </graphicData>-->
+    <capMods>
+      <li>
+        <capacity>Hearing</capacity>
+        <postFactor>1.15</postFactor>
+      </li>
+    </capMods>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Ears/Adult/EarMerged/EarMerged</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+   <!--<modExtensions>
+      <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
+        <ages>
+          <li>-1</li>
+
+        </ages>
+        <bodyPartExpressions>
+          <li>Left ear|Right ear</li>
+          <li>!Left ear|Right ear</li>
+          <li>Left ear|!Right ear</li>
+          <li>!Left ear|!Right ear</li>
+        </bodyPartExpressions>
+        <graphicPaths>
+
+          --><!--adult--><!--
+          <li>Things/Ears/Adult/EarMerged/EarMerged</li>
+          <li>Things/Ears/Adult/EarRight/EarRight</li>
+          <li>Things/Ears/Adult/EarLeft/EarLeft</li>
+          <li>Things/Ears/EarNone/EarNone</li>
+        </graphicPaths>
+      </li>
+
+      <li Class="BetterGeneGraphicsFramework.ShaderSupport">
+        <shaderType>CutoutComplex</shaderType>
+        <colorType>Hair</colorType>
+      </li>
+    </modExtensions>-->
+  </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>ReviaTeeth</defName>
+    <label>Revian teeth</label>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <iconPath>UI/icons/ReviaTooth_icon</iconPath>
+    <description>Sharp teeth that cause the victim to bleed.</description>
+    <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
+  </GeneDef>
+</Defs>

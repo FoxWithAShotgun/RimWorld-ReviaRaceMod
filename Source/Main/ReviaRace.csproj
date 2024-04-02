@@ -57,6 +57,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 1.4|AnyCPU'">
     <OutputPath>..\..\1.4\Assemblies\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 1.5|AnyCPU'">
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
