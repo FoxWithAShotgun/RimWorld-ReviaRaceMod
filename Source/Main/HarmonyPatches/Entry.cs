@@ -170,7 +170,7 @@ namespace ReviaRace.HarmonyPatches
         {
             if (NoProjectLimitations) return;
             if (__result) return;
-            ResearchProjectDef project = Find.ResearchManager?.currentProj;
+            ResearchProjectDef project = Find.ResearchManager?.GetProject();
 
             if (project?.defName?.StartsWith("Revia") ?? false) __result = !pawn.IsRevia();
         }
