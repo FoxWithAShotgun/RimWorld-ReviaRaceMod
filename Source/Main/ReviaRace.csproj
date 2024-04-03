@@ -100,9 +100,8 @@
     <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Render\HediffTexture.cs" />
-    <Compile Include="Render\PawnRendererNodeProperties_TextureByHediff.cs" />
-    <Compile Include="Render\PawnRenderNode_TextureByHediff.cs" />
+    <Compile Include="Render\PawnRenderNodeProperties_BodyPart.cs" />
+    <Compile Include="Render\PawnRenderNode_HeadBodyPart.cs" />
     <Compile Include="ReviaRaceMod.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />
