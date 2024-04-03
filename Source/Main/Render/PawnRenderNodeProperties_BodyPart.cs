@@ -7,8 +7,8 @@ using Verse;
 
 namespace ReviaRace
 {
-    public class PawnRendererNodeProperties_TextureByHediff : PawnRenderNodeProperties
+    public class PawnRenderNodeProperties_BodyPart : PawnRenderNodeProperties
     {
-        public List<HediffTexture> hediffTex = [];
+        public string bodyPartLabel;
     }
 }
