@@ -26,49 +26,7 @@
       <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
     </graphicData>-->
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
-    <renderNodeProperties>
-      <li Class="ReviaRace.PawnRendererNodeProperties_TextureByHediff">
-        <nodeClass>ReviaRace.PawnRenderNode_TextureByHediff</nodeClass>
-        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-        <texPath>Things/Tails/Tail9</texPath>
-        <colorType>Hair</colorType>
-        <overrideMeshSize>(1, 1)</overrideMeshSize>
-        <parentTagDef>Body</parentTagDef>
-        <rotDrawMode>Fresh, Rotting</rotDrawMode>
-        <shaderTypeDef>CutoutComplex</shaderTypeDef>
-        <drawData>
-          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-          <scale>1.70</scale>
-          <defaultData>
-            <layer>-2</layer>
-          </defaultData>
-          <dataNorth>
-            <offset>(-0.09, 0.03, -0.57)</offset>
-            <layer>90</layer>
-          </dataNorth>
-          <dataSouth>
-            <offset>(-0.05, 0, -0.12)</offset>
-          </dataSouth>
-          <dataEast>
-            <offset>(-0.35, 0, -0.57)</offset>
-          </dataEast>
-          <dataWest>
-            <offset>(0.35, 0, -0.45)</offset>
-          </dataWest>
-        </drawData>
-        <hediffTex>
-          <ReviaRaceSoulreapTier1>Things/Tails/Tail1</ReviaRaceSoulreapTier1>
-          <ReviaRaceSoulreapTier2>Things/Tails/Tail2</ReviaRaceSoulreapTier2>
-          <ReviaRaceSoulreapTier3>Things/Tails/Tail3</ReviaRaceSoulreapTier3>
-          <ReviaRaceSoulreapTier4>Things/Tails/Tail4</ReviaRaceSoulreapTier4>
-          <ReviaRaceSoulreapTier5>Things/Tails/Tail5</ReviaRaceSoulreapTier5>
-          <ReviaRaceSoulreapTier6>Things/Tails/Tail6</ReviaRaceSoulreapTier6>
-          <ReviaRaceSoulreapTier7>Things/Tails/Tail7</ReviaRaceSoulreapTier7>
-          <ReviaRaceSoulreapTier8>Things/Tails/Tail8</ReviaRaceSoulreapTier8>
-          <ReviaRaceSoulreapTier9>Things/Tails/Tail9</ReviaRaceSoulreapTier9>
-        </hediffTex>
-      </li>
-    </renderNodeProperties>
+
     <forcedTraits>
       <li>
         <def>Bloodlust</def>
