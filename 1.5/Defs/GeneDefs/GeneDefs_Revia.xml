@@ -113,16 +113,20 @@
         <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
         <texPath>Things/Ears/Adult/EarMerged/EarMerged</texPath>
-        <colorType>Skin</colorType>
+        <colorType>Hair</colorType>
         <parentTagDef>Head</parentTagDef>
         <useSkinShader>true</useSkinShader>
         <useRottenColor>true</useRottenColor>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <shaderTypeDef>CutoutComplex</shaderTypeDef>
         <drawData>
+          <scale>0.8</scale>
           <defaultData>
             <layer>70</layer>
           </defaultData>
+          <dataNorth>
+            <layer>62</layer>
+          </dataNorth>
         </drawData>
       </li>
     </renderNodeProperties>
