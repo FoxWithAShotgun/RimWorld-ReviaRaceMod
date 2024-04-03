@@ -33,8 +33,8 @@
       </li>
     </forcedTraits>
   </GeneDef>
-  
-  
+
+
   <GeneDef>
     <defName>ReviaClaws</defName>
     <label>Revian claws</label>
@@ -67,10 +67,10 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
     <renderNodeProperties>
-      <li>
-        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+      <li Class="ReviaRace.PawnRenderNodeProperties_BodyPart">
+        <nodeClass>ReviaRace.PawnRenderNode_HeadBodyPart</nodeClass>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-        <texPath>Things/Ears/Adult/EarMerged/EarMerged</texPath>
+        <texPath>Things/Ears/Adult/EarRight/EarRight</texPath>
         <colorType>Hair</colorType>
         <parentTagDef>Head</parentTagDef>
         <useSkinShader>true</useSkinShader>
@@ -78,17 +78,39 @@
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <shaderTypeDef>CutoutComplex</shaderTypeDef>
         <drawData>
-          <scale>0.8</scale>
+          <scale>0.87</scale>
           <defaultData>
-            <layer>70</layer>
+            <layer>92</layer>
           </defaultData>
           <dataNorth>
             <layer>62</layer>
           </dataNorth>
         </drawData>
+        <bodyPartLabel>right ear</bodyPartLabel>
+      </li>
+      <li Class="ReviaRace.PawnRenderNodeProperties_BodyPart">
+        <nodeClass>ReviaRace.PawnRenderNode_HeadBodyPart</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Ears/Adult/EarLeft/EarLeft</texPath>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <drawData>
+          <scale>0.87</scale>
+          <defaultData>
+            <layer>92</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>62</layer>
+          </dataNorth>
+        </drawData>
+        <bodyPartLabel>left ear</bodyPartLabel>
       </li>
     </renderNodeProperties>
-   <!--<modExtensions>
+    <!--<modExtensions>
       <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
         <ages>
           <li>-1</li>
@@ -102,7 +124,9 @@
         </bodyPartExpressions>
         <graphicPaths>
 
-          --><!--adult--><!--
+          -->
+    <!--adult-->
+    <!--
           <li>Things/Ears/Adult/EarMerged/EarMerged</li>
           <li>Things/Ears/Adult/EarRight/EarRight</li>
           <li>Things/Ears/Adult/EarLeft/EarLeft</li>
@@ -116,8 +140,8 @@
       </li>
     </modExtensions>-->
   </GeneDef>
-  
-  
+
+
   <GeneDef>
     <defName>ReviaTeeth</defName>
     <label>Revian teeth</label>
