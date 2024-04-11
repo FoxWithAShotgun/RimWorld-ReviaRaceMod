@@ -124,13 +124,8 @@ namespace ReviaRace.JobDrivers
                         Prisoner.Position,
                         Map,
                         Defs.Bloodstone,
-                        Rot4.Random, 6, pos =>
-                        {
-                            return
-                            (pos.x < Prisoner.Position.x - 1 || pos.x > Prisoner.Position.x + 1) &&
-                            // Fuck you Tynan. Learn your coordinates!
-                            (pos.z < Prisoner.Position.z - 1 || pos.z > Prisoner.Position.z + 1);
-                        });
+                        Rot4.Random, 6
+                        );
 
                     if (Map.GameConditionManager.ConditionIsActive(Defs.Eclipse))
                     {
@@ -183,13 +178,7 @@ namespace ReviaRace.JobDrivers
                         Prisoner.Position,
                         Map,
                         Prisoner.Corpse.def,
-                        Rot4.Random, 6, pos =>
-                        {
-                            return
-                            (pos.x < Prisoner.Position.x - 1 || pos.x > Prisoner.Position.x + 1) &&
-                            // Fuck you Tynan. Learn your coordinates!
-                            (pos.z < Prisoner.Position.z - 1 || pos.z > Prisoner.Position.z + 1);
-                        });
+                        Rot4.Random, 6);
                     Prisoner.Corpse.Position = movePos;
                 }
             };
