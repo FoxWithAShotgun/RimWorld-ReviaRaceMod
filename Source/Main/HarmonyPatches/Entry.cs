@@ -133,6 +133,7 @@ namespace ReviaRace.HarmonyPatches
         public static void PreGeneratePawn(ref PawnGenerationRequest request)
         {
             if (StaticModVariables.BirthOutcome) return;
+            if (!request.KindDef.RaceProps.Humanlike) return;
             if ((request.ForcedXenotype?.Equals(Defs.XenotypeDef) ?? false) || (request.Faction?.def?.defName?.StartsWith("Revia") ?? false))
             {
                 request.FixedGender = Gender.Female;
