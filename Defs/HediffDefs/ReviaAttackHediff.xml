@@ -5,6 +5,7 @@
     <label>claws</label>
     <hediffClass>Hediff_Implant</hediffClass>
     <description>Revia attack</description>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <becomeVisible>False</becomeVisible>
@@ -37,6 +38,7 @@
     <label>teeth</label>
     <description>Revia attack</description>
     <hediffClass>Hediff_Implant</hediffClass>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <becomeVisible>False</becomeVisible>

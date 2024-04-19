@@ -7,6 +7,7 @@
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <capMods>
