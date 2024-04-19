@@ -16,17 +16,7 @@
     <biostatMet>-2</biostatMet>
     <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
-    <!--<graphicData>
-      <graphicPath>Things/Tails/Tail1</graphicPath>
-      <colorType>Hair</colorType>
-      <drawLoc>Tailbone</drawLoc>
-      <drawScale>1.70</drawScale>
-      <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
-      <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-      <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-    </graphicData>-->
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
-
     <forcedTraits>
       <li>
         <def>Bloodlust</def>
@@ -50,14 +40,6 @@
     <iconPath>UI/icons/ReviaEar_icon</iconPath>
     <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
-    <!--<graphicData>
-    <drawScale>1.00</drawScale>
-    <drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
-
-      <graphicPath>Things/Ears/Adult/EarMerged/EarMerged</graphicPath>
-      <colorType>Hair</colorType>
-      <useSkinShader>False</useSkinShader>
-    </graphicData>-->
     <capMods>
       <li>
         <capacity>Hearing</capacity>
@@ -83,7 +65,7 @@
             <layer>92</layer>
           </defaultData>
           <dataNorth>
-            <layer>62</layer>
+            <layer>61</layer>
           </dataNorth>
         </drawData>
         <bodyPartLabel>right ear</bodyPartLabel>
@@ -104,41 +86,12 @@
             <layer>92</layer>
           </defaultData>
           <dataNorth>
-            <layer>62</layer>
+            <layer>61</layer>
           </dataNorth>
         </drawData>
         <bodyPartLabel>left ear</bodyPartLabel>
       </li>
     </renderNodeProperties>
-    <!--<modExtensions>
-      <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
-        <ages>
-          <li>-1</li>
-
-        </ages>
-        <bodyPartExpressions>
-          <li>Left ear|Right ear</li>
-          <li>!Left ear|Right ear</li>
-          <li>Left ear|!Right ear</li>
-          <li>!Left ear|!Right ear</li>
-        </bodyPartExpressions>
-        <graphicPaths>
-
-          -->
-    <!--adult-->
-    <!--
-          <li>Things/Ears/Adult/EarMerged/EarMerged</li>
-          <li>Things/Ears/Adult/EarRight/EarRight</li>
-          <li>Things/Ears/Adult/EarLeft/EarLeft</li>
-          <li>Things/Ears/EarNone/EarNone</li>
-        </graphicPaths>
-      </li>
-
-      <li Class="BetterGeneGraphicsFramework.ShaderSupport">
-        <shaderType>CutoutComplex</shaderType>
-        <colorType>Hair</colorType>
-      </li>
-    </modExtensions>-->
   </GeneDef>
 
 
