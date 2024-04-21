@@ -21,8 +21,8 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>36</power>
-        <cooldownTime>2.50</cooldownTime>
+        <power>40</power>
+        <cooldownTime>2.25</cooldownTime>
         <armorPenetration>0.26</armorPenetration>
       </li>
     </tools>

@@ -21,18 +21,18 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>22</power>
-        <cooldownTime>2.00</cooldownTime>
-        <armorPenetration>0.22</armorPenetration>
+        <power>24</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
       </li>
       <li>
         <label>edge</label>
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>22</power>
-        <cooldownTime>2.00</cooldownTime>
-        <armorPenetration>0.22</armorPenetration>
+        <power>29</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
       </li>
     </tools>
   </PersonaBondForge.ThingDef_Weapon>
