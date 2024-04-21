@@ -26,6 +26,7 @@
         <statOffsets>
           <MarketValue>400</MarketValue>
         </statOffsets>
+        <hungerRateFactorOffset>0.15</hungerRateFactorOffset>
       </li>
     </stages>
   </HediffDef>

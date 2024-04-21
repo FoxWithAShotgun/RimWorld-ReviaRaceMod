@@ -26,6 +26,7 @@
         <statOffsets>
           <MarketValue>50</MarketValue>
         </statOffsets>
+        <hungerRateFactorOffset>0.05</hungerRateFactorOffset>
       </li>
     </stages>
     <renderNodeProperties>

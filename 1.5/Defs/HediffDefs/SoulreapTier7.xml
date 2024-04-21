@@ -27,6 +27,7 @@
           <PainShockThreshold>0.20</PainShockThreshold>
           <MarketValue>800</MarketValue>
         </statOffsets>
+        <hungerRateFactorOffset>0.20</hungerRateFactorOffset>
       </li>
     </stages>
     <renderNodeProperties>
