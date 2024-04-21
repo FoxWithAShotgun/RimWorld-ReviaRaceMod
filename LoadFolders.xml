@@ -4,10 +4,12 @@
     <li>/</li>
 		<li>1.4</li>
 		<li IfModActive="Nals.FacialAnimation">FA_Compat</li>
+    <li IfModActive="StatistNo1.personabond">PersonBondForge</li>
 	</v1.4>
   <v1.5>
     <li>/</li>
     <li>1.5</li>
     <li IfModActive="Nals.FacialAnimation">FA_Compat</li>
+    <li IfModActive="StatistNo1.personabond">PersonBondForge</li>
   </v1.5>
 </loadFolders>
