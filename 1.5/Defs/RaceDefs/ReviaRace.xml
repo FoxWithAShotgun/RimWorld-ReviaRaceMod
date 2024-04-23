@@ -10,13 +10,14 @@
         <forcedRaceTraitEntries>
           <li>
             <defName>Bloodlust</defName>
+            <chance>100</chance>
           </li>
           <li>
-            <defName degree="1">Beauty</defName>
+            <defName Degree="1">Beauty</defName>
             <chance>40</chance>
           </li>
           <li>
-            <defName degree="2">Beauty</defName>
+            <defName Degree="2">Beauty</defName>
             <chance>30</chance>
           </li>
         </forcedRaceTraitEntries>
