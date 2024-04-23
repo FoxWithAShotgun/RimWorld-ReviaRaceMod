@@ -86,9 +86,9 @@ namespace ReviaRace.Comps
                     pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
                     pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
 
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Tough))
+                    if (!pawn.story.traits.HasTrait(TraitDef.Named("Tough")))
                     {
-                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDef.Named("Tough")));
                     }
                 }
                 else

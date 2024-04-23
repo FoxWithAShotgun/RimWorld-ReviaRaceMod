@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>ReviaRaceInitiate</defName>
+    <label>Revia Initiate</label>
+    <defaultFactionType>ReviaTemplarFaction</defaultFactionType>
+    <race>ReviaRaceAlien</race>
+    <combatPower>55</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <apparelTags>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+    <apparelMoney>800~1200</apparelMoney>
+    <weaponTags>
+      <li>ReviaMeleeAdvanced</li>
+      <li>Gun</li>
+    </weaponTags>
+    <initialWillRange>0.6~0.8</initialWillRange>
+    <initialResistanceRange>12~15</initialResistanceRange>
+    <weaponMoney>1500~2500</weaponMoney>
+    <isFighter>true</isFighter>
+    <invNutrition>2</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>20</choiceChance>
+          <thingDef>MedicineIndustrial</thingDef>
+          <countRange>1~1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+  </PawnKindDef>
+</Defs>
