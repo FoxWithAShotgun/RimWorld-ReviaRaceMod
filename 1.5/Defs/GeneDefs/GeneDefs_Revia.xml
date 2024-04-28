@@ -3,7 +3,7 @@
   <GeneDef ParentName="GeneTailBase">
     <defName>ReviaTail</defName>
     <label>Revian tail</label>
-    <description>Revian tail.People say that Skarne blesses their carriers.</description>
+    <description>A Foxlike tail with a white tip, the sign of the Blood goddess. The Skarne may bless those who kill in her name with power.</description>
     <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
     <iconPath>UI/icons/ReviaTail_icon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
@@ -29,7 +29,7 @@
     <defName>ReviaClaws</defName>
     <label>Revian claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
-    <description>Sharp revian claws. Makes enemy bleeding</description>
+    <description>The sharp claws of the Revia, specialized for bloodshed.</description>
     <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
     <biostatCpx>0</biostatCpx>
     <biostatMet>0</biostatMet>
@@ -101,7 +101,7 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
     <iconPath>UI/icons/ReviaTooth_icon</iconPath>
-    <description>Sharp teeth that cause the victim to bleed.</description>
+    <description>Serrated teeth to rip and tear any opponent of a Revia.</description>
     <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
   </GeneDef>
 </Defs>
