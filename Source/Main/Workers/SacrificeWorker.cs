@@ -18,7 +18,7 @@ namespace ReviaRace.Workers
                 var corpse = ingredient as Corpse;
                 corpse.Strip();
             }
-            Utils.PostSacrifide(map);
+            Utils.PostSacrifide(map, true);
             base.ConsumeIngredient(ingredient, recipe, map);
         }
     }

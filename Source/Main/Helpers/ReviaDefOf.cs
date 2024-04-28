@@ -11,5 +11,6 @@ namespace ReviaRace.Helpers
     public static class ReviaDefOf
     {
         public static TraitDef Tough;
+        public static ThoughtDef ReviaRaceThoughtSacrificedNegativePrisoner;
     }
 }
