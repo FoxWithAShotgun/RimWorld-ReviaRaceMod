@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>ReviaGeneSetIncompled</defName>
     <label>Gene set incompleted</label>
-    <description>Something missing...</description>
+    <description>Something is missing...</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <stages>

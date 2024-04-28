@@ -5,7 +5,7 @@
     <label>Revia gene rejection</label>
     <hediffClass>ReviaRace.Comps.GeneRejectionHediff</hediffClass>
     <initialSeverity>0.001</initialSeverity>
-    <description>Skarne punished this unworthy person</description>
+    <description>Skarne found this one unworthy.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <lethalSeverity>1</lethalSeverity>
