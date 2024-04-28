@@ -20,7 +20,10 @@ namespace ReviaRace
                 }
                 else if (mapPawn.IsColonist && (mapPawn.IsRevia() || mapPawn.IsSkarnite()))
                 {
-                    mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
+                    if (!corpse)
+                    {
+                        mapPawn.needs.mood.thoughts.memories.TryGainMemory(Defs.SacrificedPositive);
+                    }
                 }
                 else if (mapPawn.IsColonist &&
                          !(mapPawn.IsCannibal() || mapPawn.IsPsychopath() || mapPawn.IsBloodlust()))
