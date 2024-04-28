@@ -9,7 +9,6 @@
     <workAmount>450</workAmount>
     <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
     <workSkill>Cooking</workSkill>
-    <efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
     <effectWorking>ButcherFlesh</effectWorking>
     <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
     <interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
