@@ -42,14 +42,15 @@
         <power>10</power>
         <cooldownTime>1.5</cooldownTime>
         <armorPenetration>0.10</armorPenetration>
+        <chanceFactor>0.20</chanceFactor>
       </li>
       <li>
         <label>teeth</label>
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>30</power>
-        <cooldownTime>2.65</cooldownTime>
+        <power>26</power>
+        <cooldownTime>2.20</cooldownTime>
         <armorPenetration>0.32</armorPenetration>
       </li>
     </tools>
