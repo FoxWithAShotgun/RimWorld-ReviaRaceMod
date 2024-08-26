@@ -204,17 +204,6 @@
               <paths>
                 <li>Things/Ears/EarLeft</li>
               </paths>
-              <conditions>
-                <BodyPart>
-                  <bodyPart>ReviaRaceEar</bodyPart>
-                  <bodyPartLabel>left ear</bodyPartLabel>
-                </BodyPart>
-                <Posture>
-                  <drawnStanding>true</drawnStanding>
-                  <drawnLaying>true</drawnLaying>
-                  <drawnInBed>true</drawnInBed>
-                </Posture>
-              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
@@ -269,17 +258,6 @@
               <paths>
                 <li>Things/Ears/EarRight</li>
               </paths>
-              <conditions>
-                <BodyPart>
-                  <bodyPart>ReviaRaceEar</bodyPart>
-                  <bodyPartLabel>right ear</bodyPartLabel>
-                </BodyPart>
-                <Posture>
-                  <drawnStanding>true</drawnStanding>
-                  <drawnLaying>true</drawnLaying>
-                  <drawnInBed>true</drawnInBed>
-                </Posture>
-              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
