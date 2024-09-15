@@ -200,16 +200,28 @@
             </li>
             <li>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+              <alignWithHead>true</alignWithHead>
 			        <debug>true</debug>
               <paths>
                 <li>Things/Ears/EarLeft</li>
               </paths>
+              <conditions>
+                <BodyPart>
+                  <bodyPart>ReviaRaceEar</bodyPart>
+                  <bodyPartLabel>left ear</bodyPartLabel>
+                </BodyPart>
+                <Posture>
+                  <drawnStanding>true</drawnStanding>
+                  <drawnLaying>true</drawnLaying>
+                  <drawnInBed>true</drawnInBed>
+                </Posture>
+              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
-                  <offset>(0.42, -0.26)</offset>
+                  <offset>(0.42, -0.587)</offset>
                   <bodyTypes>
                     <Female>(-0.475, 0.57)</Female>
                     <Thin>(-0.475, 0.57)</Thin>
@@ -223,7 +235,7 @@
                   </headTypes>
                 </south>
                 <north>
-                  <offset>(-0.04, -0.52)</offset>
+                  <offset>(-0.04, -0.813)</offset>
                   <bodyTypes>
                     <Female>(0.05, 0.9)</Female>
                     <Thin>(0.05, 0.9)</Thin>
@@ -237,7 +249,7 @@
                   </headTypes>
                 </north>
                 <east>
-                  <offset>(0.42, -0.22)</offset>
+                  <offset>(0.42, -0.562)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
@@ -254,16 +266,28 @@
             </li>
             <li>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+              <alignWithHead>true</alignWithHead>
 			        <debug>false</debug>
               <paths>
                 <li>Things/Ears/EarRight</li>
               </paths>
+              <conditions>
+                <BodyPart>
+                  <bodyPart>ReviaRaceEar</bodyPart>
+                  <bodyPartLabel>right ear</bodyPartLabel>
+                </BodyPart>
+                <Posture>
+                  <drawnStanding>true</drawnStanding>
+                  <drawnLaying>true</drawnLaying>
+                  <drawnInBed>true</drawnInBed>
+                </Posture>
+              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
-                  <offset>(0.42, -0.26)</offset>
+                  <offset>(0.42, -0.587)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
@@ -277,7 +301,7 @@
                   </headTypes>
                 </south>
                 <north>
-                  <offset>(0.04, -0.52)</offset>
+                  <offset>(0.04, -0.813)</offset>
                   <bodyTypes>
                     <Female>(-0.05, 0.9)</Female>
                     <Thin>(-0.05, 0.9)</Thin>
@@ -292,7 +316,7 @@
                 </north>
                 <east>
                   <layerOffset>-1</layerOffset>
-                  <offset>(0.42, -0.22)</offset>
+                  <offset>(0.42, -0.562)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
