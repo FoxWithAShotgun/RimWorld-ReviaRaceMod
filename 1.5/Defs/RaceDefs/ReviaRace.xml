@@ -153,6 +153,7 @@
                 <Hediff For="ReviaRaceSoulreapTier8">Things/Tails/Tail8</Hediff>
                 <Hediff For="ReviaRaceSoulreapTier9">Things/Tails/Tail9</Hediff>
               </extendedGraphics>
+              <angle>-14</angle>
               <offsets>
                 <south>
                   <offset>(0.32, 0.0)</offset>
@@ -173,8 +174,8 @@
                   <bodyTypes>
                     <Female>(-0.07, 0.02)</Female>
                     <Thin>(-0.07, 0.02)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.046, 0.14)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.041, 0.14)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
