@@ -226,8 +226,8 @@
                   <bodyTypes>
                     <Female>(-0.475, 0.57)</Female>
                     <Thin>(-0.475, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Child>                    
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.449, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.46, 0.565)</Child>                    
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -240,8 +240,8 @@
                   <bodyTypes>
                     <Female>(0.05, 0.9)</Female>
                     <Thin>(0.05, 0.9)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(0.039, 0.83)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(0.046, 0.892)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -254,8 +254,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4,0.47)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.4,0.51)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.344, 0.558)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -292,8 +292,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.394, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.387, 0.565)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -306,8 +306,8 @@
                   <bodyTypes>
                     <Female>(-0.05, 0.9)</Female>
                     <Thin>(-0.05, 0.9)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.041, 0.83)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.05, 0.892)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -321,8 +321,8 @@
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.344, 0.558)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
