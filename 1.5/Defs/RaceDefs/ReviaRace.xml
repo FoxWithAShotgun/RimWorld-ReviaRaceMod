@@ -361,6 +361,10 @@
             </projects>
           </li>
         </researchList>
+        <blackEndoCategories>
+          <li>HairColor</li>
+          <li>Melanin</li>
+        </blackEndoCategories>
       </raceRestriction>
     </alienRace>
     <statBases>

@@ -16,7 +16,7 @@
     <factionIconPath>World/ReviaEmblem</factionIconPath>
     <colorSpectrum>
       <li>(0, 0.75, 0.85)</li>
-      <li>(0, 0.70, 0.85</li>
+      <li>(0, 0.70, 0.85)</li>
     </colorSpectrum>
     <playerInitialSettlementNameMaker>NamerSettlementReviaTemplar</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionReviaTemplar</factionNameMaker>
@@ -40,7 +40,6 @@
       </points>
     </raidLootValueFromPointsCurve>
     <raidLootMaker>ReviaRaiderLootMaker</raidLootMaker>
-    <melaninRange>1</melaninRange>
     <startingResearchTags>
       <li>TribalStart</li>
     </startingResearchTags>
