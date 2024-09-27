@@ -138,6 +138,7 @@
                   <drawnLaying>true</drawnLaying>
                   <drawnInBed>false</drawnInBed>
                 </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <inFrontOfBody>false</inFrontOfBody>
               <colorChannel>hair</colorChannel>
@@ -216,6 +217,7 @@
                   <drawnLaying>true</drawnLaying>
                   <drawnInBed>true</drawnInBed>
                 </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
@@ -282,6 +284,7 @@
                   <drawnLaying>true</drawnLaying>
                   <drawnInBed>true</drawnInBed>
                 </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
