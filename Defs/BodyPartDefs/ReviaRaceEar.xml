@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyPartDef>
+    <defName>ReviaRaceEar</defName>
+    <label>revia ear</label>
+    <description>A large ear covered in fluffy fur. Smells faintly of copper.</description>
+    <hitPoints>15</hitPoints>
+    <frostbiteVulnerability>0.20</frostbiteVulnerability>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+  </BodyPartDef>
+</Defs>

@@ -75,6 +75,7 @@ namespace ReviaRace.Comps
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
+
             var pawn = parent as Pawn;
             
             if (pawn != null && GetSoulReapTier() == -1)
@@ -86,9 +87,9 @@ namespace ReviaRace.Comps
                     pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
                     pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
 
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Tough))
+                    if (!pawn.story.traits.HasTrait(TraitDef.Named("Tough")))
                     {
-                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDef.Named("Tough")));
                     }
                 }
                 else
@@ -150,7 +151,11 @@ namespace ReviaRace.Comps
            
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
             toAdd.initialSeverity = float.Epsilon;
-            pawn.health.AddHediff(toAdd);
+
+            LongEventHandler.QueueLongEvent(() =>
+            {
+                pawn.health.AddHediff(toAdd);
+            }, "AddSoulReap", false, exc => { }, false);
         }
 
         internal void RemoveSoulReapHediffs()

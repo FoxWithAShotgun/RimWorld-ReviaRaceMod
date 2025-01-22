@@ -13,7 +13,7 @@ namespace ReviaRace.Comps
     {
         public abstract float GetSanctifyStrength();
 
-        public override bool CanBeUsedBy(Pawn p, out string failReason)
+        public override AcceptanceReport CanBeUsedBy(Pawn p)
         {
             var weapon = p.equipment?.Primary;
 #if DEBUG
@@ -22,8 +22,8 @@ namespace ReviaRace.Comps
 
             if (weapon == null || weapon.def.Verbs.Any(v => !v.IsMeleeAttack))
             {
-                failReason = Strings.SanctifyNonMeleeWeapon.Translate();
-                return false;
+                Messages.Message(Strings.SanctifyNonMeleeWeapon.Translate(), p, MessageTypeDefOf.RejectInput, false);
+                return AcceptanceReport.WasRejected;
             }
 
             var llcp = weapon.GetComp<CompLifeLeech>();
@@ -31,18 +31,17 @@ namespace ReviaRace.Comps
             if (llcp != null &&
                 llcp.LeechStrength > 0)
             {
-                failReason = Strings.SanctifyAlreadySanctified.Translate();
-                return false;
+                Messages.Message(Strings.SanctifyAlreadySanctified.Translate(), p, MessageTypeDefOf.RejectInput, false);
+                return AcceptanceReport.WasRejected;
             }
 
             else if (!p.IsRevia() && !p.IsSkarnite())
             {
-                failReason = Strings.SanctifyNonReviaNonSkarnite.Translate();
-                return false;
+                Messages.Message(Strings.SanctifyNonReviaNonSkarnite.Translate(), p, MessageTypeDefOf.RejectInput, false); 
+                return AcceptanceReport.WasRejected;
             }
 
-            failReason = null;
-            return true;
+            return AcceptanceReport.WasAccepted;
         }
 
         public override void DoEffect(Pawn usedBy)

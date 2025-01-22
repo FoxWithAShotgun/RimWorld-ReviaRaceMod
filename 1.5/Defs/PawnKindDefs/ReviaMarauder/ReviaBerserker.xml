@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>ReviaRaceBerserker</defName>
+    <label>revia berserker</label>
+    <race>ReviaRaceAlien</race>
+    <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
+    <combatPower>95</combatPower>
+    <itemQuality>Good</itemQuality>
+    <gearHealthRange>0.8~1.0</gearHealthRange>
+    <apparelTags>
+      <li>Neolithic</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <apparelMoney>600~1000</apparelMoney>
+    <weaponTags>
+      <li>ReviaMeleeAdvanced</li>
+    </weaponTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>20~25</initialResistanceRange>
+    <weaponMoney>2500~3000</weaponMoney>
+    <techHediffsChance>0</techHediffsChance>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>50</choiceChance>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>0~1</countRange>
+        </li>
+        <li>
+          <choiceChance>50</choiceChance>
+          <thingDef>Luciferium</thingDef>
+          <countRange>1~1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+</Defs>
