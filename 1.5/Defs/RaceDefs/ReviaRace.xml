@@ -138,6 +138,7 @@
                   <drawnLaying>true</drawnLaying>
                   <drawnInBed>false</drawnInBed>
                 </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <inFrontOfBody>false</inFrontOfBody>
               <colorChannel>hair</colorChannel>
@@ -153,6 +154,7 @@
                 <Hediff For="ReviaRaceSoulreapTier8">Things/Tails/Tail8</Hediff>
                 <Hediff For="ReviaRaceSoulreapTier9">Things/Tails/Tail9</Hediff>
               </extendedGraphics>
+              <angle>-14</angle>
               <offsets>
                 <south>
                   <offset>(0.32, 0.0)</offset>
@@ -173,8 +175,8 @@
                   <bodyTypes>
                     <Female>(-0.07, 0.02)</Female>
                     <Thin>(-0.07, 0.02)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.015, 0.14)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.046, 0.14)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.041, 0.14)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -200,21 +202,34 @@
             </li>
             <li>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+              <alignWithHead>true</alignWithHead>
 			        <debug>true</debug>
               <paths>
                 <li>Things/Ears/EarLeft</li>
               </paths>
+              <conditions>
+                <BodyPart>
+                  <bodyPart>ReviaRaceEar</bodyPart>
+                  <bodyPartLabel>left ear</bodyPartLabel>
+                </BodyPart>
+                <Posture>
+                  <drawnStanding>true</drawnStanding>
+                  <drawnLaying>true</drawnLaying>
+                  <drawnInBed>true</drawnInBed>
+                </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
+              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
-                  <offset>(0.42, -0.26)</offset>
+                  <offset>(0.42, -0.587)</offset>
                   <bodyTypes>
                     <Female>(-0.475, 0.57)</Female>
                     <Thin>(-0.475, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.40, 0.56)</Child>                    
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.449, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.46, 0.565)</Child>                    
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -223,12 +238,12 @@
                   </headTypes>
                 </south>
                 <north>
-                  <offset>(-0.04, -0.52)</offset>
+                  <offset>(-0.04, -0.813)</offset>
                   <bodyTypes>
                     <Female>(0.05, 0.9)</Female>
                     <Thin>(0.05, 0.9)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.007,0.83)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(0.039, 0.83)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(0.046, 0.892)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -237,12 +252,12 @@
                   </headTypes>
                 </north>
                 <east>
-                  <offset>(0.42, -0.22)</offset>
+                  <offset>(0.42, -0.562)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4,0.47)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.4,0.51)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.344, 0.558)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -254,21 +269,34 @@
             </li>
             <li>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+              <alignWithHead>true</alignWithHead>
 			        <debug>false</debug>
               <paths>
                 <li>Things/Ears/EarRight</li>
               </paths>
+              <conditions>
+                <BodyPart>
+                  <bodyPart>ReviaRaceEar</bodyPart>
+                  <bodyPartLabel>right ear</bodyPartLabel>
+                </BodyPart>
+                <Posture>
+                  <drawnStanding>true</drawnStanding>
+                  <drawnLaying>true</drawnLaying>
+                  <drawnInBed>true</drawnInBed>
+                </Posture>
+                <RotStage>Fresh,Rotting</RotStage>
+              </conditions>
               <inFrontOfBody>true</inFrontOfBody>
               <colorChannel>hair</colorChannel>
               <shaderType>CutoutComplex</shaderType>
               <offsets>
                 <south>
-                  <offset>(0.42, -0.26)</offset>
+                  <offset>(0.42, -0.587)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.45, 0.56)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.394, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.387, 0.565)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -277,12 +305,12 @@
                   </headTypes>
                 </south>
                 <north>
-                  <offset>(0.04, -0.52)</offset>
+                  <offset>(0.04, -0.813)</offset>
                   <bodyTypes>
                     <Female>(-0.05, 0.9)</Female>
                     <Thin>(-0.05, 0.9)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.01,0.83)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.041, 0.83)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.05, 0.892)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -292,12 +320,12 @@
                 </north>
                 <east>
                   <layerOffset>-1</layerOffset>
-                  <offset>(0.42, -0.22)</offset>
+                  <offset>(0.42, -0.562)</offset>
                   <bodyTypes>
                     <Female>(-0.375, 0.57)</Female>
                     <Thin>(-0.375, 0.57)</Thin>
-                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Baby>
-					          <Child MayRequire="ludeon.rimworld.biotech">(-0.46,0.46)</Child>
+                    <Baby MayRequire="ludeon.rimworld.biotech">(-0.4, 0.56)</Baby>
+					          <Child MayRequire="ludeon.rimworld.biotech">(-0.344, 0.558)</Child>
                   </bodyTypes>
                   <headTypes>
                     <Female_AverageNormal>(0, 0)</Female_AverageNormal>
@@ -336,6 +364,10 @@
             </projects>
           </li>
         </researchList>
+        <blackEndoCategories>
+          <li>HairColor</li>
+          <li>Melanin</li>
+        </blackEndoCategories>
       </raceRestriction>
     </alienRace>
     <statBases>
@@ -463,7 +495,7 @@
 			<Research>13</Research>
 		</lifeStageWorkSettings>		
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding_Generic</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>      
       <ageGenerationCurve Inherit="false">
         <points>

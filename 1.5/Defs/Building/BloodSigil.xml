@@ -52,8 +52,7 @@
       <li>
         <compClass>ReviaRace.Comps.SacrificeSpotComp</compClass>
       </li>
-      <li>
-        <compClass>CompReportWorkSpeed</compClass>
+      <li Class="CompProperties_ReportWorkSpeed">
       </li>
       <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
