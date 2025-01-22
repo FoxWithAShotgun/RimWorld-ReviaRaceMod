@@ -75,6 +75,7 @@ namespace ReviaRace.Comps
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
+
             var pawn = parent as Pawn;
             
             if (pawn != null && GetSoulReapTier() == -1)
@@ -150,7 +151,11 @@ namespace ReviaRace.Comps
            
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
             toAdd.initialSeverity = float.Epsilon;
-            pawn.health.AddHediff(toAdd);
+
+            LongEventHandler.QueueLongEvent(() =>
+            {
+                pawn.health.AddHediff(toAdd);
+            }, "AddSoulReap", false, exc => { }, false);
         }
 
         internal void RemoveSoulReapHediffs()
