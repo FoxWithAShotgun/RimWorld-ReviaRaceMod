@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ScenarioDef Name="ReviaExclave">
+  <ScenarioDef Name="ReviaExclave" ParentName="ScenarioBase">
     <defName>ReviaExclave</defName>
     <label>Revian Frontiersmen</label>
     <description>After one too many arguments with the High Templar of your hometown, you and two of your fellows decide to embark on an adventure. An adventure to establish a Revian exclave where you were free to establish your own rules. Two quadrums of wandering later, and you decide to settle down before your supplies ran out completely.</description>

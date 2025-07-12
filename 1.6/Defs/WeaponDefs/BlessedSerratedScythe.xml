@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaBlessedSerratedScythe</defName>
+    <label>Vermillion Tide</label>
+    <relicChance>1</relicChance>
+    <description>A cruel bardiche with a razor sharp blade. A murderous spirit resides within it.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedScythe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>90</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
+      <ReviaGreaterBloodRune>1</ReviaGreaterBloodRune>
+    </costList>
+    <statBases>
+      <WorkToMake>25600</WorkToMake>
+      <Mass>3.50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceConsecratedWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+        <Intellectual>12</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+        <LeechStrength>2.50</LeechStrength>
+      </li>
+    </comps>
+    <weaponTags>
+      <li>ReviaMeleeLegendary</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.0</cooldownTime>
+        <armorPenetration>0.18</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>2.50</cooldownTime>
+        <armorPenetration>0.26</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaSerratedDagger</defName>
+    <label>eviscerator</label>
+    <description>A cruel dagger with razor-sharp palestone shards lining its blade. Designed to tear tissue and cause grievous bleeding wounds.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedDagger</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>20</ReviaRacePalestone>
+    </costList>
+    <statBases>
+      <WorkToMake>6500</WorkToMake>
+      <Mass>1.00</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceBasicEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaMeleeBasic</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.18</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.14</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

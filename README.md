@@ -1,5 +1,5 @@
 # RimWorld-ReviaRaceMod
-Temporary and limited 1.4 update until FoxWithAShotgun updates the mod
+1.6 compatability update done by Seioch. 
 Not tested much beyond embark.
 
 An alien race mod for bloodthirsty foxgirls.

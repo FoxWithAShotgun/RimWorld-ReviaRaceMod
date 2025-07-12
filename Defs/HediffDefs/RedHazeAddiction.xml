@@ -5,7 +5,7 @@
     <label>Red Haze need</label>
     <description>An almost rabid bloodthirst grips this person. A constant supply of powdered bloodstone appears to be the only way to keep it under control. Without a supply of it, this person will frequently enter a state of berserk rage, slaking his or her bloodthirst on anyone nearby.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>ReviaRaceRedHazeNeed</causesNeed>
+    <chemicalNeed>ReviaRaceRedHazeNeed</chemicalNeed>
     <everCurableByItem>false</everCurableByItem>
     <stages>
       <li></li>
