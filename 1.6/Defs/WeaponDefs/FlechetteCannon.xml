@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseAdvancedRangedWeapon">
+    <defName>ReviaFlechetteCannon</defName>
+    <label>shard cannon</label>
+    <description>A large-bore shotgun that fires plasteel-coated uranium shards at the enemy. Highly dangerous at close range, and is also equipped with a heavy-duty bayonet.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/FlechetteCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceAdvancedEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Plasteel>50</Plasteel>
+      <Uranium>50</Uranium>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>ReviaRangedAdvanced</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>2.50</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ReviaFlechetteCannonShard</defaultProjectile>
+        <warmupTime>1.0</warmupTime>
+        <range>11.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>bayonet</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>ReviaFlechetteCannonShard</defName>
+    <label>flechette</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ReviaRangedGash</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>55</speed>
+      <stoppingPower>3.00</stoppingPower>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+</Defs>

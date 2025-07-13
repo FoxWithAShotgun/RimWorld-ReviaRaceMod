@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseMeleeWeapon">
+    <defName>ReviaBlessedSerratedSword</defName>
+    <label>Red Inquisitor</label>
+    <relicChance>1</relicChance>
+    <description>A cruel sword with a serrated blade, containing a hateful spirit.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/SerratedSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <ReviaRacePalestone>35</ReviaRacePalestone>
+      <ReviaBloodRune>1</ReviaBloodRune>
+    </costList>
+    <statBases>
+      <WorkToMake>25600</WorkToMake>
+      <Mass>1.50</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceConsecratedWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaMeleeLegendary</li>
+    </weaponTags>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+      <li Class="ReviaRace.Comps.CompProperties_LifeLeech">
+        <LeechStrength>1.50</LeechStrength>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.00</cooldownTime>
+        <armorPenetration>0.22</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>2.00</cooldownTime>
+        <armorPenetration>0.22</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

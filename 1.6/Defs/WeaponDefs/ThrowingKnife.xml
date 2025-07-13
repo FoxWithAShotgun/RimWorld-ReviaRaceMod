@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ReviaBaseRangedWeapon">
+    <defName>ReviaThrowingKnife</defName>
+    <label>throwing knife</label>
+    <description>A balanced throwing knife.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapons/ThrowingKnife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>ReviaRaceBasicEquipment</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <weaponTags>
+      <li>ReviaRangedBasic</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.5</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ReviaThrowingKnifeThrown</defaultProjectile>
+        <warmupTime>0.5</warmupTime>
+        <range>16</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>ReviaThrowingKnifeThrown</defName>
+    <label>thrown knife</label>
+    <graphicData>
+      <texPath>Things/Item/Weapons/ThrowingKnife</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ReviaRangedGash</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>44</speed>
+      <stoppingPower>0.25</stoppingPower>
+      <armorPenetrationBase>0.05</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+</Defs>
