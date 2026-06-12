@@ -1,12 +1,13 @@
-﻿using System;
+﻿using ReviaRace.Helpers;
+using ReviaRace.ModExtensions;
+using ReviaRace.Needs;
+using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
-using RimWorld;
-using ReviaRace.Helpers;
-using ReviaRace.Needs;
 
 namespace ReviaRace.Comps
 {
@@ -80,17 +81,15 @@ namespace ReviaRace.Comps
             
             if (pawn != null && GetSoulReapTier() == -1)
             {
-                if (pawn.kindDef == Defs.MarauderSkullshatterer ||
-                    pawn.kindDef == Defs.TemplarHighTemplar)
+                SoulreapTailGiver_Extension tailGiver = pawn.kindDef.GetModExtension<SoulreapTailGiver_Extension>();
+                if (tailGiver != null)
                 {
-                    AddSoulReapTier(9);
-                    pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
-                    pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
-
-                    if (!pawn.story.traits.HasTrait(TraitDef.Named("Tough")))
+                    if ((tailGiver.tier.min >= 1) && (tailGiver.tier.max <= 9))
                     {
-                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDef.Named("Tough")));
+                        int tailCount = tailGiver.tier.RandomInRange;
+                        AddSoulReapTier(tailCount);
                     }
+                    else Log.Error("Misconfigured Soulreap Mod Extensions for " + pawn.kindDef.defName + ". Tier range must be between 1 and 9.");
                 }
                 else
                 {
