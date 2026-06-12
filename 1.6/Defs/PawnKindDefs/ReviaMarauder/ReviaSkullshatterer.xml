@@ -45,5 +45,14 @@
     <techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
+    <forcedTraits>
+			<Tough/>
+		</forcedTraits>
+    <skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+    </skills>
   </PawnKindDef>
 </Defs>
