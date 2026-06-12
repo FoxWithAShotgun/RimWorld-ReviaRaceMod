@@ -22,6 +22,8 @@ namespace ReviaRace.Comps
 
     public class CompLifeLeech : ThingComp
     {
+        public CompProperties_LifeLeech Props => (CompProperties_LifeLeech)props;
+
         public float LeechStrength;
 
         public override string GetDescriptionPart()
@@ -29,6 +31,20 @@ namespace ReviaRace.Comps
             return LeechStrength > 0
                 ? Strings.SanctifyDescPart.Translate()
                 : null;
+        }
+
+        public override void PostPostMake()
+        {
+            base.PostPostMake();
+            var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
+            if (defaultLeech > 0 &&
+                defaultLeech != LeechStrength)
+            {
+#if DEBUG
+                Log.Message("Initialized new sanctified weapon.");
+#endif
+                LeechStrength = defaultLeech;
+            }
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
