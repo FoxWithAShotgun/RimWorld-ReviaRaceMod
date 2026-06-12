@@ -54,5 +54,10 @@
 				<range>20~20</range>
 			</li>
     </skills>
+	<modExtensions>
+		<li Class="ReviaRace.ModExtensions.SoulreapTailGiver_Extension">
+			<tier>9~9</tier>
+		</li>
+	</modExtensions>
   </PawnKindDef>
 </Defs>
