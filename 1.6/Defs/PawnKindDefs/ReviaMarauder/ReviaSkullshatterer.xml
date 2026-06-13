@@ -45,5 +45,19 @@
     <techHediffsRequired>
       <li>DeathAcidifier</li>
     </techHediffsRequired>
+    <forcedTraits>
+			<Tough/>
+		</forcedTraits>
+    <skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~20</range>
+			</li>
+    </skills>
+	<modExtensions>
+		<li Class="ReviaRace.ModExtensions.SoulreapTailGiver_Extension">
+			<tier>9~9</tier>
+		</li>
+	</modExtensions>
   </PawnKindDef>
 </Defs>
